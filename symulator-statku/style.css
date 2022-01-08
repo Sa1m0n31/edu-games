@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+}
+
+:root {
+    --primary: #2E3192;
+}
+
+.container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1700px;
+}
+
+.carouselWrapper {
+    width: 100%;
+    position: relative;
+}
+
+.view {
+    position: relative;
+    width: 100vw;
+    max-width: 1200px;
+    height: auto;
+}
+
+.view__img {
+    width: 100%;
+    height: 100%;
+}
+
+.btn--colreg {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    font-size: 21px;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    z-index: 3;
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.btn--start {
+    border-radius: 50%;
+    width: 20%;
+    height: 40%;
+    font-size: 21px;
+    position: absolute;
+    bottom: 30%;
+    left: 63%;
+    background: transparent;
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+.btn--back {
+    top: 10px;
+    width: 70px;
+    height: 70px;
+}
+
+.btn--home {
+    left: 10px;
+}
+
+.text {
+    position: absolute;
+    bottom: 10%;
+    left: 10%;
+    width: 30%;
+    text-align: center;
+    font-weight: 700;
+    height: 36%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.gameBtn {
+    position: absolute;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    outline: none;
+}
+
+.btn--top {
+    width: 4%;
+    height: 8%;
+    top: 64%;
+    left: 68%;
+}
+
+.btn--right {
+    width: 5%;
+    height: 5%;
+    top: 71%;
+    left: 71%;
+}
+
+.btn--left {
+    width: 5%;
+    height: 5%;
+    top: 71%;
+    left: 64%;
+}
+
+.btn--front {
+    width: 10%;
+    height: 5%;
+    top: 60.5%;
+    left: 80%;
+}
+
+.btn--short {
+    width: 1.5%;
+    height: 2.5%;
+    top: 56.5%;
+    left: 49.5%;
+}
+
+.btn--long {
+    width: 6%;
+    height: 2.5%;
+    top: 56.5%;
+    left: 52%;
+}
+
+.btn--check {
+    padding: 6px 25px;
+    color: #fff;
+    background: #2E3192;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 700;
+    margin: 15px auto 0;
+    display: block;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+
+audio {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}

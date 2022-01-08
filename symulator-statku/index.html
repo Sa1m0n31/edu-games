@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+<div class="container">
+    <audio id="tyfon">
+        <source src="./assets/sounds/tyfon.wav" type="audio/wav">
+    </audio>
+    <audio id="tyfonShort">
+        <source src="./assets/sounds/tyfon-krotki.wav" type="audio/wav">
+    </audio>
+
+    <main class="carouselWrapper">
+        <button class="btn btn--colreg btn--home" onclick="goHome()">
+
+        </button>
+        <div class="carousel">
+            <!-- START VIEW -->
+            <section class="view">
+                <button class="btn btn--start" onclick="next()">
+
+                </button>
+                <img class="view__img" src="./assets/00_plansza_startowa.png" alt="plansza-startowa" />
+            </section>
+            <!-- LVL 1 -->
+            <section class="view">
+                <img class="view__img" src="./assets/02%20(Prawidło%209.%20Wąskie%20przejścia).png" alt="prawidlo-9" />
+                <button class="btn btn--colreg" onclick="toggleColreg()">
+
+                </button>
+                <button class="btn btn--colreg btn--back" onclick="prevLvl()">
+                </button>
+                <p class="text text--1">
+                    Wpływasz do wąskiego przejścia. Obecnie znajdujesz się na jego środku. Wybierz kierunek ruchu (zwróć uwagę, że możesz klikać na dwie strzałki naraz), a następnie zapoczątkuj ruch, klikając na manetkę.
+                    <button class="btn--check" onclick="check()">
+                        Sprawdź
+                    </button>
+                </p>
+
+                <button class="gameBtn btn--top" onclick="btnClick(1, 1)">
+
+                </button>
+                <button class="gameBtn btn--right" onclick="btnClick(1, 2)">
+
+                </button>
+                <button class="gameBtn btn--front" onclick="btnClick(1, 3)">
+
+                </button>
+            </section>
+            <!-- LVL 2 -->
+            <section class="view">
+                <img class="view__img" src="./assets/02a%20Prawidło%209.%20Wąskie%20przejścia%20cd..png" alt="prawidlo-9" />
+                <button class="btn btn--colreg" onclick="toggleColreg()">
+
+                </button>
+                <button class="btn btn--colreg btn--back" onclick="prevLvl()">
+                </button>
+                <p class="text text--2">
+                    Płyniesz wąskim przejściem. Zamierzasz wyprzedzić znajdujący się przed tobą statek z jego prawej burty. Zakomunikuj to w odpowiedni sposób za pomocą sygnałów dźwiękowych.
+                    <button class="btn--check" onclick="check()">
+                        Sprawdź
+                    </button>
+                </p>
+
+                <button class="gameBtn btn--long" onclick="btnClick(2, 1); playSound(0);">
+
+                </button>
+                <button class="gameBtn btn--short" onclick="btnClick(2, 2); playSound(1);">
+
+                </button>
+            </section>
+            <!-- LVL 3 -->
+            <section class="view">
+                <img class="view__img" src="./assets/02b%20Prawidło%209.%20Wąskie%20przejścia%20cd..png" alt="prawidlo-9" />
+                <button class="btn btn--colreg" onclick="toggleColreg()">
+
+                </button>
+                <button class="btn btn--colreg btn--back" onclick="prevLvl()">
+                </button>
+                <p class="text text--3">
+                    Statek przed tobą odpowiedział na twój sygnał jednym sygnałem długim, jednym krótkim, jednym długim i jednym krótkim. Co robisz dalej?
+                    <button class="btn--check" onclick="check()">
+                        Sprawdź
+                    </button>
+                </p>
+
+                <button class="gameBtn btn--top" onclick="btnClick(3, 1)">
+
+                </button>
+                <button class="gameBtn btn--right" onclick="btnClick(3, 2)">
+
+                </button>
+                <button class="gameBtn btn--front" onclick="btnClick(3, 3)">
+
+                </button>
+            </section>
+            <!-- LVL 4 -->
+            <section class="view">
+                <img class="view__img" src="./assets/02c%20Prawidło%209.%20Wąskie%20przejścia%20cd..png" alt="prawidlo-9" />
+                <button class="btn btn--colreg" onclick="toggleColreg()">
+
+                </button>
+                <button class="btn btn--colreg btn--back" onclick="prevLvl()">
+                </button>
+                <p class="text text--4">
+                    Płyniesz wąskim przejściem. Zamierzasz wyprzedzić znajdujący się przed tobą statek z jego lewej burty. Zakomunikuj to w odpowiedni sposób za pomocą sygnałów dźwiękowych.
+                    <button class="btn--check" onclick="check()">
+                        Sprawdź
+                    </button>
+                </p>
+
+                <button class="gameBtn btn--long" onclick="btnClick(4, 1); playSound(0);">
+
+                </button>
+                <button class="gameBtn btn--short" onclick="btnClick(4, 2); playSound(1);">
+
+                </button>
+            </section>
+            <!-- LVL 5 -->
+            <section class="view">
+                <img class="view__img" src="./assets/02d%20Prawidło%209.%20Wąskie%20przejścia%20cd.%20alternatywna%20wersja.png" alt="prawidlo-9" />
+                <button class="btn btn--colreg" onclick="toggleColreg()">
+
+                </button>
+                <button class="btn btn--colreg btn--back" onclick="prevLvl()">
+                </button>
+                <p class="text text--5">
+                    Statek przed tobą odpowiedział na twój sygnał jednym sygnałem długim, jednym krótkim, jednym długim i jednym krótkim. Co robisz dalej?
+                    <button class="btn--check" onclick="check()">
+                        Sprawdź
+                    </button>
+                </p>
+
+                <button class="gameBtn btn--top" onclick="btnClick(5, 1)">
+
+                </button>
+                <button class="gameBtn btn--left" onclick="btnClick(5, 2)">
+
+                </button>
+                <button class="gameBtn btn--front" onclick="btnClick(5, 3)">
+
+                </button>
+            </section>
+        </div>
+    </main>
+</div>
+<script src="./js/siema.js"></script>
+<script src="./js/main.js"></script>
+</body>
+</html>
