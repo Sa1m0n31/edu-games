@@ -160,3 +160,89 @@ audio {
     width: 0;
     height: 0;
 }
+
+.light {
+    position: absolute;
+    visibility: hidden;
+}
+
+.light--back img {
+    visibility: hidden;
+}
+
+.light__img {
+    display: block;
+    width: 60%;
+}
+
+.light--top {
+    top: 12%;
+    left: 27%;
+}
+
+.light--left {
+    top: 30%;
+    left: 30%;
+}
+
+.light--right {
+    top: 25%;
+    left: 27%;
+}
+
+.light--back {
+    top: 18%;
+    left: 35%;
+}
+
+.btn--lightTop {
+    top: 64.5%;
+    height: 4%;
+    width: 15%;
+    left: 46.2%;
+}
+
+.btn--lightLeft {
+    top: 68.6%;
+    height: 4%;
+    width: 15%;
+    left: 46.2%;
+}
+
+.btn--lightRight {
+    top: 73%;
+    height: 4%;
+    width: 15%;
+    left: 46.2%;
+}
+
+.btn--lightBack {
+    top: 77.5%;
+    height: 4%;
+    width: 15%;
+    left: 46.2%;
+}
+
+.btn--lightTop--1 {
+    background: green;
+    width: 4%;
+    height: 6%;
+    top: 50%;
+    left: 50%;
+}
+
+.btn--lightTop--2 {
+    background: green;
+    width: 4%;
+    height: 6%;
+    top: 50%;
+    left: 50%;
+}
+
+.btn--lightTop--3 {
+    background: green;
+    width: 4%;
+    height: 6%;
+    top: 50%;
+    left: 50%;
+}
