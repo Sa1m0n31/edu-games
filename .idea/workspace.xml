@@ -20,33 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1dacfaf5-319a-496b-8493-e88c795b5ebd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/symulator-statku/assets/02_Prawidło_9_wąskie_przejście_Obszar roboczy 1 kopia.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/symulator-statku/assets/02a Prawidło 9. Wąskie przejścia cd_Obszar roboczy 1 kopia.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/symulator-statku/assets/02b Prawidło 9. Wąskie przejścia cd_Obszar roboczy 1 kopia.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/symulator-statku/assets/02c Prawidło 9. Wąskie przejścia cd_Obszar roboczy 1 kopia.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/symulator-statku/assets/02d Prawidło 9. Wąskie przejścia cd. alternatywna wersja_Obszar roboczy 1 kopia.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/symulator-statku/assets/02e Prawidło 9. Wąskie przejścia cd. alternatywna wersja_Obszar roboczy 1 kopia.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/symulator-statku/assets/03 (Prawidło 14. Statki płynące wprost na siebie (dzień))_Obszar roboczy 1 kopia.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/symulator-statku/assets/03a (Prawidło 14. Statki płynące wprost na siebie (noc))_Obszar roboczy 1 kopia.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/symulator-statku/assets/10_Prawidło_24_Holowanie_Obszar roboczy 1 kopia.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/symulator-statku/assets/11_Prawidło_26_Statek_trałujący_Obszar roboczy 1 kopia.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/symulator-statku/assets/12_Prawidło_27_Statek_nieodpowiadający_Obszar roboczy 1 kopia.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/symulator-statku/assets/13_Prawidło_27_Statek_o_ograniczonej_zdolności_manewrowania_Obszar roboczy 1 kopia.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/symulator-statku/assets/14_Prawidło_28_Statek_ograniczony_zanurzeniem_Obszar roboczy 1 kopia.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/symulator-statku/assets/15_Prawidło_34_sygnały_manewrowe_i_ostrzegawcze_Obszar roboczy 1 kopia.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/symulator-statku/assets/16_Prawidło_34_sygnały_manewrowe_i_ostrzegawcze_Obszar roboczy 1 kopia.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/symulator-statku/assets/17_Prawidło_34_sygnały_manewrowe_i_ostrzegawcze_Obszar roboczy 1 kopia.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/symulator-statku/assets/18_Prawidło_Sygnały_dźwiękowe_ograniczona_widzialność_Obszar roboczy 1 kopia.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/symulator-statku/assets/6_Prawidło_15_działania_statku_mającego_pierwszeństwo(kolizja)_Obszar roboczy 1 kopia.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/symulator-statku/assets/7_Prawidło_17_działania_statku_mającego_pierwszeństwo_Obszar roboczy 1 kopia.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/symulator-statku/assets/8_Prawidło_17_działania_statku_mającego_pierwszeństwo(kolizja)_Obszar roboczy 1 kopia.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/symulator-statku/assets/9_Prawidło_23_Światła_statku_Obszar roboczy 1 kopia.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/symulator-statku/assets/masztowe-ograniczona-zdolnosc.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/symulator-statku/assets/specjalne-biale.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/symulator-statku/assets/specjalne-czerwone.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/symulator-statku/assets/specjalne-zielone.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symulator-statku/assets/19_Prawidło_37_Sygnały_wzywania_pomocy_Obszar roboczy 1 kopia.png" beforeDir="false" afterPath="$PROJECT_DIR$/symulator-statku/assets/19_Prawidło_37_Sygnały_wzywania_pomocy_Obszar roboczy 1 kopia.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/symulator-statku/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/symulator-statku/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/symulator-statku/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/symulator-statku/js/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/symulator-statku/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/symulator-statku/style.css" afterDir="false" />
@@ -67,7 +41,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/symulator-statku/assets" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Projekty/symulator-manewrowy" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -88,7 +62,8 @@
       <workItem from="1641819328109" duration="6227000" />
       <workItem from="1641850296094" duration="9000" />
       <workItem from="1641902143237" duration="32000" />
-      <workItem from="1642015483286" duration="11685000" />
+      <workItem from="1642015483286" duration="12572000" />
+      <workItem from="1642109644374" duration="4486000" />
     </task>
     <servers />
   </component>
@@ -108,9 +83,14 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1641902174605">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="-1180" y="275" key="FileChooserDialogImpl" timestamp="1642110052645">
+      <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
+    <state x="-1180" y="275" key="FileChooserDialogImpl/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1642110052645" />
     <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1641902174605" />
+    <state x="-1304" y="240" key="run.anything.popup" timestamp="1642113677182">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="-1304" y="240" key="run.anything.popup/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1642113677182" />
   </component>
 </project>

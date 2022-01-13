@@ -79,11 +79,11 @@
 .text {
     position: absolute;
     bottom: 10%;
-    left: 10%;
-    width: 30%;
+    left: 9.5%;
+    width: 32%;
     text-align: center;
     font-weight: 700;
-    height: 36%;
+    height: 33%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -140,6 +140,7 @@
     left: 52%;
 }
 
+.btn--textBack,
 .btn--check {
     padding: 6px 25px;
     color: #fff;
@@ -404,3 +405,55 @@ audio {
     top: 10%;
 }
 
+.colregContent {
+    display: none;
+    position: relative;
+}
+
+.text > div {
+    overflow-y: hidden;
+}
+
+.btn--textBack {
+    margin: 0 auto;
+    visibility: hidden;
+    padding: 0;
+    font-size: 13px;
+    height: 0;
+    transform: translateX(-16%);
+}
+
+.colregContent * {
+    font-size: 12px !important;
+}
+
+.colregCloseBtn {
+    position: absolute;
+    background: transparent;
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: auto;
+    border: none;
+    outline: none;
+}
+
+.colregCloseBtn__img {
+    width: 100%;
+    height: auto;
+    filter: brightness(0);
+}
+
+.questionBoxColreg {
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+}
+
+.questionBoxColreg p {
+    max-width: 95%;
+    margin-top: 10px !important;
+}
+
+.questionBoxWrapper {
+    width: 100%;
+}

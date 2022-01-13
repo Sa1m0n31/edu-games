@@ -51,6 +51,12 @@ const sounds = [
     'tyfon', 'tyfonShort'
 ];
 
+const allWhitespaceElements = Array.from(document.querySelectorAll('.text'));
+const allTextsElements = Array.from(document.querySelectorAll('.text>span'));
+const allTexts = allTextsElements.map((item) => {
+    return item.textContent;
+});
+
 /* Main carousel */
 const game = new Siema({
     selector: ".carousel",
@@ -73,12 +79,64 @@ const backBtn = document.querySelector(".btn--back");
 const prevLvl = () => {
     game.prev();
 
-    /* Reset lvl 1 */
-    currentElementToPick = 0;
+    lvlProgress = [];
+    if(currentLvl > 1) currentLvl--;
+    if(currentLvl > 0) {
+        checkButtons[currentLvl-1].style.display = 'block';
+        allTextsElements[currentLvl-1].style.display = 'block';
+        allTextsElements[currentLvl-1].style.color = '#000';
+        allTextsElements[currentLvl-1].textContent = allTexts[currentLvl-1];
+    }
 }
 
-const toggleColreg = () => {
+let colregVisible = false;
+let questionBoxesContent = ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""];
+const colregContentHTML = document.querySelector(".colregContent").innerHTML;
+const checkButtons = document.querySelectorAll('.btn--check');
+const backButtons = document.querySelectorAll('.btn--textBack');
 
+const toggleColreg = () => {
+    const questionBoxesColreg = document.querySelectorAll(".text>.questionBoxColreg");
+    const questionBoxesQuestions = document.querySelectorAll(".text>span");
+
+    if(colregVisible) {
+        colregVisible = false;
+        questionBoxesColreg.forEach((item, index) => {
+            item.innerHTML = questionBoxesContent[index];
+            questionBoxesQuestions[index].style.display = "block";
+            item.style.maxWidth = "none";
+            item.style.maxHeight = "none";
+            item.style.overflowY = "hidden";
+        });
+        checkButtons.forEach((item) => {
+            item.style.display = 'flex';
+        });
+        backButtons.forEach((item) => {
+            item.style.visibility = 'hidden';
+            item.style.margin = '0';
+            item.style.padding = '0';
+            item.style.height = '0';
+        });
+    }
+    else {
+        colregVisible = true;
+        questionBoxesColreg.forEach((item, index) => {
+            questionBoxesContent[index] = item.innerHTML;
+            item.innerHTML = colregContentHTML;
+            questionBoxesQuestions[index].style.display = "none";
+            item.style.maxHeight = "90%";
+            item.style.overflowY = "scroll";
+        });
+        checkButtons.forEach((item) => {
+            item.style.display = 'none';
+        });
+        backButtons.forEach((item) => {
+            item.style.visibility = 'visible';
+            item.style.margin = '5px auto 12px';
+            item.style.padding = '5px';
+            item.style.height = 'auto';
+        });
+    }
 }
 
 let currentLvl = 1;
@@ -86,11 +144,17 @@ let pointsNeeded = [3, 3, 3, 4, 3, 3, 3, 2, 2, 1, 4, 6, 5, 2, 8, 8, 1, 2, 5, 1, 
 let lvlProgress = [];
 
 const positiveFeedback = () => {
-    document.querySelector(`.text--${currentLvl}`).textContent = positiveFeedbacks[currentLvl-1];
+    checkButtons[currentLvl-1].style.display = 'none';
+
+    allTextsElements[currentLvl-1].style.color = 'green';
+    allTextsElements[currentLvl-1].textContent = positiveFeedbacks[currentLvl-1];
 }
 
 const negativeFeedback = () => {
-    document.querySelector(`.text--${currentLvl}`).textContent = negativeFeedbacks[currentLvl-1];
+    checkButtons[currentLvl-1].style.display = 'none';
+
+    allTextsElements[currentLvl-1].style.color = 'red';
+    allTextsElements[currentLvl-1].textContent = negativeFeedbacks[currentLvl-1];
 }
 
 const check = () => {
