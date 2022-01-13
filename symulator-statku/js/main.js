@@ -16,7 +16,11 @@ const positiveFeedbacks = [
     'Dobrze! Statek nieodpowiadający za swoje ruchy, gdy się nie porusza, powinien pokazywać dwa czerwone światła widoczne dookoła widnokręgu, umieszczone w linii pionowej w miejscu, skąd będą najlepiej widoczne.',
     'Dobrze! Statek o ograniczonej zdolności manewrowej powinien pokazywać trzy światła widoczne dookoła widnokręgu, umieszczone w linii pionowej w miejscu, skąd będą najlepiej widoczne (światła górne i dolne powinny być czerwone, a środkowe białe). Ponadto gdy posuwa się po wodzie – światło lub światła masztowe, światła burtowe i światło rufowe.',
     'Dobrze! Statek ograniczony swym zanurzeniem może, prócz standardowych świateł, które muszą mieć włączone statki o napędzie mechanicznym, pokazywać w miejscu, skąd będą najlepiej widoczne, trzy czerwone światła widoczne dookoła widnokręgu, umieszczone w linii pionowej.',
-    ''
+    'Dobrze! Gdy statki są wzajemnie widoczne, statek o napędzie mechanicznym w drodze powinien wskazać manewr skrętu w prawo za pomocą jednego krótkiego sygnału dźwiękowego.',
+    'Dobrze! Gdy statki są wzajemnie widoczne, statek o napędzie mechanicznym w drodze powinien wskazać manewr skrętu w lewo za pomocą dwóch krótkich sygnałów dźwiękowych.',
+    'Dobrze! Gdy statki wzajemnie widoczne zbliżają się do siebie i z jakiejkolwiek przyczyny którykolwiek z nich nie rozumie zamiarów lub działań drugiego statku lub ma wątpliwości, czy drugi statek podejmie wystarczające działania w celu uniknięcia zderzenia, statek mający wątpliwości powinien wskazać je przez nadanie gwizdkiem co najmniej pięciu krótkich i szybko po sobie następujących sygnałów.',
+    'Dobrze! W strefie ograniczonej widzialności lub w jej pobliżu podczas dnia lub nocy statek o napędzie mechanicznym posuwający się po wodzie powinien nadawać z przerwami nie większymi niż 2 minuty jeden długi dźwięk.',
+    'Dobrze! Jednym ze sposobów wzywania pomocy na statku jest nadawanie sygnału SOS składającego się z trzech krótkich, trzech długich i trzech krótkich dźwięków.'
 ];
 
 const negativeFeedbacks = [
@@ -36,7 +40,11 @@ const negativeFeedbacks = [
     'Źle! Statek nieodpowiadający za swoje ruchy, gdy się nie porusza, powinien pokazywać dwa czerwone światła widoczne dookoła widnokręgu, umieszczone w linii pionowej w miejscu, skąd będą najlepiej widoczne.',
     'Źle! Statek o ograniczonej zdolności manewrowej powinien pokazywać trzy światła widoczne dookoła widnokręgu, umieszczone w linii pionowej w miejscu, skąd będą najlepiej widoczne (światła górne i dolne powinny być czerwone, a środkowe białe). Ponadto gdy posuwa się po wodzie – światło lub światła masztowe, światła burtowe i światło rufowe.',
     'Źle! Statek ograniczony swym zanurzeniem może, prócz standardowych świateł, które muszą mieć włączone statki o napędzie mechanicznym, pokazywać w miejscu, skąd będą najlepiej widoczne, trzy czerwone światła widoczne dookoła widnokręgu, umieszczone w linii pionowej.',
-    ''
+    'Źle! Gdy statki są wzajemnie widoczne, statek o napędzie mechanicznym w drodze powinien wskazać manewr skrętu w prawo za pomocą jednego krótkiego sygnału dźwiękowego.',
+    'Źle! Gdy statki są wzajemnie widoczne, statek o napędzie mechanicznym w drodze powinien wskazać manewr skrętu w lewo za pomocą dwóch krótkich sygnałów dźwiękowych.',
+    'Źle! Gdy statki wzajemnie widoczne zbliżają się do siebie i z jakiejkolwiek przyczyny którykolwiek z nich nie rozumie zamiarów lub działań drugiego statku lub ma wątpliwości, czy drugi statek podejmie wystarczające działania w celu uniknięcia zderzenia, statek mający wątpliwości powinien wskazać je przez nadanie gwizdkiem co najmniej pięciu krótkich i szybko po sobie następujących sygnałów.',
+    'Źle! W strefie ograniczonej widzialności lub w jej pobliżu podczas dnia lub nocy statek o napędzie mechanicznym posuwający się po wodzie powinien nadawać z przerwami nie większymi niż 2 minuty jeden długi dźwięk.',
+    'Źle! Jednym ze sposobów wzywania pomocy na statku jest nadawanie sygnału SOS składającego się z trzech krótkich, trzech długich i trzech krótkich dźwięków.'
 ];
 
 const sounds = [
@@ -49,8 +57,6 @@ const game = new Siema({
     draggable: false,
     perPage: 1
 });
-
-game.goTo(11);
 
 const colregBtn = document.querySelector(".btn--colreg");
 const next = () => {
@@ -76,7 +82,7 @@ const toggleColreg = () => {
 }
 
 let currentLvl = 1;
-let pointsNeeded = [3, 3, 3, 4, 3, 3, 3, 2, 2, 1, 4];
+let pointsNeeded = [3, 3, 3, 4, 3, 3, 3, 2, 2, 1, 4, 6, 5, 2, 8, 8, 1, 2, 5, 1, 9];
 let lvlProgress = [];
 
 const positiveFeedback = () => {
@@ -99,7 +105,7 @@ const check = () => {
         next();
         lvlProgress = [];
         currentLvl++;
-    }, 1);
+    }, 2000);
 }
 
 Array.from(document.querySelectorAll('audio')).forEach((item) => {
@@ -185,10 +191,20 @@ const lvl10Click = (btnIndex) => {
     if(lvlProgress.length === 0) lvlProgress.push(btnIndex);
 }
 
-currentLvl = 11;
-
 const turnTopLightsOn = () => {
     document.querySelector(`.view--${currentLvl}>.light--top`).style.visibility = 'visible';
+}
+
+const turnFirstTopLightOn = () => {
+    document.querySelector(`.view--${currentLvl}>.light--top>.light__img:first-of-type`).style.visibility = 'visible';
+}
+
+const turnSecondTopLightOn = () => {
+    document.querySelector(`.view--${currentLvl}>.light--top>.light__img:nth-of-type(2)`).style.visibility = 'visible';
+}
+
+const turnThirdTopLightOn = () => {
+    document.querySelector(`.view--${currentLvl}>.light--top>.light__img:last-of-type`).style.visibility = 'visible';
 }
 
 const turnLeftLightsOn = () => {
@@ -203,12 +219,33 @@ const turnBackLightsOn = () => {
     document.querySelector(`.view--${currentLvl}>.light--back`).style.visibility = 'visible';
 }
 
+/* Holowanie */
 const turnFirstBackLightOn = () => {
     document.querySelector(`.view--${currentLvl}>.light--back>.light--back__img--1`).style.visibility = 'visible';
 }
 
 const turnSecondBackLightOn = () => {
     document.querySelector(`.view--${currentLvl}>.light--back>.light--back__img--2`).style.visibility = 'visible';
+}
+
+const turnFirstSpecialLightOn = () => {
+    document.querySelector(`.view--${currentLvl}>.light--special>.light__img:first-of-type`).style.visibility = 'visible';
+}
+
+const turnSecondSpecialLightOn = () => {
+    document.querySelector(`.view--${currentLvl}>.light--special>.light__img:nth-of-type(2)`).style.visibility = 'visible';
+}
+
+const turnThirdSpecialLightOn = () => {
+    document.querySelector(`.view--${currentLvl}>.light--special>.light__img:last-of-type`).style.visibility = 'visible';
+}
+
+const turnFirstTopSpecialLightOn = () => {
+    document.querySelector(`.view--${currentLvl}>.light--top--1`).style.visibility = 'visible';
+}
+
+const turnSecondTopSpecialLightOn = () => {
+    document.querySelector(`.view--${currentLvl}>.light--top--2`).style.visibility = 'visible';
 }
 
 const lvl11Click = (btnIndex) => {
@@ -224,7 +261,7 @@ const lvl11Click = (btnIndex) => {
             turnRightLightsOn();
             break;
         case 4:
-            turnBackLightsOn();
+            turnSecondBackLightOn();
             break;
         default:
             break;
@@ -232,7 +269,135 @@ const lvl11Click = (btnIndex) => {
 }
 
 const lvl12Click = (btnIndex) => {
+    if (!isElementInLvlProgress(btnIndex)) lvlProgress.push(btnIndex);
+    switch (btnIndex) {
+        case 1:
+            turnFirstTopLightOn();
+            break;
+        case 2:
+            turnSecondTopLightOn();
+            break;
+        case 3:
+            turnLeftLightsOn();
+            break;
+        case 4:
+            turnRightLightsOn();
+            break;
+        case 5:
+            turnSecondBackLightOn();
+            break;
+        case 6:
+            turnFirstBackLightOn();
+            break;
+        default:
+            break;
+    }
+}
 
+const lvl13Click = (btnIndex) => {
+    if(!isElementInLvlProgress(btnIndex)) lvlProgress.push(btnIndex);
+    switch(btnIndex) {
+        case 1:
+            turnFirstSpecialLightOn();
+            break;
+        case 2:
+            turnSecondSpecialLightOn();
+            break;
+        case 3:
+            turnLeftLightsOn();
+            break;
+        case 4:
+            turnRightLightsOn();
+            break;
+        case 5:
+            turnSecondBackLightOn();
+            break;
+        default:
+            break;
+    }
+}
+
+const lvl14Click = (btnIndex) => {
+    if(!isElementInLvlProgress(btnIndex)) lvlProgress.push(btnIndex);
+    switch(btnIndex) {
+        case 1:
+            turnFirstSpecialLightOn();
+            break;
+        case 2:
+            turnSecondSpecialLightOn();
+            break;
+        default:
+            break;
+    }
+}
+
+const lvl15Click = (btnIndex) => {
+    if(!isElementInLvlProgress(btnIndex)) lvlProgress.push(btnIndex);
+    switch(btnIndex) {
+        case 1:
+            turnFirstSpecialLightOn();
+            break;
+        case 2:
+            turnSecondSpecialLightOn();
+            break;
+        case 3:
+            turnThirdSpecialLightOn();
+            break;
+        case 4:
+            turnFirstTopSpecialLightOn();
+            break;
+        case 5:
+            turnSecondTopSpecialLightOn();
+            break;
+        case 6:
+            turnLeftLightsOn();
+            break;
+        case 7:
+            turnRightLightsOn();
+            break;
+        case 8:
+            turnSecondBackLightOn();
+            break;
+        default:
+            break;
+    }
+}
+
+const lvl17Click = (btnIndex) => {
+    if(btnIndex === 2) lvlProgress.push(1);
+    else {
+        lvlProgress.push(1);
+        lvlProgress.push(1);
+    }
+}
+
+const lvl20Click = (btnIndex) => {
+    if(btnIndex === 1) lvlProgress.push(1);
+    else {
+        lvlProgress.push(1);
+        lvlProgress.push(1);
+    }
+}
+
+const lvl21Click = (btnIndex) => {
+    if(btnIndex === 2 && (lvlProgress.length < 3 || lvlProgress.length > 6)) {
+        lvlProgress.push(1);
+    }
+    else if(btnIndex === 1 && (lvlProgress.length >= 3 && lvlProgress.length <= 6)) {
+        lvlProgress.push(1);
+    }
+    else {
+        lvlProgress.push(1);
+        lvlProgress.push(1);
+        lvlProgress.push(1);
+        lvlProgress.push(1);
+        lvlProgress.push(1);
+        lvlProgress.push(1);
+        lvlProgress.push(1);
+        lvlProgress.push(1);
+        lvlProgress.push(1);
+        lvlProgress.push(1);
+    }
 }
 
 const btnClick = (lvl, btnIndex) => {
@@ -272,6 +437,33 @@ const btnClick = (lvl, btnIndex) => {
             break;
         case 12:
             lvl12Click(btnIndex);
+            break;
+        case 13:
+            lvl13Click(btnIndex);
+            break;
+        case 14:
+            lvl14Click(btnIndex);
+            break;
+        case 15:
+            lvl15Click(btnIndex);
+            break;
+        case 16:
+            lvl15Click(btnIndex);
+            break;
+        case 17:
+            lvl17Click(btnIndex);
+            break;
+        case 18:
+            lvl17Click(btnIndex);
+            break;
+        case 19:
+            lvl17Click(btnIndex);
+            break;
+        case 20:
+            lvl20Click(btnIndex);
+            break;
+        case 21:
+            lvl21Click(btnIndex);
             break;
         default:
             break;
