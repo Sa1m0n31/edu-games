@@ -51,6 +51,10 @@ const sounds = [
     'tyfon', 'tyfonShort'
 ];
 
+function randomIntFromInterval(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) + min)
+}
+
 const allWhitespaceElements = Array.from(document.querySelectorAll('.text'));
 const allTextsElements = Array.from(document.querySelectorAll('.text>span'));
 const allTexts = allTextsElements.map((item) => {
@@ -66,7 +70,9 @@ const game = new Siema({
 
 const colregBtn = document.querySelector(".btn--colreg");
 const next = () => {
-    game.next();
+    // game.next();
+    game.goTo(1);
+
     backBtn.style.display = "flex";
     colregBtn.style.display = "block";
 }
@@ -75,18 +81,31 @@ const goHome = () => {
     window.location.reload(false);
 }
 
+const menu = (lvl) => {
+    if(lvl < 21) {
+        currentLvl = lvl+1;
+        game.goTo(lvl+2);
+    }
+    else {
+        const randomLvl = randomIntFromInterval(1, 21);
+        currentLvl = randomLvl;
+        game.goTo(randomLvl+1);
+    }
+}
+
 const backBtn = document.querySelector(".btn--back");
 const prevLvl = () => {
-    game.prev();
+    game.goTo(1);
 
     lvlProgress = [];
     if(currentLvl > 1) currentLvl--;
     if(currentLvl > 0) {
-        checkButtons[currentLvl-1].style.display = 'block';
-        allTextsElements[currentLvl-1].style.display = 'block';
-        allTextsElements[currentLvl-1].style.color = '#000';
-        allTextsElements[currentLvl-1].textContent = allTexts[currentLvl-1];
+        checkButtons[currentLvl].style.display = 'block';
+        allTextsElements[currentLvl].style.display = 'block';
+        allTextsElements[currentLvl].style.color = '#000';
+        allTextsElements[currentLvl].textContent = allTexts[currentLvl-1];
     }
+    turnLightsOff();
 }
 
 let colregVisible = false;
@@ -164,12 +183,6 @@ const check = () => {
     else {
         negativeFeedback();
     }
-
-    setTimeout(() => {
-        next();
-        lvlProgress = [];
-        currentLvl++;
-    }, 2000);
 }
 
 Array.from(document.querySelectorAll('audio')).forEach((item) => {
@@ -177,6 +190,28 @@ Array.from(document.querySelectorAll('audio')).forEach((item) => {
         e.target.currentTime = 0;
     });
 });
+
+const turnLightsOff = () => {
+    const turnOff = Array.from(
+        document.querySelectorAll('.light:not(.light--back)'))
+        .concat(
+            Array.from(document.querySelectorAll('.light--back>img'))
+        )
+        .concat(
+            document.querySelectorAll('.light--special>img')
+        )
+        .concat(
+            document.querySelectorAll('.view--12>.light--top>img')
+        )
+    const turnOn = Array.from(document.querySelectorAll('.light--special'));
+
+    turnOff.forEach((item) => {
+        item.style.visibility = 'hidden';
+    });
+    turnOn.forEach((item) => {
+        item.style.visibility = 'visible';
+    });
+}
 
 const isAudioPlaying = () => {
     const allAudios = document.querySelectorAll('audio');
