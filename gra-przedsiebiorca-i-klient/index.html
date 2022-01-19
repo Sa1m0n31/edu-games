@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gra wcielanie się w rolę</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+<div class="container">
+    <button class="homeBtn" onclick="goHome()">
+        <img class="homeBtn__img" src="./assets/home.png" alt="od-poczatku" />
+    </button>
+    <button class="homeBtn homeBtn--prevSlide" onclick="prevSlide()">
+        <img class="homeBtn__img" src="./assets/arrow.png" alt="poprzednia-plansza" />
+    </button>
+
+    <button class="homeBtn homeBtn--mute" onclick="toggleSound()">
+        <img class="homeBtn__img homeBtn__img--sound" src="./assets/sound.png" alt="dzwiek" />
+        <img class="homeBtn__img homeBtn__img--mute" src="./assets/mute.png" alt="dzwiek" />
+    </button>
+
+    <main class="carousel">
+        <!-- 1 - plansza startowa -->
+        <section class="view">
+            <img class="view__img view__img--start" src="./assets/probka%201.png" alt="plansza-startowa" />
+            <main class="view__content view__content--start">
+                <p class="view__text">
+                    Wciel się w rolę przedsiębiorcy lub klienta i sprawdź swoją wiedzę z zakresu utworzenia i prowadzenia przedsiębiorstwa.
+                </p>
+                <button class="btn btn--black btn--marginTop btn--start" onclick="nextSlide()">
+                    Rozpocznij
+                </button>
+            </main>
+        </section>
+        <!-- 2 - wybor roli -->
+        <section class="view">
+            <img class="view__img view__img--start" src="./assets/2_Plansza%20wyboru%20roli.png" alt="wybor-roli" />
+            <main class="view__content view__content--flex view__content--role">
+                <button class="btn btn--blue" onclick="nextSlide()">
+                    Przedsiębiorca
+                </button>
+                <button class="btn btn--black" onclick="goToClient()">
+                    Klient
+                </button>
+            </main>
+        </section>
+        <!-- 3 - przedsiebiorca - lvl 1 -->
+        <section class="view view--3">
+            <img class="view__img view__img--start" src="./assets/3_przedsiebiorca.png" alt="przedsiebiorca" />
+            <main class="view__content view__content--etrepreneur">
+                <p class="view__text view__text--small">
+                    Wcielasz się w rolę przedsiębiorcy zakładającego firmę handlową. Zastanów się, jakiego rodzaju przedsiębiorstwo chcesz założyć i uzupełnij potrzebne informacje. Każda podjęta przez Ciebie decyzja (nie tylko ta właściwa) pozwoli na zdobycie i poszerzenie wiedzy z zakresu prowadzenia własnego przedsiębiorstwa, tak aby przynosiło oczekiwane dochody. Może dzięki temu w przyszłości będziesz mógł bez problemów prowadzić własną firmę. Udzielenie poprawnych odpowiedzi wiąże się z otrzymaniem większej liczby punktów i potwierdza Twoje doskonałe przygotowanie do prowadzenia własnego przedsiębiorstwa. Im więcej punktów tym większa szansa na sukces Twojej firmy na prawdziwym rynku.
+                </p>
+                <button class="btn btn--black btn--marginTop" onclick="nextSlide()">
+                    Przejdź dalej
+                </button>
+            </main>
+        </section>
+        <!-- 4 - przedsiebiorca - lvl 2 -->
+        <section class="view">
+            <img class="view__img view__img--transformUp" src="./assets/4_opis.png" alt="opis-firmy" />
+            <main class="view__content">
+                <p class="view__text form--companyInfoHeader">
+                    Podaj podstawowe informacje o swojej firmie
+                </p>
+                <section class="form form--companyInfo btn--marginTop">
+                    <label>
+                        Nazwa firmy
+                        <div class="questionMarkWrapper">
+                            <img class="questionMark__img" src="./assets/question-mark.svg" alt="podpowiedz" />
+                            <p class="questionMark__content">
+                                Nazwa jest bardzo ważnym elementem w działaniach rynkowych firmy. Od właściwego wyboru nazwy zależy to, czy przyciągnie ona, czy też zniechęci klienta do korzystania z usług firmy lub nawiązania z nią współpracy. Przy wyborze nazwy zwraca się zazwyczaj uwagę na następujące kryteria:<br/>
+                                • nazwa powinna dobrze brzmieć – nie powinna być zbyt długa ani zawierać niezrozumiałych lub trudnych do wymówienia słów, powinna wpadać w ucho i być łatwa do zapamiętania;<br/>
+                                • powinna w pewnym stopniu kojarzyć się z działalnością firmy lub jej cechami, np. miejscem lokalizacji, właścicielem, nazwą produktu itp.;<br/>
+                                • należy wziąć pod uwagę, kto będzie klientem. Sugeruje to ewentualne wykorzystanie np. nazw z młodzieżowego lub specjalistycznego żargonu, np. Sidle and Flip (żargon snowboardowy), Bosch (szlifierka kątowa);<br/>
+                                • należy mieć na uwadze łatwość używania nazwy w hasłach reklamowych;
+                            </p>
+                        </div>
+                        <input class="input input--companyName" name="nazwa-firmy" placeholder="Nazwa firmy" />
+                    </label>
+                    <label>
+                        Opis działalności
+                        <div class="questionMarkWrapper">
+                            <img class="questionMark__img" src="./assets/question-mark.svg" alt="podpowiedz" />
+                            <p class="questionMark__content">
+                                Część ta stanowi  wizytówkę firmy, która powinna w sposób zwięzły podkreślić jej działania, miejsce w gospodarce regionu lub kraju. Ta część jest poświęcona charakterystyce działań prowadzonych przez przedsiębiorstwo . W tym miejscu dokonuje się szczegółowego opisu oferty przedsiębiorstwa, uwzględniając wszystkie jej elementy, innowacyjne pomysły itd.
+                            </p>
+                        </div>
+                        <textarea class="textarea input--companyDesc" name="opis-dzialalnosci" placeholder="Opis działalności (300-1000 znaków)"></textarea>
+                    </label>
+                    <label>
+                        Branża
+                        <div class="questionMarkWrapper">
+                            <img class="questionMark__img" src="./assets/question-mark.svg" alt="podpowiedz" />
+                            <p class="questionMark__content">
+                                (Według PWN) jest to gałąź gospodarki (handlu lub produkcji), która obejmuje usługi lub produkowane towary jednego rodzaju.
+                                <br/><br/>
+                                Gra zakłada prowadzenie działalności w branży handlowej, czyli branży, która obejmuje zbiór towarów wzajemnie się uzupełniających w zaspokajaniu określonych potrzeb konsumenta.
+                                W tym segmencie możesz zdecydować się np. na branżę spożywczą, odzieżową, obuwniczą, kosmetyczną, chemiczną, RTV (sprzęt radiowo-telewizyjny), AGD (sprzęt gospodarstwa domowego: pralki, lodówki, kuchenki gazowe itp.), samochody osobowe, zabawki itp. lub prowadzenie działalności łączącej kilka z tych branż.
+                            </p>
+                        </div>
+                        <select class="select--sells select--field">
+                            <option>Wybierz</option>
+                            <option>odzieżowa</option>
+                            <option>kosmetyczna</option>
+                            <option>spożywcza</option>
+                        </select>
+                    </label>
+                    <label>
+                        Kod PKD
+                        <div class="questionMarkWrapper">
+                            <img class="questionMark__img" src="./assets/question-mark.svg" alt="podpowiedz" />
+                            <p class="questionMark__content questionMark__content--pkd">
+                                <span class="questionMark__content__pkd--1">
+                                    PKD - umownie przyjęty, hierarchicznie usystematyzowany podział zbioru rodzajów działalności społeczno-gospodarczej, jakie realizują jednostki (podmioty gospodarcze / przedsiębiorstwa)
+                                </span>
+                                <span class="questionMark__content__pkd--2">
+                                    Po wyborze rodzaju działalności handlowej należy określić konkretną branżę pokrywającą się z kodami PKD (przykładowe branże handlowe w sprzedaży detalicznej) np.
+                                    <br/>
+                                    G 47 - Handel detaliczny:
+                                    <span class="questionMark__content__list">
+                                        - PKD 47.21.Z - sprzedaż detaliczna owoców i warzyw prowadzona w wyspecjalizowanych sklepach<br/>
+                                        - PKD 47.24.Z - sprzedaż detaliczna pieczywa, ciast, wyrobów ciastkarskich i cukierniczych prowadzona w wyspecjalizowanych sklepach<br/>
+                                        - PKD 47.29.Z - sprzedaż detaliczna pozostałej żywności prowadzona w wyspecjalizowanych sklepach ( wyroby mleczarskie, art. żywnościowe)<br/>
+                                        - PKD 47.51.Z - sprzedaż detaliczna wyrobów tekstylnych prowadzona w wyspecjalizowanych sklepach (tkaniny, wyroby tekstylne i pasmanteryjne)<br/>
+                                        - PKD 47.65.Z - sprzedaż detaliczna gier i zabawek prowadzona w wyspecjalizowanych sklepach<br/>
+                                        - PKD 47.71.Z - sprzedaż detaliczna odzieży prowadzona w wyspecjalizowanych sklepach<br/>
+                                        - PKD 47.75.Z - sprzedaż detaliczna kosmetyków i artykułów toaletowych
+                                    </span>
+                                </span>
+                            </p>
+                        </div>
+                        <input class="input input--pkd" name="kod-pkd" placeholder="Kod PKD" />
+                    </label>
+                    <label>
+                        Główny kanał sprzedaży
+                        <div class="questionMarkWrapper">
+                            <img class="questionMark__img" src="./assets/question-mark.svg" alt="podpowiedz" />
+                            <p class="questionMark__content questionMark__content--kanal">
+                                Kanał sprzedaży, czyli określenie jak towar trafia do klienta. Najczęściej wykorzystywane kanały sprzedaży to np.:
+                                <br/>
+                                - sprzedaż bezpośrednia<br/>
+                                - sprzedaż przez stronę internetową<br/>
+                                - korzystanie z usług przedstawicieli handlowych<br/>
+                                - korzystanie z usług sprzedażowych call center (sprzedaż zdalna)<br/>
+                                - własny, stacjonarny punkt sprzedaży (może to być punkt działający na zasadach franczyzy: samodzielna powierzchnia sklepowa, wyspa, stoisko)<br/>
+                                - sprzedaż poprzez sieci społecznościowe
+                            </p>
+                        </div>
+                        <select class="select--sells">
+                            <option>Wybierz</option>
+                            <option>stacjonarny punkt sprzedaży</option>
+                            <option>strona internetowa</option>
+                            <option>media społecznościowe</option>
+                            <option>portale zbierające oferty</option>
+                            <option>przedstawiciele handlowi</option>
+                            <option>call center</option>
+                            <option>handel obwoźny</option>
+                            <option>marketing sieciowy</option>
+                            <option>inne</option>
+                        </select>
+                    </label>
+                    <p class="error error--companyDesc">
+                        Uzupełnij wymagane pola, aby przejść dalej
+                    </p>
+                    <button type="button" class="btn btn--black btn--marginTop btn--marginAuto" onclick="validateCompanyDescription()">
+                        Dalej
+                    </button>
+                </section>
+            </main>
+        </section>
+        <!-- 5 - przedsiebiorca - lvl 3 -->
+        <section class="view view--5">
+            <img class="view__img view__img--transformUp" src="./assets/5_plan_dzialania_firm.png" alt="plan-dzialania" />
+            <main class="view__content">
+                <p class="view__text form--companyPlanHeader">
+                    Przygotuj plan działania swojej firmy
+                </p>
+                <section class="form form--companyInfo">
+                    <section class="form--grid">
+                        <label>
+                            Cele strategiczne
+                            <div class="questionMarkWrapper">
+                                <img class="questionMark__img" src="./assets/question-mark.svg" alt="podpowiedz" />
+                                <p class="questionMark__content">
+                                    Rozumiane są potocznie jako to, co chcielibyśmy osiągnąć w przyszłości, możemy więc określać je również jako powzięte zamierzenia. Cele możemy określić, jako planowane przedsięwzięcia, będące wynikiem skonkretyzowanych potrzeb naszego przedsiębiorstwa, a także jego otoczenia. Główną zasadą determinowania celów, jest ich jasne i przejrzyste określanie, tak aby nie pozostawiały wątpliwości co do zgodności z misją przedsiębiorstwa. Powinny być ponadto ściśle sformułowane, mierzalne, ambitne, realistyczne i określone w czasie (zasada SMART).
+                                </p>
+                            </div>
+                            <textarea class="textarea textarea--grid input--celeStrategiczne" placeholder="Cele strategiczne" name="cele-strategiczne"></textarea>
+                        </label>
+                        <label>
+                            Klienci docelowi
+                            <div class="questionMarkWrapper">
+                                <img class="questionMark__img" src="./assets/question-mark.svg" alt="podpowiedz" />
+                                <p class="questionMark__content">
+                                    W tym miejscu należy scharakteryzować odbiorców oferty przedsiębiorstwa, wskazać grupę docelową, do której będzie skierowana oferta firmy i pozostałe działania marketingowe. Należy ustalić kto będzie Twoim klientem i jakie ma preferencje.
+                                </p>
+                            </div>
+                            <textarea class="textarea textarea--grid input--klienciDocelowi" placeholder="Klienci docelowi" name="klienci-docelowi"></textarea>
+                        </label>
+                        <label>
+                            Działania sprzedażowe i promocyjne
+                            <div class="questionMarkWrapper">
+                                <img class="questionMark__img" src="./assets/question-mark.svg" alt="podpowiedz" />
+                                <p class="questionMark__content questionMark__content--pkd">
+                                    Działania takie mogą przybierać różną postać i realizować różne cele. Wiele z nich koncentruje się na zwiększaniu przychodów przedsiębiorstwa. Pod pojęciem sprzedażowo - marketingowych rozumie się zespół różnorodnych działań, które mają na celu stworzenie dodatkowych, nadzwyczajnych oraz krótkotrwałych bodźców. Celem owych bodźców jest zwiększenie atrakcyjności produktu w oczach nabywcy oraz podwyższających jego skłonności do wykonania zakupu.
+                                </p>
+                            </div>
+                            <textarea class="textarea textarea--grid input--dzialaniaSprzedazowe" placeholder="Działania sprzedażowe i promocyjne" name="dzialania-sprzedazowe-i-promocyjne"></textarea>
+                        </label>
+                        <label>
+                            Potrzebne kompetencje, zasoby i środki
+                            <div class="questionMarkWrapper">
+                                <img class="questionMark__img" src="./assets/question-mark.svg" alt="podpowiedz" />
+                                <p class="questionMark__content questionMark__content--pkd">
+                                    To zestaw korzyści zaspokajający potrzeby klientów za sprawą oferty Twojego przedsiębiorstwa. Propozycja wartości to kilka zdań, które przedstawiają wartość, jaką produkt Twojego przedsiębiorstwa daje Twojemu klientowi. Jest ona odpowiedzią na pytanie, które zadaje sobie każdy klient: „Dlaczego powinienem kupić od Ciebie, a nie od twojej konkurencji”
+                                </p>
+                            </div>
+                            <textarea class="textarea textarea--grid input--potrzebneKompetencje" placeholder="Potrzebne kompetencje, zasoby i środki" name="potrzebne-kompetencje"></textarea>
+                        </label>
+                        <label>
+                            Propozycja wartości dla klientów
+                            <div class="questionMarkWrapper">
+                                <img class="questionMark__img" src="./assets/question-mark.svg" alt="podpowiedz" />
+                                <p class="questionMark__content questionMark__content--kanal">
+                                    W ekonomii pojęciem zasobów, inaczej nakładów (np. maszyny, surowce, praca) określa się wszystkie materialne i niematerialne składowe procesu produkcji, które są niezbędne do wytwarzania dóbr.
+                                    <br/>
+                                    Zasoby wykorzystywane przez wszelkiego rodzaju organizacje można podzielić na cztery podstawowe rodzaje:
+                                    <br/>
+                                    - Zasoby ludzkie<br/>
+                                    - Zasoby pieniężne<br/>
+                                    - Zasoby rzeczowe<br/>
+                                    - Zasoby informacyjne
+                                </p>
+                            </div>
+                            <textarea class="textarea textarea--grid input--propozycjaWartosci" placeholder="Propozycja wartości dla klientów" name="propozycja-wartosci"></textarea>
+                        </label>
+                    </section>
+                    <p class="error error--companyPlan">
+                        Uzupełnij wymagane pola, aby przejść dalej
+                    </p>
+                    <button type="button" class="btn btn--black btn--marginTopSmall btn--marginAuto" onclick="validateCompanyPlan()">
+                        Dalej
+                    </button>
+                </section>
+            </main>
+        </section>
+        <!-- 6 - przedsiebiorca - lvl 4 -->
+        <section class="view">
+            <img class="view__img view__img--transformUp" src="./assets/6_swot.png" alt="analiza-swot" />
+            <main class="view__content">
+                <p class="view__text form--companySWOTHeader">
+                    Dokonaj analizy strategicznej swojej firmy, wskazując potencjalne mocne i słabe strony oraz szanse i zagrożenia.
+                </p>
+                <section class="form form--companyInfo">
+                    <section class="form--grid">
+                        <label>
+                            Mocne strony
+                            <div class="questionMarkWrapper">
+                                <img class="questionMark__img" src="./assets/question-mark.svg" alt="podpowiedz" />
+                                <p class="questionMark__content">
+                                    przykładowe MOCNE STRONY PRZEDSIĘBIORSTWA:<br/>
+                                    - pozytywny wizerunek firmy<br/>
+                                    - unikatowe produkty (nowe produkty do tej pory nie występujące na rynku)<br/>
+                                    - dogodna lokalizacja (np. w centrum miasta, w obszarze dużego osiedla mieszkalnego)<br/>
+                                    - kompetencje, umiejętności, wykształcenie i doświadczenie właściciela<br/>
+                                    - duży kapitał początkowy<br/>
+                                    - znajomość rynku i branży przez właściciela<br/>
+                                    - wysoka jakość produktów<br/>
+                                    - rozwinięta / liczna sieć dostawców<br/>
+                                    - liczne kanały dystrybucji: sprzedaż osobista, dostawa do domu, zamówienia telefoniczne<br/>
+                                    - przyjazna atmosfera
+                                </p>
+                            </div>
+                            <textarea class="textarea textarea--grid input--s" placeholder="Mocne strony" name="mocne-strony"></textarea>
+                        </label>
+                        <label>
+                            Słabe strony
+                            <div class="questionMarkWrapper">
+                                <img class="questionMark__img" src="./assets/question-mark.svg" alt="podpowiedz" />
+                                <p class="questionMark__content">
+                                    przykładowe SŁABE STRONY PRZEDSIĘBIORSTWA:<br/>
+                                    - brak / niewystarczające inwestycje w reklamę<br/>
+                                    - brak planów długookresowych<br/>
+                                    - zbyt mały / wąski asortyment<br/>
+                                    - ograniczone zasoby finansowe<br/>
+                                    - nieugruntowana pozycja na rynku<br/>
+                                    - brak pomieszczenia gospodarczego / zaplecza<br/>
+                                    - opóźnienia dostawców<br/>
+                                    - brak siły konkurencyjnej / szansy na sprostanie konkurencji<br/>
+                                    - brak wykwalifikowanych pracowników
+                                </p>
+                            </div>
+                            <textarea class="textarea textarea--grid input--w" placeholder="Słabe strony" name="slabe-strony"></textarea>
+                        </label>
+                        <label>
+                            Szanse
+                            <div class="questionMarkWrapper">
+                                <img class="questionMark__img" src="./assets/question-mark.svg" alt="podpowiedz" />
+                                <p class="questionMark__content questionMark__content--kanal">
+                                    przykładowe SZANSE:<br/>
+                                    - wzrastająca z roku na rok liczba ludności w regionie<br/>
+                                    - coraz chętniejsze korzystanie z tego rodzaju produktów<br/>
+                                    - korzystne wydarzenia na rynku<br/>
+                                    - słabe strony konkurentów<br/>
+                                    - zapotrzebowanie na nowe produkty<br/>
+                                    - zmiany w stylu życia<br/>
+                                    - dostęp do wykwalifikowanej kadry, w tym studentów, których zatrudnienie (poza ich kompetencjami i umiejętnościami) daje firmie szansę na obniżenie kosztów,<br/>
+                                    - działania władz miasta ukierunkowane na przyciąganie coraz większej liczby mikro i małych przedsiębiorstw<br/>
+                                    -  możliwość uzyskania dofinansowania z funduszy Unii Europejskiej oraz urzędu pracy na działalność gospodarczą.<br/>
+                                    - obniżka podatków dla przedsiębiorców
+                                </p>
+                            </div>
+                            <textarea class="textarea textarea--grid input--o" placeholder="Szanse" name="szanse"></textarea>
+                        </label>
+                        <label>
+                            Zagrożenia
+                            <div class="questionMarkWrapper">
+                                <img class="questionMark__img" src="./assets/question-mark.svg" alt="podpowiedz" />
+                                <p class="questionMark__content questionMark__content--kanal">
+                                    przykładowe ZAGROŻENIA:<br/>
+                                    - duża konkurencja, wynikająca ze stosunkowo dużej łatwości założenia tego typu działalności<br/>
+                                    i możliwości wejścia na rynek nowych przedsiębiorstw oferujących te same produkty<br/>
+                                    - niekorzystne zmiany w prawie dotyczące przedsiębiorców i przedsiębiorstw prywatnych<br/>
+                                    - wzrost podatków<br/>
+                                    - aspekty związane z sezonowością, pogodą, wpływem mody<br/>
+                                    - rosnące wymagania rynku<br/>
+                                    - restrykcyjne przepisy dotyczące norm produkcyjnych<br/>
+                                    - polityka państwa<br/>
+                                    - wysokie koszty zatrudnienia
+                                </p>
+                            </div>
+                            <textarea class="textarea textarea--grid input--t" placeholder="Zagrożenia" name="zagrozenia"></textarea>
+                        </label>
+                    </section>
+                    <p class="error error--swot">
+                        Uzupełnij wymagane pola, aby przejść dalej
+                    </p>
+                    <button type="button" class="btn btn--black btn--marginTop btn--marginAuto" onclick="validateSWOT()">
+                        Dalej
+                    </button>
+                </section>
+            </main>
+        </section>
+        <!-- 7 - przedsiebiorca - lvl 5 -->
+        <section class="view">
+            <img class="view__img view__img--transformUp" src="./assets/7_analiza_portera.png" alt="analiza-5-sil-rynkowych-portera" />
+            <main class="view__content">
+                <p class="view__text form--companyPorterHeader">
+                    Teraz należy dokonać tzw. Analizy Rynkowej 5 sił Portera. Celem analizy Pięciu sił Portera jest uzyskanie informacji na temat danej branży, czy warto jest wchodzić na dany rynek, a jak już na nim jesteśmy, to co powinniśmy dalej robić / jaką strategię działania przyjąć.
+                </p>
+                <section class="form form--companyInfo">
+                    <section class="form--grid">
+                        <label>
+                            Konkurenci
+                            <div class="questionMarkWrapper">
+                                <img class="questionMark__img" src="./assets/question-mark.svg" alt="podpowiedz" />
+                                <p class="questionMark__content">
+                                    Stanowią główną siłą analizowanego modelu jest naturalna rywalizacja między konkurentami będącymi już w danym sektorze. Analizuje natężenie walki konkurencyjnej wewnątrz sektora. Zależy ono od: koncentracji sektora, struktura udziałów rynku, liczba konkurentów.
+                                </p>
+                            </div>
+                            <textarea class="textarea textarea--grid input--silaPrzetargowaDostawcow" placeholder="Siła przetargowa dostawców" name="sila-przetargowa-dostawcow"></textarea>
+                        </label>
+                        <label>
+                            Dostawcy
+                            <div class="questionMarkWrapper">
+                                <img class="questionMark__img" src="./assets/question-mark.svg" alt="podpowiedz" />
+                                <p class="questionMark__content">
+                                    Czyli siła przetargowa dostawców. Siła oddziaływania dostawców i możliwości wywierania przez nich presji na przedsiębiorstwa sektora. Siła tego oddziaływania zależy od: stopnia koncentracji sektora, uzależnienia jakości produktu finalnego od jakości wyrobu dostawcy, niepowtarzalność wyrobu dostawcy, łatwości i kosztu zmiany dostawcy, dużego udziału dostawcy w tworzeniu zysku producentów w sektorze, możliwości podjęcia przez dostawcę produkcji wyrobu finalnego, ostrości walki konkurencyjnej w sektorze dostawców.
+                                </p>
+                            </div>
+                            <textarea class="textarea textarea--grid input--silaPrzetargowaNabywcow" placeholder="Siła przetargowa nabywców" name="sila-przetargowa-nabywcow"></textarea>
+                        </label>
+                        <label>
+                            Nabywcy
+                            <div class="questionMarkWrapper">
+                                <img class="questionMark__img" src="./assets/question-mark.svg" alt="podpowiedz" />
+                                <p class="questionMark__content questionMark__content--kanal">
+                                    Czyli siła przetargowa nabywców. Siła oddziaływania nabywców i możliwości wywierania przez nich presji na przedsiębiorstwa sektora. Siła oddziaływania nabywców zależy od: stopnia koncentracji sektora nabywcy, ilości nabywców w danym sektorze, niepowtarzalności produktu, możliwości podjęcia przez nabywcę produkcji wyrobu finalnego, ostrości walki konkurencyjnej w sektorze nabywców, sytuacji ekonomicznej nabywców.
+                                </p>
+                            </div>
+                            <textarea class="textarea textarea--grid input--rywalizacja" placeholder="Rywalizacja wewnątrz sektora" name="rywalizacja-wewnatrz-sektora"></textarea>
+                        </label>
+                        <label>
+                            Substytuty
+                            <div class="questionMarkWrapper">
+                                <img class="questionMark__img" src="./assets/question-mark.svg" alt="podpowiedz" />
+                                <p class="questionMark__content questionMark__content--kanal">
+                                    Czyli groźba pojawienia się na rynku substytucyjnych produktów lub usług. Substytut to inaczej mówiąc – zamiennik. Jeżeli oferowany na danym rynku produkt można zastąpić czymś innym (jak na przykład masło margaryną, lub śmietankę do kawy mlekiem w kartonie), to firmy na danym rynku konkurują nie tylko między sobą, ale również z firmami produkującymi substytut. Jeżeli wystąpią duże wahania cen pomiędzy zamiennikami, konsumenci wybiorą ten, który jest tańszy.
+                                </p>
+                            </div>
+                            <textarea class="textarea textarea--grid input--grozbaPojawieniaSieProducentow" placeholder="Groźba pojawienia się nowych producentów" name="grozba-pojawienia-sie-nowych-producentow"></textarea>
+                        </label>
+                        <label>
+                            Potencjalni wchodzący
+                            <div class="questionMarkWrapper">
+                                <img class="questionMark__img" src="./assets/question-mark.svg" alt="podpowiedz" />
+                                <p class="questionMark__content">
+                                    Czyli groźba pojawienia się na rynku nowych przedsiębiorstw, producentów.
+                                </p>
+                            </div>
+                            <textarea class="textarea textarea--grid input--grozbaPojawieniaSieSubstytutow" placeholder="Groźba pojawienia się substytutow" name="grozba-pojawienia-sie-substytutow"></textarea>
+                        </label>
+                    </section>
+                    <p class="error error--porter">
+                        Uzupełnij wymagane pola, aby przejść dalej
+                    </p>
+                    <button type="button" class="btn btn--black btn--marginTop btn--marginAuto" onclick="validatePorter()">
+                        Dalej
+                    </button>
+                </section>
+            </main>
+        </section>
+        <section class="view view--table">
+            <main class="view__content">
+                <p class="view__text view__text--table">
+                    Używając skali ocen od 1 do 5 oceń “jak mocno” Twoim zdaniem, dana Siła Portera (konkurenci, dostawcy, nabywcy, substytuty itd.) oddziaływuje na Twoim rynku (rynku gdzie ma działać Twoje przedsiębiorstwo). Gdzie 1 oznacza słabe oddziaływanie, więc też małe / niskie zagrożenie, a 5 - silne oddziaływanie, czyli duże zagrożenie.
+                </p>
+                <table class="view__content__table">
+                    <thead>
+                        <tr>
+                            <td>
+                                Siła \ Skala (1 – niekorzystne, 5 – korzystne)
+                            </td>
+                            <td>
+                                1
+                            </td>
+                            <td>
+                                2
+                            </td>
+                            <td>
+                                3
+                            </td>
+                            <td>
+                                4
+                            </td>
+                            <td>
+                                5
+                            </td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                Siła przetargowa nabywców<br/>
+                                Jakich mamy klientów? Na ile mogą narzucać swoje warunki?
+                            </td>
+                            <td>
+                                <button class="table__btn" onclick="tableClick(0, 0)">
+
+                                </button>
+                            </td>
+                            <td>
+                                <button class="table__btn" onclick="tableClick(0, 1)">
+
+                                </button>
+                            </td>
+                            <td>
+                                <button class="table__btn" onclick="tableClick(0, 2)">
+
+                                </button>
+                            </td>
+                            <td>
+                                <button class="table__btn" onclick="tableClick(0, 3)">
+
+                                </button>
+                            </td>
+                            <td>
+                                <button class="table__btn" onclick="tableClick(0, 4)">
+
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Siła przetargowa dostawców<br/>
+                                Jakich mamy dostawców? Na ile mogą narzucać swoje warunki?
+                            </td>
+                            <td>
+                                <button class="table__btn" onclick="tableClick(1, 0)">
+
+                                </button>
+                            </td>
+                            <td>
+                                <button class="table__btn" onclick="tableClick(1, 1)">
+
+                                </button>
+                            </td>
+                            <td>
+                                <button class="table__btn" onclick="tableClick(1, 2)">
+
+                                </button>
+                            </td>
+                            <td>
+                                <button class="table__btn" onclick="tableClick(1, 3)">
+
+                                </button>
+                            </td>
+                            <td>
+                                <button class="table__btn" onclick="tableClick(1, 4)">
+
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Ostrość walki konkurencyjnej<br/>
+                                Jakich mamy konkurentów? Na ile trzeba walczyć z konkurencją?
+                            </td>
+                            <td>
+                                <button class="table__btn" onclick="tableClick(2, 0)">
+
+                                </button>
+                            </td>
+                            <td>
+                                <button class="table__btn" onclick="tableClick(2, 1)">
+
+                                </button>
+                            </td>
+                            <td>
+                                <button class="table__btn" onclick="tableClick(2, 2)">
+
+                                </button>
+                            </td>
+                            <td>
+                                <button class="table__btn" onclick="tableClick(2, 3)">
+
+                                </button>
+                            </td>
+                            <td>
+                                <button class="table__btn" onclick="tableClick(2, 4)">
+
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Groźba pojawienia się nowych konkurentów<br/>
+                                Na ile nowym łatwo wejść i zgarnąć część udziału w rynku?
+                            </td>
+                            <td>
+                                <button class="table__btn" onclick="tableClick(3, 0)">
+
+                                </button>
+                            </td>
+                            <td>
+                                <button class="table__btn" onclick="tableClick(3, 1)">
+
+                                </button>
+                            </td>
+                            <td>
+                                <button class="table__btn" onclick="tableClick(3, 2)">
+
+                                </button>
+                            </td>
+                            <td>
+                                <button class="table__btn" onclick="tableClick(3, 3)">
+
+                                </button>
+                            </td>
+                            <td>
+                                <button class="table__btn" onclick="tableClick(3, 4)">
+
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Groźba pojawienia się substytutów<br/>
+                                Na ile klienci mogą zaspokoić swoją potrzebę w inny sposób?
+                            </td>
+                            <td>
+                                <button class="table__btn" onclick="tableClick(4, 0)">
+
+                                </button>
+                            </td>
+                            <td>
+                                <button class="table__btn" onclick="tableClick(4, 1)">
+
+                                </button>
+                            </td>
+                            <td>
+                                <button class="table__btn" onclick="tableClick(4, 2)">
+
+                                </button>
+                            </td>
+                            <td>
+                                <button class="table__btn" onclick="tableClick(4, 3)">
+
+                                </button>
+                            </td>
+                            <td>
+                                <button class="table__btn" onclick="tableClick(4, 4)">
+
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <button class="btn btn--black btn--marginTop" onclick="nextSlide()">
+                    Dalej
+                </button>
+            </main>
+        </section>
+        <section class="view">
+            <img class="view__img view__img--transformUp" src="./assets/8_quiz.png" alt="quiz-wprowadzenie" />
+            <main class="view__content">
+                <p class="view__text quizIntro">
+                    Sprawdź swoją wiedzę z zakresu utworzenia i prowadzenia przedsiębiorstwa handlowego.
+                </p>
+                <button class="btn btn--black btn--marginTop" onclick="nextSlide()">
+                    Dalej
+                </button>
+            </main>
+        </section>
+        <!-- 8 - przedsiebiorca - lvl 6 - QUIZ -->
+        <section class="view">
+                <!-- Quiz entrepreneur -->
+                <section class="quizItem">
+                    <img class="view__img view__img--transformUp" src="./assets/8_quiz_pytanie.png" alt="quiz" />
+                    <main class="view__content quizWrapper">
+                        <p class="quizQuestion">
+
+                        </p>
+                        <button class="quizAnswer" id="answerBtn1" onclick="checkAnswer(1)">
+                            <span class="quizAnswer__letter">A</span>
+                            <span class="quizAnswer__text" id="answer1"></span>
+                        </button>
+                        <button class="quizAnswer" id="answerBtn2" onclick="checkAnswer(2)">
+                            <span class="quizAnswer__letter">B</span>
+                            <span class="quizAnswer__text" id="answer2"></span>
+                        </button>
+                        <button class="quizAnswer" id="answerBtn3" onclick="checkAnswer(3)">
+                            <span class="quizAnswer__letter">C</span>
+                            <span class="quizAnswer__text" id="answer3"></span>
+                        </button>
+                        <button class="quizAnswer" id="answerBtn4" onclick="checkAnswer(4)">
+                            <span class="quizAnswer__letter">D</span>
+                            <span class="quizAnswer__text" id="answer4"></span>
+                        </button>
+
+                        <p class="feedback">
+
+                        </p>
+                        <button class="btn btn--black btn--nextQuiz" onclick="nextEntrepreneur()">
+                            Dalej
+                        </button>
+                    </main>
+                </section>
+        </section>
+        <section class="view view--5factors">
+            <img class="view__img view__img--transformUp" src="./assets/8_quiz.png" alt="quiz-wprowadzenie" />
+            <main class="view__content">
+                <p class="view__text quizIntro">
+                    Na podstawie podejmowanych przez Ciebie decyzji i działań oraz przeprowadzonych analiz (we wcześniejszych etapach gry), wymień kilka (5) czynników, które mają wpływ na sukces nowego przedsiębiorstwa?
+                </p>
+                <textarea class="textarea input--5factors" name="opis-dzialalnosci" placeholder="Pięć czynników mających wpływ na sukces nowego przedsiębiorstwa"></textarea>
+                <button class="btn btn--black btn--marginTop" onclick="nextSlide()">
+                    Dalej
+                </button>
+            </main>
+        </section>
+        <section class="view view--5factors">
+            <img class="view__img view__img--transformUp" src="./assets/8_quiz.png" alt="quiz-wprowadzenie" />
+            <main class="view__content">
+                <p class="view__text quizIntro">
+                    Jakie działania, Twoim zdaniem, powinno podejmować przedsiębiorstwo aby sprostać konkurencji będącej na rynku lub w przypadku pojawienia się nowej konkurencji. Co Twoje przedsiębiorstwo powinno robić aby zdobyć przewagę konkurencyjną na rynku?
+                </p>
+                <textarea class="textarea input--5factors" name="opis-dzialalnosci" placeholder="Co Twoje przedsiębiorstwo powinno robić aby zdobyć przewagę konkurencyjną na rynku?"></textarea>
+                <button class="btn btn--black btn--marginTop" onclick="nextSlide()">
+                    Dalej
+                </button>
+            </main>
+        </section>
+        <section class="view view--5factors">
+            <img class="view__img view__img--transformUp" src="./assets/8_quiz.png" alt="quiz-wprowadzenie" />
+            <main class="view__content">
+                <p class="view__text quizIntro">
+                    Jakie mogą być pozytywne i negatywne aspekty prowadzenia własnej firmy (własnej działalności gospodarczej, samozatrudnienia)
+                </p>
+                <div class="twoTextareas">
+                    <textarea class="textarea input--5factors" name="opis-dzialalnosci" placeholder="Pozytywne aspekty prowadzenia własnej firmy"></textarea>
+                    <textarea class="textarea input--5factors" name="opis-dzialalnosci" placeholder="Negatywne aspekty prowadzenia własnej firmy"></textarea>
+                </div>
+                <button class="btn btn--black btn--marginTop" onclick="nextSlide()">
+                    Dalej
+                </button>
+            </main>
+        </section>
+        <section class="view view--5factors view--5factors--complete">
+            <img class="view__img view__img--transformUp" src="./assets/8_quiz.png" alt="quiz-wprowadzenie" />
+            <main class="view__content">
+                <p class="view__text quizIntro">
+                    Uzupełnij w poprawny sposób poniższe stwierdzenia:
+                </p>
+                <p class="textToComplete">
+                    Model <select>
+                    <option>Czterech</option>
+                    <option>Pięciu</option>
+                </select> sił Portera jest jedną z metod analizy strategicznej przedsiębiorstwa. Polega na weryfikacji atrakcyjności sektora i badaniu jego struktury. Wykorzystuje się ją, by lepiej poznać otoczenie <select>
+                    <option>bliższe</option>
+                    <option>dalsze</option>
+                </select> przedsiębiorstwa, a przede wszystkim ocenić siłę <select>
+                    <option>konkurentów</option>
+                    <option>administracji rządowej</option>
+                </select> w analizowanym sektorze. Głównym zadaniem modelu jest oszacowanie rentowności sektora - im większe natężenie sił konkurencji tym <select>
+                    <option>większa</option>
+                    <option>mniejsza</option>
+                </select> rentowność oraz potencjał sektora.
+                </p>
+                <button class="btn btn--black btn--marginTop" onclick="nextSlide()">
+                    Dalej
+                </button>
+            </main>
+        </section>
+        <section class="view view--5factors">
+            <img class="view__img view__img--transformUp" src="./assets/8_quiz.png" alt="quiz-wprowadzenie" />
+            <main class="view__content">
+                <p class="view__text quizIntro">
+                    Na podstawie wcześniejszych etapów gry i podejmowanych przez Ciebie decyzji wymień w odpowiedniej kolejności działania jakie należy podjąć w celu rozpoczęcia prowadzenia własnego przedsiębiorstwa.
+                </p>
+                <textarea class="textarea input--5factors" name="opis-dzialalnosci" placeholder="Jakie należy podjąć w celu rozpoczęcia prowadzenia własnego przedsiębiorstwa?"></textarea>
+                <button class="btn btn--black btn--marginTop" onclick="nextSlide()">
+                    Dalej
+                </button>
+            </main>
+        </section>
+        <!-- 9 - przedsiebiorca - plansza koncowa -->
+        <section class="view">
+            <img class="view__img view__img--transformUp" src="./assets/9_przedsiebiorca_p_koncowa.png" alt="plansza-koncowa" />
+            <main class="view__content quizWrapper">
+                <p class="view__text">
+                    Gratulacje! Masz przygotowaną koncepcję założenia firmy oraz wiesz, jak założyć i prowadzić przedsiębiorstwo.
+                </p>
+                <p class="view__text btn--marginTop">
+                    Aby dopracować lub skonsultować swoją koncepcję, możesz ją wydrukować
+                </p>
+
+                <button class="printerBtn" onclick="printFields()">
+                    <img class="printerBtn__img" src="./assets/printer.svg" alt="drukarka" />
+                    Drukuj
+                </button>
+
+                <section class="view__content--flex btn--marginTop">
+                    <button class="btn btn--black" onclick="goHome(true)">
+                        Rozpocznij od początku
+                    </button>
+                    <button class="btn btn--blue" onclick="goToClient()">
+                        Wciel się w rolę klienta
+                    </button>
+                </section>
+            </main>
+        </section>
+        <!-- 10 - klient - plansza poczatkowa -->
+        <section class="view">
+            <img class="view__img view__img--start" src="./assets/10_klient_wybor%20roli.png" alt="klient-start" />
+            <main class="view__content view__content--start view__content--clientStart">
+                <p class="view__text view__text--small view__text--client">
+                    Klienci o różnych cechach reagują w określony sposób przy możliwości zakupu nowych produktów lub usług. Co zrobić aby trafić do potencjalnych klientów? Należy zbadać potrzeby klienta i wyjść naprzeciw jego oczekiwaniom. Zadowoleni klienci stanowią klucz do sukcesu każdego biznesu. Sprawdź, swoją wiedzę z zakresu tej tematyki. Udzielenie poprawnych odpowiedzi wiąże się z otrzymaniem większej liczby punktów.
+                </p>
+                <button class="btn btn--black btn--marginTop" onclick="nextSlide()">
+                    Przejdź dalej
+                </button>
+            </main>
+        </section>
+        <!-- 11 - klient - lvl 1 - QUIZ -->
+        <section class="view">
+            <!-- Quiz client -->
+            <section class="quizItem">
+                <img class="view__img view__img--transformUp" src="./assets/8_quiz_pytanie.png" alt="quiz" />
+                <main class="view__content quizWrapper">
+                    <p class="quizQuestion--client">
+
+                    </p>
+                    <button class="quizAnswer--client" id="answerBtn1--client" onclick="checkAnswer(1)">
+                        <span class="quizAnswer__letter">A</span>
+                        <span class="quizAnswer__text" id="answer1--client"></span>
+                    </button>
+                    <button class="quizAnswer--client" id="answerBtn2--client" onclick="checkAnswer(2)">
+                        <span class="quizAnswer__letter">B</span>
+                        <span class="quizAnswer__text" id="answer2--client"></span>
+                    </button>
+                    <button class="quizAnswer--client" id="answerBtn3--client" onclick="checkAnswer(3)">
+                        <span class="quizAnswer__letter">C</span>
+                        <span class="quizAnswer__text" id="answer3--client"></span>
+                    </button>
+                    <button class="quizAnswer--client" id="answerBtn4--client" onclick="checkAnswer(4)">
+                        <span class="quizAnswer__letter">D</span>
+                        <span class="quizAnswer__text" id="answer4--client"></span>
+                    </button>
+
+                    <p class="feedback--client">
+
+                    </p>
+                    <button class="btn btn--black btn--nextQuiz--client" onclick="nextEntrepreneur()">
+                        Dalej
+                    </button>
+                </main>
+            </section>
+        </section>
+        <section class="view">
+            <img class="view__img view__img--start" src="./assets/10_klient_wybor%20roli.png" alt="klient-start" />
+            <main class="view__content view__content--start view__content--clientStart">
+                <p class="view__text view__text--small">
+                    Poniższa ankieta, skierowana do potencjalnego klienta, pozwala ocenić typ klienta, z którym przedsiębiorca ma do czynienia.
+                </p>
+                <button class="btn btn--black btn--marginTop" onclick="nextSlide()">
+                    Przejdź dalej
+                </button>
+            </main>
+        </section>
+        <section class="view">
+            <!-- Quiz client -->
+            <section class="quizItem">
+                <img class="view__img view__img--transformUp" src="./assets/8_quiz_pytanie.png" alt="quiz" />
+                <main class="view__content quizWrapper">
+                    <p class="quizQuestion--clientType">
+
+                    </p>
+                    <button class="quizAnswer--clientType" id="answerBtn1--clientType" onclick="checkAnswer(1)">
+                        <span class="quizAnswer__letter">A</span>
+                        <span class="quizAnswer__text" id="answer1--clientType"></span>
+                    </button>
+                    <button class="quizAnswer--clientType" id="answerBtn2--clientType" onclick="checkAnswer(2)">
+                        <span class="quizAnswer__letter">B</span>
+                        <span class="quizAnswer__text" id="answer2--clientType"></span>
+                    </button>
+                    <button class="quizAnswer--clientType" id="answerBtn3--clientType" onclick="checkAnswer(3)">
+                        <span class="quizAnswer__letter">C</span>
+                        <span class="quizAnswer__text" id="answer3--clientType"></span>
+                    </button>
+                    <button class="quizAnswer--clientType" id="answerBtn4--clientType" onclick="checkAnswer(4)">
+                        <span class="quizAnswer__letter">D</span>
+                        <span class="quizAnswer__text" id="answer4--clientType"></span>
+                    </button>
+
+                    <p class="feedback--client">
+
+                    </p>
+                    <button class="btn btn--black btn--nextQuiz--clientType" onclick="nextEntrepreneur()">
+                        Dalej
+                    </button>
+                </main>
+            </section>
+        </section>
+        <section class="view">
+            <img class="view__img view__img--0" src="./assets/10_klient_wybor%20roli.png" alt="klient-start" />
+            <main class="view__content view__content--start view__content--top">
+                <p class="view__text clientType">
+
+                </p>
+                <img class="clientType__img" src="#" alt="typ-klienta" />
+                <button class="btn btn--black btn--marginTop" onclick="nextSlide()">
+                    Zobacz opis
+                </button>
+            </main>
+        </section>
+        <section class="view view--clientTypeDesc">
+            <img class="view__img view__img--0" src="./assets/10_klient_wybor%20roli.png" alt="klient-start" />
+            <main class="view__content view__content--start view__content--top view__content--flex">
+                <img class="clientType__people" src="#" alt="typ-klienta" />
+                <p class="view__text view__text--small clientType--1">
+                    <b>KLIENT PAN  tzw. TYP KIEROWNICZY, DOMINUJĄCY, CHOLERYK</b> - to klient wysoce roszczeniowy, zdecydowany i zorientowany na cel, którego jest pewien. Są to osobowości zdecydowanie ekstrawertyczne i szybko działające. Lubi mieć wszystko pod kontrolą, jest zdeterminowany i oczekuje efektów. Ze względu na swoją naturę ekstrawertyczną lubi ujawniać się ze swoimi emocjami. Do sklepu wchodzi na chwilę i jeśli Twoje produkty nie zrobią na nich wrażenia po prostu wyjdzie i prawdopodobnie już nie wrócą. Klient taki oczekuje od przedsiębiorcy konkretów i szybkiego działania. Jeśli natychmiast przedstawisz mu dostępne opcje, z pewnością doceni Twoje kompetencje. Ten typ człowieka lubi poczucie władzy i świadomość, że to on podejmuje decyzje, nie nagabuj tylko sprawnie dostarczając informacji „Pan” sam zdecyduje.
+                </p>
+                <p class="view__text view__text--small clientType--2">
+                    <b>KLIENT PRZYJACIELSKI / TYP WAHAJĄCY SIĘ, MELANCHOLIK (inaczej klient “siła spokoju”)</b> - są to ludzie z reguły odprężeni, godni zaufania, cierpliwi, oraz współczujący. Niestety charakteryzuje ich także upór. Zorientowani oni są na bezpieczeństwo zakupu i raczej wiedzą czego nie chcą kupić niż to czego faktycznie potrzebują. Jest to typ przyjacielski – klient, dla którego liczą się przede wszystkim emocje, a nie dane techniczne. Nastawiony jest na nawiązywanie kontaktów i obdarzony sporą dawką intuicji.  Wymagają zainteresowania, cenią sobie atmosferę współpracy, szczerość oraz brak pośpiechu. Przedsiębiorca musi  przygotować się na fakt, iż klienci tacy  wolą słuchać niż mówić, gdy nie sprostać ich oczekiwaniom po prostu zrezygnują z zakupu. Przedsiębiorca gdy czuje takiego klienta powinien być autentyczny i stwarzać wrażenie, że wspólnie z klientem dokonuje decyzji zakupowej. Jeśli chodzi o formę zaprezentowania oferty dla takiego klienta (przyjacielskiego), to warto stosować tzw. storytelling, czyli obudować sprzedawany produkt lub usługę w historię odwołująca się do konkretnych emocji.Raz pozyskany taki klient prawdopodobnie stanie się Twoim stałym klientem.
+                </p>
+                <p class="view__text view__text--small clientType--3">
+                    <b>KLIENT ANALITYK / TYP CHŁODNY</b> - ten typ osobowości charakteryzuje ostrożność, precyzja, rozwaga, dociekliwość oraz formalny sposób komunikacji – on nie wchodzi z przedsiębiorcą / sprzedawcą w bliskie interakcje. Klientami takimi są osoby o introwertycznym usposobieniu, dysponujące techniczną wiedzą, zatem do komunikacji z nimi przedsiębiorca musi merytorycznie przygotowany. Klient, który posiada introwertyczną naturę, bardziej od emocji ceni sobie twarde dane. Dla niego najistotniejsze będą parametry techniczne konkretnego produktu. W jego przypadku ładny design nie wystarczy. Tacy klienci są perfekcjonistami i nie zależy im na czasie, lecz na jakości zamówienia. Są ludźmi głodnymi informacji, zatem przeczytaj wszystkie instrukcje, w których doszukiwać się będą nieścisłości. Udana współpraca z tym klientem opiera się na dostarczeniu mu dużej ilości precyzyjnych danych oraz wspólnej analizie dostępnych alternatyw. Musisz pokazać się jako fachowiec w swojej dziedzinie, a także uzbroić się w cierpliwość – takiego klienta się nie pogania.
+                    Podczas budowania oferty dla tego klienta warto wypunktować w czytelny sposób dane techniczne na temat produktu lub usługi, ponieważ jeśli taki konsument nie znajdzie tego typu informacji, to zrezygnuje z zakupu.
+                </p>
+                <p class="view__text view__text--small clientType--4">
+                    <b>KLIENT EKSPRESYJNY / ENTUZJASTYCZNY, SANGWINIK,  tzw. TYP HURRA</b> - W tym wypadku mamy do czynienia z ekstrawertykami, których nie interesują techniczne szczegóły. Są to ludzie z natury entuzjastyczni, wygadani i towarzyscy.  Dla nich liczy się przede wszystkim pozytywna atmosfera, dlatego próbują nawiązać bliższe relacje z przedsiębiorcą i otwartość przedsiębiorcy / sprzedawcy sprawia im przyjemność. Klient taki od sprzedawcy oczekuje równego sobie entuzjazmu i chętnie rozmawia na prywatne tematy. Taki klient w żadnym wypadku nie może poczuć się znudzony! Komunikacja z nim wymaga od przedsiębiorcy personalnego zaangażowania, a jego wybory docenienia. Taki klient często większość decyzji podejmuje spontanicznie, działa kreatywnie. Budując ofertę dla takiego klienta, warto pamiętać o dużej koncentracji na zrozumieniu jego potrzeb i oczekiwań oraz bieżącym reagowaniu na pytania lub wątpliwości przez niego zgłaszane.
+                </p>
+                <div>
+                    <button class="btn btn--black btn--marginTop" onclick="nextSlide()">
+                        Przejdź dalej
+                    </button>
+                </div>
+            </main>
+        </section>
+        <!-- 12 - klient - plansza koncowa -->
+        <section class="view">
+            <img class="view__img view__img--transformUp" src="./assets/11_klient_p_koncowa.png" alt="klient-koniec" />
+            <main class="view__content view__content--clientEnd">
+                <p class="view__text">
+                    Gratulacje! Masz wiedzę z zakresu dostosowania strategii przedsiębiorstwa do klientów o różnych cechach i potrzebach.
+                </p>
+
+                <section class="view__content--flex btn--marginTop">
+                    <button class="btn btn--black" onclick="goHome(true)">
+                        Rozpocznij od początku
+                    </button>
+                    <button class="btn btn--blue" onclick="goToEntrepreneur()">
+                        Przedsiębiorca
+                    </button>
+                </section>
+            </main>
+        </section>
+    </main>
+</div>
+<script src="./js/siema.js"></script>
+<script src="./js/main.js"></script>
+</body>
+</html>
