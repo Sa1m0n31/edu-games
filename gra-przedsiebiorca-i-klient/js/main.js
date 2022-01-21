@@ -251,6 +251,9 @@ const mainCarousel = new Siema({
 
 const nextSlide = () => {
     mainCarousel.next();
+    Array.from(document.querySelectorAll('.btn--clientTypes')).forEach((item) => {
+        item.setAttribute('disabled', 'true');
+    });
 }
 
 const prevSlide = () => {
@@ -293,10 +296,10 @@ const clearFields = () => {
     });
 }
 
-const goHome = (clearFields = false) => {
+const goHome = (clearFieldsVal = false) => {
     mainCarousel.goTo(0);
 
-    if(clearFields) clearFields();
+    if(clearFieldsVal) clearFields();
 }
 
 const goToClient = () => {
@@ -574,10 +577,11 @@ const setClientTypeImage = (clientType) => {
 
 const setTypeOfClient = () => {
     let index = 0;
-    const type1 = clientTypeAnswers.map((item) => (item === 0)).length;
-    const type2 = clientTypeAnswers.map((item) => (item === 1)).length;
-    const type3 = clientTypeAnswers.map((item) => (item === 2)).length;
-    const type4 = clientTypeAnswers.map((item) => (item === 3)).length;
+    const type1 = clientTypeAnswers.filter((item) => (item === 1)).length;
+    const type2 = clientTypeAnswers.filter((item) => (item === 2)).length;
+    const type3 = clientTypeAnswers.filter((item) => (item === 3)).length;
+    const type4 = clientTypeAnswers.filter((item) => (item === 4)).length;
+
     if(type1 >= type2 && type1 >= type3 && type1 >= type4) {
         clientType = 'kierowniczym';
     }
@@ -645,7 +649,10 @@ const nextEntrepreneur = (next = true) => {
         if(next) clientTypeQuizCurrentItem++;
 
         if(clientTypeQuizCurrentItem < 6) randomizeAnswers(clientTypeQuizCurrentItem);
-        else nextSlide();
+        else {
+            setTypeOfClient();
+            nextSlide();
+        }
     }
     else {
         if(next) clientQuizCurrentItem++;
@@ -653,16 +660,12 @@ const nextEntrepreneur = (next = true) => {
         if(clientQuizCurrentItem < 5) randomizeAnswers(clientQuizCurrentItem);
         else {
             nextSlide();
-            setTypeOfClient();
         }
     }
 }
 
 let clientTypeAnswers = [];
 let clientType = '';
-
-mainCarousel.goTo(20);
-setTypeOfClient();
 
 const checkAnswer = (n) => {
     let answerToCheck, btnNextQuiz;
@@ -731,7 +734,7 @@ const printFields = () => {
     /* Get all fields content */
     const companyName = document.querySelector(".input--companyName").value;
     const companyDesc = document.querySelector(".input--companyDesc").value;
-    const companyIndustry = document.querySelector(".input--industry").value;
+    const companyIndustry = document.querySelector("#industry").value;
     const companyPKD = document.querySelector(".input--pkd").value;
     const companySells = document.querySelector(".select--sells").value;
 
@@ -822,4 +825,336 @@ const tableClick = (row, btn) => {
     table[row][btn].style.background = '#1E78B3';
 }
 
-// mainCarousel.goTo(16);
+/* Interact */
+const position1 = { x: 0, y: 0 }
+const position2 = { x: 0, y: 0 }
+const position3 = { x: 0, y: 0 }
+const position4 = { x: 0, y: 0 }
+const position5 = { x: 0, y: 0 }
+const position6 = { x: 0, y: 0 }
+const position7 = { x: 0, y: 0 }
+const position8 = { x: 0, y: 0 }
+const position9 = { x: 0, y: 0 }
+const position10 = { x: 0, y: 0 }
+const position11 = { x: 0, y: 0 }
+const position12 = { x: 0, y: 0 }
+
+const checkIfAllClientTypesMatched = () => {
+    if(clientTypesLvl === 4) {
+        clientTypesLvl = 0;
+        Array.from(document.querySelectorAll('.btn--clientTypes')).forEach((item) => {
+            item.removeAttribute('disabled');
+        });
+    }
+}
+
+let clientTypesLvl = 0;
+
+interact('.draggableBtn--ekspresyjny--1').draggable({
+    listeners: {
+        move (event) {
+            position1.x += event.dx
+            position1.y += event.dy
+
+            event.target.style.transform =
+                `translate(${position1.x}px, ${position1.y}px)`
+        },
+        end (event) {
+            event.target.style.transform = 'none';
+            position1.x = 0;
+            position1.y = 0;
+        }
+    }
+});
+interact('.draggableBtn--kierowniczy--1').draggable({
+    listeners: {
+        move (event) {
+            position2.x += event.dx
+            position2.y += event.dy
+
+            event.target.style.transform =
+                `translate(${position2.x}px, ${position2.y}px)`
+        },
+        end (event) {
+            event.target.style.transform = 'none';
+            position2.x = 0;
+            position2.y = 0;
+        }
+    }
+});
+interact('.draggableBtn--przyjacielski--1').draggable({
+    listeners: {
+        move (event) {
+            position3.x += event.dx
+            position3.y += event.dy
+
+            event.target.style.transform =
+                `translate(${position3.x}px, ${position3.y}px)`
+        },
+        end (event) {
+            event.target.style.transform = 'none';
+            position3.x = 0;
+            position3.y = 0;
+        }
+    }
+});
+interact('.draggableBtn--analityk--1').draggable({
+    listeners: {
+        move (event) {
+            position4.x += event.dx
+            position4.y += event.dy
+
+            event.target.style.transform =
+                `translate(${position4.x}px, ${position4.y}px)`
+        },
+        end (event) {
+            event.target.style.transform = 'none';
+            position4.x = 0;
+            position4.y = 0;
+        }
+    }
+});
+
+interact('.draggableBtn--ekspresyjny--2').draggable({
+    listeners: {
+        move (event) {
+            position5.x += event.dx
+            position5.y += event.dy
+
+            event.target.style.transform =
+                `translate(${position5.x}px, ${position5.y}px)`
+        },
+        end (event) {
+            event.target.style.transform = 'none';
+            position5.x = 0;
+            position5.y = 0;
+        }
+    }
+});
+interact('.draggableBtn--kierowniczy--2').draggable({
+    listeners: {
+        move (event) {
+            position6.x += event.dx
+            position6.y += event.dy
+
+            event.target.style.transform =
+                `translate(${position6.x}px, ${position6.y}px)`
+        },
+        end (event) {
+            event.target.style.transform = 'none';
+            position6.x = 0;
+            position6.y = 0;
+        }
+    }
+});
+interact('.draggableBtn--przyjacielski--2').draggable({
+    listeners: {
+        move (event) {
+            position7.x += event.dx
+            position7.y += event.dy
+
+            event.target.style.transform =
+                `translate(${position7.x}px, ${position7.y}px)`
+        },
+        end (event) {
+            event.target.style.transform = 'none';
+            position7.x = 0;
+            position7.y = 0;
+        }
+    }
+});
+interact('.draggableBtn--analityk--2').draggable({
+    listeners: {
+        move (event) {
+            position8.x += event.dx
+            position8.y += event.dy
+
+            event.target.style.transform =
+                `translate(${position8.x}px, ${position8.y}px)`
+        },
+        end (event) {
+            event.target.style.transform = 'none';
+            position8.x = 0;
+            position8.y = 0;
+        }
+    }
+});
+
+interact('.draggableBtn--ekspresyjny--3').draggable({
+    listeners: {
+        move (event) {
+            position9.x += event.dx
+            position9.y += event.dy
+
+            event.target.style.transform =
+                `translate(${position9.x}px, ${position9.y}px)`
+        },
+        end (event) {
+            event.target.style.transform = 'none';
+            position9.x = 0;
+            position9.y = 0;
+        }
+    }
+});
+interact('.draggableBtn--kierowniczy--3').draggable({
+    listeners: {
+        move (event) {
+            position10.x += event.dx
+            position10.y += event.dy
+
+            event.target.style.transform =
+                `translate(${position10.x}px, ${position10.y}px)`
+        },
+        end (event) {
+            event.target.style.transform = 'none';
+            position10.x = 0;
+            position10.y = 0;
+        }
+    }
+});
+interact('.draggableBtn--przyjacielski--3').draggable({
+    listeners: {
+        move (event) {
+            position11.x += event.dx
+            position11.y += event.dy
+
+            event.target.style.transform =
+                `translate(${position11.x}px, ${position11.y}px)`
+        },
+        end (event) {
+            event.target.style.transform = 'none';
+            position11.x = 0;
+            position11.y = 0;
+        }
+    }
+});
+interact('.draggableBtn--analityk--3').draggable({
+    listeners: {
+        move (event) {
+            position12.x += event.dx
+            position12.y += event.dy
+
+            event.target.style.transform =
+                `translate(${position12.x}px, ${position12.y}px)`
+        },
+        end (event) {
+            event.target.style.transform = 'none';
+            position12.x = 0;
+            position12.y = 0;
+        }
+    }
+});
+
+interact('.dropzone--1')
+    .dropzone({
+        ondrop: function (event) {
+            event.relatedTarget.style.position = 'absolute';
+            event.relatedTarget.style.transform = 'none';
+            event.relatedTarget.style.width = '100%';
+            event.target.appendChild(event.relatedTarget);
+            event.relatedTarget.classList.remove('draggableBtn--kierowniczy');
+            clientTypesLvl++;
+            checkIfAllClientTypesMatched();
+        },
+        accept: '.draggableBtn--kierowniczy',
+        overlap: .3
+    })
+    .on('dropactivate', function (event) {
+        event.target.classList.add('drop-activated')
+    });
+
+interact('.dropzone--2')
+    .dropzone({
+        ondrop: function (event) {
+            event.relatedTarget.style.position = 'absolute';
+            event.relatedTarget.style.transform = 'none';
+            event.relatedTarget.style.width = '100%';
+            event.target.appendChild(event.relatedTarget);
+            event.relatedTarget.classList.remove('draggableBtn--przyjacielski');
+            clientTypesLvl++;
+            checkIfAllClientTypesMatched();
+        },
+        accept: '.draggableBtn--przyjacielski',
+        overlap: .3
+    })
+    .on('dropactivate', function (event) {
+        event.target.classList.add('drop-activated')
+    });
+
+interact('.dropzone--3')
+    .dropzone({
+        ondrop: function (event) {
+            event.relatedTarget.style.position = 'absolute';
+            event.relatedTarget.style.transform = 'none';
+            event.relatedTarget.style.width = '100%';
+            event.target.appendChild(event.relatedTarget);
+            event.relatedTarget.classList.remove('draggableBtn--analityk');
+            clientTypesLvl++;
+            checkIfAllClientTypesMatched();
+        },
+        accept: '.draggableBtn--analityk',
+        overlap: .3
+    })
+    .on('dropactivate', function (event) {
+        event.target.classList.add('drop-activated')
+    });
+
+interact('.dropzone--4')
+    .dropzone({
+        ondrop: function (event) {
+            event.relatedTarget.style.position = 'absolute';
+            event.relatedTarget.style.transform = 'none';
+            event.relatedTarget.style.width = '100%';
+            event.target.appendChild(event.relatedTarget);
+            event.relatedTarget.classList.remove('draggableBtn--ekspresyjny');
+            clientTypesLvl++;
+            checkIfAllClientTypesMatched();
+        },
+        accept: '.draggableBtn--ekspresyjny',
+        overlap: .3
+
+    })
+    .on('dropactivate', function (event) {
+        event.target.classList.add('drop-activated')
+    });
+
+const clientTypesArr = ['kierowniczym', 'przyjacielskim', 'analitykiem', 'ekspresyjnym']
+
+const checkVisualisation = (n) => {
+    if(clientType === clientTypesArr[n]) {
+        document.querySelector('.btn--visualisations').removeAttribute('disabled');
+        Array.from(document.querySelectorAll(`.visualisations>.visualisationBtn`)).forEach((item) => {
+            item.style.borderColor = '#c1c1c1';
+        });
+        document.querySelector(`.visualisations>.visualisationBtn:nth-of-type(${n+1})`).style.borderColor = 'green';
+    }
+}
+
+const checkCommunication = (n) => {
+    if(clientType === clientTypesArr[n]) {
+        document.querySelector('.btn--communication').removeAttribute('disabled');
+        Array.from(document.querySelectorAll(`.communication>.visualisationBtn`)).forEach((item) => {
+            item.style.borderColor = '#c1c1c1';
+        });
+        document.querySelector(`.communication>.visualisationBtn:nth-of-type(${n+1})`).style.borderColor = 'green';
+    }
+}
+
+const checkLogo = (n) => {
+    if(clientType === clientTypesArr[n]) {
+        document.querySelector('.btn--logo').removeAttribute('disabled');
+        Array.from(document.querySelectorAll(`.logos>.visualisationBtn`)).forEach((item) => {
+            item.style.borderColor = '#c1c1c1';
+        });
+        document.querySelector(`.logos>.visualisationBtn:nth-of-type(${n+1})`).style.borderColor = 'green';
+    }
+}
+
+const selectChanged = () => {
+    if((document.getElementById('select1').value === 'Pięciu')&&
+    (document.getElementById('select2').value === 'bliższe')&&
+    (document.getElementById('select3').value === 'konkurentów')&&
+    (document.getElementById('select4').value === 'mniejsza')) {
+        document.querySelector('.btn--select').removeAttribute('disabled');
+    }
+}

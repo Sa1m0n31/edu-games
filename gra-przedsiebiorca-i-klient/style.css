@@ -18,10 +18,10 @@ audio:not([controls]) {
 
 .homeBtn {
     position: absolute;
-    top: 30px;
-    left: 30px;
-    width: 60px;
-    height: 60px;
+    top: 20px;
+    left: 20px;
+    width: 40px;
+    height: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -39,7 +39,7 @@ audio:not([controls]) {
 }
 
 .homeBtn--prevSlide {
-    left: 100px;
+    left: 70px;
 }
 
 .homeBtn--prevSlide .homeBtn__img {
@@ -95,6 +95,11 @@ audio:not([controls]) {
 
 .view__content--role {
     margin-top: 10%;
+    justify-content: space-between !important;
+}
+
+.view__content--end {
+    justify-content: space-between !important;
 }
 
 .btn {
@@ -187,8 +192,8 @@ label {
 }
 
 .form--companyInfoHeader {
-    transform: translateY(14vh);
-    -moz-transform: translateY(14vh);
+    transform: translateY(80px);
+    -moz-transform: translateY(80px);
     font-size: 16px;
 }
 
@@ -199,12 +204,13 @@ label {
 
 .form--companyPorterHeader {
     font-size: 16px;
-    transform: translateY(11vh);
+    transform: translateY(40px);
 }
 
 .form--companyPlanHeader {
     font-size: 16px;
-    transform: translateY(11vh);
+    transform: translateY(40px);
+    margin-top: -60px;
 }
 
 .form--companyInfo {
@@ -241,6 +247,19 @@ label {
 
 .form--grid label {
     width: 48%;
+}
+
+.form--grid--plan label {
+    width: 31%;
+}
+
+.form--grid--plan label:nth-of-type(4),
+.form--grid--plan label:last-of-type {
+    width: 38%;
+}
+
+.view__content--plan {
+    width: 90%;
 }
 
 /* Quiz */
@@ -520,7 +539,7 @@ label {
 }
 
 .view--3 .view__content--etrepreneur .view__text {
-    margin-top: 1%;
+    margin-top: -4%;
 }
 
 .view--3 .btn--marginTop {
@@ -610,7 +629,7 @@ label {
 }
 
 .form--companyInfo {
-    margin-top: 15px;
+    margin-top: -10px;
 }
 
 .select--field, .select--sells {
@@ -624,7 +643,7 @@ label {
 
 .view--table {
     width: 1200px;
-    height: 900px;
+    height: 500px;
 }
 
 .view__text--table {
@@ -669,7 +688,7 @@ table thead tr td:not(:first-of-type) {
 }
 
 .view--table .view__content {
-    top: 36%;
+    top: 58%;
 }
 
 .view--table thead td {
@@ -719,7 +738,7 @@ table thead tr td:not(:first-of-type) {
 }
 
 .view--5factors--complete .view__text {
-    margin-top: 50px;
+    margin-top: 95px;
 }
 
 .view__text--client {
@@ -766,4 +785,153 @@ table thead tr td:not(:first-of-type) {
 .view--clientTypeDesc p {
     width: 400px;
     text-align: justify;
+}
+
+.view__draggableButtons,
+.view__content--clientTypes {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 80%;
+}
+
+.view__content--clientTypes section {
+    width: 21%;
+    font-size: 13px;
+}
+
+.view__content--clientTypes > div {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.placeholder {
+    width: 100%;
+    height: 40px;
+    background: #f1f1f1;
+    border: 1px solid #efefef;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.view__draggableButtons {
+    margin-bottom: 20px;
+    width: 100% !important;
+}
+
+.draggableBtn {
+    font-weight: 700;
+    width: 21%;
+    height: 40px;
+    background: #1E78B3;
+    color: #fff;
+    border-radius: 5px;
+    text-transform: uppercase;
+    border: none;
+    top: 0;
+    left: 0;
+    position: relative;
+    z-index: 100;
+}
+
+.btn--black:disabled {
+    opacity: .7;
+    cursor: default;
+}
+
+.view__draggableButtons {
+    min-height: 40px;
+}
+
+.view__visualisations {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.visualisationBtn {
+    width: 48%;
+    background: transparent;
+    border: 2px solid #c1c1c1;
+    border-radius: 5px;
+    margin-top: 30px;
+    cursor: pointer;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .2s all;
+}
+
+.visualisationBtn:hover {
+    border-color: #1E78B3;
+}
+
+.visualisationBtn__img {
+    width: 80%;
+}
+
+.view--visualisations .view__content--clientEnd {
+    margin-top: 20px;
+    width: 70%;
+}
+
+.communication .visualisationBtn {
+    height: 150px;
+    padding: 20px;
+}
+
+.view--lastStage .view__text {
+    margin-top: 30px;
+    margin-bottom: -10px;
+}
+
+.draggableBtn--ekspresyjny--swap {
+    background: #FBB91F;
+}
+
+.draggableBtn--przyjacielski--swap {
+    background: #5DBDAB;
+}
+
+.draggableBtn--analityk--swap {
+    background: #85C5ED;
+}
+
+.draggableBtn--kierowniczy--swap {
+    background: #E2504D;
+}
+
+.text__draggableView {
+    margin: 0 auto 30px;
+    text-align: center;
+    max-width: 80%;
+}
+
+.view__content--flex .btn {
+    max-width: 49%;
+}
+
+.view--entrepreneurEnd .view__content--flex {
+    justify-content: space-between;
+}
+
+.form--companyPorterHeader {
+    font-size: 12px;
+    padding-top: 0;
+    margin-bottom: -20px;
+}
+
+.btn--porter {
+    margin-top: 5px !important;
+}
+
+.view--1 .view__content {
+    top: 52%;
 }

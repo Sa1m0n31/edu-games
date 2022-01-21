@@ -25,11 +25,11 @@
 
     <main class="carousel">
         <!-- 1 - plansza startowa -->
-        <section class="view">
+        <section class="view view--1">
             <img class="view__img view__img--start" src="./assets/probka%201.png" alt="plansza-startowa" />
             <main class="view__content view__content--start">
                 <p class="view__text">
-                    Wciel się w rolę przedsiębiorcy lub klienta i sprawdź swoją wiedzę z zakresu utworzenia i prowadzenia przedsiębiorstwa.
+                    Wciel się w rolę przedsiębiorcy lub klienta i zdobądź wiedzę z zakresu utworzenia i prowadzenia przedsiębiorstwa.
                 </p>
                 <button class="btn btn--black btn--marginTop btn--start" onclick="nextSlide()">
                     Rozpocznij
@@ -103,7 +103,7 @@
                                 W tym segmencie możesz zdecydować się np. na branżę spożywczą, odzieżową, obuwniczą, kosmetyczną, chemiczną, RTV (sprzęt radiowo-telewizyjny), AGD (sprzęt gospodarstwa domowego: pralki, lodówki, kuchenki gazowe itp.), samochody osobowe, zabawki itp. lub prowadzenie działalności łączącej kilka z tych branż.
                             </p>
                         </div>
-                        <select class="select--sells select--field">
+                        <select class="select--sells select--field" id="industry">
                             <option>Wybierz</option>
                             <option>odzieżowa</option>
                             <option>kosmetyczna</option>
@@ -176,12 +176,12 @@
         <!-- 5 - przedsiebiorca - lvl 3 -->
         <section class="view view--5">
             <img class="view__img view__img--transformUp" src="./assets/5_plan_dzialania_firm.png" alt="plan-dzialania" />
-            <main class="view__content">
+            <main class="view__content view__content--plan">
                 <p class="view__text form--companyPlanHeader">
                     Przygotuj plan działania swojej firmy
                 </p>
                 <section class="form form--companyInfo">
-                    <section class="form--grid">
+                    <section class="form--grid form--grid--plan">
                         <label>
                             Cele strategiczne
                             <div class="questionMarkWrapper">
@@ -409,7 +409,7 @@
                     <p class="error error--porter">
                         Uzupełnij wymagane pola, aby przejść dalej
                     </p>
-                    <button type="button" class="btn btn--black btn--marginTop btn--marginAuto" onclick="validatePorter()">
+                    <button type="button" class="btn btn--black btn--marginTop btn--marginAuto btn--porter" onclick="validatePorter()">
                         Dalej
                     </button>
                 </section>
@@ -698,21 +698,24 @@
                     Uzupełnij w poprawny sposób poniższe stwierdzenia:
                 </p>
                 <p class="textToComplete">
-                    Model <select>
+                    Model <select id="select1" onchange="selectChanged()">
                     <option>Czterech</option>
                     <option>Pięciu</option>
-                </select> sił Portera jest jedną z metod analizy strategicznej przedsiębiorstwa. Polega na weryfikacji atrakcyjności sektora i badaniu jego struktury. Wykorzystuje się ją, by lepiej poznać otoczenie <select>
+                </select> sił Portera jest jedną z metod analizy strategicznej przedsiębiorstwa. Polega na weryfikacji atrakcyjności sektora i badaniu jego struktury. Wykorzystuje się ją, by lepiej poznać otoczenie
+                    <select id="select2" onchange="selectChanged()">
                     <option>bliższe</option>
                     <option>dalsze</option>
-                </select> przedsiębiorstwa, a przede wszystkim ocenić siłę <select>
+                </select> przedsiębiorstwa, a przede wszystkim ocenić siłę
+                    <select id="select3" onchange="selectChanged()">
                     <option>konkurentów</option>
                     <option>administracji rządowej</option>
-                </select> w analizowanym sektorze. Głównym zadaniem modelu jest oszacowanie rentowności sektora - im większe natężenie sił konkurencji tym <select>
+                </select> w analizowanym sektorze. Głównym zadaniem modelu jest oszacowanie rentowności sektora - im większe natężenie sił konkurencji tym
+                    <select id="select4" onchange="selectChanged()">
                     <option>większa</option>
                     <option>mniejsza</option>
                 </select> rentowność oraz potencjał sektora.
                 </p>
-                <button class="btn btn--black btn--marginTop" onclick="nextSlide()">
+                <button class="btn btn--black btn--marginTop btn--select" disabled onclick="nextSlide()">
                     Dalej
                 </button>
             </main>
@@ -730,7 +733,7 @@
             </main>
         </section>
         <!-- 9 - przedsiebiorca - plansza koncowa -->
-        <section class="view">
+        <section class="view view--entrepreneurEnd">
             <img class="view__img view__img--transformUp" src="./assets/9_przedsiebiorca_p_koncowa.png" alt="plansza-koncowa" />
             <main class="view__content quizWrapper">
                 <p class="view__text">
@@ -883,6 +886,353 @@
                 </div>
             </main>
         </section>
+        <section class="view">
+            <img class="view__img view__img--0" src="./assets/10_klient_wybor%20roli.png" alt="klient-start" />
+            <main class="view__content view__content--clientTypes">
+                <p class="text__draggableView">
+                    Określ typ klienta na podstawie poniższych charakterystyk, dopasowując konkretne cechy, zachowania do odpowiadających im typów klienta.
+                </p>
+                <section class="view__draggableButtons">
+                    <button class="draggableBtn draggable draggableBtn--ekspresyjny draggableBtn--ekspresyjny--1 draggableBtn--ekspresyjny--swap">
+                        Klient ekspresyjny
+                    </button>
+                    <button class="draggableBtn draggable draggableBtn--kierowniczy draggableBtn--kierowniczy--1 draggableBtn--kierowniczy--swap">
+                        Klient kierowniczy
+                    </button>
+                    <button class="draggableBtn draggable draggableBtn--przyjacielski draggableBtn--przyjacielski--1 draggableBtn--przyjacielski--swap">
+                        Klient przyjacielski
+                    </button>
+                    <button class="draggableBtn draggable draggableBtn--analityk draggableBtn--analityk--1 draggableBtn--analityk--swap">
+                        Klient analityk
+                    </button>
+                </section>
+                <section>
+                    <div class="placeholder dropzone--1">
+
+                    </div>
+                    <ul class="clientType__dots" id="kierowniczy">
+                        <li>koncentruj się na celach w kategoriach: co/gdzie/kiedy</li>
+                        <li>działaj szybko i zdecydowanie,</li>
+                        <li>bądź pewny swojego zdania, ale wysłuchaj również jego opinii,</li>
+                        <li>przygotuj się merytorycznie do rozmowy</li>
+                        <li>działaj / wypowiadaj się krótko i zwięźle</li>
+                        <li>argumentuj propozycje</li>
+                        <li>zaoferować produkt, usługę rzucające wyzwanie, obiecujące władzę</li>
+                    </ul>
+                </section>
+                <section>
+                    <div class="placeholder dropzone--2">
+
+                    </div>
+                    <ul class="clientType__dots" id="przyjacielski">
+                        <li>bądź mniej autorytatywny,</li>
+                        <li>proś o opinię i aktywnie słuchaj,</li>
+                        <li>okaż zainteresowanie tym co i jak mówi,</li>
+                        <li>unikaj wymuszania natychmiastowych reakcji i odpowiedzi,</li>
+                        <li>podziel się informacją o sobie,</li>
+                        <li>nie pospieszaj</li>
+                        <li>pokaż, że jesteś pokrewną duszą</li>
+                    </ul>
+                </section>
+                <section>
+                    <div class="placeholder dropzone--3">
+
+                    </div>
+                    <ul class="clientType__dots" id="analityk">
+                        <li>bądź bardziej towarzyski, otwarty na dyskusję,</li>
+                        <li>wysłuchaj sugestii i dopytaj,</li>
+                        <li>nie podawaj zbyt dużo szczegółów,</li>
+                        <li>obrazuj, podawaj barwne przykłady,</li>
+                        <li>często możesz zmieniać wystrój sklepu, wprowadzać nowe produkty</li>
+                        <li>roztocz wizję</li>
+                        <li>użyj emocji</li>
+                    </ul>
+                </section>
+                <section>
+                    <div class="placeholder dropzone--4">
+
+                    </div>
+                    <ul class="clientType__dots" id="ekspresyjny">
+                        <li>koncentruj się na celach w kategoriach:  dlaczego/co,</li>
+                        <li>bądź dobrze przygotowany merytorycznie,</li>
+                        <li>bądź uporządkowany i formalny,</li>
+                        <li>pamiętaj o szczegółach, faktach i liczbach.</li>
+                        <li>stosuj język faktów, analizy</li>
+                        <li>mów precyzyjnie i dokładnie</li>
+                        <li>mów konkretnie, bez emocji</li>
+                    </ul>
+                </section>
+                <div>
+                    <button class="btn btn--black btn--marginTop btn--clientTypes" disabled onclick="nextSlide()">
+                        Przejdź dalej
+                    </button>
+                </div>
+            </main>
+        </section>
+        <section class="view view--visualisations">
+            <img class="view__img view__img--0" src="./assets/10_klient_wybor%20roli.png" alt="klient-start" />
+            <main class="view__content view__content--clientEnd">
+                <p class="view__text">
+                    Jaką wizualizację zaproponujesz Twojemu typowy klienta?
+                </p>
+
+                <section class="view__visualisations visualisations">
+                    <button class="visualisationBtn" onclick="checkVisualisation(0)">
+                        <img class="visualisationBtn__img" src="./assets/wizualizacja_klient_kierowniczy.png" alt="klient-kierowniczy" />
+                    </button>
+                    <button class="visualisationBtn" onclick="checkVisualisation(1)">
+                        <img class="visualisationBtn__img" src="./assets/wizualizacja_klient_przyjacielski.png" alt="klient-przyjacielski" />
+                    </button>
+                    <button class="visualisationBtn" onclick="checkVisualisation(2)">
+                        <img class="visualisationBtn__img" src="./assets/wizualizacja_klient_analityk.png" alt="klient-analityk" />
+                    </button>
+                    <button class="visualisationBtn" onclick="checkVisualisation(3)">
+                        <img class="visualisationBtn__img" src="./assets/wizualizacja_klient_ekspresyjny.png" alt="klient-ekspresyjny" />
+                    </button>
+                </section>
+                <div>
+                    <button class="btn btn--black btn--marginTop btn--visualisations" disabled onclick="nextSlide()">
+                        Przejdź dalej
+                    </button>
+                </div>
+            </main>
+        </section>
+        <section class="view view--visualisations">
+            <img class="view__img view__img--0" src="./assets/10_klient_wybor%20roli.png" alt="klient-start" />
+            <main class="view__content view__content--clientEnd">
+                <p class="view__text">
+                    Wybierz odpowiedni sposób komunikacji dla twojego typu klienta
+                </p>
+
+                <section class="view__visualisations communication">
+                    <button class="visualisationBtn" onclick="checkCommunication(0)">
+                        “Najlepsza firma na rynku - pod Twoją ręką, Ty tu urządzisz” (firma zajmująca się wyposażaniem wnętrz)
+                    </button>
+                    <button class="visualisationBtn" onclick="checkCommunication(1)">
+                        Jesteśmy sympatycznym zespołem otwartym na ludzi, razem z Tobą pięknie urządzimy Twój dom, który stanie się pełnym miłości, przytulnym gniazdkiem dla całej Twojej rodziny na długie lata.
+                    </button>
+                    <button class="visualisationBtn" onclick="checkCommunication(2)">
+                        Innowacyjny, parametry INTER COR 5 000, profesjonalny, łatwy w użyciu, do wykorzystania w każdej dziedzinie życia i w dodatku za rozsądną cenę. (produkt: program komputerowy)
+                    </button>
+                    <button class="visualisationBtn" onclick="checkCommunication(3)">
+                        “Z nami Ci się upiecze” (piekarnia, ciastkarnia)
+                    </button>
+                </section>
+                <div>
+                    <button class="btn btn--black btn--marginTop btn--communication" disabled onclick="nextSlide()">
+                        Przejdź dalej
+                    </button>
+                </div>
+            </main>
+        </section>
+        <section class="view view--visualisations">
+            <img class="view__img view__img--0" src="./assets/10_klient_wybor%20roli.png" alt="klient-start" />
+            <main class="view__content view__content--clientEnd">
+                <p class="view__text">
+                    Dobierz odpowiednie logo do twojego typu klienta.
+                </p>
+
+                <section class="view__visualisations logos">
+                    <button class="visualisationBtn" onclick="checkLogo(0)">
+                        <img class="visualisationBtn__img" src="./assets/plansza14_klient_kierowniczy.png" alt="klient-kierowniczy" />
+                    </button>
+                    <button class="visualisationBtn" onclick="checkLogo(1)">
+                        <img class="visualisationBtn__img" src="./assets/plansza14_klient_przyjacielski.png" alt="klient-przyjacielski" />
+                    </button>
+                    <button class="visualisationBtn" onclick="checkLogo(2)">
+                        <img class="visualisationBtn__img" src="./assets/plansza14_klient_analityk.png" alt="klient-analityk" />
+                    </button>
+                    <button class="visualisationBtn" onclick="checkLogo(3)">
+                        <img class="visualisationBtn__img" src="./assets/plansza14_klient_ekspresyjny.png" alt="klient-ekspresyjny" />
+                    </button>
+                </section>
+                <div>
+                    <button class="btn btn--black btn--marginTop btn--logo" disabled onclick="nextSlide()">
+                        Przejdź dalej
+                    </button>
+                </div>
+            </main>
+        </section>
+        <section class="view view--lastStage">
+            <img class="view__img view__img--start" src="./assets/10_klient_wybor%20roli.png" alt="klient-start" />
+            <main class="view__content view__content--start view__content--clientStart">
+                <p class="view__text view__text--small">
+                    Jako dobry i doświadczony przedsiębiorca, powinieneś umieć zakwalifikować daną osobę do jednego z kilku profili osobowości klienta. Następnie po ustaleniu typu osobowości klienta należy dostosować techniki sprzedaży i określić jak powinny wyglądać twoje interakcje (jako przedsiębiorcy) z każdym z typów klienta.
+                </p>
+                <button class="btn btn--black btn--marginTop" onclick="nextSlide()">
+                    Przejdź dalej
+                </button>
+            </main>
+        </section>
+        <section class="view">
+            <img class="view__img view__img--0" src="./assets/10_klient_wybor%20roli.png" alt="klient-start" />
+            <main class="view__content view__content--clientTypes">
+                <p class="text__draggableView">
+                    Określ typ klienta na podstawie poniższych charakterystyk, dopasowując konkretne cechy, zachowania do odpowiadających im typów klienta.
+                </p>
+                <section class="view__draggableButtons">
+                    <button class="draggableBtn draggable draggableBtn--ekspresyjny draggableBtn--ekspresyjny--2 draggableBtn--ekspresyjny--swap">
+                        Klient ekspresyjny
+                    </button>
+                    <button class="draggableBtn draggable draggableBtn--kierowniczy draggableBtn--kierowniczy--2 draggableBtn--kierowniczy--swap">
+                        Klient kierowniczy
+                    </button>
+                    <button class="draggableBtn draggable draggableBtn--przyjacielski draggableBtn--przyjacielski--2 draggableBtn--przyjacielski--swap">
+                        Klient przyjacielski
+                    </button>
+                    <button class="draggableBtn draggable draggableBtn--analityk draggableBtn--analityk--2 draggableBtn--analityk--swap">
+                        Klient analityk
+                    </button>
+                </section>
+                <section>
+                    <div class="placeholder dropzone--1">
+
+                    </div>
+                    <ul class="clientType__dots" id="kierowniczy2">
+                        <li>zorientowany na cel</li>
+                        <li>ekstrawertyk szybko działający</li>
+                        <li>do sklepu wchodzi na chwilę</li>
+                        <li>oczekuje od przedsiębiorcy konkretów i szybkiego działania</li>
+                    </ul>
+                </section>
+                <section>
+                    <div class="placeholder dropzone--2">
+
+                    </div>
+                    <ul class="clientType__dots" id="przyjacielski2">
+                        <li>odprężony, cierpliwy</li>
+                        <li>godny zaufania, wrażliwy</li>
+                        <li>uparty, zorientowany na bezpieczeństwo zakupu</li>
+                        <li>iczą się dla niego emocje a nie dane techniczne</li>
+                    </ul>
+                </section>
+                <section>
+                    <div class="placeholder dropzone--3">
+
+                    </div>
+                    <ul class="clientType__dots" id="analityk2">
+                        <li>ostrożny, precyzyjny, rozważny</li>
+                        <li>dociekliwy</li>
+                        <li>preferuje formalny sposób komunikacji</li>
+                        <li>brak chęci interakcji z przedsiębiorcą</li>
+                        <li>dysponuje techniczną wiedzą</li>
+                    </ul>
+                </section>
+                <section>
+                    <div class="placeholder dropzone--4">
+
+                    </div>
+                    <ul class="clientType__dots" id="ekspresyjny2">
+                        <li>ekstrawertyk entuzjastyczny i wygadany</li>
+                        <li>liczy się dla niego przede wszystkim pozytywna atmosfera</li>
+                        <li>nie interesują go techniczne szczegóły</li>
+                        <li>próbuje nawiązać bliższe relacje z przedsiębiorcą</li>
+                        <li>chętnie rozmawia na prywatne tematy podczas dokonywania zakupów</li>
+                    </ul>
+                </section>
+                <div>
+                    <button class="btn btn--black btn--marginTop btn--clientTypes" disabled onclick="nextSlide()">
+                        Przejdź dalej
+                    </button>
+                </div>
+            </main>
+        </section>
+        <section class="view">
+            <img class="view__img view__img--0" src="./assets/10_klient_wybor%20roli.png" alt="klient-start" />
+            <main class="view__content view__content--clientTypes">
+                <p class="text__draggableView">
+                    Teraz dobierz właściwe zachowanie przedsiębiorcy (sprzedawcy) do konkretnego  typu osobowości klienta.
+                </p>
+                <section class="view__draggableButtons">
+                    <button class="draggableBtn draggable draggableBtn--ekspresyjny draggableBtn--ekspresyjny--3 draggableBtn--ekspresyjny--swap">
+                        Klient ekspresyjny
+                    </button>
+                    <button class="draggableBtn draggable draggableBtn--kierowniczy draggableBtn--kierowniczy--3 draggableBtn--kierowniczy--swap">
+                        Klient kierowniczy
+                    </button>
+                    <button class="draggableBtn draggable draggableBtn--przyjacielski draggableBtn--przyjacielski--3 draggableBtn--przyjacielski--swap">
+                        Klient przyjacielski
+                    </button>
+                    <button class="draggableBtn draggable draggableBtn--analityk draggableBtn--analityk--3 draggableBtn--analityk--swap">
+                        Klient analityk
+                    </button>
+                </section>
+                <section>
+                    <div class="placeholder dropzone--1">
+
+                    </div>
+                    <ul class="clientType__dots" id="kierowniczy3">
+                        <li>przedsiębiorca powinien być konkretny i szybko działać</li>
+                        <li>przedsiębiorca nie może “nagabywać” takiego klienta, powinien tylko sprawnie i szybko dostarczyć informacji i wywołać wrażenie, że to klient samodzielnie o czymś decyduje</li>
+                        <li>przedsiębiorca powinien stworzyć klientowi poczucie kontroli, władzy i świadomość, że to on podejmuje decyzje</li>
+                    </ul>
+                </section>
+                <section>
+                    <div class="placeholder dropzone--2">
+
+                    </div>
+                    <ul class="clientType__dots" id="przyjacielski3">
+                        <li>przedsiębiorca powinien zbudować atmosferę współpracy, okazać zainteresowanie klientowi, być szczerym i postępować bez pośpiechu</li>
+                        <li>do tego klienta sprzedawca / przedsiębiorca musi dużo mówić, gdyż klient woli słuchać niż wypowiadać się samodzielnie</li>
+                        <li>przedsiębiorca powinien być autentyczny i stwarzać wrażenie, że wspólnie z klientem dokonuje decyzji zakupowej</li>
+                    </ul>
+                </section>
+                <section>
+                    <div class="placeholder dropzone--3">
+
+                    </div>
+                    <ul class="clientType__dots" id="analityk3">
+                        <li>przedsiębiorca nie powinien wchodzić z klientem w bliskie interakcje</li>
+                        <li>z tym klientem przedsiębiorca powinien komunikować się w formalny sposób i posiadać merytoryczne przygotowanie (dysponować dokładną, fachową wiedzą na temat produktu)</li>
+                        <li>przedsiębiorca musi znać parametry techniczne konkretnego produktu, musi dostarczyć klientowi dużą ilość precyzyjnych danych</li>
+                    </ul>
+                </section>
+                <section>
+                    <div class="placeholder dropzone--4">
+
+                    </div>
+                    <ul class="clientType__dots" id="ekspresyjny3">
+                        <li>przedsiębiorca powinien być otwarty, stworzyć pozytywną atmosferę i nawiązać bliższe relacje z klientem</li>
+                        <li>przedsiębiorca powinien okazywać entuzjazm podobny do entuzjazmu klienta i rozmawiać z klientem na prywatne tematy</li>
+                        <li>komunikacja z takim klientem wymaga od przedsiębiorcy personalnego zaangażowania, a jego wybory docenienia, przedsiębiorca powinien wykazać się zrozumieniem jego potrzeb</li>
+                    </ul>
+                </section>
+                <div>
+                    <button class="btn btn--black btn--marginTop btn--clientTypes" disabled onclick="nextSlide()">
+                        Przejdź dalej
+                    </button>
+                </div>
+            </main>
+        </section>
+
+
+
+
+
+
+
+
+
+        <section class="view view--5factors">
+            <img class="view__img view__img--transformUp" src="./assets/8_quiz.png" alt="quiz-wprowadzenie" />
+            <main class="view__content">
+                <p class="view__text quizIntro">
+                    Opisz swoje postępowanie jako przedsiębiorcy z wybranym przez siebie typem klienta. Jak zachowasz się, gdy twoim klientem będzie np. KLIENT PRZYJACIELSKI. Spróbuj ułożyć Twoje wypowiedzi kierowane do takiego klienta.
+                </p>
+                <textarea class="textarea input--5factors" name="postepowanie" placeholder="Twoje postępowanie jako przedsiębiorcy z wybranym przez siebie typem klienta"></textarea>
+                <button class="btn btn--black btn--marginTop" onclick="nextSlide()">
+                    Dalej
+                </button>
+            </main>
+        </section>
+
+
+
+
+
+
+
+
         <!-- 12 - klient - plansza koncowa -->
         <section class="view">
             <img class="view__img view__img--transformUp" src="./assets/11_klient_p_koncowa.png" alt="klient-koniec" />
@@ -891,7 +1241,7 @@
                     Gratulacje! Masz wiedzę z zakresu dostosowania strategii przedsiębiorstwa do klientów o różnych cechach i potrzebach.
                 </p>
 
-                <section class="view__content--flex btn--marginTop">
+                <section class="view__content--flex view__content--end btn--marginTop">
                     <button class="btn btn--black" onclick="goHome(true)">
                         Rozpocznij od początku
                     </button>
@@ -903,6 +1253,7 @@
         </section>
     </main>
 </div>
+<script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
 <script src="./js/siema.js"></script>
 <script src="./js/main.js"></script>
 </body>
