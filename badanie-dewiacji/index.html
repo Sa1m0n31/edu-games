@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gra wcielanie się w rolę</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+<div class="container">
+     <div class="carousel">
+         <div class="view view--start">
+             <img class="view__img" src="./img/Laboratorium_1_tło-01.png" alt="wybor-parametrow" />
+
+             <div class="slidecontainer slider--kursy">
+                 <button class="kursyBtn kursy--1" onclick="toggleDeclination(1)">
+
+                 </button>
+                 <button class="kursyBtn kursy--2" onclick="toggleDeclination(2)">
+
+                 </button>
+                 <button class="kursyBtn kursy--3" onclick="toggleDeclination(3)">
+
+                 </button>
+                 <button class="kursyBtn kursy--4" onclick="toggleDeclination(4)">
+
+                 </button>
+                 <button class="kursyBtn kursy--5" onclick="toggleDeclination(5)">
+
+                 </button>
+                 <button class="kursyBtn kursy--6" onclick="toggleDeclination(6)">
+
+                 </button>
+                 <button class="kursyBtn kursy--7" onclick="toggleDeclination(7)">
+
+                 </button>
+                 <button class="kursyBtn kursy--8" onclick="toggleDeclination(8)">
+
+                 </button>
+                 <button class="kursyBtn kursy--9" onclick="toggleDeclination(9)">
+
+                 </button>
+             </div>
+             <div class="slidecontainer slider--deklinacja">
+                 <input type="range" min="-4" max="5" step="1" value="-4"
+                        class="slider" id="deklinacja" />
+             </div>
+             <div class="selectedReason">
+                 <img class="selected__img selected__img--chosen" src="./img/Laboratorium_1_przyczyna_1-01.png" alt="przyczyna" />
+             </div>
+             <button class="showReasonsBtn" onclick="showReasons()">
+
+             </button>
+             <div class="selectedReasons selectedReasons--list">
+                 <button class="selectedReason" onclick="setReason(1)">
+                     <img class="selected__img" src="./img/Laboratorium_1_przyczyna_1-01.png" alt="przyczyna" />
+                 </button>
+                 <button class="selectedReason" onclick="setReason(2)">
+                     <img class="selected__img" src="./img/Laboratorium_1_przyczyna_2-01.png" alt="przyczyna" />
+                 </button>
+                 <button class="selectedReason" onclick="setReason(3)">
+                     <img class="selected__img" src="./img/Laboratorium_1_przyczyna_3-01.png" alt="przyczyna" />
+                 </button>
+                 <button class="selectedReason" onclick="setReason(4)">
+                     <img class="selected__img" src="./img/Laboratorium_1_przyczyna_4-01.png" alt="przyczyna" />
+                 </button>
+                 <button class="selectedReason" onclick="setReason(5)">
+                     <img class="selected__img" src="./img/Laboratorium_1_przyczyna_5-01.png" alt="przyczyna" />
+                 </button>
+                 <button class="selectedReason" onclick="setReason(6)">
+                     <img class="selected__img" src="./img/Laboratorium_1_przyczyna_6-01.png" alt="przyczyna" />
+                 </button>
+             </div>
+
+             <div class="selectedReason selectedReason--way">
+                 <img class="selected__img selected__img--chosen--ways" src="./img/Laboratorium_1_sposób_1-01.png" alt="przyczyna" />
+             </div>
+             <button class="showReasonsBtn showReasonsBtn--way" onclick="showWays()">
+
+             </button>
+             <div class="selectedReasons selectedWays--list">
+                 <button class="selectedReason" onclick="setWay(1)">
+                     <img class="selected__img" src="./img/Laboratorium_1_sposób_1-01.png" alt="przyczyna" />
+                 </button>
+                 <button class="selectedReason" onclick="setWay(2)">
+                     <img class="selected__img" src="./img/Laboratorium_1_sposób_2-01.png" alt="przyczyna" />
+                 </button>
+                 <button class="selectedReason" onclick="setWay(3)">
+                     <img class="selected__img" src="./img/Laboratorium_1_sposób_3-01.png" alt="przyczyna" />
+                 </button>
+             </div>
+
+             <button class="startBtn" onclick="start()">
+                 Rozpocznij
+             </button>
+         </div>
+         <div class="view view--1">
+             <img class="view__img" src="./img/Laboratorium_2-01.png" alt="deklinacja" />
+
+             <span class="deklinacja--value abs">
+
+             </span>
+             <span class="reason--value abs">
+
+             </span>
+
+             <input class="input input--kz--1"
+                    name="kz--1" />
+
+             <input class="input input--km--1"
+                    name="km--1" />
+
+             <div class="calculationsInputs">
+                 <input class="input" />
+                 <input class="input" />
+                 <input class="input" />
+                 <input class="input" />
+             </div>
+
+             <div class="kkValues kkValues--1">
+                 <span class="kkValues--item kkValues--1"></span>
+                 <span class="kkValues--item kkValues--2"></span>
+                 <span class="kkValues--item kkValues--3"></span>
+                 <span class="kkValues--item kkValues--4"></span>
+                 <span class="kkValues--item kkValues--5"></span>
+                 <span class="kkValues--item kkValues--6"></span>
+             </div>
+             <div class="kkInputs kkInputs--1">
+                 <input class="input kkValues--item kkValues--input kkValues--input--1" />
+                 <input class="input kkValues--item kkValues--input kkValues--input--2" />
+                 <input class="input kkValues--item kkValues--input kkValues--input--3" />
+                 <input class="input kkValues--item kkValues--input kkValues--input--4" />
+                 <input class="input kkValues--item kkValues--input kkValues--input--5" />
+                 <input class="input kkValues--item kkValues--input kkValues--input--6" />
+             </div>
+
+             <div class="kkInputs kkInputs--1 kmInputs kmInputs--1">
+                 <input class="input kkValues--item kkValues--input kmValues--input--1" />
+                 <input class="input kkValues--item kkValues--input kmValues--input--2" />
+                 <input class="input kkValues--item kkValues--input kmValues--input--3" />
+                 <input class="input kkValues--item kkValues--input kmValues--input--4" />
+                 <input class="input kkValues--item kkValues--input kmValues--input--5" />
+                 <input class="input kkValues--item kkValues--input kmValues--input--6" />
+             </div>
+             <div class="kkValues kkInputs--1 kkValues--disabled--1">
+                 <span class="kkValues--item kkValues--1"></span>
+                 <span class="kkValues--item kkValues--2"></span>
+                 <span class="kkValues--item kkValues--3"></span>
+                 <span class="kkValues--item kkValues--4"></span>
+                 <span class="kkValues--item kkValues--5"></span>
+                 <span class="kkValues--item kkValues--6"></span>
+             </div>
+             <div class="kkInputs kkInputs--1 deltaInputs deltaInputs--1">
+                 <input class="input kkValues--item kkValues--input kmValues--input--1" />
+                 <input class="input kkValues--item kkValues--input kmValues--input--2" />
+                 <input class="input kkValues--item kkValues--input kmValues--input--3" />
+                 <input class="input kkValues--item kkValues--input kmValues--input--4" />
+                 <input class="input kkValues--item kkValues--input kmValues--input--5" />
+                 <input class="input kkValues--item kkValues--input kmValues--input--6" />
+             </div>
+         </div>
+         <div class="view view--2">
+             <img class="view__img" src="./img/Laboratorium_4-01.png" alt="deklinacja" />
+
+             <span class="reason--value reason--value--2 abs">
+
+             </span>
+
+             <span class="deklinacja--value deklinacja--value--2 abs">
+
+             </span>
+
+             <input class="input input--nr--2"
+                    name="nr--2" />
+
+             <div class="calculationsInputs calculationsInputs--2">
+                 <input class="input" />
+                 <input class="input" />
+                 <input class="input" />
+             </div>
+
+
+             <div class="kkValues kkValues--2">
+                 <span class="kkValues--item kkValues--1"></span>
+                 <span class="kkValues--item kkValues--2"></span>
+                 <span class="kkValues--item kkValues--3"></span>
+                 <span class="kkValues--item kkValues--4"></span>
+                 <span class="kkValues--item kkValues--5"></span>
+                 <span class="kkValues--item kkValues--6"></span>
+             </div>
+             <div class="kkInputs kkInputs--2">
+                 <input class="input kkValues--item kkValues--input kkValues--input--1" />
+                 <input class="input kkValues--item kkValues--input kkValues--input--2" />
+                 <input class="input kkValues--item kkValues--input kkValues--input--3" />
+                 <input class="input kkValues--item kkValues--input kkValues--input--4" />
+                 <input class="input kkValues--item kkValues--input kkValues--input--5" />
+                 <input class="input kkValues--item kkValues--input kkValues--input--6" />
+             </div>
+
+             <div class="kkInputs kkInputs--2 kmInputs kmInputs--2">
+                 <input class="input kkValues--item kkValues--input kmValues--input--1" />
+                 <input class="input kkValues--item kkValues--input kmValues--input--2" />
+                 <input class="input kkValues--item kkValues--input kmValues--input--3" />
+                 <input class="input kkValues--item kkValues--input kmValues--input--4" />
+                 <input class="input kkValues--item kkValues--input kmValues--input--5" />
+                 <input class="input kkValues--item kkValues--input kmValues--input--6" />
+             </div>
+             <div class="kkValues kkInputs--2 kkValues--disabled--2">
+                 <input class="input kkValues--item kkValues--input kmValues--input--1" />
+                 <input class="input kkValues--item kkValues--input kmValues--input--2" />
+                 <input class="input kkValues--item kkValues--input kmValues--input--3" />
+                 <input class="input kkValues--item kkValues--input kmValues--input--4" />
+                 <input class="input kkValues--item kkValues--input kmValues--input--5" />
+                 <input class="input kkValues--item kkValues--input kmValues--input--6" />
+             </div>
+             <div class="kkInputs kkInputs--2 deltaInputs deltaInputs--2">
+                 <input class="input kkValues--item kkValues--input kmValues--input--1" />
+                 <input class="input kkValues--item kkValues--input kmValues--input--2" />
+                 <input class="input kkValues--item kkValues--input kmValues--input--3" />
+                 <input class="input kkValues--item kkValues--input kmValues--input--4" />
+                 <input class="input kkValues--item kkValues--input kmValues--input--5" />
+                 <input class="input kkValues--item kkValues--input kmValues--input--6" />
+             </div>
+         </div>
+         <div class="view view--3">
+             <img class="view__img" src="./img/Laboratorium_5-01.png" alt="deklinacja" />
+
+             <span class="reason--value reason--value--3 abs">
+
+             </span>
+
+             <span class="deklinacja--value deklinacja--value--3 abs">
+
+             </span>
+
+             <input class="input input--nr--3"
+                    name="nr--3" />
+
+             <div class="calculationsInputs calculationsInputs--3">
+                 <input class="input" />
+                 <input class="input" />
+                 <input class="input" />
+             </div>
+
+
+             <div class="kkValues kkValues--3">
+                 <span class="kkValues--item kkValues--1"></span>
+                 <span class="kkValues--item kkValues--2"></span>
+                 <span class="kkValues--item kkValues--3"></span>
+                 <span class="kkValues--item kkValues--4"></span>
+                 <span class="kkValues--item kkValues--5"></span>
+                 <span class="kkValues--item kkValues--6"></span>
+             </div>
+             <div class="kkInputs kkInputs--3">
+                 <input class="input kkValues--item kkValues--input kkValues--input--1" />
+                 <input class="input kkValues--item kkValues--input kkValues--input--2" />
+                 <input class="input kkValues--item kkValues--input kkValues--input--3" />
+                 <input class="input kkValues--item kkValues--input kkValues--input--4" />
+                 <input class="input kkValues--item kkValues--input kkValues--input--5" />
+                 <input class="input kkValues--item kkValues--input kkValues--input--6" />
+             </div>
+
+             <div class="kkInputs kkInputs--3 kmInputs kmInputs--3">
+                 <input class="input kkValues--item kkValues--input kmValues--input--1" />
+                 <input class="input kkValues--item kkValues--input kmValues--input--2" />
+                 <input class="input kkValues--item kkValues--input kmValues--input--3" />
+                 <input class="input kkValues--item kkValues--input kmValues--input--4" />
+                 <input class="input kkValues--item kkValues--input kmValues--input--5" />
+                 <input class="input kkValues--item kkValues--input kmValues--input--6" />
+             </div>
+             <div class="kkValues kkInputs--3 kkValues--disabled--3">
+                 <input class="input kkValues--item kkValues--input kmValues--input--1" />
+                 <input class="input kkValues--item kkValues--input kmValues--input--2" />
+                 <input class="input kkValues--item kkValues--input kmValues--input--3" />
+                 <input class="input kkValues--item kkValues--input kmValues--input--4" />
+                 <input class="input kkValues--item kkValues--input kmValues--input--5" />
+                 <input class="input kkValues--item kkValues--input kmValues--input--6" />
+             </div>
+             <div class="kkInputs kkInputs--3 deltaInputs deltaInputs--3">
+                 <input class="input kkValues--item kkValues--input kmValues--input--1" />
+                 <input class="input kkValues--item kkValues--input kmValues--input--2" />
+                 <input class="input kkValues--item kkValues--input kmValues--input--3" />
+                 <input class="input kkValues--item kkValues--input kmValues--input--4" />
+                 <input class="input kkValues--item kkValues--input kmValues--input--5" />
+                 <input class="input kkValues--item kkValues--input kmValues--input--6" />
+             </div>
+         </div>
+
+         <div class="view view--chart">
+             <h3 class="view__chart__header">
+                 Wykres dewiacji
+             </h3>
+             <div>
+                 <canvas id="chart" width="700" height="400"></canvas>
+             </div>
+         </div>
+
+         <button class="homeBtn" onclick="home()">
+
+         </button>
+         <button class="homeBtn homeBtn--chart" onclick="chart()">
+
+         </button>
+         <button class="homeBtn homeBtn--chart homeBtn--home" onclick="home()">
+
+         </button>
+     </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js" integrity="sha512-TW5s0IT/IppJtu76UbysrBH9Hy/5X41OTAbQuffZFU6lQ1rdcLHzpU5BzVvr/YFykoiMYZVWlr/PX1mDcfM9Qg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="./js/siema.js"></script>
+<script src="./js/main.js"></script>
+</body>
+</html>

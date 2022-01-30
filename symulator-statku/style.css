@@ -196,7 +196,7 @@ audio {
 }
 
 .light--right {
-    top: 25%;
+    top: 24%;
     left: 27%;
 }
 
@@ -504,4 +504,20 @@ audio {
 
 .btn--menu--random {
     width: 90%;
+}
+
+.light--back__img--2--26 {
+    transform: rotate(-90deg);
+}
+
+.gameBtn:active {
+    background: rgba(0, 0, 0, .3);
+}
+
+.gameBtn--wrong {
+    z-index: 1000;
+}
+
+.gameBtn:not(.gameBtn--wrong) {
+    z-index: 1001;
 }

@@ -10,7 +10,7 @@ const positiveFeedbacks = [
     'Dobrze! Jeżeli dwa statki o napędzie mechanicznym przecinają swoje kursy w taki sposób, że powoduje to ryzyko zderzenia, wówczas statek, który ma drugi statek ze swej prawej burty, powinien ustąpić mu z drogi.',
     'Dobrze! Jeżeli jeden z dwóch statków ma ustąpić z drogi, to drugi statek powinien zachować swój kurs i szybkość.',
     'Dobrze! Jeżeli z jakiejkolwiek przyczyny statek obowiązany do zachowania swego kursu i szybkości znajdzie się tak blisko, że nie można uniknąć zderzenia przez samo tylko działanie statku ustępującego z drogi, wówczas powinien on podjąć działanie, które najlepiej przyczyni się do uniknięcia zderzenia. Statek powinien nie zmieniać kursu w lewo, jeżeli z lewej jego burty znajduje się drugi statek.',
-    'Dobrze! Statek o napędzie mechanicznym w drodze powinien pokazywać światło masztowe z przodu, światła burtowe i światło rufowe. Ponadto statek o długości większej niż 50 metrów powinien pokazywać drugie światło masztowe z tyłu przedniego i wyżej od niego z tym. Statek o mniejszej długości może, ale nie musi pokazywać tego światła.',
+    'Dobrze! Statek o napędzie mechanicznym w drodze powinien pokazywać światło masztowe z przodu, światła burtowe i światło rufowe.',
     'Dobrze! Statek o napędzie mechanicznym podczas holowania powinien pokazywać dwa światła masztowe umieszczone w linii pionowej, światła burtowe, światła rufowe i światło holowania umieszczone w linii pionowej nad światłem rufowym.',
     'Dobrze! Statek zajęty trałowaniem o długości mniejszej niż 50 metrów powinien pokazywać dwa światła widoczne dookoła widnokręgu, umieszczone w linii pionowej, górne zielone, a dolne białe, a gdy posuwa się po wodzie dodatkowo światła burtowe i światło rufowe.',
     'Dobrze! Statek nieodpowiadający za swoje ruchy, gdy się nie porusza, powinien pokazywać dwa czerwone światła widoczne dookoła widnokręgu, umieszczone w linii pionowej w miejscu, skąd będą najlepiej widoczne.',
@@ -46,6 +46,30 @@ const negativeFeedbacks = [
     'Źle! W strefie ograniczonej widzialności lub w jej pobliżu podczas dnia lub nocy statek o napędzie mechanicznym posuwający się po wodzie powinien nadawać z przerwami nie większymi niż 2 minuty jeden długi dźwięk.',
     'Źle! Jednym ze sposobów wzywania pomocy na statku jest nadawanie sygnału SOS składającego się z trzech krótkich, trzech długich i trzech krótkich dźwięków.'
 ];
+
+const infos = [
+    'Wpływasz do wąskiego przejścia. Obecnie znajdujesz się na jego środku. Wybierz kierunek ruchu za pomocą strzałek, a następnie zapoczątkuj ruch, klikając na manetkę.',
+    'Płyniesz wąskim przejściem. Zamierzasz wyprzedzić znajdujący się przed tobą statek z jego prawej burty. Zakomunikuj to w odpowiedni sposób za pomocą sygnałów dźwiękowych.',
+    'Statek przed tobą odpowiedział na twój sygnał jednym sygnałem długim, jednym krótkim, jednym długim i jednym krótkim. Co robisz dalej?',
+    'Płyniesz wąskim przejściem. Zamierzasz wyprzedzić znajdujący się przed tobą statek z jego lewej burty. Zakomunikuj to w odpowiedni sposób za pomocą sygnałów dźwiękowych.',
+    'Statek przed tobą odpowiedział na twój sygnał jednym sygnałem długim, jednym krótkim, jednym długim i jednym krótkim. Co robisz dalej?',
+    'Płyniesz w warunkach dobrej widzialności. Naprzeciwko twojego statku dostrzegasz inny statek. Płyniecie wprost na siebie. Co w takim wypadku zrobisz?',
+    'Płyniesz w nocy w warunkach dobrej widzialności. Naprzeciwko twojego statku dostrzegasz inny statek. Płyniecie wprost na siebie. Co w takim wypadku zrobisz?',
+    'Płyniesz w warunkach dobrej widzialności. W pewnym momencie dostrzegasz drugi statek płynący po prawej stronie. Oceniasz, że wasze kursy przetną się. Co robisz?',
+    'Płyniesz w warunkach dobrej widzialności. W pewnym momencie dostrzegasz drugi statek płynący po lewej stronie. Oceniasz, że wasze kursy mogą się przeciąć, ale drugi statek już zaczął podejmować odpowiednie działania, żeby temu zapobiec. Co robisz?',
+    'Płyniesz w warunkach dobrej widzialności. W pewnym momencie dostrzegasz drugi statek płynący po lewej stronie. Oceniasz, że wasze kursy mogą się przeciąć, ale drugi statek już zaczął podejmować odpowiednie działania, żeby temu zapobiec. Co robisz?',
+    'Płyniesz statkiem o napędzie mechanicznym, o długości do 50 metrów. Kliknij na nazwy świateł, które statek powinien mieć włączone.',
+    'Holujesz inny statek. Długość zespołu holowniczego nie przekracza 200 metrów. Które światła powinny być włączone na twoim statku?',
+    'Twój statek, który ma mniej niż 50 metrów, zajęty jest trałowaniem. Które światła powinien mieć w takim wypadku włączone?',
+    'Znajdujesz się w statku nieodpowiadającym za swoje ruchy, który się nie porusza. Które światła powinny być włączone na takim statku?',
+    'Twój statek ma ograniczoną zdolność manewrową. Pomimo tego płynie dalej. Jakie światła powinny być włączone na statku?',
+    'Twój statek jest mocno załadowany. Jego zanurzenie ogranicza możliwość manewrowania. Które światła powinien mieć taki statek włączone?',
+    'Płyniesz statkiem. Przed dziobem, w oddali, znajduje się inny statek. Niedługo zamierzasz skręcić w prawo. Jaki dźwięk nadasz?',
+    'Płyniesz statkiem. Przed dziobem, w oddali, znajduje się inny statek. Niedługo zamierzasz skręcić w lewo. Jaki dźwięk nadasz?',
+    'Płyniesz statkiem przed siebie. Po lewej stronie płynie inny statek. Wasze kursy mogą się przeciąć. Czekasz aż drugi statek podejmie odpowiednie działania, ponieważ masz pierwszeństwo. Czas mija, a drugi statek płynie dalej w tym samym kierunku. Jakim sygnałem dźwiękowym wyrazisz swoje wątpliwości co do zaistniałej sytuacji?',
+    'Płyniesz statkiem o napędzie mechanicznym w strefie ograniczonej widzialności. Jaki sygnał dźwiękowy powinien być w takim wypadku nadawany?',
+    'Twój statek doznał poważnego uszkodzenia. Zaczyna tonąć. Nadaj sygnał dźwiękowy wzywania pomocy.'
+]
 
 const sounds = [
     'tyfon', 'tyfonShort'
@@ -83,11 +107,21 @@ const goHome = () => {
 
 const menu = (lvl) => {
     if(lvl < 21) {
+        checkButtons[lvl].style.display = 'flex';
+
+        allTextsElements[lvl].style.color = '#000';
+        allTextsElements[lvl].textContent = infos[lvl];
+
         currentLvl = lvl+1;
         game.goTo(lvl+2);
     }
     else {
         const randomLvl = randomIntFromInterval(1, 21);
+        checkButtons[randomLvl-1].style.display = 'flex';
+
+        allTextsElements[randomLvl-1].style.color = '#000';
+        allTextsElements[randomLvl-1].textContent = infos[randomLvl-1];
+
         currentLvl = randomLvl;
         game.goTo(randomLvl+1);
     }
@@ -239,10 +273,16 @@ const lvl1Click = (btnIndex) => {
             lvlProgress.push(btnIndex);
         }
     }
-    else {
+    else if(btnIndex < 4) {
         if(!isElementInLvlProgress(btnIndex)) {
             lvlProgress.push(btnIndex);
         }
+    }
+    else {
+        lvlProgress.push(1);
+        lvlProgress.push(1);
+        lvlProgress.push(1);
+        lvlProgress.push(1);
     }
 }
 
@@ -281,7 +321,7 @@ const lvl8Click = (btnIndex) => {
     if(lvlProgress.length === 0 && btnIndex === 1) {
         lvlProgress.push(btnIndex);
     }
-    else if(lvlProgress.length === 1 && btnIndex === 1) {
+    else if(lvlProgress.length === 1 && btnIndex === 2) {
         lvlProgress.push(btnIndex);
     }
 }
@@ -345,6 +385,19 @@ const turnFirstTopSpecialLightOn = () => {
 
 const turnSecondTopSpecialLightOn = () => {
     document.querySelector(`.view--${currentLvl}>.light--top--2`).style.visibility = 'visible';
+}
+
+const wrongAnswer = () => {
+    lvlProgress.push(1);
+    lvlProgress.push(1);
+    lvlProgress.push(1);
+    lvlProgress.push(1);
+    lvlProgress.push(1);
+    lvlProgress.push(1);
+    lvlProgress.push(1);
+    lvlProgress.push(1);
+    lvlProgress.push(1);
+    lvlProgress.push(1);
 }
 
 const lvl11Click = (btnIndex) => {
@@ -486,16 +539,7 @@ const lvl21Click = (btnIndex) => {
         lvlProgress.push(1);
     }
     else {
-        lvlProgress.push(1);
-        lvlProgress.push(1);
-        lvlProgress.push(1);
-        lvlProgress.push(1);
-        lvlProgress.push(1);
-        lvlProgress.push(1);
-        lvlProgress.push(1);
-        lvlProgress.push(1);
-        lvlProgress.push(1);
-        lvlProgress.push(1);
+        wrongAnswer();
     }
 }
 
@@ -565,6 +609,7 @@ const btnClick = (lvl, btnIndex) => {
             lvl21Click(btnIndex);
             break;
         default:
+            wrongAnswer();
             break;
     }
 }
