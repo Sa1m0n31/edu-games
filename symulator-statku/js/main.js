@@ -229,13 +229,13 @@ const turnLightsOff = () => {
     const turnOff = Array.from(
         document.querySelectorAll('.light:not(.light--back)'))
         .concat(
-            Array.from(document.querySelectorAll('.light--back>img'))
+            Array.from(document.querySelectorAll('.light--back>assets'))
         )
         .concat(
-            document.querySelectorAll('.light--special>img')
+            document.querySelectorAll('.light--special>assets')
         )
         .concat(
-            document.querySelectorAll('.view--12>.light--top>img')
+            document.querySelectorAll('.view--12>.light--top>assets')
         )
     const turnOn = Array.from(document.querySelectorAll('.light--special'));
 

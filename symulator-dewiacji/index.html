@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Symulator</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+<div class="container">
+    <div class="carousel">
+        <div class="view view--start">
+            <img class="view__img" src="./img/start.png" alt="start" />
+
+            <button class="trans btn--start" onclick="start()">
+
+            </button>
+        </div>
+        <div class="view view--1">
+            <img class="view__img" src="./img/tlo-1.png" alt="tlo" />
+
+            <div class="slidecontainer slider--wiatr">
+                <input type="range" min="0" max="10" step="1" value="0" class="slider" id="wiatr" />
+            </div>
+            <div class="slidecontainer slider--temperatura">
+                <input type="range" min="-5" max="30" step="1" value="20" class="slider" id="temperatura" />
+            </div>
+            <div class="slidecontainer slider--cisnienie">
+                <input type="range" min="900" max="1100" step="1" value="1013" class="slider" id="cisnienie" />
+            </div>
+            <div class="slidecontainer slider--opady">
+                <input type="range" min="0" max="10" step="1" value="3" class="slider" id="opady" />
+            </div>
+
+            <div class="values">
+                <p class="values--baro">
+                    1013
+                </p>
+                <p class="values--temp">
+                    20
+                </p>
+                <p class="values--twd">
+                    335
+                </p>
+                <p class="values--aws">
+                    0
+                </p>
+                <p class="values--tws">
+                    6.9
+                </p>
+            </div>
+
+            <div class="radar">
+                <div class="clouds">
+                    <img class="btn__img" src="./img/clouds-radar.png" alt="chmury" />
+                </div>
+            </div>
+
+            <img class="abs img--suwak" src="./img/suwak.png" alt="suwak" />
+            <img class="abs img--arrowKierunek" src="./img/strzalka.png" alt="kierunek" />
+            <img class="abs img--arrowHome1" src="./img/wskaznik-radaru-1.png" alt="kierunek" />
+            <img class="abs img--arrowHome2" src="./img/wskaznik-radaru-2.png" alt="kierunek" />
+        </div>
+        <button class="homeBtn" onclick="home()">
+
+        </button>
+        <button class="homeBtn homeBtn--chart" onclick="chart()">
+
+        </button>
+        <button class="homeBtn homeBtn--chart homeBtn--home" onclick="secondView()">
+
+        </button>
+    </div>
+    <div class="view view--2">
+        <img class="view__img" src="./img/tlo-2.png" alt="tlo" />
+
+        <button class="chooseCourse" onclick="chooseCourse()">
+
+        </button>
+        <div class="courses">
+            <div>
+                <p>45</p>
+                <p>45</p>
+            </div>
+            <div>
+                <p>90</p>
+                <p>90</p>
+            </div>
+            <div>
+                <p>135</p>
+                <p>135</p>
+            </div>
+            <div>
+                <p>180</p>
+                <p>180</p>
+            </div>
+            <div>
+                <p>225</p>
+                <p>225</p>
+            </div>
+            <div>
+                <p>270</p>
+                <p>270</p>
+            </div>
+            <div>
+                <p>315</p>
+                <p>315</p>
+            </div>
+            <div>
+                <p>360</p>
+                <p>360</p>
+            </div>
+        </div>
+
+        <div class="courses2">
+            <div>
+                <p>50</p>
+                <p>95</p>
+                <p>140</p>
+                <p>185</p>
+                <p>230</p>
+                <p>275</p>
+            </div>
+            <div>
+                <p>45</p>
+                <p>90</p>
+                <p>135</p>
+                <p>180</p>
+                <p>225</p>
+                <p>270</p>
+            </div>
+            <div>
+                <p>5</p>
+                <p>90</p>
+                <p>135</p>
+                <p>180</p>
+                <p>225</p>
+                <p>270</p>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="./js/siema.js"></script>
+<script src="./js/main.js"></script>
+</body>
+</html>

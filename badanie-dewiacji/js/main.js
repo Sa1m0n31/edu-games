@@ -34,18 +34,18 @@ const showWays = () => {
 }
 
 const reasons = [
-    './img/Laboratorium_1_przyczyna_1-01.png',
-    './img/Laboratorium_1_przyczyna_2-01.png',
-    './img/Laboratorium_1_przyczyna_3-01.png',
-    './img/Laboratorium_1_przyczyna_4-01.png',
-    './img/Laboratorium_1_przyczyna_5-01.png',
-    './img/Laboratorium_1_przyczyna_6-01.png'
+    './assets/przyczyna1.png',
+    './assets/przyczyna2.png',
+    './assets/przyczyna3.png',
+    './assets/przyczyna4.png',
+    './assets/przyczyna5.png',
+    './assets/przyczyna6.png'
 ]
 
 const ways = [
-    './img/Laboratorium_1_sposób_1-01.png',
-    './img/Laboratorium_1_sposób_2-01.png',
-    './img/Laboratorium_1_sposób_3-01.png'
+    './assets/sposob1.png',
+    './assets/sposob2.png',
+    './assets/sposob3.png'
 ]
 
 const setReason = (n) => {
@@ -84,7 +84,7 @@ const toggleDeclination = (n) => {
     }
     else {
         selectedAngles.push(angles[n-1]);
-        document.querySelector(`.kursy--${n}`).style.background = "green";
+        document.querySelector(`.kursy--${n}`).style.background = "#32B86E";
     }
 
     declination = declination.map((item, index) => {
@@ -98,6 +98,7 @@ const start = () => {
         return item;
     }).length === 6) {
         document.querySelector('.view--start').style.visibility = 'hidden';
+        document.querySelector('.view--chart').style.visibility = 'hidden';
         document.querySelector(`.view--${way+1}`).style.visibility = 'visible';
 
         Array.from(document.querySelectorAll('.deklinacja--value')).forEach((item) => {
@@ -107,13 +108,25 @@ const start = () => {
             item.textContent = reasonNames[reason]
         });
 
-        console.log(`.kkValues--${way}>kkValues--item`);
         Array.from(document.querySelectorAll(`.kkValues--${way+1}>.kkValues--item`)).forEach((item, index) => {
-            item.textContent = selectedAngles.sort()[index];
+            item.textContent = selectedAngles.sort((a, b) => {
+                return parseInt(a) >= parseInt(b) ? 1 : -1;
+            })[index];
         });
     }
     else {
+        const feedback = document.querySelector('.feedback');
+        const startBtn = document.querySelector('.startBtn');
 
+        feedback.style.zIndex = '2';
+        feedback.textContent = 'Wybierz dokładnie sześć kursów kompasowych';
+        startBtn.style.visibility = 'hidden';
+
+        setTimeout(() => {
+            feedback.textContent = '';
+            feedback.style.zIndex = '-2';
+            startBtn.style.visibility = 'visible';
+        }, 2000);
     }
 }
 
@@ -121,8 +134,22 @@ const home = () => {
     document.querySelector(`.view--1`).style.visibility = 'hidden';
     document.querySelector(`.view--2`).style.visibility = 'hidden';
     document.querySelector(`.view--3`).style.visibility = 'hidden';
+    document.querySelector(`.view--chart`).style.visibility = 'hidden';
     document.querySelector(`.view--start`).style.visibility = 'visible';
+    myChart.destroy();
 }
+
+const homeOrPrev = () => {
+    if(window.getComputedStyle(document.querySelector('.view--chart')).getPropertyValue('visibility') !== 'hidden') {
+        start();
+        myChart.destroy();
+    }
+    else {
+        home();
+    }
+}
+
+let deltaValues = [0, 0, 0, 0, 0, 0];
 
 [1, 2, 3, 4, 5, 6].forEach((item) => {
     document.querySelector(`.kkValues--input--${item}`).addEventListener('input', (e) => {
@@ -130,30 +157,52 @@ const home = () => {
     })
 });
 
-const data = {
-    labels: selectedAngles,
-    datasets: [{
-        label: 'Wykres dewiacji',
-        backgroundColor: 'rgb(255, 99, 132)',
-        borderColor: 'rgb(255, 99, 132)',
-        data: [0, 10, 5, 2, 20, 30, 45],
-    }]
-};
+const setDeltaValues = () => {
+    deltaValues = deltaValues.map((item, index) => {
+        return document.querySelector(`.deltaInputs--${way+1}>input:nth-of-type(${index+1})`).value;
+    });
+}
 
-const config = {
-    type: 'line',
-    data: data,
-    options: {}
-};
+let data, myChart;
 
 const chart = () => {
-    document.querySelector(`.view--1`).style.visibility = 'hidden';
-    document.querySelector(`.view--2`).style.visibility = 'hidden';
-    document.querySelector(`.view--3`).style.visibility = 'hidden';
-    document.querySelector(`.view--chart`).style.visibility = 'visible';
+    if(window.getComputedStyle(document.querySelector('.view--chart')).getPropertyValue('visibility') === 'hidden') {
+        setDeltaValues();
 
-    const myChart = new Chart(
-        document.getElementById('chart'),
-        config
-    );
+        document.querySelector(`.view--1`).style.visibility = 'hidden';
+        document.querySelector(`.view--2`).style.visibility = 'hidden';
+        document.querySelector(`.view--3`).style.visibility = 'hidden';
+        document.querySelector(`.view--chart`).style.visibility = 'visible';
+
+        data = {
+            labels: selectedAngles.sort((a, b) => {
+                return parseInt(a) >= parseInt(b) ? 1 : -1;
+            }),
+            datasets: [{
+                label: 'Wykres dewiacji',
+                backgroundColor: '#fff',
+                borderColor: '#463DB7',
+                color: '#fff',
+                data: deltaValues,
+            }]
+        };
+
+        myChart = new Chart(
+            document.getElementById('chart'),
+            {
+                type: 'line',
+                data: data,
+                options: {
+                    plugins: {
+                        legend: {
+                            display: false
+                        }
+                    }
+                }
+            }
+        );
+    }
+    else {
+        home();
+    }
 }

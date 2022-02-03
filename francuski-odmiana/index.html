@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Symulator</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+<div class="container">
+    <img class="img" src="assets/odmiana.jpg" alt="francuski" />
+    <button class="btn" onclick="toggleSound()">
+        <img class="btn__img start" src="assets/speaker-filled-audio-tool.svg" alt="start" />
+        <img class="btn__img stop" src="assets/pause.svg" alt="stop" />
+    </button>
+
+    <img class="volume__icon" src="./assets/speaker-filled-audio-tool.svg" alt="reguluj-glosnosc" />
+    <input type="range" class="volume" min="0" max="100" value="75" oninput="changeVolume()" />
+</div>
+<script src="./main.js"></script>
+</body>
+</html>
