@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gra słowna</title>
+    <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+<div class="container">
+    <div class="view view--1">
+        <img class="view__img" src="./assets/start.png" alt="plansza-startowa" />
+        <button class="startBtn" onclick="start()">
+
+        </button>
+    </div>
+    <div class="view view--2">
+        <img class="view__img" src="./assets/poziomy.png" alt="plansza" />
+        <div class="levelButtons">
+            <button class="levelButtons__item" onclick="setLvl(0)">
+
+            </button>
+            <button class="levelButtons__item" onclick="setLvl(1)">
+
+            </button>
+            <button class="levelButtons__item" onclick="setLvl(2)">
+
+            </button>
+        </div>
+    </div>
+    <div class="view view--3">
+        <img class="view__img" src="./assets/plansza.png" alt="plansza" />
+
+        <div class="timer">
+            03:00
+        </div>
+
+        <div class="grid">
+            <button class="letter" onclick="toggleLetter(this)">
+                <img class="letter__img" src="./assets/litery-ciemne-0.png" alt="litera" />
+            </button>
+            <button class="letter" onclick="toggleLetter(this)">
+                <img class="letter__img" src="./assets/litery-ciemne-0.png" alt="litera" />
+            </button>
+            <button class="letter" onclick="toggleLetter(this)">
+                <img class="letter__img" src="./assets/litery-ciemne-0.png" alt="litera" />
+            </button>
+            <button class="letter" onclick="toggleLetter(this)">
+                <img class="letter__img" src="./assets/litery-ciemne-0.png" alt="litera" />
+            </button>
+            <button class="letter" onclick="toggleLetter(this)">
+                <img class="letter__img" src="./assets/litery-ciemne-0.png" alt="litera" />
+            </button>
+            <button class="letter" onclick="toggleLetter(this)">
+                <img class="letter__img" src="./assets/litery-ciemne-0.png" alt="litera" />
+            </button>
+            <button class="letter" onclick="toggleLetter(this)">
+                <img class="letter__img" src="./assets/litery-ciemne-0.png" alt="litera" />
+            </button>
+            <button class="letter" onclick="toggleLetter(this)">
+                <img class="letter__img" src="./assets/litery-ciemne-0.png" alt="litera" />
+            </button>
+            <button class="letter" onclick="toggleLetter(this)">
+                <img class="letter__img" src="./assets/litery-ciemne-0.png" alt="litera" />
+            </button>
+            <button class="letter" onclick="toggleLetter(this)">
+                <img class="letter__img" src="./assets/litery-ciemne-0.png" alt="litera" />
+            </button>
+            <button class="letter" onclick="toggleLetter(this)">
+                <img class="letter__img" src="./assets/litery-ciemne-0.png" alt="litera" />
+            </button>
+            <button class="letter" onclick="toggleLetter(this)">
+                <img class="letter__img" src="./assets/litery-ciemne-0.png" alt="litera" />
+            </button>
+            <button class="letter" onclick="toggleLetter(this)">
+                <img class="letter__img" src="./assets/litery-ciemne-0.png" alt="litera" />
+            </button>
+            <button class="letter" onclick="toggleLetter(this)">
+                <img class="letter__img" src="./assets/litery-ciemne-0.png" alt="litera" />
+            </button>
+            <button class="letter" onclick="toggleLetter(this)">
+                <img class="letter__img" src="./assets/litery-ciemne-0.png" alt="litera" />
+            </button>
+            <button class="letter" onclick="toggleLetter(this)">
+                <img class="letter__img" src="./assets/litery-ciemne-0.png" alt="litera" />
+            </button>
+        </div>
+
+        <div class="currentWord">
+
+        </div>
+
+        <button class="view--3__btn view--3__btn--cancel" onclick="cancel()">
+
+        </button>
+        <button class="view--3__btn view--3__btn--accept" onclick="accept()">
+
+        </button>
+    </div>
+</div>
+<script src="./main.js"></script>
+</body>
+</html>

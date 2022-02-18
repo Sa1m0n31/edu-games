@@ -20,55 +20,111 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1dacfaf5-319a-496b-8493-e88c795b5ebd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/badanie-dewiacji/img/Labortorium_3-01.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/badanie-dewiacji/img/home.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/badanie-dewiacji/manifest.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/badanie-dewiacji/womi.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/francuski-odmiana/assets/odmiana.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/francuski-odmiana/assets/pause.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/francuski-odmiana/assets/sound.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/francuski-odmiana/assets/speaker-filled-audio-tool.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/francuski-odmiana/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/francuski-odmiana/main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/francuski-odmiana/manifest.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/francuski-odmiana/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/francuski-odmiana/womi.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/symulator-dewiacji/img/clouds-radar.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/symulator-dewiacji/img/clouds.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/symulator-dewiacji/img/start.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/symulator-dewiacji/img/strzalka.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/symulator-dewiacji/img/suwak.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/symulator-dewiacji/img/tlo-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/symulator-dewiacji/img/tlo-2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/symulator-dewiacji/img/wskaznik-radaru-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/symulator-dewiacji/img/wskaznik-radaru-2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/symulator-dewiacji/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/symulator-dewiacji/js/main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/symulator-dewiacji/js/siema.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/symulator-dewiacji/manifest.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/symulator-dewiacji/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/symulator-dewiacji/womi.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gra-slowna/assets/litery-ciemne-0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gra-slowna/assets/litery-ciemne-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gra-slowna/assets/litery-ciemne-10.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gra-slowna/assets/litery-ciemne-11.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gra-slowna/assets/litery-ciemne-12.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gra-slowna/assets/litery-ciemne-13.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gra-slowna/assets/litery-ciemne-14.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gra-slowna/assets/litery-ciemne-15.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gra-slowna/assets/litery-ciemne-16.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gra-slowna/assets/litery-ciemne-17.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gra-slowna/assets/litery-ciemne-18.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gra-slowna/assets/litery-ciemne-19.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gra-slowna/assets/litery-ciemne-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gra-slowna/assets/litery-ciemne-20.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gra-slowna/assets/litery-ciemne-21.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gra-slowna/assets/litery-ciemne-22.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gra-slowna/assets/litery-ciemne-23.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gra-slowna/assets/litery-ciemne-24.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gra-slowna/assets/litery-ciemne-25.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gra-slowna/assets/litery-ciemne-26.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gra-slowna/assets/litery-ciemne-27.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gra-slowna/assets/litery-ciemne-3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gra-slowna/assets/litery-ciemne-4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gra-slowna/assets/litery-ciemne-5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gra-slowna/assets/litery-ciemne-6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gra-slowna/assets/litery-ciemne-7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gra-slowna/assets/litery-ciemne-8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gra-slowna/assets/litery-ciemne-9.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gra-slowna/assets/litery-jasne-0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gra-slowna/assets/litery-jasne-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gra-slowna/assets/litery-jasne-10.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gra-slowna/assets/litery-jasne-11.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gra-slowna/assets/litery-jasne-12.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gra-slowna/assets/litery-jasne-13.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gra-slowna/assets/litery-jasne-14.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gra-slowna/assets/litery-jasne-15.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gra-slowna/assets/litery-jasne-16.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gra-slowna/assets/litery-jasne-17.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gra-slowna/assets/litery-jasne-18.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gra-slowna/assets/litery-jasne-19.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gra-slowna/assets/litery-jasne-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gra-slowna/assets/litery-jasne-20.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gra-slowna/assets/litery-jasne-21.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gra-slowna/assets/litery-jasne-22.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gra-slowna/assets/litery-jasne-23.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gra-slowna/assets/litery-jasne-24.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gra-slowna/assets/litery-jasne-25.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gra-slowna/assets/litery-jasne-26.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gra-slowna/assets/litery-jasne-27.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gra-slowna/assets/litery-jasne-28.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gra-slowna/assets/litery-jasne-3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gra-slowna/assets/litery-jasne-4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gra-slowna/assets/litery-jasne-5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gra-slowna/assets/litery-jasne-6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gra-slowna/assets/litery-jasne-7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gra-slowna/assets/litery-jasne-8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gra-slowna/assets/litery-jasne-9.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gra-slowna/assets/plansza.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gra-slowna/assets/poziomy.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gra-slowna/assets/start.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gra-slowna/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gra-slowna/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gra-slowna/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/milionerzy/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/milionerzy/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/milionerzy/.idea/gra-przedsiebiorca-i-klient.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/milionerzy/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/milionerzy/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/milionerzy/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/milionerzy/assets/50-50.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/milionerzy/assets/balony.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/milionerzy/assets/bledna.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/milionerzy/assets/feedback.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/milionerzy/assets/gratulacje-francuski.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/milionerzy/assets/gratulacje.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/milionerzy/assets/img1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/milionerzy/assets/img10.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/milionerzy/assets/img2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/milionerzy/assets/img3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/milionerzy/assets/img4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/milionerzy/assets/img5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/milionerzy/assets/img6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/milionerzy/assets/img7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/milionerzy/assets/img8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/milionerzy/assets/img9.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/milionerzy/assets/intro.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/milionerzy/assets/plansza_3_odp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/milionerzy/assets/podklad.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/milionerzy/assets/poprawna.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/milionerzy/assets/pytanie.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/milionerzy/assets/right.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/milionerzy/assets/terminal.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/milionerzy/assets/wrong.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/milionerzy/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/milionerzy/js/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/milionerzy/manifest.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/milionerzy/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/milionerzy/womi.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/badanie-dewiacji/img/Laboratorium_1_przyczyna_1-01.png" beforeDir="false" afterPath="$PROJECT_DIR$/badanie-dewiacji/img/przyczyna1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/badanie-dewiacji/img/Laboratorium_1_przyczyna_2-01.png" beforeDir="false" afterPath="$PROJECT_DIR$/badanie-dewiacji/img/przyczyna2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/badanie-dewiacji/img/Laboratorium_1_przyczyna_3-01.png" beforeDir="false" afterPath="$PROJECT_DIR$/badanie-dewiacji/img/przyczyna3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/badanie-dewiacji/img/Laboratorium_1_przyczyna_4-01.png" beforeDir="false" afterPath="$PROJECT_DIR$/badanie-dewiacji/img/przyczyna4.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/badanie-dewiacji/img/Laboratorium_1_przyczyna_5-01.png" beforeDir="false" afterPath="$PROJECT_DIR$/badanie-dewiacji/img/przyczyna5.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/badanie-dewiacji/img/Laboratorium_1_przyczyna_6-01.png" beforeDir="false" afterPath="$PROJECT_DIR$/badanie-dewiacji/img/przyczyna6.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/badanie-dewiacji/img/Laboratorium_1_sposób_1-01.png" beforeDir="false" afterPath="$PROJECT_DIR$/badanie-dewiacji/img/sposob1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/badanie-dewiacji/img/Laboratorium_1_sposób_2-01.png" beforeDir="false" afterPath="$PROJECT_DIR$/badanie-dewiacji/img/sposob2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/badanie-dewiacji/img/Laboratorium_1_sposób_3-01.png" beforeDir="false" afterPath="$PROJECT_DIR$/badanie-dewiacji/img/sposob3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/badanie-dewiacji/img/Laboratorium_1_suwak_deklinacja-01.png" beforeDir="false" afterPath="$PROJECT_DIR$/badanie-dewiacji/img/suwakdeklinacja.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/badanie-dewiacji/img/Laboratorium_1_suwak_kompas-01.png" beforeDir="false" afterPath="$PROJECT_DIR$/badanie-dewiacji/img/suwakkompas.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/badanie-dewiacji/img/Laboratorium_1_tło-01.png" beforeDir="false" afterPath="$PROJECT_DIR$/badanie-dewiacji/img/tlo1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/badanie-dewiacji/img/Laboratorium_2-01.png" beforeDir="false" afterPath="$PROJECT_DIR$/badanie-dewiacji/img/tlo2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/badanie-dewiacji/img/Laboratorium_4-01.png" beforeDir="false" afterPath="$PROJECT_DIR$/badanie-dewiacji/img/tlo4.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/badanie-dewiacji/img/Laboratorium_5-01.png" beforeDir="false" afterPath="$PROJECT_DIR$/badanie-dewiacji/img/tlo5.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/badanie-dewiacji/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/badanie-dewiacji/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/badanie-dewiacji/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/badanie-dewiacji/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/badanie-dewiacji/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/badanie-dewiacji/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symulator-statku/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/symulator-statku/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symulator-dewiacji/img/tlo-1.png" beforeDir="false" afterPath="$PROJECT_DIR$/symulator-dewiacji/img/tlo-1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symulator-dewiacji/img/tlo-2.png" beforeDir="false" afterPath="$PROJECT_DIR$/symulator-dewiacji/img/tlo-2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symulator-dewiacji/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/symulator-dewiacji/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symulator-dewiacji/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/symulator-dewiacji/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symulator-dewiacji/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/symulator-dewiacji/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symulator-dewiacji/symulator.zip" beforeDir="false" afterPath="$PROJECT_DIR$/symulator-dewiacji/symulator.zip" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,8 +135,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
-        <option value="CSS File" />
         <option value="JavaScript File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -95,19 +151,20 @@
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/francuski-odmiana" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Projekty/biostories" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\sajmo\Desktop\Programowanie\edu\francuski-odmiana" />
-      <recent name="C:\Users\sajmo\Desktop\Programowanie\edu\francuski-odmiana\img" />
+      <recent name="C:\Users\sajmo\Desktop\Programowanie\edu\gra-slowna\assets" />
       <recent name="C:\Users\sajmo\Desktop\Programowanie\edu\symulator-dewiacji\img" />
-      <recent name="C:\Users\sajmo\Desktop\Programowanie\edu\symulator-dewiacji" />
-      <recent name="\" />
+      <recent name="C:\Users\sajmo\Desktop\Programowanie\edu\milionerzy\assets" />
+      <recent name="C:\Users\sajmo\Desktop\Programowanie\edu" />
+      <recent name="C:\Users\sajmo\Desktop\Programowanie\edu\francuski-odmiana" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -134,7 +191,14 @@
       <workItem from="1643632734450" duration="767000" />
       <workItem from="1643654488854" duration="10558000" />
       <workItem from="1643722254250" duration="39000" />
-      <workItem from="1643874378195" duration="2437000" />
+      <workItem from="1643874378195" duration="3322000" />
+      <workItem from="1643879871402" duration="6542000" />
+      <workItem from="1644007767571" duration="145000" />
+      <workItem from="1644008013757" duration="17000" />
+      <workItem from="1644426364614" duration="9898000" />
+      <workItem from="1644508171649" duration="1149000" />
+      <workItem from="1644514515302" duration="21000" />
+      <workItem from="1645121844569" duration="8179000" />
     </task>
     <servers />
   </component>
@@ -158,11 +222,12 @@
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
     <state x="-1230" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1642178645001" />
-    <state x="-1180" y="275" key="FileChooserDialogImpl" timestamp="1643633507085">
-      <screen x="-1920" y="0" width="1920" height="1040" />
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1645133404980">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="-1180" y="275" key="FileChooserDialogImpl/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1643633507085" />
-    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1641902174605" />
+    <state x="-1180" y="275" key="FileChooserDialogImpl/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1643910540435" />
+    <state x="592" y="218" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1644007912458" />
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1645133404980" />
     <state x="-1143" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1643578242729">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
@@ -175,10 +240,11 @@
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
     <state x="-1304" y="240" key="run.anything.popup/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1643655703443" />
-    <state x="-1297" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1643660078061">
-      <screen x="-1920" y="0" width="1920" height="1040" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1645122366377">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="-1297" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1643660078061" />
+    <state x="-1297" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1643881339945" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1645122366377" />
     <state x="-1238" y="432" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1643654903993">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>

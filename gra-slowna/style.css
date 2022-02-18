@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Open-sans:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+}
+
+button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.view {
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 1430px;
+}
+
+.view__img {
+    width: 100%;
+    height: auto;
+}
+
+.startBtn {
+    width: 40%;
+    height: 20%;
+    background: transparent;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.view {
+    z-index: 2;
+    transition: .2s opacity;
+}
+
+.view--2, .view--3 {
+    z-index: -1;
+    opacity: 0;
+}
+
+.levelButtons {
+    position: absolute;
+    top: 66.1%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30%;
+    height: 50%;
+}
+
+.levelButtons__item {
+    width: 100%;
+    height: 20%;
+    background: transparent;
+}
+
+.timer {
+    font-size: 42px;
+    font-weight: 700;
+    position: absolute;
+    top: 19.5%;
+    left: 26.5%;
+    color: #C51718;
+}
+
+.view--3__btn {
+    position: absolute;
+    bottom: 11%;
+    right: 20%;
+    width: 19%;
+    height: 10%;
+    background: transparent;
+}
+
+.view--3__btn--cancel {
+    right: 28%;
+}
+
+.view--3__btn--accept {
+    right: 9%;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2px;
+    position: absolute;
+    left: 10.4%;
+    top: 28%;
+    width: 40%;
+    height: auto;
+}
+
+.letter {
+    width: 100%;
+    background: transparent;
+}
+
+.letter__img {
+    width: 100%;
+    height: auto;
+}
+
+.currentWord {
+    position: absolute;
+    top: 68.5%;
+    left: 54%;
+    width: 36%;
+    height: 9%;
+    background: transparent;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.currentWord > * {
+    margin: 0 1px;
+}
+
+.currentWord__letter {
+    width: 4%;
+    height: auto;
+}

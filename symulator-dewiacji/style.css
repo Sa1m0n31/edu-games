@@ -21,6 +21,19 @@
     width: 100%; /* Width of the outside container */
 }
 
+@-moz-keyframes spin {
+    100% { -moz-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+    100% { -webkit-transform: rotate(360deg); }
+}
+@keyframes spin {
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform:rotate(360deg);
+    }
+}
+
 /* The slider itself */
 .slider {
     -webkit-appearance: none;  /* Override default CSS styles */
@@ -199,6 +212,12 @@ button {
     z-index: 3;
 }
 
+.homeBtn--2 {
+    bottom: 90%;
+    right: 1%;
+    left: unset;
+}
+
 .abs {
     position: absolute;
     display: block;
@@ -322,7 +341,7 @@ button {
 }
 
 .homeBtn--home {
-    bottom: 89%;
+    bottom: 3%;
 }
 
 .kkValues--2 {
@@ -492,19 +511,19 @@ body {
     top: 7%;
 }
 
-.img--suwak {
-    position: absolute;
-    right: 10.5%;
-    transform: rotate(90deg);
-    bottom: 8%;
-    width: 3%;
-}
-
 .slidecontainer {
     position: absolute;
     width: 28%;
     left: 14%;
     height: 2%;
+}
+
+.slider--predkosc {
+    transform: rotate(-90deg);
+    height: 3%;
+    width: 19%;
+    top: 74.5%;
+    left: 78.12%;
 }
 
 .slider--wiatr {
@@ -552,11 +571,18 @@ body {
 }
 
 .clouds {
-
+    -webkit-animation:spin 10s linear infinite;
+    -moz-animation:spin 10s linear infinite;
+    animation:spin 10s linear infinite;
+    width: 30%;
+    position: absolute;
+    top: 25%;
+    left: 35%;
+    transform-origin: center;
 }
 
 .clouds .btn__img {
-    width: 30%;
+    width: 100%;
     border-radius: 30%;
     opacity: .8;
     transform: skew(10deg);
@@ -618,14 +644,14 @@ body {
 
 .courses {
     position: absolute;
-    top: 56%;
+    top: 60.6%;
     left: 34.7%;
-    width: 13%;
+    width: 11.7%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    height: 38%;
+    height: 32%;
 }
 
 .courses > div {
@@ -641,10 +667,10 @@ body {
 
 .courses2 {
     position: absolute;
-    top: 20%;
-    left: 60%;
+    top: 22.5%;
+    left: 56.5%;
     width: 30%;
-    height: 40%;
+    height: 17%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -656,4 +682,93 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.chooseCourse__modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 600px;
+    height: 400px;
+    z-index: -1;
+    transform: translate(-50%, -50%);
+    max-width: 600px;
+    max-height: 400px;
+    background: #fff;
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(66, 68, 90, 1);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(66, 68, 90, 1);
+    box-shadow: 0px 0px 10px 0px rgba(66, 68, 90, 1);
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    border-radius: 10px;
+    transition: .2s all;
+    opacity: 0;
+}
+
+.chooseCourse__modal__btn {
+    position: relative;
+    margin: 10px auto;
+    width: 40%;
+    height: 40px;
+    border-radius: 4px;
+    border: 1px solid #2E3192;
+    font-size: 19px;
+    text-align: center;
+    background: transparent;
+}
+
+.chooseCourse__modal__btn span {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 15px;
+    height: 15px;
+    background: #04AA6D;
+}
+
+.chooseCourse__header {
+    text-align: center;
+    font-weight: 700;
+    width: 100%;
+}
+
+.chooseCourse__choose {
+    width: 80%;
+    height: 40px;
+    border-radius: 40px;
+    background: #2E3192;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 15px;
+}
+
+.courses2 > div:last-of-type {
+    transform: translateY(-3px) scaleX(.95);
+}
+
+.showChart {
+    position: absolute;
+    top: 43%;
+    left: 57%;
+    width: 26%;
+    height: 10%;
+    background: transparent;
+}
+
+.chart {
+    position: absolute;
+    top: 58%;
+    right: 8%;
+    width: 43%;
+    height: 34%;
+    background: #fff;
+    z-index: 1;
+}
+
+.chart canvas {
+    visibility: hidden;
 }

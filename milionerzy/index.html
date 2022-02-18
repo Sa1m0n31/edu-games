@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Milionerzy</title>
+    <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+<div class="container">
+    <main class="view view--start">
+        <img class="view__img" src="./assets/intro.png" alt="start" />
+        <p class="view__start__text">
+            Au centre commercial, il y a une grande variété de boutiques.
+            Il y a les hypermarchés, les boutiques de vêtements à la mode pour les hommes, pour les femmes et pour les enfants. Il y a les magasins  de sport, de chaussures, de bijoux, des accessoires, des meubles et des décorations pour la maison, des librairies, des parfumeries.
+        </p>
+    </main>
+    <main class="view view--end">
+        <video autoplay muted playsinline>
+            <source src="./assets/gratulacje-francuski.mp4" />
+        </video>
+    </main>
+    <main class="view view--question">
+        <figure class="feedbackWrapper  feedbackWrapper--right">
+            <img class="feedback__img" src="./assets/feedback.png" alt="feedback" />
+            <main class="feedback__content">
+                <img class="feedback__icon" src="./assets/right.svg" alt="ok" />
+                <span class="feedback__text">
+<!--                    ¡Felicidades! Has conseguido completar el <span class="feedbackWrapper&#45;&#45;right__percent"></span>% del juego.-->
+                    Bravo ! C'est la bonne réponse !
+                </span>
+            </main>
+        </figure>
+        <figure class="feedbackWrapper feedbackWrapper--wrong">
+            <img class="feedback__img" src="./assets/feedback.png" alt="feedback" />
+            <main class="feedback__content">
+                <img class="feedback__icon" src="./assets/wrong.svg" alt="blad" />
+                <span class="feedback__text">
+                    C'est inexact, essaie encore une fois.
+                </span>
+            </main>
+        </figure>
+
+        <figure class="imageWrapper">
+            <img class="image" src="" alt="obrazek" />
+        </figure>
+
+<!--        <button class="help" onclick="excludeTwoAnswers()">-->
+<!--            <img class="help__img" src="./assets/50-50.png" alt="50/50" />-->
+<!--        </button>-->
+
+
+        <p class="question">
+
+        </p>
+
+        <img class="img--right" src="./assets/poprawna.png" alt="odpowiedz" />
+        <img class="img--wrong" src="./assets/bledna.png" alt="odpowiedz" />
+
+        <button class="answer answer--1" onclick="checkAnswer(this, 1)">
+
+        </button>
+        <button class="answer answer--2" onclick="checkAnswer(this, 2)">
+
+        </button>
+        <button class="answer answer--3" onclick="checkAnswer(this, 3)">
+
+        </button>
+<!--        <button class="answer answer&#45;&#45;4" onclick="checkAnswer(this, 4)">-->
+
+<!--        </button>-->
+        <img class="view__img" src="./assets/plansza_3_odp.png" alt="pytanie" />
+    </main>
+</div>
+<script src="./js/main.js"></script>
+</body>
+</html>

@@ -34,6 +34,9 @@
             <div class="slidecontainer slider--opady">
                 <input type="range" min="0" max="10" step="1" value="3" class="slider" id="opady" />
             </div>
+            <div class="slidecontainer slider--predkosc">
+                <input type="range" min="0" max="20" step="1" value="0" class="slider" id="predkosc" />
+            </div>
 
             <div class="values">
                 <p class="values--baro">
@@ -59,90 +62,130 @@
                 </div>
             </div>
 
-            <img class="abs img--suwak" src="./img/suwak.png" alt="suwak" />
             <img class="abs img--arrowKierunek" src="./img/strzalka.png" alt="kierunek" />
             <img class="abs img--arrowHome1" src="./img/wskaznik-radaru-1.png" alt="kierunek" />
             <img class="abs img--arrowHome2" src="./img/wskaznik-radaru-2.png" alt="kierunek" />
         </div>
+        <div class="view view--2">
+            <img class="view__img" src="./img/tlo-2.png" alt="tlo" />
+
+            <button class="chooseCourse" onclick="chooseCourse()">
+            </button>
+
+            <div class="chooseCourse__modal">
+                <h3 class="chooseCourse__header">
+                    Wybierz sześć kursów
+                </h3>
+                <button class="chooseCourse__modal__btn" onclick="selectCourse(1)">
+                    45
+                </button>
+                <button class="chooseCourse__modal__btn" onclick="selectCourse(2)">
+                    90
+                </button>
+                <button class="chooseCourse__modal__btn" onclick="selectCourse(3)">
+                    135
+                </button>
+                <button class="chooseCourse__modal__btn" onclick="selectCourse(4)">
+                    180
+                </button>
+                <button class="chooseCourse__modal__btn" onclick="selectCourse(5)">
+                    225
+                </button>
+                <button class="chooseCourse__modal__btn" onclick="selectCourse(6)">
+                    270
+                </button>
+                <button class="chooseCourse__modal__btn" onclick="selectCourse(7)">
+                    315
+                </button>
+                <button class="chooseCourse__modal__btn" onclick="selectCourse(8)">
+                    360
+                </button>
+                <button class="chooseCourse__choose" onclick="chooseSelectedCourses()">
+                    Wybierz kursy
+                </button>
+            </div>
+
+            <div class="courses">
+                <div>
+                    <p></p>
+                    <p></p>
+                </div>
+                <div>
+                    <p></p>
+                    <p></p>
+                </div>
+                <div>
+                    <p></p>
+                    <p></p>
+                </div>
+                <div>
+                    <p></p>
+                    <p></p>
+                </div>
+                <div>
+                    <p></p>
+                    <p></p>
+                </div>
+                <div>
+                    <p></p>
+                    <p></p>
+                </div>
+            </div>
+
+            <div class="courses2">
+                <div>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                </div>
+                <div>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                </div>
+                <div>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                </div>
+            </div>
+
+            <button class="showChart" onclick="chart()">
+
+            </button>
+
+            <div class="chart">
+                <canvas id="chart" width="480" height="230"></canvas>
+            </div>
+        </div>
+
+
+
+
         <button class="homeBtn" onclick="home()">
 
         </button>
-        <button class="homeBtn homeBtn--chart" onclick="chart()">
+        <button class="homeBtn homeBtn--2" onclick="home()">
+
+        </button>
+        <button class="homeBtn homeBtn--chart" onclick="home()">
 
         </button>
         <button class="homeBtn homeBtn--chart homeBtn--home" onclick="secondView()">
 
         </button>
     </div>
-    <div class="view view--2">
-        <img class="view__img" src="./img/tlo-2.png" alt="tlo" />
-
-        <button class="chooseCourse" onclick="chooseCourse()">
-
-        </button>
-        <div class="courses">
-            <div>
-                <p>45</p>
-                <p>45</p>
-            </div>
-            <div>
-                <p>90</p>
-                <p>90</p>
-            </div>
-            <div>
-                <p>135</p>
-                <p>135</p>
-            </div>
-            <div>
-                <p>180</p>
-                <p>180</p>
-            </div>
-            <div>
-                <p>225</p>
-                <p>225</p>
-            </div>
-            <div>
-                <p>270</p>
-                <p>270</p>
-            </div>
-            <div>
-                <p>315</p>
-                <p>315</p>
-            </div>
-            <div>
-                <p>360</p>
-                <p>360</p>
-            </div>
-        </div>
-
-        <div class="courses2">
-            <div>
-                <p>50</p>
-                <p>95</p>
-                <p>140</p>
-                <p>185</p>
-                <p>230</p>
-                <p>275</p>
-            </div>
-            <div>
-                <p>45</p>
-                <p>90</p>
-                <p>135</p>
-                <p>180</p>
-                <p>225</p>
-                <p>270</p>
-            </div>
-            <div>
-                <p>5</p>
-                <p>90</p>
-                <p>135</p>
-                <p>180</p>
-                <p>225</p>
-                <p>270</p>
-            </div>
-        </div>
-    </div>
 </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js" integrity="sha512-TW5s0IT/IppJtu76UbysrBH9Hy/5X41OTAbQuffZFU6lQ1rdcLHzpU5BzVvr/YFykoiMYZVWlr/PX1mDcfM9Qg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="./js/siema.js"></script>
 <script src="./js/main.js"></script>
 </body>
