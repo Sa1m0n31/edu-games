@@ -1,0 +1,141 @@
+@media(max-width: 1600px) {
+    .container--userNotifications .register__imgWrapper {
+        display: none;
+    }
+
+    .myNotifications {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media(max-width: 1400px) {
+    .register__imgWrapper {
+        display: none;
+    }
+
+    .register__form {
+        width: 100%;
+        padding-right: 0;
+    }
+
+    .addPetForm {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media(max-width: 996px) {
+    .formInput {
+        width: 100% !important;
+    }
+
+    .register__form {
+        width: 90%;
+        margin: auto;
+    }
+
+    .afterFormButtons,
+    .formSubmitBtn,
+    .label {
+        width: 100% !important;
+    }
+
+    .register__formContent > .flex:not(.label--pointer) {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .register__btn {
+        font-size: 14px;
+    }
+
+    .formInput {
+        font-size: 15px;
+        height: 40px;
+    }
+
+    .label--pointer {
+        font-size: 14px;
+    }
+
+    .underlineLink {
+        margin-top: 12px;
+        font-size: 12px;
+    }
+
+    .register--login .formInput {
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+    .register--login .formSubmitBtn {
+        height: 40px;
+        margin-top: 10px;
+    }
+
+    .myAccount {
+        align-items: center;
+        justify-content: center;
+    }
+
+    .smallHeader {
+        font-size: 17px;
+        text-align: center;
+    }
+
+    .pageHeader {
+        margin: 40px auto 20px;
+        font-size: 24px;
+    }
+
+    .myNotifications {
+        width: 90%;
+    }
+
+    .singleReservation {
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+    }
+}
+
+@media(max-width: 768px) {
+    .topBar__logo {
+        font-size: 21px;
+    }
+
+    .d-desktop {
+        display: none;
+    }
+
+    .addPetForm {
+        width: 90%;
+        max-width: 400px;
+    }
+
+    .addPet__label {
+        flex-direction: column;
+        font-size: 13px;
+    }
+
+    .addPet__label option, .addPet__label select, .addPet__input {
+        width: 100%;
+    }
+
+    .pageHeader {
+        font-size: 21px;
+    }
+
+    .pageHeader::after, .pageHeader::before {
+        width: 20px;
+    }
+
+    .pageHeader::after {
+        right: -30px;
+    }
+
+    .pageHeader::before {
+        left: -30px;
+    }
+}
