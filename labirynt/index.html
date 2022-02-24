@@ -286,6 +286,11 @@
        <div class="view view--word">
            <img class="view__img" src="./img/plansza-3-1.png" alt="plansza-2" />
 
+           <button class="soundBtn" onclick="toggleSound1()">
+               <img class="btn__img start start1" src="./img/play-button.svg" alt="start" />
+               <img class="btn__img stop stop1" src="./img/pause.svg" alt="stop" />
+           </button>
+
            <button class="btn btn--type1 btn--70" onclick="verifyAnswer([0, 1, 2, 3], 'treize', true)">
                treize
            </button>
@@ -351,9 +356,14 @@
            <button class="circle circle--nextLvl" onclick="nextLvl()"></button>
        </div>
 
-       <!-- LVL 4 -->
+       <!-- LVL 6 -->
        <div class="view">
            <img class="view__img" src="./img/plansza-3-2.png" alt="plansza-2" />
+
+           <button class="soundBtn soundBtn2" onclick="toggleSound2()">
+               <img class="btn__img start start2" src="./img/play-button.svg" alt="start" />
+               <img class="btn__img stop stop2" src="./img/pause.svg" alt="stop" />
+           </button>
 
            <button class="btn btn--type1 btn--88" onclick="verifyAnswer([0, 1, 2, 3], 16)">
                16
@@ -430,9 +440,15 @@
        <div class="view">
            <img class="view__img" src="./img/feedback-3-2.png" alt="udalo-sie" />
 
-           <button class="circle circle--home" onclick="home()"></button>
-           <button class="circle circle--playAgain" onclick="playAgain()"></button>
-           <button class="circle circle--nextLvl" onclick="nextLvl()"></button>
+           <button class="circle circle--home circle--home--failure" onclick="home()"></button>
+           <button class="circle circle--playAgain circle--playAgain--failure" onclick="playAgain()"></button>
+       </div>
+
+       <div class="view">
+           <img class="view__img" src="./img/negative-feedback.png" alt="porazka" />
+
+           <button class="circle circle--home circle--home--failure" onclick="home()"></button>
+           <button class="circle circle--playAgain circle--playAgain--failure" onclick="playAgainAfterFailure()"></button>
        </div>
    </div>
 </div>

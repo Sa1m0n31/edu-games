@@ -228,7 +228,7 @@ const toggleLetter = (el) => {
     const n = parseInt(el.classList[1].split('-')[1]);
 
     feedbackImage.style.opacity = '0';
-    selectedLetters.push(n);
+    if(selectedLetters.length <= 12) selectedLetters.push(n);
     img.setAttribute('src', lettersSelectedImages[n]);
     setTimeout(() => {
         img.setAttribute('src', lettersImages[n]);
@@ -303,7 +303,9 @@ const checkWord = () => {
     }) !== -1) {
         feedbackImage.setAttribute('src', './assets/right.svg');
         removeWordFromWordsBank(selectedLetters);
-        correctAnimation();
+        setTimeout(() => {
+            correctAnimation();
+        }, 50);
     }
     else {
         wrongAnimation();

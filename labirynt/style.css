@@ -68,6 +68,10 @@ button {
     transition: .1s all;
 }
 
+.btn:active {
+    border: 3px solid #fff;
+}
+
 .view--word .btn {
     width: auto;
     border-radius: 20px;
@@ -328,10 +332,18 @@ button {
     transform: rotate(45deg);
 }
 
+.btn--42:hover {
+    transform: rotate(45deg) scale(1.05);
+}
+
 .btn--43 {
     top: 77%;
     left: 34.6%;
     transform: rotate(75deg);
+}
+
+.btn--43:hover {
+    transform: rotate(75deg) scale(1.05);
 }
 
 .btn--44 {
@@ -340,10 +352,18 @@ button {
     transform: rotate(-60deg);
 }
 
+.btn--44:hover {
+    transform: rotate(-60deg) scale(1.05);
+}
+
 .btn--45 {
     top: 16%;
     left: 60%;
     transform: rotate(-20deg);
+}
+
+.btn--45:hover {
+    transform: rotate(-20deg) scale(1.05);
 }
 
 .btn--36 {
@@ -352,10 +372,18 @@ button {
     transform: rotate(-10deg);
 }
 
+.btn--36:hover {
+    transform: rotate(-10deg) scale(1.05);
+}
+
 .btn--37 {
     top: 31%;
     left: 64%;
     transform: rotate(49deg);
+}
+
+.btn--37:hover {
+    transform: rotate(49deg) scale(1.05);
 }
 
 .btn--38 {
@@ -364,10 +392,18 @@ button {
     transform: rotate(-80deg);
 }
 
+.btn--38:hover {
+    transform: rotate(-80deg) scale(1.05);
+}
+
 .btn--39 {
     top: 73%;
     left: 47%;
     transform: rotate(30deg)
+}
+
+.btn--39:hover {
+    transform: rotate(30deg) scale(1.05);
 }
 
 .btn--46 {
@@ -376,10 +412,18 @@ button {
     transform: rotate(-80deg);
 }
 
+.btn--46:hover {
+    transform: rotate(-80deg) scale(1.05);
+}
+
 .btn--47 {
     top: 49%;
     left: 42%;
     transform: rotate(10deg);
+}
+
+.btn--47:hover {
+    transform: rotate(10deg) scale(1.05);
 }
 
 .btn--48 {
@@ -388,10 +432,18 @@ button {
     transform: rotate(40deg);
 }
 
+.btn--48:hover {
+    transform: rotate(40deg) scale(1.05);
+}
+
 .btn--49 {
     top: 59%;
     left: 65%;
     transform: rotate(-40deg);
+}
+
+.btn--49:hover {
+    transform: rotate(-40deg) scale(1.05);
 }
 
 .btn--50 {
@@ -400,10 +452,18 @@ button {
     transform: rotate(40deg);
 }
 
+.btn--50:hover {
+    transform: rotate(40deg) scale(1.05);
+}
+
 .btn--51 {
     top: 63%;
     left: 32.3%;
     transform: rotate(-70deg);
+}
+
+.btn--51:hover {
+    transform: rotate(-70deg) scale(1.05);
 }
 
 .btn--52 {
@@ -412,10 +472,18 @@ button {
     transform: rotate(20deg);
 }
 
+.btn--52:hover {
+    transform: rotate(20deg) scale(1.05);
+}
+
 .btn--53 {
     top: 78.5%;
     left: 62%;
     transform: rotate(25deg);
+}
+
+.btn--53:hover {
+    transform: rotate(25deg) scale(1.05);
 }
 
 .btn--54 {
@@ -429,6 +497,10 @@ button {
     transform: rotate(40deg);
 }
 
+.btn--55:hover {
+    transform: rotate(40deg) scale(1.05);
+}
+
 .btn--56 {
     top: 58%;
     left: 60%;
@@ -440,10 +512,18 @@ button {
     transform: rotate(-10deg);
 }
 
+.btn--57:hover {
+    transform: rotate(-10deg) scale(1.05);
+}
+
 .btn--58 {
     top: 76%;
     left: 47%;
     transform: rotate(20deg);
+}
+
+.btn--58:hover {
+    transform: rotate(20deg) scale(1.05);
 }
 
 .btn--59 {
@@ -452,10 +532,18 @@ button {
     transform: rotate(-50deg);
 }
 
+.btn--59:hover {
+    transform: rotate(-50deg) scale(1.05);
+}
+
 .btn--60 {
     top: 34.5%;
     left: 62%;
     transform: rotate(40deg);
+}
+
+.btn--60:hover {
+    transform: rotate(40deg) scale(1.05);
 }
 
 .btn--61 {
@@ -464,10 +552,18 @@ button {
     transform: rotate(-10deg);
 }
 
+.btn--61:hover {
+    transform: rotate(-10deg) scale(1.05);
+}
+
 .btn--62 {
     top: 43%;
     left: 24%;
     transform: rotate(15deg);
+}
+
+.btn--62:hover {
+    transform: rotate(15deg) scale(1.05);
 }
 
 .btn--63 {
@@ -481,10 +577,18 @@ button {
     transform: rotate(-40deg);
 }
 
+.btn--64:hover {
+    transform: rotate(-40deg) scale(1.05);
+}
+
 .btn--65 {
     top: 32%;
     left: 66.5%;
     transform: rotate(80deg);
+}
+
+.btn--65:hover {
+    transform: rotate(80deg) scale(1.05);
 }
 
 .btn--66 {
@@ -493,10 +597,18 @@ button {
     transform: rotate(-10deg);
 }
 
+.btn--66:hover {
+    transform: rotate(-10deg) scale(1.05);
+}
+
 .btn--67 {
     top: 71%;
     left: 36.8%;
     transform: rotate(-60deg);
+}
+
+.btn--67:hover {
+    transform: rotate(-60deg) scale(1.05);
 }
 
 .btn--68 {
@@ -505,10 +617,18 @@ button {
     transform: rotate(15deg);
 }
 
+.btn--68:hover {
+    transform: rotate(15deg) scale(1.05);
+}
+
 .btn--69 {
     top: 75%;
     left: 67.7%;
     transform: rotate(-53deg);
+}
+
+.btn--69:hover {
+    transform: rotate(-53deg) scale(1.05);
 }
 
 .btn--70 {
@@ -517,10 +637,18 @@ button {
     transform: rotate(53deg);
 }
 
+.btn--70:hover {
+    transform: rotate(53deg) scale(1.05);
+}
+
 .btn--71 {
     top: 68%;
     left: 43.5%;
     transform: rotate(-44deg);
+}
+
+.btn--71:hover {
+    transform: rotate(-44deg) scale(1.05);
 }
 
 .btn--72 {
@@ -529,16 +657,18 @@ button {
     transform: rotate(28deg);
 }
 
-.btn--73 {
-    left: 62%;
-    top: 64%;
-    transform: rotate(60deg);
+.btn--72:hover {
+    transform: rotate(28deg) scale(1.05);
 }
 
 .btn--73 {
     left: 62%;
     top: 64%;
     transform: rotate(60deg);
+}
+
+.btn--73:hover {
+    transform: rotate(60deg) scale(1.05);
 }
 
 .btn--74 {
@@ -547,10 +677,18 @@ button {
     transform: rotate(-40deg);
 }
 
+.btn--74:hover {
+    transform: rotate(-40deg) scale(1.05);
+}
+
 .btn--75 {
     top: 62%;
     left: 70.6%;
     transform: rotate(69deg);
+}
+
+.btn--75:hover {
+    transform: rotate(69deg) scale(1.05);
 }
 
 .btn--76 {
@@ -559,10 +697,18 @@ button {
     transform: rotate(-30deg);
 }
 
+.btn--76:hover {
+    transform: rotate(-30deg) scale(1.05);
+}
+
 .btn--77 {
     top: 43.5%;
     left: 39%;
     transform: rotate(37deg);
+}
+
+.btn--77:hover {
+    transform: rotate(37deg) scale(1.05);
 }
 
 .btn--78 {
@@ -571,10 +717,18 @@ button {
     transform: rotate(35deg);
 }
 
+.btn--78:hover {
+    transform: rotate(35deg) scale(1.05);
+}
+
 .btn--79 {
     top: 59%;
     left: 55%;
     transform: rotate(45deg);
+}
+
+.btn--79:hover {
+    transform: rotate(45deg) scale(1.05);
 }
 
 .btn--80 {
@@ -583,10 +737,18 @@ button {
     transform: rotate(-58deg);
 }
 
+.btn--80:hover {
+    transform: rotate(-50deg) scale(1.05);
+}
+
 .btn--81 {
     top: 36%;
     left: 56.5%;
     transform: rotate(43deg);
+}
+
+.btn--81:hover {
+    transform: rotate(43deg) scale(1.05);
 }
 
 .btn--82 {
@@ -600,10 +762,18 @@ button {
     transform: rotate(65deg);
 }
 
+.btn--83:hover {
+    transform: rotate(65deg) scale(1.05);
+}
+
 .btn--84 {
     top: 79.5%;
     left: 50%;
     transform: rotate(5deg);
+}
+
+.btn--84:hover {
+    transform: rotate(5deg) scale(1.05);
 }
 
 .btn--85 {
@@ -612,16 +782,28 @@ button {
     transform: rotate(60deg);
 }
 
+.btn--85:hover {
+    transform: rotate(60deg) scale(1.05);
+}
+
 .btn--86 {
     top: 43%;
     left: 52%;
     transform: rotate(18deg);
 }
 
+.btn--86:hover {
+    transform: rotate(18deg) scale(1.05);
+}
+
 .btn--87 {
     top: 31%;
     left: 64%;
     transform: rotate(18deg);
+}
+
+.btn--87:hover {
+    transform: rotate(18deg) scale(1.05);
 }
 
 .btn--88 {
@@ -737,4 +919,39 @@ button {
 .btn--110 {
     top: 75.5%;
     left: 59.7%;
+}
+
+.circle--home--failure {
+    left: 38%;
+}
+
+.circle--playAgain--failure {
+    left: 52.5%;
+}
+
+.soundBtn {
+    width: 3%;
+    background: transparent;
+    position: absolute;
+    top: 27%;
+    left: 30%;
+}
+
+.btn__img {
+    width: 100%;
+    height: auto;
+}
+
+.stop {
+    visibility: hidden;
+}
+
+.start, .stop {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.soundBtn2 {
+    top: 25%;
 }
