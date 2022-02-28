@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Milionerzy</title>
+    <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+<div class="container">
+    <main class="view view--start">
+        <img class="view__img" src="./assets/intro.png" alt="start" />
+        <p class="view__start__text">
+            ¿Recuerdas mucho de esta clase? Compruébalo.
+        </p>
+    </main>
+    <main class="view view--end">
+        <video autoplay muted playsinline>
+            <source src="./assets/gratulacje.mp4" />
+        </video>
+    </main>
+    <main class="view view--question">
+        <figure class="feedbackWrapper  feedbackWrapper--right">
+            <img class="feedback__img" src="./assets/feedback.png" alt="feedback" />
+            <main class="feedback__content">
+                <img class="feedback__icon" src="./assets/right.svg" alt="ok" />
+                <span class="feedback__text">
+                    ¡Felicidades! Has conseguido completar el <span class="feedbackWrapper--right__percent"></span>% del juego.
+<!--                    Bravo ! C'est la bonne réponse !-->
+                </span>
+            </main>
+        </figure>
+        <figure class="feedbackWrapper feedbackWrapper--wrong">
+            <img class="feedback__img" src="./assets/feedback.png" alt="feedback" />
+            <main class="feedback__content">
+                <img class="feedback__icon" src="./assets/wrong.svg" alt="blad" />
+                <span class="feedback__text">
+                    Parece que no te ha salido muy bien. Puedes intentarlo de nuevo.
+                </span>
+            </main>
+        </figure>
+
+        <figure class="imageWrapper">
+            <img class="image" src="" alt="obrazek" />
+        </figure>
+
+        <button class="help" onclick="excludeTwoAnswers()">
+            <img class="help__img" src="./assets/50-50.png" alt="50/50" />
+        </button>
+
+
+        <p class="question">
+
+        </p>
+
+        <img class="img--right" src="./assets/poprawna.png" alt="odpowiedz" />
+        <img class="img--wrong" src="./assets/bledna.png" alt="odpowiedz" />
+
+        <button class="answer answer--1" onclick="checkAnswer(this, 1)">
+
+        </button>
+        <button class="answer answer--2" onclick="checkAnswer(this, 2)">
+
+        </button>
+        <button class="answer answer--3" onclick="checkAnswer(this, 3)">
+
+        </button>
+        <button class="answer answer--4" onclick="checkAnswer(this, 4)">
+
+        </button>
+        <img class="view__img" src="./assets/pytanie.png" alt="pytanie" />
+    </main>
+</div>
+<script src="./js/main.js"></script>
+</body>
+</html>

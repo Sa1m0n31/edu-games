@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Milionerzy</title>
+    <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+<div class="container">
+    <div class="carousel">
+        <div class="view view--start">
+            <img class="view__img" src="./img/tabela.png" alt="start" />
+
+            <button class="btn--table btn--table--0" onclick="setQuestions(0)"></button>
+            <button class="btn--table btn--table--3" onclick="setQuestions(1)"></button>
+            <button class="btn--table btn--table--1" onclick="setQuestions(2)"></button>
+            <button class="btn--table btn--table--4" onclick="setQuestions(3)"></button>
+            <button class="btn--table btn--table--2" onclick="setQuestions(4)"></button>
+            <button class="btn--table btn--table--5" onclick="setQuestions(5)"></button>
+        </div>
+        <div class="view view--question">
+            <img class="view__img" src="./img/21_gra_na_ulicy_pytanie_1.png" alt="pytanie" />
+
+            <button class="answer answer--0" onclick="answer(0, 0)"></button>
+            <button class="answer answer--1" onclick="answer(0, 1)"></button>
+        </div>
+        <div class="view view--question">
+            <img class="view__img" src="./img/21_gra_na_ulicy_pytanie_2.png" alt="pytanie" />
+
+            <button class="answer answer--0" onclick="answer(1, 0)"></button>
+            <button class="answer answer--1" onclick="answer(1, 1)"></button>
+        </div>
+        <div class="view view--question">
+            <img class="view__img" src="./img/21_gra_na_ulicy_pytanie_2.png" alt="pytanie" />
+
+            <button class="answer answer--0" onclick="answer(2, 0)"></button>
+            <button class="answer answer--1" onclick="answer(2, 1)"></button>
+        </div>
+
+        <div class="view view--question">
+            <img class="view__img" src="./img/21_gra_w_parku_pytanie_1.png" alt="pytanie" />
+
+            <button class="answer answer--0" onclick="answer(3, 0)"></button>
+            <button class="answer answer--1" onclick="answer(3, 1)"></button>
+        </div>
+        <div class="view view--question">
+            <img class="view__img" src="./img/21_gra_w_parku_pytanie_2.png" alt="pytanie" />
+
+            <button class="answer answer--0" onclick="answer(4, 0)"></button>
+            <button class="answer answer--1" onclick="answer(4, 1)"></button>
+        </div>
+        <div class="view view--question">
+            <img class="view__img" src="./img/21_gra_w_parku_pytanie_3.png" alt="pytanie" />
+
+            <button class="answer answer--0" onclick="answer(5, 0)"></button>
+            <button class="answer answer--1" onclick="answer(5, 1)"></button>
+        </div>
+        <div class="view view--question">
+            <img class="view__img" src="./img/21_gra_w_parku_pytanie_4.png" alt="pytanie" />
+
+            <button class="answer answer--0" onclick="answer(6, 0)"></button>
+            <button class="answer answer--1" onclick="answer(6, 1)"></button>
+        </div>
+
+        <div class="view view--question">
+            <img class="view__img" src="./img/21_gra_w_szkole_pytanie_1.png" alt="pytanie" />
+
+            <button class="answer answer--0" onclick="answer(7, 0)"></button>
+            <button class="answer answer--1" onclick="answer(7, 1)"></button>
+        </div>
+        <div class="view view--question">
+            <img class="view__img" src="./img/21_gra_w_szkole_pytanie_2.png" alt="pytanie" />
+
+            <button class="answer answer--0" onclick="answer(8, 0)"></button>
+            <button class="answer answer--1" onclick="answer(8, 1)"></button>
+        </div>
+        <div class="view view--question">
+            <img class="view__img" src="./img/21_gra_w_szkole_pytanie_3.png" alt="pytanie" />
+
+            <button class="answer answer--0" onclick="answer(9, 0)"></button>
+            <button class="answer answer--1" onclick="answer(9, 1)"></button>
+        </div>
+
+        <div class="view view--question">
+            <img class="view__img" src="./img/21_gra_dbam_o_czystość_pytanie_1.png" alt="pytanie" />
+
+            <button class="answer answer--0" onclick="answer(10, 0)"></button>
+            <button class="answer answer--1" onclick="answer(10, 1)"></button>
+        </div>
+        <div class="view view--question">
+            <img class="view__img" src="./img/21_gra_dbam_o_czystość_pytanie_2.png" alt="pytanie" />
+
+            <button class="answer answer--0" onclick="answer(11, 0)"></button>
+            <button class="answer answer--1" onclick="answer(11, 1)"></button>
+        </div>
+        <div class="view view--question">
+            <img class="view__img" src="./img/21_gra_dbam_o_czystość_pytanie_3.png" alt="pytanie" />
+
+            <button class="answer answer--0" onclick="answer(12, 0)"></button>
+            <button class="answer answer--1" onclick="answer(12, 1)"></button>
+        </div>
+        <div class="view view--question">
+            <img class="view__img" src="./img/21_gra_dbam_o_czystość_pytanie_4.png" alt="pytanie" />
+
+            <button class="answer answer--0" onclick="answer(13, 0)"></button>
+            <button class="answer answer--1" onclick="answer(13, 1)"></button>
+        </div>
+
+        <div class="view view--question">
+            <img class="view__img" src="./img/21_gra_w_domu_pytanie_1.png" alt="pytanie" />
+
+            <button class="answer answer--0" onclick="answer(14, 0)"></button>
+            <button class="answer answer--1" onclick="answer(14, 1)"></button>
+        </div>
+        <div class="view view--question">
+            <img class="view__img" src="./img/21_gra_w_domu_pytanie_2.png" alt="pytanie" />
+
+            <button class="answer answer--0" onclick="answer(15, 0)"></button>
+            <button class="answer answer--1" onclick="answer(15, 1)"></button>
+        </div>
+        <div class="view view--question">
+            <img class="view__img" src="./img/21_gra_w_domu_pytanie_3.png" alt="pytanie" />
+
+            <button class="answer answer--0" onclick="answer(16, 0)"></button>
+            <button class="answer answer--1" onclick="answer(16, 1)"></button>
+        </div>
+
+        <div class="view view--question">
+            <img class="view__img" src="./img/21_gra_jem_zdrowo_pytanie_1.png" alt="pytanie" />
+
+            <button class="answer answer--0" onclick="answer(17, 0)"></button>
+            <button class="answer answer--1" onclick="answer(17, 1)"></button>
+        </div>
+        <div class="view view--question">
+            <img class="view__img" src="./img/21_gra_jem_zdrowo_pytanie_2.png" alt="pytanie" />
+
+            <button class="answer answer--0" onclick="answer(18, 0)"></button>
+            <button class="answer answer--1" onclick="answer(18, 1)"></button>
+        </div>
+        <div class="view view--question">
+            <img class="view__img" src="./img/21_gra_jem_zdrowo_pytanie_3.png" alt="pytanie" />
+
+            <button class="answer answer--0" onclick="answer(19, 0)"></button>
+            <button class="answer answer--1" onclick="answer(19, 1)"></button>
+        </div>
+        <div class="view view--question">
+            <img class="view__img" src="./img/21_gra_jem_zdrowo_pytanie_4.png" alt="pytanie" />
+
+            <button class="answer answer--0" onclick="answer(20, 0)"></button>
+            <button class="answer answer--1" onclick="answer(20, 1)"></button>
+        </div>
+
+        <div class="view view--summary">
+            <img class="view__img view__img--summary" src="./img/punkty-0.png" alt="podsumowanie" />
+        </div>
+    </div>
+</div>
+<script src="./js/siema.js"></script>
+<script src="./js/main.js"></script>
+</body>
+</html>
