@@ -79,7 +79,8 @@ function randomIntFromInterval(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min)
 }
 
-const allWhitespaceElements = Array.from(document.querySelectorAll('.text'));
+let shifterState = 1; // 0, 1 or 2
+
 const allTextsElements = Array.from(document.querySelectorAll('.text>span'));
 const allTexts = allTextsElements.map((item) => {
     return item.textContent;
@@ -88,13 +89,12 @@ const allTexts = allTextsElements.map((item) => {
 /* Main carousel */
 const game = new Siema({
     selector: ".carousel",
-    draggable: false,
+    draggable: true,
     perPage: 1
 });
 
 const colregBtn = document.querySelector(".btn--colreg");
 const next = () => {
-    // game.next();
     game.goTo(1);
 
     backBtn.style.display = "flex";
@@ -130,6 +130,39 @@ const menu = (lvl) => {
 const backBtn = document.querySelector(".btn--back");
 const prevLvl = () => {
     game.goTo(1);
+
+    feedbackImages.forEach((item) => {
+        item.style.zIndex = '-1';
+    });
+
+    lightsImages.forEach((item) => {
+        item.forEach((item) => {
+            item.style.visibility = 'hidden';
+        });
+    });
+    shifterButtons.forEach((item) => {
+        item.forEach((item, index) => {
+            if(index === 1) item.style.opacity = '1';
+            else item.style.opacity = '0';
+        })
+    });
+    arrows.forEach((item) => {
+        item.forEach((item) => {
+            item.style.visibility = 'hidden';
+        });
+    });
+    arrowsClicked = arrowsClicked.map((item) => {
+        return false;
+    });
+    lightsClicked = lightsClicked.map((item) => {
+        return false;
+    });
+    shifterImages.forEach((item) => {
+        item.forEach((item, index) => {
+            if(index === 1) item.style.visibility = 'visible';
+            else item.style.visibility = 'hidden';
+        })
+    });
 
     lvlProgress = [];
     if(currentLvl > 1) currentLvl--;
@@ -196,12 +229,17 @@ let currentLvl = 1;
 let pointsNeeded = [3, 3, 3, 4, 3, 3, 3, 2, 2, 1, 4, 6, 5, 2, 8, 8, 1, 2, 5, 1, 9];
 let lvlProgress = [];
 
+const feedbackImages = Array.from(document.querySelectorAll('.view__img--feedback'));
+
 const positiveFeedback = () => {
     checkButtons[currentLvl-1].style.display = 'none';
 
     allTextsElements[currentLvl-1].style.color = 'green';
     allTextsElements[currentLvl-1].textContent = positiveFeedbacks[currentLvl-1];
-}
+
+    const feedbackImage = document.querySelector(`.view--${currentLvl}>.view__img--feedback`);
+    if(feedbackImage) feedbackImage.style.zIndex = '2';
+};
 
 const negativeFeedback = () => {
     checkButtons[currentLvl-1].style.display = 'none';
@@ -239,13 +277,22 @@ const turnLightsOff = () => {
         )
     const turnOn = Array.from(document.querySelectorAll('.light--special'));
 
-    turnOff.forEach((item) => {
-        item.style.visibility = 'hidden';
-    });
-    turnOn.forEach((item) => {
-        item.style.visibility = 'visible';
-    });
+    // turnOff.forEach((item) => {
+    //     item.style.visibility = 'hidden';
+    // });
+    // turnOn.forEach((item) => {
+    //     item.style.visibility = 'visible';
+    // });
 }
+
+const soundsElements = Array.from(document.querySelectorAll('audio'));
+
+soundsElements.forEach((item, index) => {
+    item.onended = () => {
+        item.currentTime = 0;
+        soundsImages[index].style.visibility = 'hidden';
+    }
+});
 
 const isAudioPlaying = () => {
     const allAudios = document.querySelectorAll('audio');
@@ -256,6 +303,7 @@ const isAudioPlaying = () => {
 
 const playSound = (n) => {
     if(!isAudioPlaying()) {
+        soundsImages[n].style.visibility = 'visible';
         let audio = document.getElementById(sounds[n]);
         audio.play();
     }
@@ -268,21 +316,13 @@ const isElementInLvlProgress = (el) => {
 }
 
 const lvl1Click = (btnIndex) => {
-    if(btnIndex === 3) {
-        if(lvlProgress.length === 2) {
-            lvlProgress.push(btnIndex);
-        }
-    }
-    else if(btnIndex < 4) {
-        if(!isElementInLvlProgress(btnIndex)) {
-            lvlProgress.push(btnIndex);
-        }
+    if(!isElementInLvlProgress(btnIndex)) {
+        lvlProgress.push(btnIndex);
     }
     else {
-        lvlProgress.push(1);
-        lvlProgress.push(1);
-        lvlProgress.push(1);
-        lvlProgress.push(1);
+        lvlProgress = lvlProgress.filter((item) => {
+            return item !== btnIndex;
+        });
     }
 }
 
@@ -543,7 +583,60 @@ const lvl21Click = (btnIndex) => {
     }
 }
 
-const btnClick = (lvl, btnIndex) => {
+let shifterButtons = [], arrows = [], shifterImages = [], lightsImages = [], soundsImages = [];
+for(let i=1; i<22; i++) {
+    shifterButtons.push(Array.from(document.querySelectorAll(`.view--${i} .btn--shifter__img`)));
+    arrows.push(Array.from(document.querySelectorAll(`.view--${i} .btn--arrow__img`)));
+    shifterImages.push(Array.from(document.querySelectorAll(`.view--${i} .view__shifter__img`)));
+    lightsImages.push(Array.from(document.querySelectorAll(`.view--${i} .btn--light__img`)));
+    soundsImages.push(Array.from(document.querySelectorAll(`.view--${i} .btn--sound__img`)));
+}
+
+let arrowsClicked = [false, false, false, false];
+let lightsClicked = [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false];
+
+const toggleShifter = (n) => {
+    shifterState = n;
+    shifterImages[currentLvl-1].forEach((item, index) => {
+        if(index === n) {
+            item.style.visibility = 'visible';
+            shifterButtons[currentLvl-1][index].style.opacity = '1';
+        }
+        else {
+            item.style.visibility = 'hidden';
+            shifterButtons[currentLvl-1][index].style.opacity = '0';
+        }
+    });
+}
+
+const toggleArrow = (n) => {
+    if(arrowsClicked[n]) {
+        arrows[currentLvl-1][n].style.visibility = 'hidden';
+    }
+    else {
+        arrows[currentLvl-1][n].style.visibility = 'visible';
+    }
+    arrowsClicked[n] = !arrowsClicked[n];
+}
+
+const toggleLight = (n) => {
+    console.log(lightsImages);
+    if(lightsClicked[n]) {
+        lightsImages[currentLvl-1][n].style.visibility = 'hidden';
+    }
+    else {
+        lightsImages[currentLvl-1][n].style.visibility = 'visible';
+    }
+    lightsClicked[n] = !lightsClicked[n];
+}
+
+const btnClick = (lvl, btnIndex, action = null) => {
+    if(action !== null) {
+        if(action < 3) toggleShifter(action);
+        else if(action < 7) toggleArrow(action-3);
+        else if(action < 23) toggleLight(action-7);
+    }
+
     switch(lvl) {
         case 1:
             lvl1Click(btnIndex);
@@ -609,7 +702,7 @@ const btnClick = (lvl, btnIndex) => {
             lvl21Click(btnIndex);
             break;
         default:
-            wrongAnswer();
+            // wrongAnswer();
             break;
     }
 }

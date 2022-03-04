@@ -17,7 +17,7 @@ button {
     position: absolute;
     top: 0;
     left: 0;
-    max-width: 1430px;
+    max-width: 640px;
 }
 
 .view__img {
@@ -40,9 +40,17 @@ button {
     transition: .2s opacity;
 }
 
-.view--2, .view--3 {
+.view--2, .view--3, .view--4 {
     z-index: -1;
     opacity: 0;
+}
+
+.pointsCount {
+    font-size: 65px;
+    position: absolute;
+    top: 49%;
+    left: 28%;
+    color: #fff;
 }
 
 .levelButtons {
@@ -61,7 +69,7 @@ button {
 }
 
 .timer {
-    font-size: 36px;
+    font-size: 24px;
     font-weight: 700;
     position: absolute;
     top: 19%;
@@ -152,7 +160,7 @@ button {
 }
 
 .currentWord__item img {
-    max-width: 16px;
+    max-width: 12px;
     margin: 3px 0;
 }
 
@@ -165,11 +173,21 @@ button {
 }
 
 .currentWord__img {
-    max-width: 35px;
+    max-width: 24px;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     opacity: 0;
     transition: .3s all;
+}
+
+.startAgainBtn {
+    position: absolute;
+    top: 56%;
+    left: 62.5%;
+    width: 11%;
+    height: 16%;
+    border-radius: 50%;
+    background: transparent;
 }

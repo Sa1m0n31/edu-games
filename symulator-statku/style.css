@@ -30,6 +30,8 @@
     width: 100vw;
     max-width: 1200px;
     height: auto;
+    background: url("./assets/tlo.png");
+    background-size: 100%;
 }
 
 .view--menu {
@@ -134,8 +136,8 @@
 .btn--short {
     width: 1.5%;
     height: 2.5%;
-    top: 56.5%;
-    left: 49.5%;
+    top: 56.4%;
+    left: 49.65%;
 }
 
 .btn--long {
@@ -206,38 +208,46 @@ audio {
 }
 
 .btn--lightTop {
-    top: 64.5%;
-    height: 4%;
-    width: 15%;
-    left: 46.2%;
+    top: 65.3%;
+    height: 2%;
+    width: 1.5%;
+    left: 56.6%;
+}
+
+.btn--lightTop2 {
+    left: 58%;
+}
+
+.btn--lightTop3 {
+    left: 59.2%;
 }
 
 .btn--lightLeft {
     top: 68.6%;
     height: 4%;
-    width: 15%;
-    left: 46.2%;
+    width: 15.5%;
+    left: 46.1%;
 }
 
 .btn--lightRight {
     top: 73%;
     height: 4%;
-    width: 15%;
-    left: 46.2%;
+    width: 15.5%;
+    left: 46.1%;
 }
 
 .btn--lightBack {
-    top: 77.5%;
+    top: 77.2%;
     height: 4%;
-    width: 15%;
-    left: 46.2%;
+    width: 15.5%;
+    left: 46.1%;
 }
 
 .btn--lightTowing {
-    top: 82%;
+    top: 81.6%;
     height: 4%;
-    width: 15%;
-    left: 46.2%;
+    width: 15.5%;
+    left: 46.1%;
 }
 
 .btn--lightTop--1 {
@@ -510,14 +520,177 @@ audio {
     transform: rotate(-90deg);
 }
 
-.gameBtn:active {
-    background: rgba(0, 0, 0, .3);
-}
-
 .gameBtn--wrong {
     z-index: 1000;
 }
 
 .gameBtn:not(.gameBtn--wrong) {
     z-index: 1001;
+}
+
+.view__shifter {
+    position: absolute;
+    top: 46.5%;
+    right: 3.5%;
+    width: 20%;
+    height: 50%;
+}
+
+.view__shifter__img {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.shifter--2, .shifter--0 {
+    visibility: hidden;
+}
+
+.btn--shifter--0 .btn--shifter__img,
+.btn--shifter--2 .btn--shifter__img {
+    opacity: 0;
+}
+
+.btn--shifter {
+    position: absolute;
+    background: transparent;
+    border: none;
+    outline: none;
+    width: 47%;
+    left: 15.5%;
+    cursor: pointer;
+}
+
+.btn--shifter__img {
+    width: 100%;
+    height: auto;
+}
+
+.btn--shifter--0 {
+    top: 34.3%;
+}
+
+.btn--shifter--1 {
+    top: 53.5%;
+}
+
+.btn--shifter--2 {
+    top: 72%;
+}
+
+.view__arrows {
+    position: absolute;
+    top: 63%;
+    left: 64%;
+    width: 12%;
+    height: 21%;
+}
+
+.btn--arrow {
+    position: absolute;
+    width: 30%;
+    height: 50%;
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.btn--arrowTop {
+    left: 34.5%;
+}
+
+.btn--arrowRight {
+    right: 14%;
+    height: 33%;
+    top: 33.5%;
+}
+
+.btn--arrowBottom {
+    bottom: -3%;
+    left: 30.5%;
+    width: 38%;
+}
+
+.btn--arrowLeft {
+    height: 33%;
+    top: 33.5%;
+    left: 4%;
+}
+
+.btn--arrow__img {
+    width: 100%;
+    height: auto;
+    visibility: hidden;
+}
+
+.btn--arrowRight .btn--arrow__img,
+.btn--arrowLeft .btn--arrow__img {
+    height: 100%;
+    width: auto;
+}
+
+.btn--light__img {
+    width: 100%;
+    height: auto;
+    visibility: hidden;
+}
+
+.btn--sound__img {
+    width: 100%;
+    height: auto;
+    visibility: hidden;
+}
+
+.btn--light360 {
+    position: absolute;
+    top: 86.4%;
+    left: 57.85%;
+    width: 1.15%;
+    height: 2%;
+}
+
+.btn--light360--1 {
+    left: 58.85%;
+}
+
+.btn--light360--2 {
+    left: 59.85%;
+}
+
+.btn--light360--3 {
+    top: 89.3%;
+}
+
+.btn--light360--4 {
+    top: 89.3%;
+    left: 58.85%;
+}
+
+.btn--light360--5 {
+    top: 89.3%;
+    left: 59.85%;
+}
+
+.btn--light360--6 {
+    top: 92.1%;
+}
+
+.btn--light360--7 {
+    top: 92.1%;
+    left: 58.85%;
+}
+
+.btn--light360--8 {
+    left: 59.85%;
+    top: 92.1%;
+}
+
+.view__img--feedback {
+    position: absolute;
+    top: -0.5%;
+    left: 0;
+    width: 100%;
+    z-index: -1;
 }

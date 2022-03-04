@@ -20,92 +20,71 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1dacfaf5-319a-496b-8493-e88c795b5ebd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/labirynt/img/pause.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/labirynt/img/play-button.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/labirynt/manifest.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/labirynt/sounds/sound1.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/labirynt/sounds/sound2.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/labirynt/womi.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/symulator-statku/assets/do-przodu.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/symulator-statku/assets/do-tylu.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/symulator-statku/assets/dzwiek-dlugi.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/symulator-statku/assets/dzwiek-krotki.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/symulator-statku/assets/manetka-do-przodu.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/symulator-statku/assets/manetka-do-tylu.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/symulator-statku/assets/manetka-stop.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/symulator-statku/assets/stop.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/symulator-statku/assets/strzalka-dol.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/symulator-statku/assets/strzalka-gora.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/symulator-statku/assets/strzalka-lewo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/symulator-statku/assets/strzalka-prawo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/symulator-statku/assets/swiatla-biale.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/symulator-statku/assets/swiatla-czerwone.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/symulator-statku/assets/swiatla-zielone.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/symulator-statku/assets/swiatlo-burtowe-lewe-klik.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/symulator-statku/assets/swiatlo-burtowe-prawe-klik.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/symulator-statku/assets/swiatlo-holowania-klik.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/symulator-statku/assets/swiatlo-masztowe-klik1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/symulator-statku/assets/swiatlo-masztowe-klik2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/symulator-statku/assets/swiatlo-masztowe-klik3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/symulator-statku/assets/swiatlo-rufowe-klik.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/symulator-statku/assets/tlo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gra-slowna-francuski/assets/plansza.png" beforeDir="false" afterPath="$PROJECT_DIR$/gra-slowna-francuski/assets/plansza.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gra-slowna-francuski/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/gra-slowna-francuski/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gra-slowna-francuski/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/gra-slowna-francuski/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gra-slowna-francuski/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/gra-slowna-francuski/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gra-slowna-francuski/womi.js" beforeDir="false" afterPath="$PROJECT_DIR$/gra-slowna-francuski/womi.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/labirynt/backup/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/labirynt/backup/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/labirynt/backup/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/labirynt/backup/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/labirynt/backup/public/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/labirynt/backup/public/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/labirynt/backup/public/logo192.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/labirynt/backup/public/logo512.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/labirynt/backup/public/manifest.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/labirynt/backup/public/robots.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/labirynt/backup/src/App.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/labirynt/backup/src/components/Footer.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/labirynt/backup/src/components/GoogleMap.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/labirynt/backup/src/components/Header.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/labirynt/backup/src/components/MyAccountPersonalData.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/labirynt/backup/src/components/MyAccountPetList.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/labirynt/backup/src/components/RegisterAsHotelOwner.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/labirynt/backup/src/components/RegisterAsPetOwner.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/labirynt/backup/src/components/SearchSection.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/labirynt/backup/src/components/SinglePetOnList.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/labirynt/backup/src/components/SingleReservation.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/labirynt/backup/src/components/hotelList/Hotel.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/labirynt/backup/src/components/hotelList/Hotels.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/labirynt/backup/src/components/hotelList/services/getHotels.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/labirynt/backup/src/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/labirynt/backup/src/pages/AddHotel.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/labirynt/backup/src/pages/AddPet.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/labirynt/backup/src/pages/AddReservation.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/labirynt/backup/src/pages/BlockDays.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/labirynt/backup/src/pages/Homepage.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/labirynt/backup/src/pages/HotelOwnerNotifications.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/labirynt/backup/src/pages/LoginPage.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/labirynt/backup/src/pages/MyAccount.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/labirynt/backup/src/pages/MyAccountHotelOwner.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/labirynt/backup/src/pages/RegisterPage.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/labirynt/backup/src/pages/RemindPassword.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/labirynt/backup/src/pages/SingleHotel.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/labirynt/backup/src/pages/UpdateHotel.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/labirynt/backup/src/pages/UserNotifications.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/labirynt/backup/src/redux/loggedUserInfo.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/labirynt/backup/src/redux/store.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/labirynt/backup/src/static/credentials.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/labirynt/backup/src/static/img/arrow.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/labirynt/backup/src/static/img/bedroom.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/labirynt/backup/src/static/img/bell.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/labirynt/backup/src/static/img/calendar.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/labirynt/backup/src/static/img/cat.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/labirynt/backup/src/static/img/check.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/labirynt/backup/src/static/img/close.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/labirynt/backup/src/static/img/dodaj-zwierzaka.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/labirynt/backup/src/static/img/dog.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/labirynt/backup/src/static/img/edit.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/labirynt/backup/src/static/img/like.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/labirynt/backup/src/static/img/location-icon.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/labirynt/backup/src/static/img/location.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/labirynt/backup/src/static/img/logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/labirynt/backup/src/static/img/logout.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/labirynt/backup/src/static/img/my-notifications.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/labirynt/backup/src/static/img/pet-house.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/labirynt/backup/src/static/img/petmypet-logo-transparent.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/labirynt/backup/src/static/img/phone.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/labirynt/backup/src/static/img/register.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/labirynt/backup/src/static/img/search-icon.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/labirynt/backup/src/static/img/star.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/labirynt/backup/src/static/img/star.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/labirynt/backup/src/static/img/trash.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/labirynt/backup/src/static/img/undraw-1.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/labirynt/backup/src/static/img/undraw-2.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/labirynt/backup/src/static/img/undraw-3.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/labirynt/backup/src/static/img/user.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/labirynt/backup/src/static/style/mobile.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/labirynt/backup/src/static/style/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/labirynt/img/plansza-3-1.png" beforeDir="false" afterPath="$PROJECT_DIR$/labirynt/img/plansza-3-1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/labirynt/img/plansza-3-2.png" beforeDir="false" afterPath="$PROJECT_DIR$/labirynt/img/plansza-3-2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gra-slowna/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/gra-slowna/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gra-slowna/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/gra-slowna/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gra-slowna/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/gra-slowna/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gra-slowna/womi.js" beforeDir="false" afterPath="$PROJECT_DIR$/gra-slowna/womi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kolo-fortuny/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/kolo-fortuny/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kolo-fortuny/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/kolo-fortuny/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kolo-fortuny/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/kolo-fortuny/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kolo-fortuny/womi.js" beforeDir="false" afterPath="$PROJECT_DIR$/kolo-fortuny/womi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/labirynt/img/plansza-1-1.png" beforeDir="false" afterPath="$PROJECT_DIR$/labirynt/img/plansza-1-1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/labirynt/img/plansza-1-2.png" beforeDir="false" afterPath="$PROJECT_DIR$/labirynt/img/plansza-1-2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/labirynt/img/plansza-2-1.png" beforeDir="false" afterPath="$PROJECT_DIR$/labirynt/img/plansza-2-1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/labirynt/img/plansza-2-2.png" beforeDir="false" afterPath="$PROJECT_DIR$/labirynt/img/plansza-2-2.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/labirynt/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/labirynt/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/labirynt/labirynt.zip" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/labirynt/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/labirynt/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/labirynt/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/labirynt/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/labirynt/womi.js" beforeDir="false" afterPath="$PROJECT_DIR$/labirynt/womi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/milionerzy/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/milionerzy/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/milionerzy/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/milionerzy/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/milionerzy/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/milionerzy/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obieg-wody-w-przyrodzie/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/obieg-wody-w-przyrodzie/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obieg-wody-w-przyrodzie/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/obieg-wody-w-przyrodzie/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obieg-wody-w-przyrodzie/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/obieg-wody-w-przyrodzie/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/quiz-higiena/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/quiz-higiena/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/quiz-higiena/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/quiz-higiena/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/quiz-higiena/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/quiz-higiena/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/quiz-higiena/womi.js" beforeDir="false" afterPath="$PROJECT_DIR$/quiz-higiena/womi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symulator-statku/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/symulator-statku/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symulator-statku/assets/prawidlo-9-1.png" beforeDir="false" afterPath="$PROJECT_DIR$/symulator-statku/assets/prawidlo-9-1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symulator-statku/assets/start.png" beforeDir="false" afterPath="$PROJECT_DIR$/symulator-statku/assets/start.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symulator-statku/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/symulator-statku/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symulator-statku/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/symulator-statku/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symulator-statku/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/symulator-statku/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symulator-statku/symulator.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/symulator-statku/womi.js" beforeDir="false" afterPath="$PROJECT_DIR$/symulator-statku/womi.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,9 +94,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="CSS File" />
         <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -134,18 +113,18 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Projekty/draft4u" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\sajmo\Desktop\Programowanie\edu\labirynt" />
-      <recent name="C:\Users\sajmo\Desktop\Programowanie\edu\labirynt\sounds" />
-      <recent name="C:\Users\sajmo\Desktop\Programowanie\edu\labirynt\img" />
-      <recent name="C:\Users\sajmo\Desktop\Programowanie\edu\gra-slowna-francuski" />
+      <recent name="C:\Users\sajmo\Desktop\Programowanie\edu\symulator-statku\assets" />
       <recent name="C:\Users\sajmo\Desktop\Programowanie\edu\gra-slowna-francuski\assets" />
+      <recent name="C:\Users\sajmo\Desktop\Programowanie\edu\labirynt\img" />
+      <recent name="C:\Users\sajmo\Desktop\Programowanie\edu\obieg-wody-w-przyrodzie\img" />
+      <recent name="C:\Users\sajmo\Desktop\Programowanie\edu\obieg-wody-w-przyrodzie" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -184,6 +163,16 @@
       <workItem from="1645520656323" duration="6085000" />
       <workItem from="1645611646268" duration="23927000" />
       <workItem from="1645705264919" duration="7385000" />
+      <workItem from="1645781926705" duration="3786000" />
+      <workItem from="1645839557020" duration="3367000" />
+      <workItem from="1645875010095" duration="3659000" />
+      <workItem from="1645894420527" duration="7106000" />
+      <workItem from="1646040434121" duration="1244000" />
+      <workItem from="1646069428370" duration="1640000" />
+      <workItem from="1646214841463" duration="2190000" />
+      <workItem from="1646399476316" duration="5216000" />
+      <workItem from="1646411765139" duration="532000" />
+      <workItem from="1646421449060" duration="18000" />
     </task>
     <servers />
   </component>
@@ -207,11 +196,11 @@
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
     <state x="-1230" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1645666143826" />
-    <state x="-1180" y="275" key="FileChooserDialogImpl" timestamp="1645734675911">
-      <screen x="-1920" y="0" width="1920" height="1040" />
+    <state x="592" y="218" key="FileChooserDialogImpl" timestamp="1646219857187">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="-1180" y="275" key="FileChooserDialogImpl/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1645734675911" />
-    <state x="592" y="218" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1644007912458" />
+    <state x="-1180" y="275" key="FileChooserDialogImpl/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1646071093192" />
+    <state x="592" y="218" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1646219857187" />
     <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1645545773452" />
     <state x="-1143" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1643578242729">
       <screen x="-1920" y="0" width="1920" height="1040" />
@@ -221,14 +210,16 @@
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
     <state x="-1253" y="253" width="585" height="534" key="find.popup/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1643578241013" />
-    <state x="-1304" y="240" key="run.anything.popup" timestamp="1645636230123">
+    <state x="-1304" y="240" key="run.anything.popup" timestamp="1646070508678">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="-1304" y="240" key="run.anything.popup/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1645636230123" />
-    <state x="-1297" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1645706787566">
+    <state x="-1304" y="240" key="run.anything.popup/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1646070508678" />
+    <state x="493" y="190" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1645898123665" />
+    <state x="-1297" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1646215631102">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="-1297" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1645706787566" />
+    <state x="-1297" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1646215631102" />
+    <state x="498" y="178" width="672" height="538" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1645898985975" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1645122366377" />
     <state x="-1238" y="432" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1643654903993">
       <screen x="-1920" y="0" width="1920" height="1040" />

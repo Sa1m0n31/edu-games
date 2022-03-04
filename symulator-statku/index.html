@@ -103,7 +103,9 @@
             </section>
             <!-- LVL 1 -->
             <section class="view view--1">
-                <img class="view__img" src="./assets/prawidlo-9-1.png" alt="prawidlo-9" />
+                <img class="view__img view__img--normal" src="./assets/prawidlo-9-1.png" alt="prawidlo-9" />
+                <img class="view__img view__img--feedback" src="./assets/prawidlo-9-1-feedback.png" alt="sukces" />
+
                 <button class="btn btn--colreg" onclick="toggleColreg()">
 
                 </button>
@@ -124,56 +126,102 @@
                     </div>
                 </div>
 
-                <button class="gameBtn btn--top" onclick="btnClick(1, 1)">
+                <div class="view__shifter">
+                    <img class="view__shifter__img shifter--0" src="./assets/manetka-do-przodu.png" alt="manetka-do-przodu" />
+                    <img class="view__shifter__img shifter--1" src="./assets/manetka-stop.png" alt="manetka-stop" />
+                    <img class="view__shifter__img shifter--2" src="./assets/manetka-do-tylu.png" alt="manetka-do-tylu" />
 
-                </button>
-                <button class="gameBtn btn--right" onclick="btnClick(1, 2)">
+                    <button class="btn--shifter btn--shifter--0" onclick="btnClick(1, 3, 0)">
+                        <img class="btn--shifter__img" src="./assets/do-przodu.png" alt="do-przodu" />
+                    </button>
+                    <button class="btn--shifter btn--shifter--1" onclick="btnClick(1, 4, 1)">
+                        <img class="btn--shifter__img" src="./assets/stop.png" alt="do-stop" />
+                    </button>
+                    <button class="btn--shifter btn--shifter--2" onclick="btnClick(1, 5, 2)">
+                        <img class="btn--shifter__img" src="./assets/do-tylu.png" alt="do-tylu" />
+                    </button>
+                </div>
 
-                </button>
-                <button class="gameBtn btn--front" onclick="btnClick(1, 3)">
+                <div class="view__arrows">
+                    <button class="btn--arrow btn--arrowTop" onclick="btnClick(1, 1, 3)">
+                        <img class="btn--arrow__img" src="./assets/strzalka-gora.png" alt="strzalka-1" />
+                    </button>
+                    <button class="btn--arrow btn--arrowRight" onclick="btnClick(1, 2, 4)">
+                        <img class="btn--arrow__img" src="./assets/strzalka-prawo.png" alt="strzalka-1" />
+                    </button>
+                    <button class="btn--arrow btn--arrowBottom" onclick="btnClick(1, 6, 5)">
+                        <img class="btn--arrow__img" src="./assets/strzalka-dol.png" alt="strzalka-1" />
+                    </button>
+                    <button class="btn--arrow btn--arrowLeft" onclick="btnClick(1, 7, 6)">
+                        <img class="btn--arrow__img" src="./assets/strzalka-lewo.png" alt="strzalka-1" />
+                    </button>
+                </div>
 
-                </button>
+                <div class="view__lights">
+                    <button class="gameBtn gameBtn--wrong btn--lightTop btn--lightTop1" onclick="btnClick(1, 8, 7)">
+                        <img class="btn--light__img" src="./assets/swiatlo-masztowe-klik1.png" alt="swiatlo-masztowe" />
+                    </button>
+                    <button class="gameBtn gameBtn--wrong btn--lightTop btn--lightTop2" onclick="btnClick(1, 9, 8)">
+                        <img class="btn--light__img" src="./assets/swiatlo-masztowe-klik2.png" alt="swiatlo-masztowe" />
+                    </button>
+                    <button class="gameBtn gameBtn--wrong btn--lightTop btn--lightTop3" onclick="btnClick(1, 10, 9)">
+                        <img class="btn--light__img" src="./assets/swiatlo-masztowe-klik3.png" alt="swiatlo-masztowe" />
+                    </button>
 
-                <button class="gameBtn gameBtn--wrong btn--top" onclick="btnClick(100, 4)">
+                    <button class="gameBtn gameBtn--wrong btn--lightLeft" onclick="btnClick(1, 11, 10)">
+                        <img class="btn--light__img" src="./assets/swiatlo-burtowe-lewe-klik.png" alt="swiatlo-burtowe-lewe" />
+                    </button>
+                    <button class="gameBtn gameBtn--wrong btn--lightRight" onclick="btnClick(1, 12, 11)">
+                        <img class="btn--light__img" src="./assets/swiatlo-burtowe-prawe-klik.png" alt="swiatlo-burtowe-prawe" />
+                    </button>
+                    <button class="gameBtn gameBtn--wrong btn--lightBack" onclick="btnClick(1, 13, 12)">
+                        <img class="btn--light__img" src="./assets/swiatlo-rufowe-klik.png" alt="swiatlo-rufowe" />
+                    </button>
+                    <button class="gameBtn gameBtn--wrong btn--lightTowing" onclick="btnClick(1, 14, 13)">
+                        <img class="btn--light__img" src="./assets/swiatlo-holowania-klik.png" alt="swiatlo-holowania" />
+                    </button>
 
-                </button>
-                <button class="gameBtn gameBtn--wrong btn--right" onclick="btnClick(100, 4)">
+                    <button class="gameBtn gameBtn--wrong btn--light360" onclick="btnClick(1, 15, 14)">
+                        <img class="btn--light__img" src="./assets/swiatla-biale.png" alt="swiatlo-holowania" />
+                    </button>
+                    <button class="gameBtn gameBtn--wrong btn--light360 btn--light360--1" onclick="btnClick(1, 16, 15)">
+                        <img class="btn--light__img" src="./assets/swiatla-zielone.png" alt="swiatlo-holowania" />
+                    </button>
+                    <button class="gameBtn gameBtn--wrong btn--light360 btn--light360--2" onclick="btnClick(1, 17, 16)">
+                        <img class="btn--light__img" src="./assets/swiatla-czerwone.png" alt="swiatlo-holowania" />
+                    </button>
+                    <button class="gameBtn gameBtn--wrong btn--light360 btn--light360--3" onclick="btnClick(1, 18, 17)">
+                        <img class="btn--light__img" src="./assets/swiatla-biale.png" alt="swiatlo-holowania" />
+                    </button>
+                    <button class="gameBtn gameBtn--wrong btn--light360 btn--light360--4" onclick="btnClick(1, 19, 18)">
+                        <img class="btn--light__img" src="./assets/swiatla-zielone.png" alt="swiatlo-holowania" />
+                    </button>
+                    <button class="gameBtn gameBtn--wrong btn--light360 btn--light360--5" onclick="btnClick(1, 20, 19)">
+                        <img class="btn--light__img" src="./assets/swiatla-czerwone.png" alt="swiatlo-holowania" />
+                    </button>
+                    <button class="gameBtn gameBtn--wrong btn--light360 btn--light360--6" onclick="btnClick(1, 21, 20)">
+                        <img class="btn--light__img" src="./assets/swiatla-biale.png" alt="swiatlo-holowania" />
+                    </button>
+                    <button class="gameBtn gameBtn--wrong btn--light360 btn--light360--7" onclick="btnClick(1, 22, 21)">
+                        <img class="btn--light__img" src="./assets/swiatla-zielone.png" alt="swiatlo-holowania" />
+                    </button>
+                    <button class="gameBtn gameBtn--wrong btn--light360 btn--light360--8" onclick="btnClick(1, 23, 22)">
+                        <img class="btn--light__img" src="./assets/swiatla-czerwone.png" alt="swiatlo-holowania" />
+                    </button>
+                </div>
 
-                </button>
-                <button class="gameBtn gameBtn--wrong btn--front" onclick="btnClick(100, 4)">
-
-                </button>
-                <button class="gameBtn gameBtn--wrong btn--left" onclick="btnClick(100, 4)">
-
-                </button>
-                <button class="gameBtn gameBtn--wrong btn--back" onclick="btnClick(100, 4)">
-
-                </button>
                 <button class="gameBtn gameBtn--wrong gameBtn--wrong btn--long" onclick="btnClick(100, 4); playSound(0);">
-
+                    <img class="btn--sound__img" src="./assets/dzwiek-dlugi.png" alt="dlugi" />
                 </button>
                 <button class="gameBtn gameBtn--wrong btn--short" onclick="btnClick(100, 4); playSound(1);">
-
+                    <img class="btn--sound__img" src="./assets/dzwiek-krotki.png" alt="dlugi" />
                 </button>
-                <button class="gameBtn gameBtn--wrong btn--lightTop" onclick="btnClick(100, 4)">
 
-                </button>
-                <button class="gameBtn gameBtn--wrong btn--lightLeft" onclick="btnClick(100, 4)">
-
-                </button>
-                <button class="gameBtn gameBtn--wrong btn--lightRight" onclick="btnClick(100, 4)">
-
-                </button>
-                <button class="gameBtn gameBtn--wrong btn--lightBack" onclick="btnClick(100, 4)">
-
-                </button>
-                <button class="gameBtn gameBtn--wrong btn--lightTowing" onclick="btnClick(100, 4)">
-
-                </button>
             </section>
             <!-- LVL 2 -->
             <section class="view view--2">
                 <img class="view__img" src="./assets/prawidlo-9-2.png" alt="prawidlo-9" />
+                <img class="view__img view__img--feedback" src="./assets/prawidlo-9-2-feedback.png" alt="prawidlo-9" />
                 <button class="btn btn--colreg" onclick="toggleColreg()">
 
                 </button>
@@ -194,48 +242,95 @@
                     </div>
                 </div>
 
-                <button class="gameBtn btn--long" onclick="btnClick(2, 1); playSound(0);">
+                <div class="view__shifter">
+                    <img class="view__shifter__img shifter--0" src="./assets/manetka-do-przodu.png" alt="manetka-do-przodu" />
+                    <img class="view__shifter__img shifter--1" src="./assets/manetka-stop.png" alt="manetka-stop" />
+                    <img class="view__shifter__img shifter--2" src="./assets/manetka-do-tylu.png" alt="manetka-do-tylu" />
 
+                    <button class="btn--shifter btn--shifter--0" onclick="btnClick(2, 3, 0)">
+                        <img class="btn--shifter__img" src="./assets/do-przodu.png" alt="do-przodu" />
+                    </button>
+                    <button class="btn--shifter btn--shifter--1" onclick="btnClick(2, 4, 1)">
+                        <img class="btn--shifter__img" src="./assets/stop.png" alt="do-stop" />
+                    </button>
+                    <button class="btn--shifter btn--shifter--2" onclick="btnClick(2, 5, 2)">
+                        <img class="btn--shifter__img" src="./assets/do-tylu.png" alt="do-tylu" />
+                    </button>
+                </div>
+
+                <div class="view__arrows">
+                    <button class="btn--arrow btn--arrowTop" onclick="btnClick(2, 24, 3)">
+                        <img class="btn--arrow__img" src="./assets/strzalka-gora.png" alt="strzalka-1" />
+                    </button>
+                    <button class="btn--arrow btn--arrowRight" onclick="btnClick(2, 25, 4)">
+                        <img class="btn--arrow__img" src="./assets/strzalka-prawo.png" alt="strzalka-1" />
+                    </button>
+                    <button class="btn--arrow btn--arrowBottom" onclick="btnClick(2, 6, 5)">
+                        <img class="btn--arrow__img" src="./assets/strzalka-dol.png" alt="strzalka-1" />
+                    </button>
+                    <button class="btn--arrow btn--arrowLeft" onclick="btnClick(2, 7, 6)">
+                        <img class="btn--arrow__img" src="./assets/strzalka-lewo.png" alt="strzalka-1" />
+                    </button>
+                </div>
+
+                <div class="view__lights">
+                    <button class="gameBtn gameBtn--wrong btn--lightTop btn--lightTop1" onclick="btnClick(2, 8, 7)">
+                        <img class="btn--light__img" src="./assets/swiatlo-masztowe-klik1.png" alt="swiatlo-masztowe" />
+                    </button>
+                    <button class="gameBtn gameBtn--wrong btn--lightTop btn--lightTop2" onclick="btnClick(2, 9, 8)">
+                        <img class="btn--light__img" src="./assets/swiatlo-masztowe-klik2.png" alt="swiatlo-masztowe" />
+                    </button>
+                    <button class="gameBtn gameBtn--wrong btn--lightTop btn--lightTop3" onclick="btnClick(2, 10, 9)">
+                        <img class="btn--light__img" src="./assets/swiatlo-masztowe-klik3.png" alt="swiatlo-masztowe" />
+                    </button>
+
+                    <button class="gameBtn gameBtn--wrong btn--lightLeft" onclick="btnClick(2, 12, 10)">
+                        <img class="btn--light__img" src="./assets/swiatlo-burtowe-lewe-klik.png" alt="swiatlo-burtowe-lewe" />
+                    </button>
+                    <button class="gameBtn gameBtn--wrong btn--lightRight" onclick="btnClick(2, 12, 11)">
+                        <img class="btn--light__img" src="./assets/swiatlo-burtowe-prawe-klik.png" alt="swiatlo-burtowe-prawe" />
+                    </button>
+                    <button class="gameBtn gameBtn--wrong btn--lightBack" onclick="btnClick(2, 13, 12)">
+                        <img class="btn--light__img" src="./assets/swiatlo-rufowe-klik.png" alt="swiatlo-rufowe" />
+                    </button>
+                    <button class="gameBtn gameBtn--wrong btn--lightTowing" onclick="btnClick(2, 14, 13)">
+                        <img class="btn--light__img" src="./assets/swiatlo-holowania-klik.png" alt="swiatlo-holowania" />
+                    </button>
+
+                    <button class="gameBtn gameBtn--wrong btn--light360" onclick="btnClick(2, 15, 14)">
+                        <img class="btn--light__img" src="./assets/swiatla-biale.png" alt="swiatlo-holowania" />
+                    </button>
+                    <button class="gameBtn gameBtn--wrong btn--light360 btn--light360--1" onclick="btnClick(2, 16, 15)">
+                        <img class="btn--light__img" src="./assets/swiatla-zielone.png" alt="swiatlo-holowania" />
+                    </button>
+                    <button class="gameBtn gameBtn--wrong btn--light360 btn--light360--2" onclick="btnClick(2, 17, 16)">
+                        <img class="btn--light__img" src="./assets/swiatla-czerwone.png" alt="swiatlo-holowania" />
+                    </button>
+                    <button class="gameBtn gameBtn--wrong btn--light360 btn--light360--3" onclick="btnClick(2, 18, 17)">
+                        <img class="btn--light__img" src="./assets/swiatla-biale.png" alt="swiatlo-holowania" />
+                    </button>
+                    <button class="gameBtn gameBtn--wrong btn--light360 btn--light360--4" onclick="btnClick(2, 19, 18)">
+                        <img class="btn--light__img" src="./assets/swiatla-zielone.png" alt="swiatlo-holowania" />
+                    </button>
+                    <button class="gameBtn gameBtn--wrong btn--light360 btn--light360--5" onclick="btnClick(2, 20, 19)">
+                        <img class="btn--light__img" src="./assets/swiatla-czerwone.png" alt="swiatlo-holowania" />
+                    </button>
+                    <button class="gameBtn gameBtn--wrong btn--light360 btn--light360--6" onclick="btnClick(2, 22, 20)">
+                        <img class="btn--light__img" src="./assets/swiatla-biale.png" alt="swiatlo-holowania" />
+                    </button>
+                    <button class="gameBtn gameBtn--wrong btn--light360 btn--light360--7" onclick="btnClick(2, 22, 21)">
+                        <img class="btn--light__img" src="./assets/swiatla-zielone.png" alt="swiatlo-holowania" />
+                    </button>
+                    <button class="gameBtn gameBtn--wrong btn--light360 btn--light360--8" onclick="btnClick(2, 23, 22)">
+                        <img class="btn--light__img" src="./assets/swiatla-czerwone.png" alt="swiatlo-holowania" />
+                    </button>
+                </div>
+
+                <button class="gameBtn gameBtn--wrong gameBtn--wrong btn--long" onclick="btnClick(2, 1); playSound(0);">
+                    <img class="btn--sound__img" src="./assets/dzwiek-dlugi.png" alt="dlugi" />
                 </button>
-                <button class="gameBtn btn--short" onclick="btnClick(2, 2); playSound(1);">
-
-                </button>
-
-                <button class="gameBtn gameBtn--wrong btn--top" onclick="btnClick(100, 4)">
-
-                </button>
-                <button class="gameBtn gameBtn--wrong btn--right" onclick="btnClick(100, 4)">
-
-                </button>
-                <button class="gameBtn gameBtn--wrong btn--front" onclick="btnClick(100, 4)">
-
-                </button>
-                <button class="gameBtn gameBtn--wrong btn--left" onclick="btnClick(100, 4)">
-
-                </button>
-                <button class="gameBtn gameBtn--wrong btn--back" onclick="btnClick(100, 4)">
-
-                </button>
-                <button class="gameBtn gameBtn--wrong gameBtn--wrong btn--long" onclick="btnClick(100, 4); playSound(0);">
-
-                </button>
-                <button class="gameBtn gameBtn--wrong btn--short" onclick="btnClick(100, 4); playSound(1);">
-
-                </button>
-                <button class="gameBtn gameBtn--wrong btn--lightTop" onclick="btnClick(100, 4)">
-
-                </button>
-                <button class="gameBtn gameBtn--wrong btn--lightLeft" onclick="btnClick(100, 4)">
-
-                </button>
-                <button class="gameBtn gameBtn--wrong btn--lightRight" onclick="btnClick(100, 4)">
-
-                </button>
-                <button class="gameBtn gameBtn--wrong btn--lightBack" onclick="btnClick(100, 4)">
-
-                </button>
-                <button class="gameBtn gameBtn--wrong btn--lightTowing" onclick="btnClick(100, 4)">
-
+                <button class="gameBtn gameBtn--wrong btn--short" onclick="btnClick(2, 2); playSound(1);">
+                    <img class="btn--sound__img" src="./assets/dzwiek-krotki.png" alt="krotki" />
                 </button>
             </section>
             <!-- LVL 3 -->

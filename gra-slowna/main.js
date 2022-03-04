@@ -1,42 +1,58 @@
 const view1 = document.querySelector('.view--1');
 const view2 = document.querySelector('.view--2');
 const view3 = document.querySelector('.view--3');
+const view4 = document.querySelector('.view--4');
 const timerEl = document.querySelector('.timer');
 const currentWordEl = document.querySelector('.currentWord');
 const wordsTable = document.querySelector('.wordsTable');
 const pointsTable = document.querySelector('.pointsTable');
 const feedbackImage = document.querySelector('.currentWord__img');
+const pointsCount = document.querySelector('.pointsCount');
 
 const letterImagesPlaceholders = Array.from(document.querySelectorAll('.letter__img'));
 
 const wordsLvl1 = [
-    [21, 0, 12, 12, 5],
-    [21, 0, 12, 12, 5, 21],
-    [2, 12, 0, 21, 21, 5],
-    [2, 8, 0, 9, 21, 5],
-    [2, 8, 0, 9, 21, 5, 21],
-    [2, 20, 0, 9, 5],
-    [2, 0, 20, 22, 5],
-    [2, 0, 20, 22, 5, 21],
-    [8, 17, 20, 12, 17, 7, 5],
-    [8, 17, 20, 12, 17, 7, 5, 21],
-    [7, 12, 17, 1, 5],
-    [7, 12, 17, 1, 5, 21]
+    [21, 17, 15, 9, 4, 17],
+    [14, 28, 21, 9, 2, 0],
+    [22, 9, 5, 15, 4, 0],
+    [2, 17, 14, 18, 20, 0],
+    [5, 15, 22, 20, 5, 7, 0],
+    [2, 23, 12, 22, 23, 20, 0],
+    [14, 0, 20, 2, 0],
+    [2, 17, 14, 5, 20, 2, 9, 17]
 ]
 
 const wordsLvl2 = [
-
+    [22, 5, 2, 15, 17, 12, 17, 7, 9, 0],
+    [22, 5, 12, 5, 24, 9, 21, 17, 20],
+    [22, 5, 12, 5, 24, 9, 21, 17, 20, 5, 21],
+    [0, 23, 20, 9, 2, 23, 12, 0, 20, 5, 21],
+    [21, 17, 15, 9, 4, 17],
+    [22, 9, 5, 15, 4, 0],
+    [22, 9, 5, 15, 4, 0, 21],
+    [2, 23, 12, 22, 23, 20, 0],
+    [12, 9, 22, 5, 20, 0, 22, 23, 20, 0]
 ]
 
 const wordsLvl3 = [
-
+    [2, 23, 12, 22, 23, 20, 0],
+    [0, 23, 20, 9, 2, 23, 12, 0, 20, 5, 21],
+    [14, 0, 20, 2, 0],
+    [22, 5, 12, 5, 24, 9, 21, 17, 20],
+    [22, 5, 12, 5, 24, 9, 21, 17, 20, 5, 21],
+    [12, 9, 1, 20, 17],
+    [12, 9, 1, 20, 17, 21],
+    [22, 9, 5, 15, 4, 0],
+    [2, 17, 14, 5, 20, 2, 9, 17],
+    [12, 9, 22, 5, 20, 0, 22, 23, 20, 0],
 ]
 
 let currentLvlWords = [], currentLvlLetters = [];
+let points = 0;
 
-const lettersLvl1 = [2, 8, 0, 9, 5, 20, 21, 22, 17, 12, 7, 26, 27, 1, 14, 28];
-const lettersLvl2 = [0, 2, 3, 4, 10, 14, 15, 17, 18, 20, 1, 8, 9, 21, 12, 13];
-const lettersLvl3 = [0, 2, 3, 4, 10, 14, 15, 17, 18, 20, 1, 8, 9, 21, 12, 13];
+const lettersLvl1 = [21, 17, 15, 9, 14, 28, 2, 0, 4, 17, 27, 5, 18, 20, 7, 23];
+const lettersLvl2 = [22, 5, 2, 15, 17, 9, 0, 24, 9, 21, 20, 12, 17, 7, 23, 4];
+const lettersLvl3 = [20, 9, 0, 23, 2, 12, 0, 22, 5, 17, 14, 24, 1, 4, 29, 21];
 
 const words = [wordsLvl1, wordsLvl2, wordsLvl3];
 const letters = [lettersLvl1, lettersLvl2, lettersLvl3];
@@ -70,14 +86,15 @@ const lettersImages = [
     './assets/litery-jasne-25.png',
     './assets/litery-jasne-26.png',
     './assets/litery-jasne-27.png',
-    './assets/litery-jasne-28.png'
+    './assets/litery-jasne-28.png',
+    './assets/litery-jasne-29.png'
 ]
 
 const lettersSelectedImages = [
     './assets/litery-ciemne-0.png',
     './assets/litery-ciemne-1.png',
-    './assets/litery-ciemne-3.png',
     './assets/litery-ciemne-2.png',
+    './assets/litery-ciemne-3.png',
     './assets/litery-ciemne-4.png',
     './assets/litery-ciemne-5.png',
     './assets/litery-ciemne-6.png',
@@ -102,7 +119,8 @@ const lettersSelectedImages = [
     './assets/litery-ciemne-25.png',
     './assets/litery-ciemne-26.png',
     './assets/litery-ciemne-27.png',
-    './assets/litery-ciemne-28.png'
+    './assets/litery-ciemne-28.png',
+    './assets/litery-ciemne-29.png'
 ]
 
 let lvl = 0;
@@ -120,7 +138,6 @@ const setLvl = (n) => {
     lvl = n;
     currentLvlLetters = letters[n];
     currentLvlWords = words[n];
-    console.log(words[n]);
 
     view2.style.zIndex = '-1';
     view2.style.opacity = '0';
@@ -135,14 +152,17 @@ const startGame = () => {
 
     /* Randomize letters */
     letterImagesPlaceholders.forEach((item, index) => {
+        item.parentNode.setAttribute('class', 'letter');
         item.parentNode.classList.add(`letter-${currentLvlLetters[index]}`);
         item.setAttribute('src', lettersImages[currentLvlLetters[index]]);
     });
 }
 
+let interval;
+
 const startTimer = (duration, display) => {
     let timer = duration, minutes, seconds;
-    setInterval(function () {
+    const intervalFunc = () => {
         minutes = parseInt(timer / 60, 10);
         seconds = parseInt(timer % 60, 10);
 
@@ -152,9 +172,12 @@ const startTimer = (duration, display) => {
         display.textContent = minutes + ":" + seconds;
 
         if (--timer < 0) {
+            endOfTime();
             timer = duration;
         }
-    }, 1000);
+    }
+
+    interval = setInterval(intervalFunc, 1000);
 }
 
 const isElementInArray = (el, arr) => {
@@ -188,15 +211,13 @@ const updateCurrentWord = () => {
 const toggleLetter = (el) => {
     const img = el.childNodes[1];
     const n = parseInt(el.classList[1].split('-')[1]);
-    // if(isElementInArray(n, selectedLetters)) {
-    //     selectedLetters = removeElementFromArray(n, selectedLetters);
-    //     img.setAttribute('src', lettersImages[n]);
-    // }
-    // else {
-        feedbackImage.style.opacity = '0';
-        selectedLetters.push(n);
-        img.setAttribute('src', lettersSelectedImages[n]);
-    // }
+
+    feedbackImage.style.opacity = '0';
+    if(selectedLetters.length <= 16) selectedLetters.push(n);
+    img.setAttribute('src', lettersSelectedImages[n]);
+    setTimeout(() => {
+        img.setAttribute('src', lettersImages[n]);
+    }, 120)
 
     updateCurrentWord();
 }
@@ -222,6 +243,8 @@ const correctAnimation = () => {
     newPoint.textContent = '1';
     pointsTable.appendChild(newPoint);
 
+    points++;
+    selectedLetters = [];
     cancel();
 }
 
@@ -261,12 +284,13 @@ const setRedLetters = () => {
 
 const checkWord = () => {
     if(currentLvlWords.findIndex((item, index) => {
-        console.log(item, selectedLetters);
         return isArrayTheSame(item, selectedLetters);
     }) !== -1) {
         feedbackImage.setAttribute('src', './assets/right.svg');
         removeWordFromWordsBank(selectedLetters);
-        correctAnimation();
+        setTimeout(() => {
+            correctAnimation();
+        }, 50);
     }
     else {
         wrongAnimation();
@@ -277,4 +301,31 @@ const cancel = () => {
     selectedLetters.pop();
     updateCurrentWord();
     setRedLetters();
+}
+
+const endOfTime = () => {
+    view3.style.opacity = '0';
+    view3.style.zIndex = '-1';
+    view4.style.opacity = '1';
+    view4.style.zIndex = '2';
+
+    selectedLetters = [];
+    updateCurrentWord();
+    clearInterval(interval);
+    pointsCount.textContent = points;
+    points = 0;
+
+    Array.from(document.querySelectorAll('.wordsTable>*')).forEach((item) => {
+        item.style.display = 'none';
+    });
+    Array.from(document.querySelectorAll('.pointsTable>*')).forEach((item) => {
+        item.style.display = 'none';
+    });
+}
+
+const home = () => {
+    view4.style.opacity = '0';
+    view4.style.zIndex = '-1';
+    view2.style.opacity = '1';
+    view2.style.zIndex = '2';
 }

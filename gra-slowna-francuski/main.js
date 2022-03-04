@@ -19,6 +19,7 @@ const wordsLvl1 = [
     [2, 7, 0, 8, 18, 4],
     [2, 7, 0, 8, 18, 4, 18],
     [2, 17, 0, 8, 4],
+    [2, 17, 0, 8, 4, 18],
     [2, 0, 17, 19, 4],
     [2, 0, 17, 19, 4, 18],
     [7, 14, 17, 11, 14, 6, 4],
@@ -35,6 +36,7 @@ const wordsLvl2 = [
     [2, 7, 0, 8, 18, 4],
     [2, 7, 0, 8, 18, 4, 18],
     [2, 17, 0, 8, 4],
+    [2, 17, 0, 8, 4, 18],
     [2, 0, 17, 19, 4],
     [2, 0, 17, 19, 4, 18],
     [7, 14, 17, 11, 14, 6, 4],
@@ -60,6 +62,7 @@ const wordsLvl3 = [
     [12, 8, 2, 17, 14, 18, 2, 14, 15, 4, 18],
     [19, 0, 1, 11, 4, 0, 20],
     [2, 17, 0, 8, 4],
+    [2, 17, 0, 8, 4, 18],
     [2, 0, 17, 19, 4],
     [2, 0, 17, 19, 4, 18]
 ]
@@ -140,7 +143,6 @@ const lettersSelectedImages = [
 
 let lvl = 0;
 let selectedLetters = []; // array of numbers, number = index in lettersImages array
-let selectedWords = []; // array of ?
 
 const start = () => {
     view1.style.zIndex = '-1';
@@ -193,18 +195,6 @@ const startTimer = (duration, display) => {
     }
 
     interval = setInterval(intervalFunc, 1000);
-}
-
-const isElementInArray = (el, arr) => {
-    return arr.findIndex((item) => {
-        return item === el;
-    }) !== -1;
-}
-
-const removeElementFromArray = (el, arr) => {
-    return arr.filter((item) => {
-        return item !== el;
-    });
 }
 
 const updateCurrentWord = () => {
@@ -336,6 +326,10 @@ const endOfTime = () => {
     Array.from(document.querySelectorAll('.pointsTable>*')).forEach((item) => {
         item.style.display = 'none';
     });
+
+    setTimeout(() => {
+        timerEl.textContent = "03:00";
+    }, 500);
 }
 
 const home = () => {

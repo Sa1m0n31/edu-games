@@ -59,6 +59,20 @@ const right = (n) => {
     }
 }
 
+const stopAudio = () => {
+    audio1.pause();
+    audio2.pause();
+    audio1.currentTime = 0;
+    audio2.currentTime = 0;
+
+    startIcon1.style.visibility = 'visible';
+    stopIcon1.style.visibility = 'hidden';
+    startIcon2.style.visibility = 'visible';
+    stopIcon2.style.visibility = 'hidden';
+    playing1 = false;
+    playing2 = false;
+}
+
 const verifyAnswer = (pointsAvailable, n = null, wrongPath = false) => {
     if(onWrongPath && !wrongPath) {
         // Wchodzimy na dobra sciezke
@@ -75,10 +89,12 @@ const verifyAnswer = (pointsAvailable, n = null, wrongPath = false) => {
             right(n);
         }
         else {
+            stopAudio();
             wrong();
         }
     }
     else {
+        stopAudio();
         wrong();
     }
 }
@@ -95,6 +111,7 @@ const playAgain = () => {
 
 const nextLvl = () => {
     mainCarousel.next();
+    stopAudio();
 }
 
 const playAgainAfterFailure = () => {
@@ -171,8 +188,4 @@ audio2.onended = () => {
     startIcon2.style.visibility = 'visible';
     stopIcon2.style.visibility = 'hidden';
     audio2.currentTime = 0;
-}
-
-const toggleSound = () => {
-
 }

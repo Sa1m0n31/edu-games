@@ -2,156 +2,207 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Milionerzy</title>
+    <title>Koło fortuny</title>
     <link rel="stylesheet" href="./style.css" />
 </head>
 <body>
 <div class="container">
     <div class="carousel">
         <div class="view view--start">
-            <img class="view__img" src="./img/tabela.png" alt="start" />
+            <img class="view__img" src="./img/kolo-tlo.png" alt="tlo" />
 
-            <button class="btn--table btn--table--0" onclick="setQuestions(0)"></button>
-            <button class="btn--table btn--table--3" onclick="setQuestions(1)"></button>
-            <button class="btn--table btn--table--1" onclick="setQuestions(2)"></button>
-            <button class="btn--table btn--table--4" onclick="setQuestions(3)"></button>
-            <button class="btn--table btn--table--2" onclick="setQuestions(4)"></button>
-            <button class="btn--table btn--table--5" onclick="setQuestions(5)"></button>
+            <img class="indicator" src="./img/wskaznik.png" alt="wskaznik" />
+            <img class="circle" src="./img/kolo.png" alt="kolo" />
+            <img class="foundation" src="./img/podstawa.png" alt="podstawa" />
+
+            <button class="startCircle" onclick="startCircle()">
+                Zakręć
+            </button>
         </div>
         <div class="view view--question">
-            <img class="view__img" src="./img/21_gra_na_ulicy_pytanie_1.png" alt="pytanie" />
+            <img class="view__img" src="./img/pytania-tlo.png" alt="pytanie" />
+            <img class="question__img" src="./img/pytanie1.png" alt="tekst" />
 
             <button class="answer answer--0" onclick="answer(0, 0)"></button>
             <button class="answer answer--1" onclick="answer(0, 1)"></button>
+            <button class="answer answer--2" onclick="answer(0, 2)"></button>
         </div>
         <div class="view view--question">
-            <img class="view__img" src="./img/21_gra_na_ulicy_pytanie_2.png" alt="pytanie" />
+            <img class="view__img" src="./img/pytania-tlo.png" alt="pytanie" />
+            <img class="question__img" src="./img/pytanie2.png" alt="tekst" />
 
             <button class="answer answer--0" onclick="answer(1, 0)"></button>
             <button class="answer answer--1" onclick="answer(1, 1)"></button>
+            <button class="answer answer--2" onclick="answer(1, 2)"></button>
         </div>
         <div class="view view--question">
-            <img class="view__img" src="./img/21_gra_na_ulicy_pytanie_2.png" alt="pytanie" />
+            <img class="view__img" src="./img/pytania-tlo.png" alt="pytanie" />
+            <img class="question__img" src="./img/pytanie3.png" alt="tekst" />
 
             <button class="answer answer--0" onclick="answer(2, 0)"></button>
             <button class="answer answer--1" onclick="answer(2, 1)"></button>
+            <button class="answer answer--2" onclick="answer(2, 2)"></button>
         </div>
-
         <div class="view view--question">
-            <img class="view__img" src="./img/21_gra_w_parku_pytanie_1.png" alt="pytanie" />
+            <img class="view__img" src="./img/pytania-tlo.png" alt="pytanie" />
+            <img class="question__img" src="./img/pytanie4.png" alt="tekst" />
 
             <button class="answer answer--0" onclick="answer(3, 0)"></button>
             <button class="answer answer--1" onclick="answer(3, 1)"></button>
+            <button class="answer answer--2" onclick="answer(3, 2)"></button>
         </div>
         <div class="view view--question">
-            <img class="view__img" src="./img/21_gra_w_parku_pytanie_2.png" alt="pytanie" />
+            <img class="view__img" src="./img/pytania-tlo.png" alt="pytanie" />
+            <img class="question__img" src="./img/pytanie5.png" alt="tekst" />
 
             <button class="answer answer--0" onclick="answer(4, 0)"></button>
             <button class="answer answer--1" onclick="answer(4, 1)"></button>
+            <button class="answer answer--2" onclick="answer(4, 2)"></button>
         </div>
         <div class="view view--question">
-            <img class="view__img" src="./img/21_gra_w_parku_pytanie_3.png" alt="pytanie" />
+            <img class="view__img" src="./img/pytania-tlo.png" alt="pytanie" />
+            <img class="question__img" src="./img/pytanie6.png" alt="tekst" />
 
             <button class="answer answer--0" onclick="answer(5, 0)"></button>
             <button class="answer answer--1" onclick="answer(5, 1)"></button>
+            <button class="answer answer--2" onclick="answer(5, 2)"></button>
         </div>
         <div class="view view--question">
-            <img class="view__img" src="./img/21_gra_w_parku_pytanie_4.png" alt="pytanie" />
+            <img class="view__img" src="./img/pytania-tlo.png" alt="pytanie" />
+            <img class="question__img" src="./img/pytanie7.png" alt="tekst" />
 
             <button class="answer answer--0" onclick="answer(6, 0)"></button>
             <button class="answer answer--1" onclick="answer(6, 1)"></button>
+            <button class="answer answer--2" onclick="answer(6, 2)"></button>
         </div>
-
         <div class="view view--question">
-            <img class="view__img" src="./img/21_gra_w_szkole_pytanie_1.png" alt="pytanie" />
+            <img class="view__img" src="./img/pytania-tlo.png" alt="pytanie" />
+            <img class="question__img" src="./img/pytanie8.png" alt="tekst" />
 
             <button class="answer answer--0" onclick="answer(7, 0)"></button>
             <button class="answer answer--1" onclick="answer(7, 1)"></button>
+            <button class="answer answer--2" onclick="answer(7, 2)"></button>
         </div>
         <div class="view view--question">
-            <img class="view__img" src="./img/21_gra_w_szkole_pytanie_2.png" alt="pytanie" />
+            <img class="view__img" src="./img/pytania-tlo.png" alt="pytanie" />
+            <img class="question__img" src="./img/pytanie9.png" alt="tekst" />
 
             <button class="answer answer--0" onclick="answer(8, 0)"></button>
             <button class="answer answer--1" onclick="answer(8, 1)"></button>
+            <button class="answer answer--2" onclick="answer(8, 2)"></button>
         </div>
         <div class="view view--question">
-            <img class="view__img" src="./img/21_gra_w_szkole_pytanie_3.png" alt="pytanie" />
+            <img class="view__img" src="./img/pytania-tlo.png" alt="pytanie" />
+            <img class="question__img" src="./img/pytanie10.png" alt="tekst" />
 
             <button class="answer answer--0" onclick="answer(9, 0)"></button>
             <button class="answer answer--1" onclick="answer(9, 1)"></button>
+            <button class="answer answer--2" onclick="answer(9, 2)"></button>
         </div>
-
         <div class="view view--question">
-            <img class="view__img" src="./img/21_gra_dbam_o_czystość_pytanie_1.png" alt="pytanie" />
+            <img class="view__img" src="./img/pytania-tlo.png" alt="pytanie" />
+            <img class="question__img" src="./img/pytanie11.png" alt="tekst" />
 
             <button class="answer answer--0" onclick="answer(10, 0)"></button>
             <button class="answer answer--1" onclick="answer(10, 1)"></button>
+            <button class="answer answer--2" onclick="answer(10, 2)"></button>
         </div>
         <div class="view view--question">
-            <img class="view__img" src="./img/21_gra_dbam_o_czystość_pytanie_2.png" alt="pytanie" />
+            <img class="view__img" src="./img/pytania-tlo.png" alt="pytanie" />
+            <img class="question__img" src="./img/pytanie12.png" alt="tekst" />
 
             <button class="answer answer--0" onclick="answer(11, 0)"></button>
             <button class="answer answer--1" onclick="answer(11, 1)"></button>
+            <button class="answer answer--2" onclick="answer(11, 2)"></button>
         </div>
         <div class="view view--question">
-            <img class="view__img" src="./img/21_gra_dbam_o_czystość_pytanie_3.png" alt="pytanie" />
+            <img class="view__img" src="./img/pytania-tlo.png" alt="pytanie" />
+            <img class="question__img" src="./img/pytanie13.png" alt="tekst" />
 
             <button class="answer answer--0" onclick="answer(12, 0)"></button>
             <button class="answer answer--1" onclick="answer(12, 1)"></button>
+            <button class="answer answer--2" onclick="answer(12, 2)"></button>
         </div>
         <div class="view view--question">
-            <img class="view__img" src="./img/21_gra_dbam_o_czystość_pytanie_4.png" alt="pytanie" />
+            <img class="view__img" src="./img/pytania-tlo.png" alt="pytanie" />
+            <img class="question__img" src="./img/pytanie14.png" alt="tekst" />
 
             <button class="answer answer--0" onclick="answer(13, 0)"></button>
             <button class="answer answer--1" onclick="answer(13, 1)"></button>
+            <button class="answer answer--2" onclick="answer(13, 2)"></button>
         </div>
-
         <div class="view view--question">
-            <img class="view__img" src="./img/21_gra_w_domu_pytanie_1.png" alt="pytanie" />
+            <img class="view__img" src="./img/pytania-tlo.png" alt="pytanie" />
+            <img class="question__img" src="./img/pytanie15.png" alt="tekst" />
 
             <button class="answer answer--0" onclick="answer(14, 0)"></button>
             <button class="answer answer--1" onclick="answer(14, 1)"></button>
+            <button class="answer answer--2" onclick="answer(14, 2)"></button>
         </div>
         <div class="view view--question">
-            <img class="view__img" src="./img/21_gra_w_domu_pytanie_2.png" alt="pytanie" />
+            <img class="view__img" src="./img/pytania-tlo.png" alt="pytanie" />
+            <img class="question__img" src="./img/pytanie16.png" alt="tekst" />
 
             <button class="answer answer--0" onclick="answer(15, 0)"></button>
             <button class="answer answer--1" onclick="answer(15, 1)"></button>
+            <button class="answer answer--2" onclick="answer(15, 2)"></button>
         </div>
         <div class="view view--question">
-            <img class="view__img" src="./img/21_gra_w_domu_pytanie_3.png" alt="pytanie" />
+            <img class="view__img" src="./img/pytania-tlo.png" alt="pytanie" />
+            <img class="question__img" src="./img/pytanie17.png" alt="tekst" />
 
             <button class="answer answer--0" onclick="answer(16, 0)"></button>
             <button class="answer answer--1" onclick="answer(16, 1)"></button>
+            <button class="answer answer--2" onclick="answer(16, 2)"></button>
         </div>
-
         <div class="view view--question">
-            <img class="view__img" src="./img/21_gra_jem_zdrowo_pytanie_1.png" alt="pytanie" />
+            <img class="view__img" src="./img/pytania-tlo.png" alt="pytanie" />
+            <img class="question__img" src="./img/pytanie18.png" alt="tekst" />
 
             <button class="answer answer--0" onclick="answer(17, 0)"></button>
             <button class="answer answer--1" onclick="answer(17, 1)"></button>
+            <button class="answer answer--2" onclick="answer(17, 2)"></button>
         </div>
         <div class="view view--question">
-            <img class="view__img" src="./img/21_gra_jem_zdrowo_pytanie_2.png" alt="pytanie" />
+            <img class="view__img" src="./img/pytania-tlo.png" alt="pytanie" />
+            <img class="question__img" src="./img/pytanie19.png" alt="tekst" />
 
             <button class="answer answer--0" onclick="answer(18, 0)"></button>
             <button class="answer answer--1" onclick="answer(18, 1)"></button>
+            <button class="answer answer--2" onclick="answer(18, 2)"></button>
         </div>
         <div class="view view--question">
-            <img class="view__img" src="./img/21_gra_jem_zdrowo_pytanie_3.png" alt="pytanie" />
+            <img class="view__img" src="./img/pytania-tlo.png" alt="pytanie" />
+            <img class="question__img" src="./img/pytanie20.png" alt="tekst" />
 
             <button class="answer answer--0" onclick="answer(19, 0)"></button>
             <button class="answer answer--1" onclick="answer(19, 1)"></button>
-        </div>
-        <div class="view view--question">
-            <img class="view__img" src="./img/21_gra_jem_zdrowo_pytanie_4.png" alt="pytanie" />
-
-            <button class="answer answer--0" onclick="answer(20, 0)"></button>
-            <button class="answer answer--1" onclick="answer(20, 1)"></button>
+            <button class="answer answer--2" onclick="answer(19, 2)"></button>
         </div>
 
-        <div class="view view--summary">
-            <img class="view__img view__img--summary" src="./img/punkty-0.png" alt="podsumowanie" />
+        <div class="view view--wrongAnswer">
+            <img class="view__img" src="./img/feedback-tlo.png" alt="tlo" />
+            <p class="wrongAnswer__text">
+                Nietety, to nie jest poprawna odpowiedź.
+            </p>
+            <button class="tryAgainBtn" onclick="tryAgain()">
+                Spróbuj ponownie
+            </button>
+        </div>
+        <div class="view view--wrongAnswer">
+            <img class="view__img" src="./img/feedback-tlo.png" alt="tlo" />
+            <p class="wrongAnswer__text">
+                Gratulacje! Odpowiedziałeś na wszystkie pytania.
+            </p>
+            <button class="tryAgainBtn" onclick="tryAgain()">
+                Zacznij od nowa
+            </button>
+        </div>
+        <div class="view view--wrongAnswer">
+            <img class="view__img" src="./img/feedback-tlo.png" alt="tlo" />
+            <p class="wrongAnswer__text wrongAnswer__text--right">
+                Gratulacje! To jest poprawna odpowiedź!
+            </p>
         </div>
     </div>
 </div>

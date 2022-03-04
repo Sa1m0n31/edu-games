@@ -1,78 +1,94 @@
 const questions = [
         [
             {
-                question: 'J`aime bien les porter. C\'est mon accessoire préféré. Je les achète dans une boutique de bijoux.',
-                right: 'les boucles d’oreilles',
-                wrong1: 'une bague',
-                wrong2: 'un collier',
-                img: './assets/img1.jpg'
+                question: 'Fnac es:',
+                right: 'la primera marca distribuidora en Europa de productos tecnológicos y culturales',
+                wrong1: 'la marca distribuidora de alimentación',
+                wrong2: 'la primera marca distribuidora de ropa ',
+                wrong3: 'la marca que produce zapatillas deportivas'
             },
             {
-                question: 'Je les essaye et je les achète dans un magasin de chaussures. Je les porte en été. Elles sont très confortables quand il fait chaud.',
-                right: 'les sandales',
-                wrong1: 'les bottes',
-                wrong2: 'les baskets',
-                img: './assets/img2.jpg'
+                question: 'Fnac nació en el:',
+                right: '1954',
+                wrong1: '1594',
+                wrong2: '1945',
+                wrong3: '1845'
             },
             {
-                question: 'Je l\'achète dans une parfumerie. C`est pour le cadeau pour ma maman. Elle aime les roses et les lilas.',
-                right: 'le parfum',
-                wrong1: 'le rouge à lèvres ',
-                wrong2: 'la crème.',
-                img: './assets/img3.jpg'
+                question: 'En Fnac es posible comprar:',
+                right: 'videojuegos, auriculares, libros, televisores, productos de hogar, etc. ',
+                wrong1: 'leche, huevos, pan, carne, pescado, etc.',
+                wrong2: 'muebles, zapatillas deportivas, alimentos, etc. ',
+                wrong3: 'vestidos, calcetines, calzoncillos, trajes de baño, etc. '
             },
             {
-                question: 'Je les achète dans un magasin de vêtements. Parfois c\'est très difficile de choisir seulement un seul. Il y en a de toutes les couleurs, ils sont très chauds, c`est bien de les porter en hiver.',
-                right: 'les pulls',
-                wrong1: 'les robes',
-                wrong2: 'les tee-shirts ',
-                img: './assets/img4.jpg'
-            },
-            {
-                question: 'Je les achète au supermarché. Au centre commercial, il y a une très bien équipé. J\'adore la cuisine italienne. ',
-                right: 'les pâtes',
-                wrong1: 'les citrons',
-                wrong2: 'les biscuits',
-                img: './assets/img5.jpg'
+                question: 'Desde hace 20 años Fnac es una compañía: ',
+                right: 'con cuatro formas de entrega de los productos',
+                wrong1: 'con solo una forma de entrega de los productos ',
+                wrong2: 'con dos formas de entrega de los productos ',
+                wrong3: 'con tres formas de entrega de los productos'
             }
         ],
         [
             {
-                question: 'Je le trouve dans un magasin de sport. J`adore la natation et je dois avoir tout ce qu`il me faut.',
-                right: 'le maillot de bain',
-                wrong1: 'les lunettes de natation',
-                wrong2: 'les ballons',
-                img: './assets/img6.jpg'
+                question: 'La opción Click & Collect se refiere a la posibilidad de:',
+                right: 'comprar en la web un producto y recogerlo en la tienda o recibirlo en el domicilio',
+                wrong1: 'comprar en la tienda un producto que físicamente está en otro lugar para recogerlo en la propia tienda o recibirlo en el domicilio',
+                wrong2: 'reservar online un producto que está disponible en la tienda y pasar a recogerlo en 1 hora',
+                wrong3: 'apostar por la flexibilidad '
             },
             {
-                question: 'Je le choisis pour mon petit neveu au magasin de jouets. C`est très difficile de choisir parmi les jouets différents.',
-                right: 'un ours en peluche',
-                wrong1: 'une petite voiture',
-                wrong2: 'les cubes',
-                img: './assets/img10.jpg'
+                question: 'Same-Day Delivery es la opción que consiste en:',
+                right: 'las entregas a domicilio en el día y entregas en 2h en todas las ciudades donde Fnac tiene sus tiendas',
+                wrong1: 'recibir un producto comprado en la tienda',
+                wrong2: 'apostar por la flexibilidad',
+                wrong3: 'reservar online un producto'
             },
             {
-                question: 'Je les achète d\'habitude une fois par semaine. J`aime lire. Au centre commercial, je passe beaucoup de temps à la librairie.',
-                right: 'les bandes dessinées ',
-                wrong1: 'un roman d’aventures',
-                wrong2: 'un polar',
-                img: './assets/img7.jpg'
+                question: 'Fnac constituye un ejemplo único de alianza entre:',
+                right: 'comercio, cultura y tecnología',
+                wrong1: 'alimentación, moda y cultura',
+                wrong2: 'música, cine y moda',
+                wrong3: 'tecnología, alimentación y deporte'
             },
             {
-                question: 'Elle l\'achète pour décorer le couloir de notre maison. Ma maman adore décorer la maison. Au centre commercial, elle a son magasin préféré.',
-                right: 'un miroir',
-                wrong1: 'les bougies',
-                wrong2: 'une nappe',
-                img: './assets/img8.jpg'
-            },
-            {
-                question: 'On peut les acheter au magasin de chaussures, mais il y a des magasins de maroquinerie où on les vend aussi. Ma mère adore les petits et les grands.',
-                right: 'les sacs',
-                wrong1: 'les valises',
-                wrong2: 'les trousses',
-                img: './assets/img9.jpg'
+                question: 'Para facilitar la recogida de los productos, Fnac dispone de:',
+                right: 'lockers',
+                wrong1: 'la tienda abierta 24/7',
+                wrong2: 'el teléfono de ayuda',
+                wrong3: 'la página web'
             }
-        ]
+        ],
+    [
+        {
+            question: '¿Cuál de las siguientes cosas no vas a comprar en Fnac?',
+            right: 'traje de baño',
+            wrong1: 'televisor',
+            wrong2: 'libros',
+            wrong3: 'auriculares'
+        },
+        {
+            question: 'En España Fnac tiene:',
+            right: 'treinta y nueve tiendas y la página web',
+            wrong1: 'treinta tiendas pero no tiene la página web',
+            wrong2: 'solo la página web',
+            wrong3: 'solo dos tiendas'
+        },
+        {
+            question: '¿Qué puedes comprar en Fnac? ',
+            right: 'móviles',
+            wrong1: 'vestidos',
+            wrong2: 'tacones',
+            wrong3: 'gafas del sol'
+        },
+        {
+            question: 'La opción en la que el cliente reserva online un producto que está disponible en la tienda y puede pasar a recogerlo en 1 hora se llama: ',
+            right: 'Reserve & Collect',
+            wrong1: 'Click & Collect',
+            wrong2: 'ClickinStore',
+            wrong3: 'Same-Day Delivery'
+        }
+    ]
 ]
 
 /* Play audio in background */
@@ -85,8 +101,8 @@ document.addEventListener("click", () => {
 }, { once: true });
 
 // const progress = [7, 13, 20, 27, 33, 40, 47, 53, 60, 67, 73, 80, 87, 93, 100];
-const progress = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100];
-// const progress = [8, 17, 25, 33, 42, 50, 58, 67, 75, 83, 92, 100];
+// const progress = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100];
+const progress = [8, 17, 25, 33, 42, 50, 58, 67, 75, 83, 92, 100];
 // const progress = [11, 22, 33, 44, 56, 67, 78, 89, 100];
 
 /* Randomize questions */
@@ -114,7 +130,7 @@ let helpAvailable = 2;
 
 let lvl1Questions = shuffleArray(questions[0]);
 let lvl2Questions = shuffleArray(questions[1]);
-// let lvl3Questions = shuffleArray(questions[2]);
+let lvl3Questions = shuffleArray(questions[2]);
 
 const intro = document.querySelector(".view--start");
 const questionImg = document.querySelector(".view--question");
@@ -132,16 +148,16 @@ const endOfTheGame = document.querySelector(".view--end");
 setTimeout(() => {
     intro.style.display = "none";
     questionImg.style.display = "block";
-}, 6000);
+}, 2000);
 
 const questionPlaceholder = document.querySelector(".question");
 const answer1Placeholder = document.querySelector(".answer--1");
 const answer2Placeholder = document.querySelector(".answer--2");
 const answer3Placeholder = document.querySelector(".answer--3");
-// const answer4Placeholder = document.querySelector(".answer--4");
+const answer4Placeholder = document.querySelector(".answer--4");
 const image = document.querySelector(".image");
 
-const answerPlaceholders = [answer1Placeholder, answer2Placeholder, answer3Placeholder];
+const answerPlaceholders = [answer1Placeholder, answer2Placeholder, answer3Placeholder, answer4Placeholder];
 // const answerPlaceholders = [answer1Placeholder, answer2Placeholder, answer3Placeholder];
 
 const enableAllAnswers = () => {
@@ -153,13 +169,13 @@ const enableAllAnswers = () => {
 const playAgain = () => {
     lvl1Questions = shuffleArray(questions[0]);
     lvl2Questions = shuffleArray(questions[1]);
-    // lvl3Questions = shuffleArray(questions[2]);
+    lvl3Questions = shuffleArray(questions[2]);
 
     feedbackWrong.style.opacity = "0";
     feedbackWrong.style.display = "none";
     wrongAnswerMarker.style.display = "none";
 
-    // helpBtn.style.display = "block";
+    helpBtn.style.display = "block";
 
     gameOver = false;
     currentLvl = 0;
@@ -179,7 +195,7 @@ const markRightAnswer = (position) => {
     feedbackRight.style.display = "block";
     feedbackRight.style.opacity = "1";
 
-    // feedbackRightPercentPlaceholder.textContent = progress[currentLvl-1].toString();
+    feedbackRightPercentPlaceholder.textContent = progress[currentLvl-1].toString();
 
     setTimeout(() => {
         nextLvl();
@@ -221,15 +237,15 @@ const checkAnswer = (e, position) => {
 }
 
 const getCurrentQuestionObject = () => {
-    if(currentLvl < 6) return lvl1Questions[currentLvl-1];
-    else if(currentLvl < 11) return lvl2Questions[(currentLvl-1)%5];
-    // else return lvl3Questions[(currentLvl-1)%4];
+    if(currentLvl < 5) return lvl1Questions[currentLvl-1];
+    else if(currentLvl < 9) return lvl2Questions[(currentLvl-1)%4];
+    else return lvl3Questions[(currentLvl-1)%4];
 }
 
 const nextLvl = () => {
     currentLvl++;
 
-    if(currentLvl < 11) {
+    if(currentLvl < 13) {
         enableAllAnswers();
 
         rightAnswerMarker.style.display = "none";
@@ -246,15 +262,15 @@ const nextLvl = () => {
             wrongAnswerMarker.classList.remove(`img--mark--${i}--wrong`);
         }
 
-        const { question, right, wrong1, wrong2 } = currentQuestionObject;
+        const { question, right, wrong1, wrong2, wrong3 } = currentQuestionObject;
         questionPlaceholder.textContent = question;
-        const currentQuestionAnswers = [right, wrong1, wrong2];
+        const currentQuestionAnswers = [right, wrong1, wrong2, wrong3];
         const shuffledAnswers = shuffleArray(currentQuestionAnswers);
 
         answer1Placeholder.textContent = shuffledAnswers[0];
         answer2Placeholder.textContent = shuffledAnswers[1];
         answer3Placeholder.textContent = shuffledAnswers[2];
-        // answer4Placeholder.textContent = shuffledAnswers[3];
+        answer4Placeholder.textContent = shuffledAnswers[3];
 
         if(currentQuestionObject.img) {
             image.style.display = "block";

@@ -31,7 +31,7 @@ button {
 
 .view {
     position: relative;
-    max-width: 1000px;
+    max-width: 640px;
 }
 
 .view__img {
@@ -319,6 +319,16 @@ button {
 
 .btn--35:hover {
     transform: rotate(65deg) scale(1.05);
+}
+
+.btn--40 {
+    top: 64%;
+    left: 59%;
+    transform: rotate(-30deg);
+}
+
+.btn--40:hover {
+    transform: rotate(-30deg) scale(1.05);
 }
 
 .btn--41 {
