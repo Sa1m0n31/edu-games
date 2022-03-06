@@ -59,7 +59,7 @@ const infos = [
     'Płyniesz w warunkach dobrej widzialności. W pewnym momencie dostrzegasz drugi statek płynący po lewej stronie. Oceniasz, że wasze kursy mogą się przeciąć, ale drugi statek już zaczął podejmować odpowiednie działania, żeby temu zapobiec. Co robisz?',
     'Płyniesz w warunkach dobrej widzialności. W pewnym momencie dostrzegasz drugi statek płynący po lewej stronie. Oceniasz, że wasze kursy mogą się przeciąć, ale drugi statek już zaczął podejmować odpowiednie działania, żeby temu zapobiec. Co robisz?',
     'Płyniesz statkiem o napędzie mechanicznym, o długości do 50 metrów. Kliknij na nazwy świateł, które statek powinien mieć włączone.',
-    'Holujesz inny statek. Długość zespołu holowniczego nie przekracza 200 metrów. Które światła powinny być włączone na twoim statku?',
+    'Holujesz inny statek. Twój statek ma długość mniejszą niż 50 metrów. Długość zespołu holowniczego nie przekracza 200 metrów. Które światła powinny być włączone na twoim statku?',
     'Twój statek, który ma mniej niż 50 metrów, zajęty jest trałowaniem. Które światła powinien mieć w takim wypadku włączone?',
     'Znajdujesz się w statku nieodpowiadającym za swoje ruchy, który się nie porusza. Które światła powinny być włączone na takim statku?',
     'Twój statek ma ograniczoną zdolność manewrową. Pomimo tego płynie dalej. Jakie światła powinny być włączone na statku?',
@@ -85,6 +85,12 @@ const allTextsElements = Array.from(document.querySelectorAll('.text>span'));
 const allTexts = allTextsElements.map((item) => {
     return item.textContent;
 });
+
+const visibility0 = Array.from(document.querySelectorAll('.visibility-0'));
+const visibility1 = Array.from(document.querySelectorAll('.visibility-1'));
+const opacity0 = Array.from(document.querySelectorAll('.opacity-0'));
+const opacity1 = Array.from(document.querySelectorAll('.opacity-1'));
+const visibleOnFeedback = Array.from(document.querySelectorAll('.visibility-1-on-feedback'));
 
 /* Main carousel */
 const game = new Siema({
@@ -135,6 +141,11 @@ const prevLvl = () => {
         item.style.zIndex = '-1';
     });
 
+    allLights.forEach((item) => {
+        item.forEach((item) => {
+            item.style.visibility = 'hidden';
+        });
+    });
     lightsImages.forEach((item) => {
         item.forEach((item) => {
             item.style.visibility = 'hidden';
@@ -164,6 +175,22 @@ const prevLvl = () => {
         })
     });
 
+    visibility0.forEach((item) => {
+        item.style.visibility = 'hidden';
+    });
+    visibility1.forEach((item) => {
+        item.style.visibility = 'visible';
+    });
+    opacity0.forEach((item) => {
+        item.style.opacity = '0';
+    });
+    opacity1.forEach((item) => {
+        item.style.opacity = '1';
+    });
+    visibleOnFeedback.forEach((item) => {
+        item.style.visibility = 'hidden';
+    });
+
     lvlProgress = [];
     if(currentLvl > 1) currentLvl--;
     if(currentLvl > 0) {
@@ -172,7 +199,6 @@ const prevLvl = () => {
         allTextsElements[currentLvl].style.color = '#000';
         allTextsElements[currentLvl].textContent = allTexts[currentLvl-1];
     }
-    turnLightsOff();
 }
 
 let colregVisible = false;
@@ -180,6 +206,14 @@ let questionBoxesContent = ["", "", "", "", "", "", "", "", "", "", "", "", "", 
 const colregContentHTML = document.querySelector(".colregContent").innerHTML;
 const checkButtons = document.querySelectorAll('.btn--check');
 const backButtons = document.querySelectorAll('.btn--textBack');
+
+const lights1 = Array.from(document.querySelectorAll('.view--11>.view__img--light'));
+const lights2 = Array.from(document.querySelectorAll('.view--12>.view__img--light'));
+const lights3 = Array.from(document.querySelectorAll('.view--13>.view__img--light'));
+const lights4 = Array.from(document.querySelectorAll('.view--14>.view__img--light'));
+const lights5 = Array.from(document.querySelectorAll('.view--15>.view__img--light'));
+const lights6 = Array.from(document.querySelectorAll('.view--16>.view__img--light'));
+const allLights = [lights1, lights2, lights3, lights4, lights5, lights6];
 
 const toggleColreg = () => {
     const questionBoxesColreg = document.querySelectorAll(".text>.questionBoxColreg");
@@ -226,10 +260,14 @@ const toggleColreg = () => {
 }
 
 let currentLvl = 1;
-let pointsNeeded = [3, 3, 3, 4, 3, 3, 3, 2, 2, 1, 4, 6, 5, 2, 8, 8, 1, 2, 5, 1, 9];
+let pointsNeeded = [3, 3, 3, 4, 3, 3, 3, 2, 2, 2, 4, 6, 5, 2, 8, 8, 1, 2, 5, 1, 9];
 let lvlProgress = [];
 
 const feedbackImages = Array.from(document.querySelectorAll('.view__img--feedback'));
+
+const areTwoArraysEquals = (array1, array2) => {
+    return array1.sort().join(',') === array2.sort().join(',');
+}
 
 const positiveFeedback = () => {
     checkButtons[currentLvl-1].style.display = 'none';
@@ -248,9 +286,125 @@ const negativeFeedback = () => {
     allTextsElements[currentLvl-1].textContent = negativeFeedbacks[currentLvl-1];
 }
 
+const arrayHasElement = (arr, el) => {
+    return arr.findIndex((item) => {
+        return item === el
+    }) !== -1;
+}
+
 const check = () => {
+    let verified = false;
     if(lvlProgress.length === pointsNeeded[currentLvl-1]) {
+        switch(currentLvl) {
+            case 1:
+                if(areTwoArraysEquals(lvlProgress, [1, 2, 3])) verified = true;
+                break;
+            case 2:
+                verified = true;
+                break;
+            case 3:
+                if(areTwoArraysEquals(lvlProgress, [1, 2, 3])) verified = true;
+                break;
+            case 4:
+                verified = true;
+                break;
+            case 5:
+                if(areTwoArraysEquals(lvlProgress, [1, 2, 3])) verified = true;
+                break;
+            case 6:
+                if(areTwoArraysEquals(lvlProgress, [1, 2, 3])) verified = true;
+                break;
+            case 7:
+                if(areTwoArraysEquals(lvlProgress, [1, 2, 3])) verified = true;
+                break;
+            case 8:
+                if(areTwoArraysEquals(lvlProgress, [1, 2, 3])) verified = true;
+                break;
+            case 9:
+                if(areTwoArraysEquals(lvlProgress, [1, 2])) verified = true;
+                break;
+            case 10:
+                if (areTwoArraysEquals(lvlProgress, [1, 2])) verified = true;
+                break;
+            case 11:
+                if(arrayHasElement(lvlProgress, 4) && arrayHasElement(lvlProgress, 5) && arrayHasElement(lvlProgress, 6) && (arrayHasElement(lvlProgress, 1) || arrayHasElement(lvlProgress, 2) || arrayHasElement(lvlProgress, 3))) {
+                    verified = true;
+                }
+                break;
+            case 12:
+                if(arrayHasElement(lvlProgress, 4) && arrayHasElement(lvlProgress, 5) && arrayHasElement(lvlProgress, 6) && arrayHasElement(lvlProgress, 7) && (arrayHasElement(lvlProgress, 1) || arrayHasElement(lvlProgress, 2) || arrayHasElement(lvlProgress, 3))) {
+                    verified = true;
+                }
+                break;
+            case 13:
+                if(arrayHasElement(lvlProgress, 1) && arrayHasElement(lvlProgress, 2) && arrayHasElement(lvlProgress, 3) && ((arrayHasElement(lvlProgress, 4) || arrayHasElement(lvlProgress, 6) || arrayHasElement(lvlProgress, 8)) && (arrayHasElement(lvlProgress, 5) || arrayHasElement(lvlProgress, 7) || arrayHasElement(lvlProgress, 9)))) {
+                    verified = true;
+                }
+                break;
+            case 14:
+                if(areTwoArraysEquals(lvlProgress, [1, 2]) || areTwoArraysEquals(lvlProgress, [2, 3]) || areTwoArraysEquals(lvlProgress, [1, 3])) {
+                    verified = true;
+                }
+                break;
+            case 15:
+                if(arrayHasElement(lvlProgress, 1) && arrayHasElement(lvlProgress, 2) && arrayHasElement(lvlProgress, 3) && arrayHasElement(lvlProgress, 4) && arrayHasElement(lvlProgress, 5) && arrayHasElement(lvlProgress, 6) && ((arrayHasElement(lvlProgress, 7) && arrayHasElement(lvlProgress, 8)) || (arrayHasElement(lvlProgress, 7) && arrayHasElement(lvlProgress, 9)) || (arrayHasElement(lvlProgress, 9) && arrayHasElement(lvlProgress, 8)))) {
+                    verified = true;
+                }
+                break;
+            case 16:
+                if(arrayHasElement(lvlProgress, 1) && arrayHasElement(lvlProgress, 2) && arrayHasElement(lvlProgress, 3) && arrayHasElement(lvlProgress, 4) && arrayHasElement(lvlProgress, 5) && arrayHasElement(lvlProgress, 6) && ((arrayHasElement(lvlProgress, 7) && arrayHasElement(lvlProgress, 8)) || (arrayHasElement(lvlProgress, 7) && arrayHasElement(lvlProgress, 9)) || (arrayHasElement(lvlProgress, 9) && arrayHasElement(lvlProgress, 8)))) {
+                    verified = true;
+                }
+                break;
+            case 17:
+                if(areTwoArraysEquals(lvlProgress, [1])) verified = true;
+                break;
+            case 18:
+                if(areTwoArraysEquals(lvlProgress, [1, 1])) verified = true;
+                break;
+            case 19:
+                if(areTwoArraysEquals(lvlProgress, [1, 1, 1, 1, 1])) verified = true;
+                break;
+            case 20:
+                if(areTwoArraysEquals(lvlProgress, [1])) verified = true;
+                break;
+            case 21:
+                verified = true;
+                break;
+            default:
+                break;
+        }
+    }
+    else {
+        switch(currentLvl) {
+            case 11:
+                if(arrayHasElement(lvlProgress, 4) && arrayHasElement(lvlProgress, 5) && arrayHasElement(lvlProgress, 6) && (arrayHasElement(lvlProgress, 1) || arrayHasElement(lvlProgress, 2) || arrayHasElement(lvlProgress, 3))) {
+                    verified = true;
+                }
+                break;
+            case 12:
+                if(arrayHasElement(lvlProgress, 4) && arrayHasElement(lvlProgress, 5) && arrayHasElement(lvlProgress, 6) && arrayHasElement(lvlProgress, 7) && (arrayHasElement(lvlProgress, 1) || arrayHasElement(lvlProgress, 2) || arrayHasElement(lvlProgress, 3))) {
+                    verified = true;
+                }
+                break;
+            case 19:
+                if(lvlProgress.findIndex((item) => {
+                    return item !== 1;
+                }) === -1) {
+                    verified = true;
+                }
+                break;
+            default:
+                negativeFeedback();
+                break;
+        }
+    }
+
+    if(verified) {
         positiveFeedback();
+        visibleOnFeedback.forEach((item) => {
+            item.style.visibility = 'visible';
+        });
     }
     else {
         negativeFeedback();
@@ -263,34 +417,16 @@ Array.from(document.querySelectorAll('audio')).forEach((item) => {
     });
 });
 
-const turnLightsOff = () => {
-    const turnOff = Array.from(
-        document.querySelectorAll('.light:not(.light--back)'))
-        .concat(
-            Array.from(document.querySelectorAll('.light--back>assets'))
-        )
-        .concat(
-            document.querySelectorAll('.light--special>assets')
-        )
-        .concat(
-            document.querySelectorAll('.view--12>.light--top>assets')
-        )
-    const turnOn = Array.from(document.querySelectorAll('.light--special'));
-
-    // turnOff.forEach((item) => {
-    //     item.style.visibility = 'hidden';
-    // });
-    // turnOn.forEach((item) => {
-    //     item.style.visibility = 'visible';
-    // });
-}
-
 const soundsElements = Array.from(document.querySelectorAll('audio'));
 
 soundsElements.forEach((item, index) => {
     item.onended = () => {
         item.currentTime = 0;
-        soundsImages[index].style.visibility = 'hidden';
+        soundsImages.forEach((item) => {
+            item.forEach((item) => {
+                item.style.visibility = 'hidden';
+            });
+        });
     }
 });
 
@@ -303,7 +439,9 @@ const isAudioPlaying = () => {
 
 const playSound = (n) => {
     if(!isAudioPlaying()) {
-        soundsImages[n].style.visibility = 'visible';
+        soundsImages.forEach((item) => {
+            if(item[n]) item[n].style.visibility = 'visible';
+        });
         let audio = document.getElementById(sounds[n]);
         audio.play();
     }
@@ -346,12 +484,14 @@ const lvl4Click = (btnIndex) => {
         if(btnIndex === 1 && lvlProgress.length < 2) {
             lvlProgress.push(btnIndex);
         }
-        else if(btnIndex === 1 && lvlProgress.length === 2) {
-            lvlProgress.push(btnIndex);
-            lvlProgress.push(btnIndex);
+        else if(btnIndex === 2 && lvlProgress.length >= 2) {
             lvlProgress.push(btnIndex);
         }
-        else if(btnIndex === 2 && lvlProgress.length >= 2) {
+        else if((btnIndex === 1 && lvlProgress.length === 2) || (btnIndex === 2 && lvlProgress.length < 2)) {
+            lvlProgress.push(btnIndex);
+            lvlProgress.push(btnIndex);
+            lvlProgress.push(btnIndex);
+            lvlProgress.push(btnIndex);
             lvlProgress.push(btnIndex);
         }
     }
@@ -364,67 +504,6 @@ const lvl8Click = (btnIndex) => {
     else if(lvlProgress.length === 1 && btnIndex === 2) {
         lvlProgress.push(btnIndex);
     }
-}
-
-const lvl10Click = (btnIndex) => {
-    if(lvlProgress.length === 0) lvlProgress.push(btnIndex);
-}
-
-const turnTopLightsOn = () => {
-    document.querySelector(`.view--${currentLvl}>.light--top`).style.visibility = 'visible';
-}
-
-const turnFirstTopLightOn = () => {
-    document.querySelector(`.view--${currentLvl}>.light--top>.light__img:first-of-type`).style.visibility = 'visible';
-}
-
-const turnSecondTopLightOn = () => {
-    document.querySelector(`.view--${currentLvl}>.light--top>.light__img:nth-of-type(2)`).style.visibility = 'visible';
-}
-
-const turnThirdTopLightOn = () => {
-    document.querySelector(`.view--${currentLvl}>.light--top>.light__img:last-of-type`).style.visibility = 'visible';
-}
-
-const turnLeftLightsOn = () => {
-    document.querySelector(`.view--${currentLvl}>.light--left`).style.visibility = 'visible';
-}
-
-const turnRightLightsOn = () => {
-    document.querySelector(`.view--${currentLvl}>.light--right`).style.visibility = 'visible';
-}
-
-const turnBackLightsOn = () => {
-    document.querySelector(`.view--${currentLvl}>.light--back`).style.visibility = 'visible';
-}
-
-/* Holowanie */
-const turnFirstBackLightOn = () => {
-    document.querySelector(`.view--${currentLvl}>.light--back>.light--back__img--1`).style.visibility = 'visible';
-}
-
-const turnSecondBackLightOn = () => {
-    document.querySelector(`.view--${currentLvl}>.light--back>.light--back__img--2`).style.visibility = 'visible';
-}
-
-const turnFirstSpecialLightOn = () => {
-    document.querySelector(`.view--${currentLvl}>.light--special>.light__img:first-of-type`).style.visibility = 'visible';
-}
-
-const turnSecondSpecialLightOn = () => {
-    document.querySelector(`.view--${currentLvl}>.light--special>.light__img:nth-of-type(2)`).style.visibility = 'visible';
-}
-
-const turnThirdSpecialLightOn = () => {
-    document.querySelector(`.view--${currentLvl}>.light--special>.light__img:last-of-type`).style.visibility = 'visible';
-}
-
-const turnFirstTopSpecialLightOn = () => {
-    document.querySelector(`.view--${currentLvl}>.light--top--1`).style.visibility = 'visible';
-}
-
-const turnSecondTopSpecialLightOn = () => {
-    document.querySelector(`.view--${currentLvl}>.light--top--2`).style.visibility = 'visible';
 }
 
 const wrongAnswer = () => {
@@ -442,140 +521,23 @@ const wrongAnswer = () => {
 
 const lvl11Click = (btnIndex) => {
     if(!isElementInLvlProgress(btnIndex)) lvlProgress.push(btnIndex);
-    switch(btnIndex) {
-        case 1:
-            turnTopLightsOn();
-            break;
-        case 2:
-            turnLeftLightsOn();
-            break;
-        case 3:
-            turnRightLightsOn();
-            break;
-        case 4:
-            turnSecondBackLightOn();
-            break;
-        default:
-            break;
-    }
-}
-
-const lvl12Click = (btnIndex) => {
-    if (!isElementInLvlProgress(btnIndex)) lvlProgress.push(btnIndex);
-    switch (btnIndex) {
-        case 1:
-            turnFirstTopLightOn();
-            break;
-        case 2:
-            turnSecondTopLightOn();
-            break;
-        case 3:
-            turnLeftLightsOn();
-            break;
-        case 4:
-            turnRightLightsOn();
-            break;
-        case 5:
-            turnSecondBackLightOn();
-            break;
-        case 6:
-            turnFirstBackLightOn();
-            break;
-        default:
-            break;
-    }
-}
-
-const lvl13Click = (btnIndex) => {
-    if(!isElementInLvlProgress(btnIndex)) lvlProgress.push(btnIndex);
-    switch(btnIndex) {
-        case 1:
-            turnFirstSpecialLightOn();
-            break;
-        case 2:
-            turnSecondSpecialLightOn();
-            break;
-        case 3:
-            turnLeftLightsOn();
-            break;
-        case 4:
-            turnRightLightsOn();
-            break;
-        case 5:
-            turnSecondBackLightOn();
-            break;
-        default:
-            break;
-    }
-}
-
-const lvl14Click = (btnIndex) => {
-    if(!isElementInLvlProgress(btnIndex)) lvlProgress.push(btnIndex);
-    switch(btnIndex) {
-        case 1:
-            turnFirstSpecialLightOn();
-            break;
-        case 2:
-            turnSecondSpecialLightOn();
-            break;
-        default:
-            break;
-    }
-}
-
-const lvl15Click = (btnIndex) => {
-    if(!isElementInLvlProgress(btnIndex)) lvlProgress.push(btnIndex);
-    switch(btnIndex) {
-        case 1:
-            turnFirstSpecialLightOn();
-            break;
-        case 2:
-            turnSecondSpecialLightOn();
-            break;
-        case 3:
-            turnThirdSpecialLightOn();
-            break;
-        case 4:
-            turnFirstTopSpecialLightOn();
-            break;
-        case 5:
-            turnSecondTopSpecialLightOn();
-            break;
-        case 6:
-            turnLeftLightsOn();
-            break;
-        case 7:
-            turnRightLightsOn();
-            break;
-        case 8:
-            turnSecondBackLightOn();
-            break;
-        default:
-            break;
+    else {
+        lvlProgress = lvlProgress.filter((item) => {
+            return item !== btnIndex;
+        });
     }
 }
 
 const lvl17Click = (btnIndex) => {
-    if(btnIndex === 2) lvlProgress.push(1);
-    else {
-        lvlProgress.push(1);
-        lvlProgress.push(1);
-    }
-}
-
-const lvl20Click = (btnIndex) => {
     if(btnIndex === 1) lvlProgress.push(1);
-    else {
-        lvlProgress.push(1);
-        lvlProgress.push(1);
-    }
+    else if(btnIndex === 2) lvlProgress.push(2);
 }
 
 const lvl21Click = (btnIndex) => {
-    if(btnIndex === 2 && (lvlProgress.length < 3 || lvlProgress.length > 6)) {
+    if(btnIndex === 2 && (lvlProgress.length < 3 || lvlProgress.length >= 6)) {
         lvlProgress.push(1);
     }
-    else if(btnIndex === 1 && (lvlProgress.length >= 3 && lvlProgress.length <= 6)) {
+    else if(btnIndex === 1 && (lvlProgress.length >= 3 && lvlProgress.length <= 5)) {
         lvlProgress.push(1);
     }
     else {
@@ -619,13 +581,64 @@ const toggleArrow = (n) => {
     arrowsClicked[n] = !arrowsClicked[n];
 }
 
+const toggle360Lights = (on, off1, off2) => {
+    allLights.forEach((item) => {
+        item[on].style.visibility = 'visible';
+        item[off1].style.visibility = 'hidden';
+        item[off2].style.visibility = 'hidden';
+        lightsImages[currentLvl-1][on].style.visibility = 'visible';
+        lightsImages[currentLvl-1][off1].style.visibility = 'hidden';
+        lightsImages[currentLvl-1][off2].style.visibility = 'hidden';
+    })
+}
+
 const toggleLight = (n) => {
-    console.log(lightsImages);
     if(lightsClicked[n]) {
         lightsImages[currentLvl-1][n].style.visibility = 'hidden';
+        allLights.forEach((item) => {
+            item[n].style.visibility = 'hidden';
+        });
     }
     else {
-        lightsImages[currentLvl-1][n].style.visibility = 'visible';
+        if(n < 7) {
+            lightsImages[currentLvl-1][n].style.visibility = 'visible';
+            allLights.forEach((item) => {
+                item[n].style.visibility = 'visible';
+            });
+        }
+        else {
+            switch(n) {
+                case 7:
+                    toggle360Lights(7, 8, 9);
+                    break;
+                case 8:
+                    toggle360Lights(8, 7, 9);
+                    break;
+                case 9:
+                    toggle360Lights(9, 7, 8);
+                    break;
+                case 10:
+                    toggle360Lights(10, 11, 12);
+                    break;
+                case 11:
+                    toggle360Lights(11, 10, 12);
+                    break;
+                case 12:
+                    toggle360Lights(12, 10, 11);
+                    break;
+                case 13:
+                    toggle360Lights(13, 14, 15);
+                    break;
+                case 14:
+                    toggle360Lights(14, 13, 15);
+                    break;
+                case 15:
+                    toggle360Lights(15, 13, 14);
+                    break;
+                default:
+                    break;
+            }
+        }
     }
     lightsClicked[n] = !lightsClicked[n];
 }
@@ -660,31 +673,31 @@ const btnClick = (lvl, btnIndex, action = null) => {
             lvl1Click(btnIndex);
             break;
         case 8:
-            lvl8Click(btnIndex);
+            lvl1Click(btnIndex);
             break;
         case 9:
-            lvl8Click(btnIndex);
+            lvl1Click(btnIndex);
             break;
         case 10:
-            lvl10Click(btnIndex);
+            lvl1Click(btnIndex);
             break;
         case 11:
             lvl11Click(btnIndex);
             break;
         case 12:
-            lvl12Click(btnIndex);
+            lvl11Click(btnIndex);
             break;
         case 13:
-            lvl13Click(btnIndex);
+            lvl11Click(btnIndex);
             break;
         case 14:
-            lvl14Click(btnIndex);
+            lvl11Click(btnIndex);
             break;
         case 15:
-            lvl15Click(btnIndex);
+            lvl11Click(btnIndex);
             break;
         case 16:
-            lvl15Click(btnIndex);
+            lvl11Click(btnIndex);
             break;
         case 17:
             lvl17Click(btnIndex);
@@ -696,13 +709,12 @@ const btnClick = (lvl, btnIndex, action = null) => {
             lvl17Click(btnIndex);
             break;
         case 20:
-            lvl20Click(btnIndex);
+            lvl17Click(btnIndex);
             break;
         case 21:
             lvl21Click(btnIndex);
             break;
         default:
-            // wrongAnswer();
             break;
     }
 }

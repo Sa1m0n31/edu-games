@@ -543,6 +543,22 @@ audio {
     left: 0;
 }
 
+.visibility-1 {
+    visibility: visible;
+}
+
+.visibility-0 {
+    visibility: hidden;
+}
+
+.opacity-1 {
+    opacity: 1;
+}
+
+.opacity-0 {
+    opacity: 0;
+}
+
 .shifter--2, .shifter--0 {
     visibility: hidden;
 }
@@ -550,6 +566,56 @@ audio {
 .btn--shifter--0 .btn--shifter__img,
 .btn--shifter--2 .btn--shifter__img {
     opacity: 0;
+}
+
+.view--14 .shifter--1,
+.view--14 .shifter--2,
+.view--15 .shifter--1,
+.view--15 .shifter--2,
+.view--16 .shifter--1,
+.view--16 .shifter--2,
+.view--17 .shifter--1,
+.view--17 .shifter--2,
+.view--11 .shifter--1,
+.view--11 .shifter--2 {
+    visibility: hidden;
+}
+
+.view--14 .shifter--0,
+.view--17 .shifter--0,
+.view--15 .shifter--0,
+.view--16 .shifter--0,
+.view--11 .shifter--0 {
+    visibility: visible;
+}
+
+.view--14 .btn--shifter--1 .btn--shifter__img,
+.view--14 .btn--shifter--2 .btn--shifter--img,
+.view--17 .btn--shifter--1 .btn--shifter__img,
+.view--17 .btn--shifter--2 .btn--shifter--img,
+.view--15 .btn--shifter--1 .btn--shifter__img,
+.view--15 .btn--shifter--2 .btn--shifter--img,
+.view--16 .btn--shifter--1 .btn--shifter__img,
+.view--16 .btn--shifter--2 .btn--shifter--img,
+.view--11 .btn--shifter--1 .btn--shifter__img,
+.view--11 .btn--shifter--2 .btn--shifter--img {
+    opacity: 0;
+}
+
+.view--14 .btn--shifter--0 .btn--shifter__img,
+.view--15 .btn--shifter--0 .btn--shifter__img,
+.view--16 .btn--shifter--0 .btn--shifter__img,
+.view--17 .btn--shifter--0 .btn--shifter__img,
+.view--11 .btn--shifter--0 .btn--shifter__img {
+    opacity: 1;
+}
+
+.view--14 .btn--arrowTop .btn--arrow__img,
+.view--15 .btn--arrowTop .btn--arrow__img,
+.view--16 .btn--arrowTop .btn--arrow__img,
+.view--17 .btn--arrowTop .btn--arrow__img,
+.view--11 .btn--arrowTop .btn--arrow__img {
+    visibility: visible;
 }
 
 .btn--shifter {
@@ -694,3 +760,23 @@ audio {
     width: 100%;
     z-index: -1;
 }
+
+.view__img--light {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    visibility: hidden;
+}
+
+/*.visible,*/
+/*.visible img {*/
+/*    visibility: visible;*/
+/*    opacity: 1;*/
+/*}*/
+
+/*.hidden,*/
+/*.hidden img {*/
+/*    visibility: hidden;*/
+/*    opacity: 1;*/
+/*}*/
