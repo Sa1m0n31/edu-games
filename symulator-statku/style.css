@@ -568,56 +568,6 @@ audio {
     opacity: 0;
 }
 
-.view--14 .shifter--1,
-.view--14 .shifter--2,
-.view--15 .shifter--1,
-.view--15 .shifter--2,
-.view--16 .shifter--1,
-.view--16 .shifter--2,
-.view--17 .shifter--1,
-.view--17 .shifter--2,
-.view--11 .shifter--1,
-.view--11 .shifter--2 {
-    visibility: hidden;
-}
-
-.view--14 .shifter--0,
-.view--17 .shifter--0,
-.view--15 .shifter--0,
-.view--16 .shifter--0,
-.view--11 .shifter--0 {
-    visibility: visible;
-}
-
-.view--14 .btn--shifter--1 .btn--shifter__img,
-.view--14 .btn--shifter--2 .btn--shifter--img,
-.view--17 .btn--shifter--1 .btn--shifter__img,
-.view--17 .btn--shifter--2 .btn--shifter--img,
-.view--15 .btn--shifter--1 .btn--shifter__img,
-.view--15 .btn--shifter--2 .btn--shifter--img,
-.view--16 .btn--shifter--1 .btn--shifter__img,
-.view--16 .btn--shifter--2 .btn--shifter--img,
-.view--11 .btn--shifter--1 .btn--shifter__img,
-.view--11 .btn--shifter--2 .btn--shifter--img {
-    opacity: 0;
-}
-
-.view--14 .btn--shifter--0 .btn--shifter__img,
-.view--15 .btn--shifter--0 .btn--shifter__img,
-.view--16 .btn--shifter--0 .btn--shifter__img,
-.view--17 .btn--shifter--0 .btn--shifter__img,
-.view--11 .btn--shifter--0 .btn--shifter__img {
-    opacity: 1;
-}
-
-.view--14 .btn--arrowTop .btn--arrow__img,
-.view--15 .btn--arrowTop .btn--arrow__img,
-.view--16 .btn--arrowTop .btn--arrow__img,
-.view--17 .btn--arrowTop .btn--arrow__img,
-.view--11 .btn--arrowTop .btn--arrow__img {
-    visibility: visible;
-}
-
 .btn--shifter {
     position: absolute;
     background: transparent;
@@ -768,15 +718,3 @@ audio {
     width: 100%;
     visibility: hidden;
 }
-
-/*.visible,*/
-/*.visible img {*/
-/*    visibility: visible;*/
-/*    opacity: 1;*/
-/*}*/
-
-/*.hidden,*/
-/*.hidden img {*/
-/*    visibility: hidden;*/
-/*    opacity: 1;*/
-/*}*/

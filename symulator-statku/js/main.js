@@ -57,7 +57,7 @@ const infos = [
     'Płyniesz w nocy w warunkach dobrej widzialności. Naprzeciwko twojego statku dostrzegasz inny statek. Płyniecie wprost na siebie. Co w takim wypadku zrobisz?',
     'Płyniesz w warunkach dobrej widzialności. W pewnym momencie dostrzegasz drugi statek płynący po prawej stronie. Oceniasz, że wasze kursy przetną się. Co robisz?',
     'Płyniesz w warunkach dobrej widzialności. W pewnym momencie dostrzegasz drugi statek płynący po lewej stronie. Oceniasz, że wasze kursy mogą się przeciąć, ale drugi statek już zaczął podejmować odpowiednie działania, żeby temu zapobiec. Co robisz?',
-    'Płyniesz w warunkach dobrej widzialności. W pewnym momencie dostrzegasz drugi statek płynący po lewej stronie. Oceniasz, że wasze kursy mogą się przeciąć, ale drugi statek już zaczął podejmować odpowiednie działania, żeby temu zapobiec. Co robisz?',
+    'Płyniesz w warunkach dobrej widzialności. W pewnym momencie dostrzegasz drugi statek płynący po lewej stronie. Oceniasz, że wasze kursy mogą się przeciąć. Czas mija, ale drugi statek nie podejmuje żadnych działań. Znajdujecie się coraz bliżej siebie. Co robisz?',
     'Płyniesz statkiem o napędzie mechanicznym, o długości do 50 metrów. Kliknij na nazwy świateł, które statek powinien mieć włączone.',
     'Holujesz inny statek. Twój statek ma długość mniejszą niż 50 metrów. Długość zespołu holowniczego nie przekracza 200 metrów. Które światła powinny być włączone na twoim statku?',
     'Twój statek, który ma mniej niż 50 metrów, zajęty jest trałowaniem. Które światła powinien mieć w takim wypadku włączone?',
@@ -95,7 +95,7 @@ const visibleOnFeedback = Array.from(document.querySelectorAll('.visibility-1-on
 /* Main carousel */
 const game = new Siema({
     selector: ".carousel",
-    draggable: true,
+    draggable: false,
     perPage: 1
 });
 
@@ -105,10 +105,6 @@ const next = () => {
 
     backBtn.style.display = "flex";
     colregBtn.style.display = "block";
-}
-
-const goHome = () => {
-    window.location.reload(false);
 }
 
 const menu = (lvl) => {
@@ -318,7 +314,7 @@ const check = () => {
                 if(areTwoArraysEquals(lvlProgress, [1, 2, 3])) verified = true;
                 break;
             case 8:
-                if(areTwoArraysEquals(lvlProgress, [1, 2, 3])) verified = true;
+                if(areTwoArraysEquals(lvlProgress, [2, 3])) verified = true;
                 break;
             case 9:
                 if(areTwoArraysEquals(lvlProgress, [1, 2])) verified = true;

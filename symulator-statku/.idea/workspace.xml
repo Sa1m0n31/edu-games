@@ -20,101 +20,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="30e1dee3-d04c-449c-a4d2-665e9fc3353b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/assets/07_Prawidło_24_Holowanie rufowe.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/prawidlo-14-2-feedback.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/prawidlo-14-feedback.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/prawidlo-15-feedback.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/prawidlo-17-1-feedback.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/prawidlo-17-2-feedback.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/prawidlo-34-1-feedback.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/prawidlo-34-2-feedback.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/prawidlo-34-3-feedback.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/prawidlo-35-feedback.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/prawidlo-37-feedback.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/swiatla-23-360-1a.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/swiatla-23-360-1b.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/swiatla-23-360-1c.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/swiatla-23-360-2a.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/swiatla-23-360-2b.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/swiatla-23-360-2c.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/swiatla-23-360-3a.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/swiatla-23-360-3b.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/swiatla-23-360-3c.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/swiatla-23-burtowe-czerwone.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/swiatla-23-burtowe-zielone.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/swiatla-23-holowania.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/swiatla-23-masztowe-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/swiatla-23-masztowe-2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/swiatla-23-masztowe-3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/swiatla-23-rufowe.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/swiatla-24-360-1a.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/swiatla-24-360-1b.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/swiatla-24-360-1c.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/swiatla-24-360-2a.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/swiatla-24-360-2b.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/swiatla-24-360-2c.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/swiatla-24-360-3a.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/swiatla-24-360-3b.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/swiatla-24-360-3c.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/swiatla-24-burtowe-czerwone.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/swiatla-24-burtowe-zielone.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/swiatla-24-holowania.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/swiatla-24-masztowe-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/swiatla-24-masztowe-2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/swiatla-24-masztowe-3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/swiatla-24-rufowe.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/swiatla-26-360-1a.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/swiatla-26-360-1b.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/swiatla-26-360-1c.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/swiatla-26-360-2a.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/swiatla-26-360-2b.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/swiatla-26-360-2c.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/swiatla-26-360-3a.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/swiatla-26-360-3b.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/swiatla-26-360-3c.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/swiatla-26-burtowe-czerwone.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/swiatla-26-burtowe-zielone.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/swiatla-26-holowania.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/swiatla-26-masztowe-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/swiatla-26-masztowe-2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/swiatla-26-masztowe-3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/swiatla-26-rufowe.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/swiatla-27-360-1a.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/swiatla-27-360-1b.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/swiatla-27-360-1c.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/swiatla-27-360-2a.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/swiatla-27-360-2b.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/swiatla-27-360-2c.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/swiatla-27-360-3a.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/swiatla-27-360-3b.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/swiatla-27-360-3c.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/swiatla-27-burtowe-czerwone.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/swiatla-27-burtowe-zielone.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/swiatla-27-holowania.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/swiatla-27-masztowe-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/swiatla-27-masztowe-2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/swiatla-27-masztowe-3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/swiatla-27-rufowe.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/prawidlo-14-2.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/prawidlo-14-2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/prawidlo-14.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/prawidlo-14.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/prawidlo-15.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/prawidlo-15.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/prawidlo-17-1.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/prawidlo-17-1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/prawidlo-17-2.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/prawidlo-17-2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/prawidlo-23.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/prawidlo-23.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/prawidlo-24.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/prawidlo-24.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/prawidlo-26.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/prawidlo-26.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/prawidlo-27-1.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/prawidlo-27-1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/prawidlo-27-2.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/prawidlo-27-2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/prawidlo-28.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/prawidlo-28.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/prawidlo-34-1.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/prawidlo-34-1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/prawidlo-34-2.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/prawidlo-34-2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/prawidlo-34-3.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/prawidlo-34-3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/prawidlo-35.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/prawidlo-35.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/prawidlo-37.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/prawidlo-37.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/07_Prawidło_24_Holowanie rufowe.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symulator.zip" beforeDir="false" afterPath="$PROJECT_DIR$/symulator.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/womi.js" beforeDir="false" afterPath="$PROJECT_DIR$/womi.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,7 +45,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/assets" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -159,7 +71,9 @@
       <workItem from="1641597958269" duration="8114000" />
       <workItem from="1641652278535" duration="2568000" />
       <workItem from="1642961868255" duration="6197000" />
-      <workItem from="1646412307654" duration="31733000" />
+      <workItem from="1646412307654" duration="34043000" />
+      <workItem from="1646563254383" duration="9000" />
+      <workItem from="1646676028411" duration="421000" />
     </task>
     <servers />
   </component>
@@ -183,20 +97,20 @@
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
     <state x="-1217" y="322" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1641596624580" />
-    <state x="-1234" y="211" key="FileChooserDialogImpl" timestamp="1646421445176">
+    <state x="-1234" y="211" key="FileChooserDialogImpl" timestamp="1646563262781">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="-1234" y="211" key="FileChooserDialogImpl/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1646421445176" />
+    <state x="-1234" y="211" key="FileChooserDialogImpl/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1646563262781" />
     <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1641256696791" />
     <state x="-1234" y="211" key="FileChooserDialogImpl/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1642970743218" />
     <state x="-1304" y="242" key="run.anything.popup" timestamp="1646526372559">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
     <state x="-1304" y="242" key="run.anything.popup/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1646526372559" />
-    <state x="-1297" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1646443172010">
+    <state x="-1297" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1646676114379">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="-1297" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1646443172010" />
+    <state x="-1297" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1646676114379" />
     <state x="-1297" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1642963598772" />
   </component>
 </project>
