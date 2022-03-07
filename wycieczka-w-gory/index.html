@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Szczyty górskie w Polsce</title>
+    <link rel="stylesheet" href="./style.css" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta charset="utf-8"/>
+</head>
+<body>
+
+<div class="container">
+
+    <main class="content">
+        <figure class="content__img siemaCarousel">
+            <!-- 0 -->
+            <figure class="backgroundImgWrapper">
+                <main class="start">
+                    <button class="startBtn" onclick="changeSection(true)">
+                        Rozpocznij wędrówkę
+                    </button>
+                    <h3 class="startHeader">
+                        Poruszaj się między poziomami za pomocą strzałek lub wykonując podane polecenia
+                    </h3>
+                </main>
+                <img class="backgroundImg" src="./assets/wstep.png" alt="poczatek-gry" />
+            </figure>
+
+            <!-- 1 -->
+            <figure class="backgroundImgWrapper">
+                <img class="backgroundImg" src="./assets/zad1.png" alt="co-musisz-zabrac-na-wyprawe-w-gory" />
+
+                <figure class="backpack dropzone">
+
+                </figure>
+
+                <section class="equipmentWrapper">
+                    <button class="draggable equipment equipment-ok">
+                        <img class="equipment__img" src="./assets/apteczka.png" alt="apteczka" />
+                    </button>
+                    <button class="draggable equipment equipment-ok">
+                        <img class="equipment__img" src="./assets/buty.png" alt="buty" />
+                    </button>
+                    <button class="draggable equipment equipment-ok">
+                        <img class="equipment__img" src="./assets/czapka.png" alt="czapka" />
+                    </button>
+                    <button class="draggable equipment">
+                        <img class="equipment__img" src="./assets/gra.png" alt="gra" />
+                    </button>
+                    <button class="draggable equipment equipment-ok">
+                        <img class="equipment__img" src="./assets/prowiant.png" alt="kanapki" />
+                    </button>
+                    <button class="draggable equipment">
+                        <img class="equipment__img" src="./assets/klapki.png" alt="klapki" />
+                    </button>
+                    <button class="draggable equipment equipment-ok">
+                        <img class="equipment__img" src="./assets/kurtka.png" alt="kurtka" />
+                    </button>
+                    <button class="draggable equipment">
+                        <img class="equipment__img" src="./assets/okulary.png" alt="okulary" />
+                    </button>
+                    <button class="draggable equipment">
+                        <img class="equipment__img" src="./assets/recznik.png" alt="recznik" />
+                    </button>
+                </section>
+            </figure>
+
+            <!-- 2 -->
+            <figure class="backgroundImgWrapper">
+                <img class="backgroundImg" src="./assets/feedback.png" alt="brawo-spakowales-plecak" />
+                <p class="feedbackCenter">
+                    Brawo! Spakowałeś plecak i możesz ruszać w drogę
+                </p>
+            </figure>
+
+            <!-- 3 -->
+            <figure class="backgroundImgWrapper">
+                <img class="backgroundImg" src="./assets/zad_2.png" alt="wycieczka-w-gory" />
+            </figure>
+
+            <!-- 4 -->
+            <figure class="backgroundImgWrapper">
+                <img class="backgroundImg" src="./assets/feedback.png" alt="brawo-spakowales-plecak" />
+                <p class="feedbackCenter">
+                    Bardzo dobry pomysł! Wędrówki podczas burzy są niebezpieczne. Dzięki
+                    odpoczynkowi nabrałeś sił i dotarłeś do najwyższego szczytu Gór Świętokrzyskich
+                    Znajdujesz się obecnie na Łysicy, która ma 614 metrów wysokości.
+                </p>
+            </figure>
+
+            <!-- 5 -->
+            <figure class="backgroundImgWrapper backgroundDropzoneWrapper">
+                <img class="backgroundImg" src="./assets/zad_3.png" alt="lysica" />
+
+                <span class="item-dropzone" id="item-dropzone-sniezka"></span>
+                <span class="item-dropzone" id="item-dropzone-chmurka"></span>
+                <span class="item-dropzone" id="item-dropzone-kamien"></span>
+                <span class="item-dropzone" id="item-dropzone-kwiatki"></span>
+                <span class="item-dropzone" id="item-dropzone-plecak"></span>
+            </figure>
+
+            <!-- 6 -->
+            <figure class="backgroundImgWrapper">
+                <img class="backgroundImg" src="./assets/zad4.png" alt="chwila-odpoczynku" />
+            </figure>
+
+            <!-- 7 -->
+            <figure class="backgroundImgWrapper">
+                <img class="backgroundImg" src="./assets/feedback.png" alt="dotarles-na-sniezke" />
+            </figure>
+
+            <!-- 8 -->
+            <figure class="backgroundImgWrapper">
+                <img class="backgroundImg" src="./assets/zad_5.png" alt="przyporzadkuj-gory-do-miejsc-na-mapie" />
+            </figure>
+
+            <!-- 9 -->
+            <figure class="backgroundImgWrapper">
+                <img class="backgroundImg" src="./assets/feedback.png" alt="mozesz-isc-dalej" />
+            </figure>
+
+            <!-- 10 -->
+            <figure class="backgroundImgWrapper">
+                <img class="backgroundImg" src="./assets/zad_6.png" alt="ponumeruj-szczyty" />
+            </figure>
+
+            <!-- 11 -->
+            <figure class="backgroundImgWrapper">
+                <p class="feedbackCenter">
+                    Gratulacje! Dzięki swojej sile, wiedzy i wytrwałości dotarłeś na najwyższy szczyt w Polsce. Wszedłeś na Rysy, które znajdują się aż 2501 m.n.p.m.
+                </p>
+                <img class="backgroundImg" src="./assets/wstep.png" alt="gratulacje" />
+            </figure>
+
+            <!-- 12 -->
+            <figure class="backgroundImgWrapper">
+                <main class="feedbackCenter">
+                    <span class="">
+                        Koniec gry
+                    </span>
+                    <button class="startBtn startBtn--end" onclick="startAgain()">
+                        Zacznij od nowa
+                    </button>
+                </main>
+                <img class="backgroundImg" src="./assets/feedback.png" alt="najwyzsze-szczyty-w-polsce" />
+            </figure>
+
+        </figure>
+
+        <!-- TEXT -->
+        <section class="content__text">
+            <h3 class="content__text__header">
+
+            </h3>
+            <p class="content__text__text">
+
+            </p>
+            <section class="answerWrapper">
+                <span class="answerFeedback">
+                    Spróbuj jeszcze raz
+                </span>
+                <button class="answer" onclick="wrongAnswer()">
+                    Zakładam kurtkę i idę dalej
+                </button>
+                <button class="answer" onclick="checkAnswer()">
+                    Przeczekam burzę w schronisku, a później ruszę w dalszą drogę
+                </button>
+            </section>
+
+            <section class="placesWrapper">
+                <button class="draggable answer place" id="morze">
+                    Morze
+                </button>
+                <button class="draggable answer place" id="las">
+                    Las
+                </button>
+                <button class="draggable answer place" id="jezioro">
+                    Jezioro
+                </button>
+                <button class="draggable answer place" id="gory">
+                    Góry
+                </button>
+            </section>
+
+            <p class="additionalHints">
+                <span>Na tabliczce jest napis z nazwą szczytu.</span>
+                <span>Na trawie po prawej stronie tabliczki rosną kwiaty.</span>
+                <span>Nad górami są dwie chmury.</span>
+                <span>Na ścieżce za chłopcem leżą cztery kamienie.</span>
+                <span>Za chłopcem leży plecak.</span>
+            </p>
+            <section class="itemsWrapper">
+                <img class="draggable item" id="chmurki" src="./assets/chmurki.png" alt="chmurki" />
+                <img class="draggable item" id="kamien" src="./assets/kamien.png" alt="kamien" />
+                <img class="draggable item" id="sniezka" src="./assets/sniezka.png" alt="sniezka" />
+                <img class="draggable item" id="kwiatki" src="./assets/kwiatki.png" alt="kwiatki" />
+                <img class="draggable item" id="plecak" src="./assets/plecak.png" alt="plecak" />
+            </section>
+
+            <section class="placesDropzonesWrapper">
+                <figure class="placesDropzones__item" id="dropzone-jezioro">
+                    <img class="placesDropzones__img" src="./assets/jezioro.png" alt="jezioro" />
+                    <button class="dropzone placeDropzone">
+
+                    </button>
+                </figure>
+                <figure class="placesDropzones__item" id="dropzone-gory">
+                    <img class="placesDropzones__img" src="./assets/gory.png" alt="gory" />
+                    <button class="dropzone placeDropzone">
+
+                    </button>
+                </figure>
+                <figure class="placesDropzones__item" id="dropzone-morze">
+                    <img class="placesDropzones__img" src="./assets/morze.png" alt="morze" />
+                    <button class="dropzone placeDropzone">
+
+                    </button>
+                </figure>
+                <figure class="placesDropzones__item" id="dropzone-las">
+                    <img class="placesDropzones__img" src="./assets/las.png" alt="las" />
+                    <button class="dropzone placeDropzone">
+
+                    </button>
+                </figure>
+            </section>
+
+            <section class="placesWrapper mountainsWrapper">
+                <button class="draggable answer place answer--mountains" id="karpaty">
+                    Karpaty
+                </button>
+                <button class="draggable answer place answer--mountains" id="sudety">
+                    Sudety
+                </button>
+                <button class="draggable answer place answer--mountains" id="gory-swietokrzyskie">
+                    Góry Świętokrzyskie
+                </button>
+            </section>
+
+            <span class="mapPoint" id="sudety-dropzone"></span>
+            <span class="mapPoint" id="gory-swietokrzyskie-dropzone"></span>
+            <span class="mapPoint" id="karpaty-dropzone"></span>
+
+            <section class="peaksWrapper">
+                <section class="numbersWrapper">
+                    <button class="number draggable" id="number-1">
+                        1
+                    </button>
+                    <button class="number draggable" id="number-2">
+                        2
+                    </button>
+                    <button class="number draggable" id="number-3">
+                        3
+                    </button>
+                    <button class="number draggable" id="number-4">
+                        4
+                    </button>
+                    <button class="number draggable" id="number-5">
+                        5
+                    </button>
+                </section>
+
+                <section class="peaksNamesWrapper">
+                    <section class="peak">
+                        <span class="peak-dropzone" id="number-5-dropzone"></span>
+                        Rysy (2501 m.n.p.m)
+                    </section>
+                    <section class="peak">
+                        <span class="peak-dropzone" id="number-4-dropzone"></span>
+                        Babia Góra (1725 m.n.p.m)
+                    </section>
+                    <section class="peak">
+                        <span class="peak-dropzone" id="number-1-dropzone"></span>
+                        Łysica (614 m.n.p.m)
+                    </section>
+                    <section class="peak">
+                        <span class="peak-dropzone" id="number-3-dropzone"></span>
+                        Śnieżka (1602 m.n.p.m)
+                    </section>
+                    <section class="peak">
+                        <span class="peak-dropzone" id="number-2-dropzone"></span>
+                        Tarnica (1346 m.n.p.m)
+                    </section>
+                </section>
+            </section>
+        </section>
+
+        <!-- BUTTONS -->
+        <button class="btn btn--prev" onclick="changeSection(false)">
+            <img class="btn__arrow btn__arrow--left" src="./assets/right-arrow.png" alt="poprzedni" />
+        </button>
+        <button class="btn btn--next" onclick="changeSection(true)">
+            <img class="btn__arrow" src="./assets/right-arrow.png" alt="nastepny" />
+        </button>
+    </main>
+
+</div>
+<script src="https://unpkg.com/interactjs/dist/interact.min.js"></script>
+<script src="js/siema.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

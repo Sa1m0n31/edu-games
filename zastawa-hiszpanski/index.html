@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+<div class="container">
+    <!-- Question and level -->
+    <div class="textWrapper">
+        <div class="lvlWrapper">
+            <h2 class="lvl">
+                NIVEL
+                <span class="currentLvl">1</span>
+            </h2>
+            <h3 class="sublvl">
+                Ronda
+                <span class="currentSubLvl">1</span>
+            </h3>
+        </div>
+        <div class="questionWrapper">
+            <p class="question">
+                Hay un plato en el centro de la mesa. A la izquierda del plato hay un tenedor. A la derecha del plato hay un cuchillo. Hay un vaso arriba del plato.
+            </p>
+        </div>
+    </div>
+
+    <!-- Dropzones -->
+    <!-- LVL 1-1 -->
+    <section class="dropzone dropzone-1-1 dropzone-1-1-talerz"></section>
+    <section class="dropzone dropzone-1-1 dropzone-1-1-widelec"></section>
+    <section class="dropzone dropzone-1-1 dropzone-1-1-noz"></section>
+    <section class="dropzone dropzone-1-1 dropzone-1-1-szklanka"></section>
+    <!-- LVL 1-2 -->
+    <section class="dropzone dropzone-1-2 dropzone-1-2-talerz"></section>
+    <section class="dropzone dropzone-1-2 dropzone-1-2-widelec"></section>
+    <section class="dropzone dropzone-1-2 dropzone-1-2-noz"></section>
+    <section class="dropzone dropzone-1-2 dropzone-1-2-lyzka"></section>
+    <!-- LVL 1-3 -->
+    <section class="dropzone dropzone-1-3 dropzone-1-3-talerzyk"></section>
+    <section class="dropzone dropzone-1-3 dropzone-1-3-filizanka"></section>
+    <section class="dropzone dropzone-1-3 dropzone-1-3-lyzeczka"></section>
+    <section class="dropzone dropzone-1-3 dropzone-1-3-szklanka"></section>
+
+    <!-- LVL 2-1 -->
+    <section class="dropzone dropzone-2-1 dropzone-2-1-talerz"></section>
+    <section class="dropzone dropzone-2-1 dropzone-2-1-gleboki-talerz"></section>
+    <section class="dropzone dropzone-2-1 dropzone-2-1-lyzka"></section>
+    <section class="dropzone dropzone-2-1 dropzone-2-1-noz"></section>
+    <section class="dropzone dropzone-2-1 dropzone-2-1-widelec"></section>
+    <section class="dropzone dropzone-2-1 dropzone-2-1-szklanka"></section>
+    <!-- LVL 2-2 -->
+    <section class="dropzone dropzone-2-2 dropzone-2-2-talerzyk"></section>
+    <section class="dropzone dropzone-2-2 dropzone-2-2-miseczka"></section>
+    <section class="dropzone dropzone-2-2 dropzone-2-2-lyzeczka"></section>
+    <section class="dropzone dropzone-2-2 dropzone-2-2-widelczyk"></section>
+    <!-- LVL 2-3 -->
+    <section class="dropzone dropzone-2-3 dropzone-2-3-talerz"></section>
+    <section class="dropzone dropzone-2-3 dropzone-2-3-lyzka"></section>
+    <section class="dropzone dropzone-2-3 dropzone-2-3-gleboki-talerz"></section>
+    <section class="dropzone dropzone-2-3 dropzone-2-3-kubek"></section>
+
+    <!-- LVL 3-1 -->
+    <section class="dropzone dropzone-3-1 dropzone-3-1-talerz"></section>
+    <section class="dropzone dropzone-3-1 dropzone-3-1-szklanka"></section>
+    <section class="dropzone dropzone-3-1 dropzone-3-1-filizanka"></section>
+    <section class="dropzone dropzone-3-1 dropzone-3-1-lyzka"></section>
+    <section class="dropzone dropzone-3-1 dropzone-3-1-solniczka"></section>
+    <!-- LVL 3-2 -->
+    <section class="dropzone dropzone-3-2 dropzone-3-2-gleboki-talerz"></section>
+    <section class="dropzone dropzone-3-2 dropzone-3-2-miseczka"></section>
+    <section class="dropzone dropzone-3-2 dropzone-3-2-filizanka"></section>
+    <section class="dropzone dropzone-3-2 dropzone-3-2-pieprzniczka"></section>
+    <section class="dropzone dropzone-3-2 dropzone-3-2-widelec"></section>
+    <!-- LVL 3-3 -->
+    <section class="dropzone dropzone-3-3 dropzone-3-3-noz"></section>
+    <section class="dropzone dropzone-3-3 dropzone-3-3-solniczka"></section>
+    <section class="dropzone dropzone-3-3 dropzone-3-3-pieprzniczka"></section>
+    <section class="dropzone dropzone-3-3 dropzone-3-3-lyzka"></section>
+    <section class="dropzone dropzone-3-3 dropzone-3-3-kubek"></section>
+    <section class="dropzone dropzone-3-3 dropzone-3-3-filizanka"></section>
+
+
+    <!-- Elements to drag -->
+    <!-- LVL 1-1 -->
+    <section class="elements" id="elements-1-1">
+        <img class="element draggable" id="talerz-1-1" src="./assets/talerz-02.png" alt="duzy-talerz" />
+        <img class="element draggable" id="noz-1-1" src="./assets/noz-02.png" alt="noz" />
+        <img class="element draggable" id="widelec-1-1" src="./assets/widelec-02.png" alt="widelec" />
+        <img class="element draggable" id="szklanka-1-1" src="./assets/szklanka-02.png" alt="szklanka" />
+    </section>
+    <!-- LVL 1-2 -->
+    <section class="elements" id="elements-1-2">
+        <img class="element draggable" id="talerz-1-2" src="./assets/gleboki_talerz-02.png" alt="duzy-talerz" />
+        <img class="element draggable" id="noz-1-2" src="./assets/noz-02.png" alt="noz" />
+        <img class="element draggable" id="widelec-1-2" src="./assets/widelec-02.png" alt="widelec" />
+        <img class="element draggable" id="lyzka-1-2" src="./assets/lyzka-02.png" alt="lyzka" />
+    </section>
+    <!-- LVL 1-3 -->
+    <section class="elements" id="elements-1-3">
+        <img class="element draggable" id="talerzyk-1-3" src="./assets/talerzyk-02.png" alt="talerzyk" />
+        <img class="element draggable" id="filizanka-1-3" src="./assets/filizanka-02.png" alt="filizanka" />
+        <img class="element draggable" id="lyzeczka-1-3" src="./assets/lyzeczka-02.png" alt="lyzeczka" />
+        <img class="element draggable" id="szklanka-1-3" src="./assets/szklanka-02.png" alt="szklanka" />
+    </section>
+
+    <!-- LVL 2-1 -->
+    <section class="elements" id="elements-2-1">
+        <img class="element draggable" id="talerz-2-1" src="./assets/talerz-02.png" alt="talerz" />
+        <img class="element draggable" id="gleboki-talerz-2-1" src="./assets/gleboki_talerz-02.png" alt="gleboki-talerz" />
+        <img class="element draggable" id="lyzka-2-1" src="./assets/lyzka-02.png" alt="lyzka" />
+        <img class="element draggable" id="noz-2-1" src="./assets/noz-02.png" alt="noz" />
+        <img class="element draggable" id="widelec-2-1" src="./assets/widelec-02.png" alt="widelec" />
+        <img class="element draggable" id="szklanka-2-1" src="./assets/szklanka-02.png" alt="szklanka" />
+    </section>
+    <!-- LVL 2-2 -->
+    <section class="elements" id="elements-2-2">
+        <img class="element draggable" id="talerzyk-2-2" src="./assets/talerzyk-02.png" alt="talerzyk" />
+        <img class="element draggable" id="miseczka-2-2" src="./assets/miseczka-02.png" alt="miseczka" />
+        <img class="element draggable" id="lyzeczka-2-2" src="./assets/lyzeczka-02.png" alt="lyzeczka" />
+        <img class="element draggable" id="widelczyk-2-2" src="./assets/widelczyk-02.png" alt="widelczyk" />
+
+        <img class="element draggable" id="gleboki-talerz-2-2" src="./assets/gleboki_talerz-02.png" alt="gleboki-talerz" />
+        <img class="element draggable" id="noz-2-2" src="./assets/noz-02.png" alt="noz" />
+    </section>
+    <!-- LVL 2-3 -->
+    <section class="elements" id="elements-2-3">
+        <img class="element draggable" id="talerz-2-3" src="./assets/talerz-02.png" alt="talerz" />
+        <img class="element draggable" id="lyzka-2-3" src="./assets/lyzka-02.png" alt="lyzka" />
+        <img class="element draggable" id="gleboki-talerz-2-3" src="./assets/gleboki_talerz-02.png" alt="gleboki-talerz" />
+        <img class="element draggable" id="kubek-2-3" src="./assets/kubek-02.png" alt="kubek" />
+
+        <img class="element draggable" id="widelec-2-3" src="./assets/widelec-02.png" alt="widelec" />
+        <img class="element draggable" id="miseczka-2-3" src="./assets/miseczka-02.png" alt="miseczka" />
+        <img class="element draggable" id="filizanka-2-3" src="./assets/filizanka-02.png" alt="filizanka" />
+    </section>
+
+    <!-- LVL 3-1 -->
+    <section class="elements" id="elements-3-1">
+        <img class="element element--small draggable" id="talerz-3-1" src="./assets/talerz-02.png" alt="talerz" />
+        <img class="element element--small draggable" id="szklanka-3-1" src="./assets/szklanka-02.png" alt="szklanka" />
+        <img class="element element--small draggable" id="filizanka-3-1" src="./assets/filizanka-02.png" alt="filizanka" />
+        <img class="element element--small draggable" id="lyzka-3-1" src="./assets/lyzka-02.png" alt="lyzka" />
+        <img class="element element--small draggable" id="solniczka-3-1" src="./assets/solniczka-02.png" alt="solniczka" />
+
+        <img class="element element--small draggable" id="miseczka-3-1" src="./assets/miseczka-02.png" alt="miseczka" />
+        <img class="element element--small draggable" id="kubek-3-1" src="./assets/kubek-02.png" alt="kubek" />
+        <img class="element element--small draggable" id="pieprzniczka-3-1" src="./assets/pieprzniczka-02.png" alt="pieprzniczka" />
+    </section>
+    <!-- LVL 3-2 -->
+    <section class="elements" id="elements-3-2">
+        <img class="element element--superSmall draggable" id="gleboki-talerz-3-2" src="./assets/gleboki_talerz-02.png" alt="gleboki-talerz" />
+        <img class="element element--superSmall draggable" id="miseczka-3-2" src="./assets/miseczka-02.png" alt="miseczka" />
+        <img class="element element--superSmall draggable" id="filizanka-3-2" src="./assets/filizanka-02.png" alt="filizanka" />
+        <img class="element element--superSmall draggable" id="pieprzniczka-3-2" src="./assets/pieprzniczka-02.png" alt="pieprzniczka" />
+        <img class="element element--superSmall draggable" id="widelec-3-2" src="./assets/widelec-02.png" alt="widelec" />
+
+        <img class="element element--superSmall draggable" id="solniczka-3-2" src="./assets/solniczka-02.png" alt="solniczka" />
+        <img class="element element--superSmall draggable" id="talerzyk-3-2" src="./assets/talerzyk-02.png" alt="talerzyk" />
+        <img class="element element--superSmall draggable" id="talerz-3-2" src="./assets/talerz-02.png" alt="talerz" />
+        <img class="element element--superSmall draggable" id="kubek-3-2" src="./assets/kubek-02.png" alt="kubek" />
+    </section>
+    <!-- LVL 3-3 -->
+    <section class="elements" id="elements-3-3">
+        <img class="element element--extraSmall draggable" id="noz-3-3" src="./assets/noz-02.png" alt="noz" />
+        <img class="element element--extraSmall draggable" id="solniczka-3-3" src="./assets/solniczka-02.png" alt="solniczka" />
+        <img class="element element--extraSmall draggable" id="pieprzniczka-3-3" src="./assets/pieprzniczka-02.png" alt="pieprzniczka" />
+        <img class="element element--extraSmall draggable" id="lyzka-3-3" src="./assets/lyzka-02.png" alt="lyzka" />
+        <img class="element element--extraSmall draggable" id="kubek-3-3" src="./assets/kubek-02.png" alt="kubek" />
+        <img class="element element--extraSmall draggable" id="filizanka-3-3" src="./assets/filizanka-02.png" alt="filizanka" />
+
+        <img class="element element--extraSmall draggable" id="szklanka-3-3" src="./assets/szklanka-02.png" alt="szklanka" />
+        <img class="element element--extraSmall draggable" id="miseczka-3-3" src="./assets/miseczka-02.png" alt="miseczka" />
+        <img class="element element--extraSmall draggable" id="widelec-3-3" src="./assets/widelec-02.png" alt="widelec" />
+        <img class="element element--extraSmall draggable" id="talerz-3-3" src="./assets/talerz-02.png" alt="talerz" />
+    </section>
+
+
+    <img class="container__background" src="./assets/stol_Obszar%20roboczy%201.png" alt="stol" />
+</div>
+<script src="https://unpkg.com/interactjs/dist/interact.min.js"></script>
+<script src="./js/main.js"></script>
+</body>
+</html>

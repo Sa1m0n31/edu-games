@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pierniczki</title>
+    <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+<div class="container">
+    <section class="view">
+        <img class="view__img" src="./assets/start.png" alt="start" />
+        <button class="btn btn--start" onclick="next()">
+            Rozpocznij
+        </button>
+    </section>
+    <!-- 1 -->
+    <section class="view">
+        <img class="view__img" src="./assets/tlo-1.png" alt="blat-kuchenny" />
+        <section class="view__instruction">
+            <p class="view__instruction__p">
+                W garnuszku podgrzej 60 ml miodu, 80 g masła i 90 g cukru trzcinowego i wymieszaj.
+            </p>
+        </section>
+
+        <button class="element element--1-1 draggable">
+            <img class="element__img" src="./assets/miod.png" alt="miod" />
+        </button>
+        <div class="element element--1-2 draggable">
+            <img class="element__img" src="./assets/maslo.png" alt="maslo" />
+        </div>
+        <div class="element element--1-3 draggable">
+            <img class="element__img" src="./assets/cukier.png" alt="cukier" />
+        </div>
+        <div class="element element--1-4 draggable">
+            <img class="element__img" src="./assets/lyzeczka.png" alt="lyzeczka" />
+        </div>
+        <div class="element element--1-5 dropzone--1-2">
+            <img class="element__img element__img--emptyPan" src="./assets/rondel.png" alt="rondel" />
+            <img class="element__img element__img--panWithHoney hidden" src="./assets/rondel-z-miodem.png" alt="rondel-z-miodem" />
+            <img class="element__img element__img--panWithButterAndHoney hidden" src="./assets/rondel-z-maslem-i-miodem.png" alt="rondel-z-maslem-i-miodem" />
+            <img class="element__img element__img--fullPan hidden" src="./assets/rondel-ze-wszystkim.png" alt="rondel-ze-wszystkim" />
+        </div>
+        <div class="element element--1-6">
+            <img class="element__img element__img--scales0" src="./assets/waga-0.png" alt="waga" />
+            <img class="element__img element__img--scales80 hidden" src="./assets/waga-80.png" alt="waga-80" />
+            <img class="element__img element__img--scales90 hidden" src="./assets/waga-90.png" alt="waga-90" />
+        </div>
+        <div class="element element--1-7 draggable dropzone--1-3">
+            <img class="element__img element__img--emptyBowl" src="./assets/miska.png" alt="miska" />
+            <img class="element__img element__img--bowlWithButter hidden" src="./assets/miska-z-maslem.png" alt="miska-z-maslem" />
+            <img class="element__img element__img--bowlWithSugar hidden" src="./assets/miska-z-cukrem.png" alt="miska-z-cukrem" />
+        </div>
+        <div class="element element--1-8 draggable dropzone--1-1">
+            <img class="element__img element__img--emptyCan" src="./assets/pojemnik.png" alt="pojemnik" />
+            <img class="element__img element__img--fullCan hidden" src="./assets/pojemnik-z-miodem.png" alt="pojemnik-z-miodem" />
+        </div>
+        <button class="element element--1-9" onclick="turnCookerOn()">
+
+        </button>
+    </section>
+    <!-- 2 -->
+    <section class="view">
+        <img class="view__img" src="./assets/tlo-2.png" alt="blat-kuchenny" />
+        <section class="view__instruction">
+            <p class="view__instruction__p">
+                Odważ na wadze 380 g mąki pszennej i przesiej ją na stolnicę.
+            </p>
+        </section>
+
+        <button class="element element--2-1 draggable">
+            <img class="element__img" src="./assets/sitko.png" alt="sitko" />
+        </button>
+        <div class="element element--2-2">
+            <img class="element__img element__img--scales0-2" src="./assets/waga-0.png" alt="waga" />
+            <img class="element__img element__img--scales380 hidden" src="./assets/waga380.png" alt="waga-380" />
+        </div>
+        <button class="element element--2-3 draggable">
+            <img class="element__img" src="./assets/maka.png" alt="maka" />
+        </button>
+        <div class="element element--2-4 draggable dropzone--2-1">
+            <img class="element__img element__img--emptyBowl-2" src="./assets/miska.png" alt="miska" />
+            <img class="element__img element__img--bowlWithSugar-2 hidden" src="./assets/miska-z-cukrem.png" alt="miska-z-cukrem" />
+        </div>
+        <div class="element element--2-5 dropzone--2-2">
+            <img class="element__img element__img--sitkoInPlace" src="./assets/sitko.png" alt="sitko" />
+            <img class="element__img element__img--stolnica" src="./assets/stolnica.png" alt="stolnica" />
+            <img class="element__img element__img--stolnicaZMaka hidden" src="./assets/stolnica-z-maka.png" alt="stolnica" />
+        </div>
+    </section>
+    <!-- 3 -->
+    <section class="view">
+        <img class="view__img" src="./assets/tlo-3.png" alt="blat-kuchenny" />
+        <section class="view__instruction">
+            <p class="view__instruction__p">
+                Dodaj do mąki 1 łyżeczkę sody oczyszczonej, 20g przyprawy do piernika, 1 jajko i zawartość rondla.
+            </p>
+        </section>
+
+        <button class="element element--2-1">
+            <img class="element__img" src="./assets/sitko.png" alt="sitko" />
+        </button>
+        <div class="element element--2-2">
+            <img class="element__img element__img--scales0-3" src="./assets/waga-0.png" alt="waga" />
+            <img class="element__img element__img--scales20-2 hidden" src="./assets/waga20.png" alt="waga-20" />
+        </div>
+        <button class="element element--2-3 draggable">
+            <img class="element__img" src="./assets/maka.png" alt="maka" />
+        </button>
+        <div class="element element--3-4 draggable dropzone--3-4">
+            <img class="element__img element__img--emptyBowl-3" src="./assets/miska.png" alt="miska" />
+            <img class="element__img element__img--bowlWithSugar-3 hidden" src="./assets/miska-z-przyprawami.png" alt="miska-z-przyprawami" />
+        </div>
+        <div class="element element--2-5">
+            <div class="dropzone--3-2"></div>
+            <img class="element__img element__img--stolnicaZMaka-2" src="./assets/stolnica-z-maka.png" alt="stolnica" />
+            <img class="element__img element__img--stolnicaZPrzyprawami hidden" src="./assets/stolnica-z-przyprawami.png" alt="stolnica" />
+            <img class="element__img element__img--stolnicaZJajkiem hidden" src="./assets/stolnica-z-jajkiem.png" alt="stolnica" />
+            <img class="element__img element__img--stolnicaZeWszystkim hidden" src="./assets/stolnica-reszta.png" alt="stolnica" />
+        </div>
+
+        <div class="element element--3-6 draggable">
+            <img class="element__img" src="./assets/jajko.png" alt="jajko" />
+        </div>
+        <div class="element element--3-7 dropzone--3-3">
+            <img class="element__img" src="./assets/soda.png" alt="soda" />
+        </div>
+        <div class="element element--3-8 draggable">
+            <img class="element__img element__img--lyzeczkaBezSody" src="./assets/lyzeczka.png" alt="lyzeczka" />
+            <img class="element__img element__img--lyzeczkaZSoda hidden" src="./assets/lyzeczka-z-soda.png" alt="lyzeczka-z-soda" />
+        </div>
+        <div class="element element--3-9 draggable">
+            <img class="element__img" src="./assets/przyprawy.png" alt="przyprawa-do-piernika" />
+        </div>
+        <div class="element element--3-10 draggable">
+            <img class="element__img" src="./assets/rondel-ze-wszystkim.png" alt="rondel-ze-wszystkim" />
+        </div>
+    </section>
+    <!-- 4 -->
+    <section class="view">
+        <img class="view__img" src="./assets/tlo-5-2.png" alt="stolnica" />
+        <section class="view__instruction">
+            <p class="view__instruction__p">
+                Wymieszaj składniki, rozwałkuj ciasto i wykroj pierniki.
+            </p>
+        </section>
+
+        <div class="element element--4-1 draggable">
+            <img class="element__img" src="./assets/forma-gwiazda.png" alt="forma-gwiazda" />
+        </div>
+        <div class="element element--4-2 draggable">
+            <img class="element__img" src="./assets/forma-serce.png" alt="forma-serce" />
+        </div>
+        <div class="element element--4-3 draggable">
+            <img class="element__img" src="./assets/forma-ludzik.png" alt="forma-ludzik" />
+        </div>
+
+        <div class="element element--4-4 dropzone--4-1" onclick="makePie()">
+            <img class="element__img element__img--ciasto" src="./assets/ciasto.png" alt="ciasto" />
+            <img class="element__img element__img--rece hidden" src="./assets/rece.png" alt="dlonie" />
+            <img class="element__img element__img--ciastoUgniecione hidden" src="./assets/ciasto-ugniecione.png" alt="ciasto-ugniecione" />
+            <img class="element__img element__img--ciastoRozwalkowane hidden" src="./assets/ciasto-rozwalkowane.png" alt="ciasto-rozwalkowane" />
+
+            <img class="element__img element__img--ciastoSerce hidden" src="./assets/ciasto-jeden-piernik.png" alt="ciasto-jeden-piernik" />
+            <img class="element__img element__img--ciastoGwiazdka hidden" src="./assets/ciasto-gwiazdka.png" alt="ciasto-jeden-piernik" />
+            <img class="element__img element__img--ciastoLudzik hidden" src="./assets/ciasto-ludzik.png" alt="ciasto-jeden-piernik" />
+
+            <img class="element__img element__img--ciastoSerceLudzik hidden" src="./assets/ciasto-dwa-pierniki.png" alt="ciasto-dwa-pierniki" />
+            <img class="element__img element__img--ciastoGwiazdkaSerce hidden" src="./assets/ciasto-gwiazdka-serce.png" alt="ciasto-dwa-pierniki" />
+            <img class="element__img element__img--ciastoGwiazdkaLudzik hidden" src="./assets/ciasto-gwiazdka-ludzik.png" alt="ciasto-dwa-pierniki" />
+
+            <img class="element__img element__img--ciastoTrzyPierniki hidden" src="./assets/ciasto-trzy-pierniki.png" alt="ciasto-trzy-pierniki" />
+        </div>
+
+        <div class="element element--4-5 draggable">
+            <img class="element__img" src="./assets/walek.png" alt="walek" />
+        </div>
+
+        <div class="element element--4-6 hidden">
+            <img class="element__img" src="./assets/serce.png" alt="piernik-serce" />
+        </div>
+        <div class="element element--4-7 hidden">
+            <img class="element__img" src="./assets/gwiazdka.png" alt="piernik-gwiazdka" />
+        </div>
+        <div class="element element--4-8 hidden">
+            <img class="element__img" src="./assets/ludzik.png" alt="piernik-ludzik" />
+        </div>
+    </section>
+    <!-- 5 -->
+    <section class="view view--5">
+        <img class="view__img" src="./assets/tlo-6.png" alt="blat-kuchenny" />
+        <section class="view__instruction">
+            <p class="view__instruction__p">
+                Piecz pierniki w 180*C przez 10 minut.
+            </p>
+        </section>
+
+        <div class="tempCounter">
+            <span class="tempCounter__temp">0</span>&deg;C
+        </div>
+        <div class="timeCounter">
+            <span class="timeCounter__minutes">00</span>:00
+        </div>
+
+        <button class="lvl6Btn lvl6Btn--decreaseTemp" onclick="decreaseTemp()"></button>
+        <button class="lvl6Btn lvl6Btn--increaseTemp" onclick="increaseTemp()"></button>
+        <button class="lvl6Btn lvl6Btn--decreaseTime" onclick="decreaseTime()"></button>
+        <button class="lvl6Btn lvl6Btn--increaseTime" onclick="increaseTime()"></button>
+
+        <div class="element element--5-1 dropzone--5-1">
+            <img class="element__img element__img--oven" src="./assets/piekarnik.png" alt="piekarnik" />
+            <img class="element__img element__img--openOven hidden" src="./assets/piekarnik-otwarty.png" alt="piekarnik-otwarty" />
+            <img class="element__img element__img--ovenWithPies hidden" src="./assets/piekarnik-z-blacha.png" alt="piekarnik-z-blacha" />
+            <img class="element__img element__img--ovenReady hidden" src="./assets/piekarnik-gotowe-pierniczki.png" alt="piekarnik-gotowe-pierniczki" />
+        </div>
+        <div class="element element--5-2 draggable">
+            <img class="element__img" src="./assets/blacha.png" alt="blacha" />
+        </div>
+    </section>
+</div>
+<script src="https://unpkg.com/interactjs/dist/interact.min.js"></script>
+<script src="./js/siema.js"></script>
+<script src="./js/main.js"></script>
+</body>
+</html>

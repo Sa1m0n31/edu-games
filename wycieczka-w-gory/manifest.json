@@ -1,0 +1,8 @@
+{
+    "engine": "core/iframe",
+    "data": {
+      "index": "index.html",
+      "width": 1200,
+      "height": 800
+    }
+  }

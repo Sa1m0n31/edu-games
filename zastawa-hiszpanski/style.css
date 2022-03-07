@@ -1,0 +1,488 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    max-width: 1200px;
+    position: relative;
+}
+
+.container__background {
+    width: 100%;
+    height: auto;
+}
+
+.textWrapper {
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255, 255, 255, .7);
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    width: 80%;
+    height: 150px;;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+    transition: .4s all;
+}
+
+.lvlWrapper {
+    padding-right: 40px;
+    border-right: 1px solid rgba(0, 0, 0, .5);
+}
+
+.lvl, .sublvl {
+    font-size: 21px;
+    white-space: nowrap;
+}
+
+.questionWrapper {
+    margin-left: 40px;
+}
+
+.question {
+    transition: .4s all;
+}
+
+.elements {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
+}
+
+.element {
+    max-width: clamp(20px, 12vw, 200px);
+    transition: .4s opacity;
+    display: none;
+    opacity: 0;
+    position: relative;
+    z-index: 10000;
+}
+
+.element--small {
+    max-width: clamp(20px, 12vw, 130px);
+}
+
+.element--superSmall {
+    max-width: clamp(20px, 12vw, 120px);
+}
+
+.element--extraSmall {
+    max-width: clamp(20px, 12vw, 108px);
+}
+
+.dropzone {
+    position: absolute;
+    display: none;
+}
+
+.place-dropped {
+    position: absolute;
+    top: 50% !important;
+    left: 50% !important;
+    bottom: unset !important;
+    right: unset !important;
+    transform: translate(-50%, -50%) !important;
+}
+
+.place-dropped-item {
+    position: absolute;
+    top: 50% !important;
+    left: 50% !important;
+    right: unset !important;
+    bottom: unset !important;
+    transform: translate(-50%, -50%) !important;
+}
+
+.border {
+    outline: 3px dashed black;
+}
+
+.dropzone {
+    background: rgba(255, 255, 255, .8) !important;
+    border-radius: 50%;
+    width: 50px !important;
+    height: 50px !important;
+}
+
+/* Lvl 1 */
+.dropzone-1-1-talerz {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, .8);
+}
+
+.dropzone-1-1-noz {
+    top: 50%;
+    left: 65%;
+    transform: translate(-50%, -50%);
+    width: 20%;
+    height: 30%;
+}
+
+.dropzone-1-1-widelec {
+    top: 50%;
+    left: 35%;
+    transform: translate(-50%, -50%);
+    width: 20%;
+    height: 30%;
+}
+
+.dropzone-1-1-szklanka {
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40%;
+    height: 20%;
+}
+
+/* Lvl 2 */
+.dropzone-1-2-talerz {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30%;
+    height: 30%;
+}
+
+.dropzone-1-2-noz {
+    top: 50%;
+    left: 65%;
+    transform: translate(-50%, -50%);
+    width: 20%;
+    height: 30%;
+}
+
+.dropzone-1-2-widelec {
+    top: 50%;
+    left: 35%;
+    transform: translate(-50%, -50%);
+    width: 20%;
+    height: 30%;
+}
+
+.dropzone-1-2-lyzka {
+    top: 50%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    width: 40%;
+    height: 20%;
+}
+
+/* Lvl 3 */
+.dropzone-1-3-talerzyk {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30%;
+    height: 30%;
+}
+
+.dropzone-1-3-filizanka {
+    top: 50%;
+    left: 65%;
+    transform: translate(-50%, -50%);
+    width: 20%;
+    height: 30%;
+}
+
+.dropzone-1-3-lyzeczka {
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40%;
+    height: 20%;
+}
+
+.dropzone-1-3-szklanka {
+    top: 50%;
+    left: 35%;
+    transform: translate(-50%, -50%);
+    width: 20%;
+    height: 30%;
+}
+
+/* Lvl 4 */
+.dropzone-2-1-talerz {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30%;
+    height: 30%;
+    /*background: red;*/
+}
+
+.dropzone-2-1-gleboki-talerz {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30%;
+    height: 30%;
+}
+
+.dropzone-2-1-lyzka {
+    top: 50%;
+    left: 58%;
+    transform: translate(-50%, -50%);
+    width: 20%;
+    height: 30%;
+}
+
+.dropzone-2-1-noz {
+    top: 50%;
+    left: 64%;
+    transform: translate(-50%, -50%);
+    width: 20%;
+    height: 20%;
+}
+
+.dropzone-2-1-widelec {
+    top: 50%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    width: 20%;
+    height: 20%;
+}
+
+.dropzone-2-1-szklanka {
+    top: 50%;
+    left: 35%;
+    transform: translate(-50%, -50%);
+    width: 20%;
+    height: 30%;
+}
+
+/* Lvl 5 */
+.dropzone-2-2-talerzyk {
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20%;
+    height: 30%;
+}
+
+.dropzone-2-2-miseczka {
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40%;
+    height: 20%;
+}
+
+.dropzone-2-2-lyzeczka {
+    top: 32%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20%;
+    height: 30%;
+}
+
+.dropzone-2-2-widelczyk {
+    top: 60%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    width: 20%;
+    height: 20%;
+}
+
+/* Lvl 6 */
+.dropzone-2-3-talerz {
+    top: 50%;
+    left: 35%;
+    transform: translate(-50%, -50%);
+    width: 20%;
+    height: 30%;
+}
+
+.dropzone-2-3-lyzka {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20%;
+    height: 30%;
+}
+
+.dropzone-2-3-gleboki-talerz {
+    top: 50%;
+    left: 62%;
+    transform: translate(-50%, -50%);
+    width: 20%;
+    height: 30%;
+}
+
+.dropzone-2-3-kubek {
+    top: 32%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20%;
+    height: 20%;
+}
+
+/* Lvl 7 */
+.dropzone-3-1-talerz {
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40%;
+    height: 20%;
+}
+
+.dropzone-3-1-szklanka {
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40%;
+    height: 20%;
+}
+
+.dropzone-3-1-filizanka {
+    top: 55%;
+    left: 65%;
+    transform: translate(-50%, -50%);
+    width: 30%;
+    height: 20%;
+}
+
+.dropzone-3-1-lyzka {
+    top: 55%;
+    left: 35%;
+    transform: translate(-50%, -50%);
+    width: 30%;
+    height: 20%;
+}
+
+.dropzone-3-1-solniczka {
+    top: 35%;
+    left: 35%;
+    transform: translate(-50%, -50%);
+    width: 30%;
+    height: 20%;
+}
+
+/* Lvl 8 */
+.dropzone-3-2-gleboki-talerz {
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40%;
+    height: 20%;
+}
+
+.dropzone-3-2-miseczka {
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40%;
+    height: 20%;
+}
+
+.dropzone-3-2-filizanka {
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40%;
+    height: 20%;
+}
+
+.dropzone-3-2-pieprzniczka {
+    top: 55%;
+    left: 65%;
+    transform: translate(-50%, -50%);
+    width: 30%;
+    height: 20%;
+}
+
+.dropzone-3-2-widelec {
+    top: 55%;
+    left: 35%;
+    transform: translate(-50%, -50%);
+    width: 30%;
+    height: 20%;
+}
+
+/* Lvl 9 */
+.dropzone-3-3-noz {
+    top: 50%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    width: 20%;
+    height: 20%;
+}
+
+.dropzone-3-3-solniczka {
+    top: 50%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+    width: 20%;
+    height: 20%;
+}
+
+.dropzone-3-3-pieprzniczka {
+    top: 50%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    width: 20%;
+    height: 20%;
+}
+
+.dropzone-3-3-lyzka {
+    top: 50%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+    width: 20%;
+    height: 20%;
+}
+
+.dropzone-3-3-kubek {
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30%;
+    height: 20%;
+}
+
+.dropzone-3-3-filizanka {
+    top: 35%;
+    left: 65%;
+    transform: translate(-50%, -50%);
+    width: 40%;
+    height: 20%;
+}
+
+/* Special */
+#gleboki-talerz-2-1 {
+    max-width: 150px !important;
+}
+
+/* Mobile */
+@media(max-width: 776px) {
+    .textWrapper {
+        padding: 5px 20px;
+        height: 60px;
+        top: 25px;
+    }
+
+    .question {
+        font-size: 10px;
+    }
+
+    .lvlWrapper * {
+        font-size: 12px;
+    }
+}

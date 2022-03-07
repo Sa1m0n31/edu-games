@@ -1,0 +1,124 @@
+* {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    position: relative;
+}
+
+.background, .img {
+    width: 100%;
+    height: auto;
+}
+
+.view {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    transition: .3s all;
+}
+
+.view--details {
+    opacity: 0;
+    height: 0;
+    z-index: -1;
+}
+
+.btn {
+    position: absolute;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+.backBtn {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    width: 50px;
+    height: 50px;
+    opacity: .85;
+    background: transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: .2s all;
+}
+
+.backBtn:hover {
+    opacity: 1;
+}
+
+#anvil {
+    width: 25%;
+    height: 85%;
+    top: 8%;
+    right: 5%;
+}
+
+#cirrus {
+    width: 25%;
+    height: 20%;
+    top: 5%;
+    right: 37%;
+}
+
+#halo {
+    width: 15%;
+    height: 20%;
+    top: 12%;
+    right: 63%;
+}
+
+#cirrocumulus {
+    width: 21%;
+    height: 20%;
+    top: 0;
+    left: 1%;
+}
+
+#altocumulus {
+    width: 28%;
+    height: 20%;
+    left: 0;
+    top: 40%;
+}
+
+#nimbostratus {
+    width: 28%;
+    height: 30%;
+    left: 0;
+    top: 70%;
+}
+
+#stratocumulus {
+    width: 14%;
+    height: 10%;
+    left: 29%;
+    top: 80%;
+}
+
+#cumulus {
+    width: 15%;
+    height: 12%;
+    left: 47%;
+    top: 77%;
+}
+
+.stratus {
+    position: absolute;
+}
+
+.stratus,
+#stratus {
+    width: 22%;
+    height: 12%;
+    top: 42%;
+    left: 40%;
+}

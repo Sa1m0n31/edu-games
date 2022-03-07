@@ -1,0 +1,306 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+.container {
+    position: relative;
+    margin: auto;
+    max-width: 1000px;
+}
+
+.carousel, .carousel * {
+    cursor: pointer !important;
+}
+
+.view__img {
+    max-width: 100%;
+    display: block;
+}
+
+.arrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    background: rgba(255, 255, 255, .5);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    z-index: 3;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transform: translateY(-50%);
+}
+
+.arrow--prev {
+    left: 5%;
+}
+
+.arrow--next {
+    right: 5%;
+}
+
+.arrow__img {
+    width: 40%;
+    height: auto;
+}
+
+.arrow--prev .arrow__img {
+    transform: rotateY(180deg);
+}
+
+.view {
+    position: relative;
+}
+
+/* Clouds */
+.view__cloud {
+    position: absolute;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: 100%;
+    opacity: 0;
+    transition: .4s all;
+}
+
+.view__cloud--leftBottom {
+    background-image: url("./assets/dymek_lewy_1.svg");
+}
+
+.view__cloud--leftTop {
+    background-image: url("./assets/dymek_lewy_1.svg");
+}
+
+.view__cloud--rightTop {
+    background-image: url("./assets/dymek_prawy_1.svg");
+}
+
+.window {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 50%;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, .9);
+    z-index: 5;
+    opacity: 0;
+    padding: 5%;
+    text-align: center;
+    transition: .4s all;
+}
+
+.windowBtn {
+    background: transparent;
+    position: absolute;
+    width: 12%;
+    height: 18%;
+    border-radius: 50%;
+    z-index: 3;
+    border: none;
+}
+
+.windowBtn--1 {
+    bottom: 6%;
+    right: 6%;
+}
+
+.windowBtn--2 {
+    right: 24%;
+    bottom: 3%;
+}
+
+.windowBtn--3 {
+    right: 21%;
+    bottom: 4.5%;
+}
+
+.windowBtn--3 {
+    right: 21%;
+    bottom: 5%;
+}
+
+.windowBtn--4 {
+    right: 6.7%;
+    bottom: 6%;
+}
+
+.windowBtn--5, .windowBtn--6, .windowBtn--7 {
+    right: 7.6%;
+    bottom: 6%;
+}
+
+.windowBtn--8, .windowBtn--9 {
+    right: 7.5%;
+    bottom: 6%;
+}
+
+.windowBtn--10 {
+    right: 22%;
+    bottom: 2%;
+}
+
+/* Slide 1 */
+#cloud1 {
+    bottom: 20%;
+    left: 39%;
+    width: 240px;
+    height: 85px;
+    padding: 0 50px;
+}
+
+#cloud2 {
+    bottom: 23%;
+    left: 41%;
+    width: 240px;
+    height: 85px;
+    padding: 0 50px;
+}
+
+#cloud3 {
+    bottom: 17%;
+    left: 31%;
+    width: 250px;
+    height: 110px;
+    padding: 0 10px;
+}
+
+
+#cloud4 {
+    bottom: 10%;
+    left: 37%;
+    width: 35%;
+    height: 18%;
+    padding: 1% 8%;
+}
+
+#cloud5 {
+    bottom: 8%;
+    left: 12%;
+    width: 43%;
+    height: 23%;
+    padding: 10% 8% 10% 7%;
+}
+
+#cloud6 {
+    bottom: 42%;
+    left: 38%;
+    width: 30%;
+    height: 14%;
+    padding: 6% 0;
+}
+
+#cloud7 {
+    bottom: 52%;
+    left: 35%;
+    width: 35%;
+    height: 15%;
+    padding: 6% 8%;
+}
+
+#cloud8 {
+    bottom: 65%;
+    left: 0;
+    width: 29%;
+    height: 16%;
+    padding: 0 3%;
+}
+
+#cloud9 {
+    bottom: 62%;
+    left: 60%;
+    width: 30%;
+    height: 18%;
+    padding: 0 3%;
+}
+
+#cloud10 {
+    bottom: 48%;
+    left: 70%;
+    width: 30%;
+    height: 15%;
+    padding: 0 3%;
+}
+
+#cloud11 {
+    bottom: 58%;
+    left: 35%;
+    width: 40%;
+    height: 24%;
+    padding: 0 5%;
+}
+
+#cloud12 {
+    bottom: 44%;
+    left: 21%;
+    width: 30%;
+    height: 15%;
+    padding: 5% 7%;
+}
+
+#cloud13 {
+    bottom: 44%;
+    left: 17%;
+    width: 32%;
+    height: 18%;
+    padding: 5% 7% 5% 5%;
+}
+
+#cloud14 {
+    bottom: 43%;
+    left: 15%;
+    width: 40%;
+    height: 20%;
+    padding: 5% 10%;
+}
+
+#cloud15 {
+    bottom: 52%;
+    left: 40%;
+    width: 35%;
+    height: 17%;
+    padding: 6% 7% 6% 8%;
+}
+
+#cloud16 {
+    bottom: 55%;
+    left: 28%;
+    width: 40%;
+    height: 22%;
+    padding: 5% 6%;
+}
+
+#cloud17 {
+    bottom: 48%;
+    left: 24%;
+    width: 30%;
+    height: 15%;
+    padding: 5% 6%;
+}
+
+#cloud18 {
+    bottom: 55%;
+    left: 40%;
+    width: 30%;
+    height: 14%;
+    padding: 5% 6%;
+}
+
+#cloud19 {
+    bottom: 70%;
+    left: 35%;
+    width: 30%;
+    height: 14%;
+    padding: 5% 6%;
+}

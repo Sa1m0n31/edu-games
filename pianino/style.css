@@ -1,0 +1,166 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --keyClicked: #0000FF;
+    --keyClickedText: #F86995;
+    --keyClickedBorder: #D32A77;
+    --smallKeyClicked: #001049;
+}
+
+button {
+    border: none;
+    outline: none;
+}
+
+.container {
+    max-width: 1400px;
+    position: relative;
+}
+
+.pianino {
+    width: 100%;
+}
+
+.key {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 1%;
+    font-size: 28px;
+    position: absolute;
+    top: 30.5%;
+    font-family: 'Arial', sans-serif;
+}
+
+.key--big {
+    width: 5%;
+    height: 51.2%;
+    z-index: 1;
+    background: #fff;
+    color: var(--keyClickedText);
+}
+
+.key--clicked {
+    opacity: 1;
+    font-weight: 700;
+    background: var(--keyClicked) !important;
+    color: var(--keyClickedText);
+    border-bottom: 5px solid var(--keyClickedText);
+}
+
+.smallKey--clicked {
+    opacity: 1;
+    font-weight: 700;
+    background: var(--smallKeyClicked) !important;
+    color: var(--keyClickedText);
+    border-bottom: 5px solid var(--keyClickedText);
+}
+
+.key-1 {
+    left: 10.3%;
+}
+
+.key-2 {
+    left: 15.6%;
+}
+
+.key-3 {
+    left: 20.9%;
+}
+
+.key-4 {
+    left: 26.2%;
+}
+
+.key-5 {
+    left: 31.6%;
+}
+
+.key-6 {
+    left: 36.9%;
+}
+
+.key-7 {
+    left: 42.2%;
+}
+
+.key-8 {
+    left: 47.6%;
+}
+
+.key-9 {
+    left: 52.9%;
+}
+
+.key-10 {
+    left: 58.2%;
+}
+
+.key-11 {
+    left: 63.5%;
+}
+
+.key-12 {
+    left: 68.9%;
+}
+
+.key-13 {
+    left: 74.2%;
+}
+
+.key-14 {
+    left: 79.6%;
+}
+
+.key-15 {
+    left: 84.9%;
+}
+
+.key--small {
+    z-index: 2;
+    width: 3.2%;
+    height: 38.2%;
+    background: yellow;
+}
+
+.key-small-1 {
+    left: 13.8%;
+}
+
+.key-small-2 {
+    left: 19.1%;
+}
+
+.key-small-3 {
+    left: 29.8%;
+}
+
+.key-small-4 {
+    left: 35%;
+}
+
+.key-small-5 {
+    left: 40.5%;
+}
+
+.key-small-6 {
+    left: 51.1%;
+}
+
+.key-small-7 {
+    left: 56.5%;
+}
+
+.key-small-8 {
+    left: 67.1%;
+}
+
+.key-small-9 {
+    left: 72.4%;
+}
+
+.key-small-10 {
+    left: 77.7%;
+}

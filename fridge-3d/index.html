@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+<div class="container">
+    <button class="backBtn" onclick="backToStart()">
+        <img class="backBtn__img" src="./assets/back.svg" alt="wroc" />
+    </button>
+    <div class="view view--main">
+
+        <video autoplay muted class="video--start">
+            <source src="./assets/video_pelny_lodowka.mp4" type="video/mp4">
+        </video>
+        <video class="video video--1">
+            <source src="./assets/video_2_polka.mp4" type="video/mp4" />
+        </video>
+        <video class="video video--2">
+            <source src="./assets/video_3_polka.mp4" type="video/mp4" />
+        </video>
+        <video class="video video--3">
+            <source src="./assets/video_4_polka.mp4" type="video/mp4" />
+        </video>
+        <video class="video video--4">
+            <source src="./assets/video_szuflada_1_warzywa.mp4" type="video/mp4" />
+        </video>
+        <video class="video video--5">
+            <source src="./assets/video_szuflada_2_owoce.mp4" type="video/mp4" />
+        </video>
+        <video class="video video--6">
+            <source src="./assets/video_drzwiczki_lodowka.mp4" type="video/mp4" />
+        </video>
+
+        <!-- TOP LEVEL BUTTONS -->
+        <button class="btn btn--0" onclick="goToShelf(0)"></button>
+        <button class="btn btn--1" onclick="goToShelf(1)"></button>
+        <button class="btn btn--2" onclick="goToShelf(2)"></button>
+        <button class="btn btn--3" onclick="goToShelf(3)"></button>
+        <button class="btn btn--4" onclick="goToShelf(4)"></button>
+        <button class="btn btn--5" onclick="goToShelf(5)"></button>
+
+        <!-- LABELS -->
+        <p class="label label--g1 label--1">
+            la tarta
+        </p>
+        <p class="label label--g1 label--2">
+            el chocolate
+        </p>
+
+        <p class="label label--g2 label--3">
+            los huevos
+        </p>
+        <p class="label label--g2 label--4">
+            la mantequilla
+        </p>
+        <p class="label label--g2 label--5">
+            el queso
+        </p>
+
+        <p class="label label--g3 label--6">
+            el pollo
+        </p>
+        <p class="label label--g3 label--7">
+            el jamón
+        </p>
+        <p class="label label--g3 label--8">
+            el atún
+        </p>
+
+        <p class="label label--g4 label--9">
+            la zanahoria
+        </p>
+        <p class="label label--g4 label--10">
+            las patatas
+        </p>
+        <p class="label label--g4 label--11">
+            los tomates
+        </p>
+        <p class="label label--g4 label--12">
+            el pepino
+        </p>
+        <p class="label label--g4 label--13">
+            la cebolla
+        </p>
+
+        <p class="label label--g5 label--14">
+            la manzana
+        </p>
+        <p class="label label--g5 label--15">
+            la pera
+        </p>
+        <p class="label label--g5 label--16">
+            los plátanos
+        </p>
+        <p class="label label--g5 label--17">
+            la naranja
+        </p>
+
+        <p class="label label--g6 label--18">
+            el agua
+        </p>
+        <p class="label label--g6 label--19">
+            zumo de naranja
+        </p>
+        <p class="label label--g6 label--20">
+            la leche
+        </p>
+    </div>
+</div>
+<script src="./main.js"></script>
+</body>
+</html>

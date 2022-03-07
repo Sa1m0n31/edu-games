@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rodzaje chmur</title>
+    <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+<div class="container">
+    <div class="view view--start">
+        <img class="background" src="./assets/tlo.png" alt="chmury" />
+        <img class="stratus" src="./assets/stratus-extra.png" alt="stratus" />
+
+        <button class="btn" id="anvil" onclick="goTo(0)"></button>
+        <button class="btn" id="cirrus" onclick="goTo(1)"></button>
+        <button class="btn" id="halo" onclick="goTo(2)"></button>
+        <button class="btn" id="cirrocumulus" onclick="goTo(3)"></button>
+        <button class="btn" id="altocumulus" onclick="goTo(4)"></button>
+        <button class="btn" id="nimbostratus" onclick="goTo(5)"></button>
+        <button class="btn" id="stratocumulus" onclick="goTo(6)"></button>
+        <button class="btn" id="cumulus" onclick="goTo(7)"></button>
+        <button class="btn" id="stratus" onclick="goTo(8)"></button>
+    </div>
+
+    <div class="view view--details">
+        <button class="backBtn" onclick="backToStart()">
+            <img class="background" src="./assets/previous.svg" alt="wroc-do-grafiki" />
+        </button>
+
+        <img class="img" src="./assets/Cumulonimbus.png" alt="cumulonimbus" />
+        <img class="img" src="./assets/Cirrostratus.png" alt="cumulonimbus" />
+        <img class="img" src="./assets/Halo.png" alt="cumulonimbus" />
+        <img class="img" src="./assets/Cirrocumulus.png" alt="cumulonimbus" />
+        <img class="img" src="./assets/Altocumulus.png" alt="cumulonimbus" />
+        <img class="img" src="./assets/Nimbostratus.png" alt="cumulonimbus" />
+        <img class="img" src="./assets/Stratocumulus.png" alt="cumulonimbus" />
+        <img class="img" src="./assets/Cumulus.png" alt="cumulonimbus" />
+        <img class="img" src="./assets/Stratus.png" alt="cumulonimbus" />
+    </div>
+</div>
+<script src="./main.js"></script>
+</body>
+</html>

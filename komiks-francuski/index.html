@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+<div class="container">
+    <div class="carousel">
+        <section class="view" onclick="nextLvl()">
+            <img class="view__img" src="./assets/start.png" alt="plansza-startowa" />
+        </section>
+
+        <!-- 1 -->
+        <section class="view">
+            <img onclick="nextLvl()" class="view__img" src="./assets/1.png" alt="obrazek-1" />
+            <div onclick="nextLvl()" class="view__cloud view__cloud--leftTop" id="cloud1">
+                Bonjour, Emmanuel ! Ça va ?
+            </div>
+            <button class="windowBtn windowBtn--1" onclick="toggleWindow(0)">
+                <img class="windowBtn__img" src="./assets/ikona_zarowka.svg" alt="pokaz-okno" />
+            </button>
+            <section class="window" id="window1">
+                se saluer – dire bonjour à quelqu’un
+            </section>
+        </section>
+
+        <!-- 2 -->
+        <section class="view">
+            <img onclick="nextLvl()" class="view__img" src="./assets/2.png" alt="obrazek-2" />
+            <div onclick="nextLvl()" class="view__cloud view__cloud--leftTop" id="cloud2">
+                Bonjour, Jacques, ça va, et toi ?
+            </div>
+            <div onclick="nextLvl()" class="view__cloud view__cloud--rightTop" id="cloud3">
+                Tout va bien, merci !
+            </div>
+
+            <button class="windowBtn windowBtn--2" onclick="toggleWindow(1)">
+                <img class="windowBtn__img" src="./assets/ikona_zarowka.svg" alt="pokaz-okno" />
+            </button>
+            <section class="window" id="window2">
+                se tutoyer – utiliser la deuxième personne du singulier pour s'adresser à quelqu'un
+            </section>
+        </section>
+
+        <!-- 3 -->
+        <section class="view">
+            <img onclick="nextLvl()" class="view__img" src="./assets/3.png" alt="obrazek-3" />
+            <div onclick="nextLvl()" class="view__cloud view__cloud--leftTop" id="cloud4">
+                Écoute, tu sais qu’il y a une nouvelle copine dans notre bureau ?
+            </div>
+            <div onclick="nextLvl()" class="view__cloud view__cloud--rightTop" id="cloud5">
+                Oui, elle s’appelle Sasha ! Elle est comptable. Elle remplace Antoinette.
+            </div>
+
+            <button class="windowBtn windowBtn--3" onclick="toggleWindow(2)">
+                <img class="windowBtn__img" src="./assets/ikona_zarowka.svg" alt="pokaz-okno" />
+            </button>
+            <section class="window" id="window3">
+                le comptable - la profession, personne qui tient les comptes
+            </section>
+        </section>
+
+        <!-- 4 -->
+        <section class="view">
+            <img onclick="nextLvl()" class="view__img" src="./assets/4.png" alt="obrazek-4" />
+            <div onclick="nextLvl()" class="view__cloud view__cloud--rightTop" id="cloud6">
+                Sasha? Elle vient d’où ?
+            </div>
+            <div onclick="nextLvl()" class="view__cloud view__cloud--leftTop" id="cloud7">
+                Elle vient de Russie. Mais elle habite en France maintenant.
+            </div>
+
+            <button class="windowBtn windowBtn--4" onclick="toggleWindow(3)">
+                <img class="windowBtn__img" src="./assets/ikona_zarowka.svg" alt="pokaz-okno" />
+            </button>
+            <section class="window" id="window4">
+                la nationalité – généralement le pays où on est né ou d’où viennent les parents d’une personne
+            </section>
+        </section>
+
+        <!-- 5 -->
+        <section class="view">
+            <img onclick="nextLvl()" class="view__img" src="./assets/5.png" alt="obrazek-5" />
+            <div onclick="nextLvl()" class="view__cloud view__cloud--rightTop" id="cloud8">
+                Et voilà ! Quand on parle du loup, on en voit la queue !
+            </div>
+            <div onclick="nextLvl()" class="view__cloud view__cloud--rightTop" id="cloud9">
+                Bonjour, madame ! On s’est connu déjà
+            </div>
+            <div onclick="nextLvl()" class="view__cloud view__cloud--leftTop" id="cloud10">
+                Oui, bonjour, monsieur !
+            </div>
+
+            <button class="windowBtn windowBtn--5" onclick="toggleWindow(4)">
+                <img class="windowBtn__img" src="./assets/ikona_zarowka.svg" alt="pokaz-okno" />
+            </button>
+            <section class="window" id="window5">
+                Quand on parle du loup, on en voit la queue ! – on dit comme ça quand on parle de quelqu’un et cette personne vient dans le même moment
+            </section>
+        </section>
+
+        <!-- 6 -->
+        <section class="view">
+            <img onclick="nextLvl()" class="view__img" src="./assets/6.png" alt="obrazek-6" />
+            <div onclick="nextLvl()" class="view__cloud view__cloud--rightTop" id="cloud11">
+                Madame, c’est Emmanuel, notre informaticien. Emmanuel, c’est Sasha Sidorova.
+            </div>
+            <div onclick="nextLvl()" class="view__cloud view__cloud--leftTop" id="cloud12">
+                Enchanté, madame, vous allez-bien ?
+            </div>
+            <div onclick="nextLvl()" class="view__cloud view__cloud--rightTop" id="cloud13">
+                Enchantée, monsieur. Je vais bien, merci !
+            </div>
+
+            <button class="windowBtn windowBtn--6" onclick="toggleWindow(5)">
+                <img class="windowBtn__img" src="./assets/ikona_zarowka.svg" alt="pokaz-okno" />
+            </button>
+            <section class="window" id="window6">
+                se vouvoyer - utiliser la deuxième personne du pluriel pour s'adresser à quelqu'un
+            </section>
+        </section>
+
+        <!-- 7 -->
+        <section class="view">
+            <img onclick="nextLvl()" class="view__img" src="./assets/7.png" alt="obrazek-7" />
+            <div onclick="nextLvl()" class="view__cloud view__cloud--leftTop" id="cloud14">
+                Alors, madame, vous aimez travailler ici ?
+            </div>
+            <div onclick="nextLvl()" class="view__cloud view__cloud--leftTop" id="cloud15">
+                Oui, le travail est assez facile et les employés sont amicaux.
+            </div>
+
+            <button class="windowBtn windowBtn--7" onclick="toggleWindow(6)">
+                <img class="windowBtn__img" src="./assets/ikona_zarowka.svg" alt="pokaz-okno" />
+            </button>
+            <section class="window" id="window7">
+                lancer un discours – commencer une conversation
+            </section>
+        </section>
+
+        <!-- 8 -->
+        <section class="view">
+            <img onclick="nextLvl()" class="view__img" src="./assets/8.png" alt="obrazek-8" />
+            <div onclick="nextLvl()" class="view__cloud view__cloud--rightTop" id="cloud16">
+                Écoutez, nous travaillons ensemble. On peut se tutoyer peut-être ?
+            </div>
+
+            <button class="windowBtn windowBtn--8" onclick="toggleWindow(7)">
+                <img class="windowBtn__img" src="./assets/ikona_zarowka.svg" alt="pokaz-okno" />
+            </button>
+            <section class="window" id="window8">
+                proposer quelque chose à quelqu’un
+            </section>
+        </section>
+
+        <!-- 9 -->
+        <section class="view">
+            <img onclick="nextLvl()" class="view__img" src="./assets/9.png" alt="obrazek-9" />
+            <div onclick="nextLvl()" class="view__cloud view__cloud--leftTop" id="cloud17">
+                Ça va pour moi !
+            </div>
+            <div onclick="nextLvl()" class="view__cloud view__cloud--leftTop" id="cloud18">
+                Une excellente idée !
+            </div>
+
+            <button class="windowBtn windowBtn--9" onclick="toggleWindow(8)">
+                <img class="windowBtn__img" src="./assets/ikona_zarowka.svg" alt="pokaz-okno" />
+            </button>
+            <section class="window" id="window9">
+                Accepter une proposition de quelqu’un
+            </section>
+        </section>
+
+        <!-- 10 -->
+        <section class="view">
+            <img onclick="nextLvl()" class="view__img" src="./assets/10.png" alt="obrazek-10" />
+            <div onclick="nextLvl()" class="view__cloud view__cloud--leftTop" id="cloud19">
+                D’accord, on se connais déjà, donc on peut passer à nos devoirs !
+            </div>
+
+            <button class="windowBtn windowBtn--10" onclick="toggleWindow(9)">
+                <img class="windowBtn__img" src="./assets/ikona_zarowka.svg" alt="pokaz-okno" />
+            </button>
+            <section class="window" id="window10">
+                le devoir – quelque chose à faire
+            </section>
+        </section>
+    </div>
+</div>
+<script src="./js/siema.js"></script>
+<script src="./js/main.js"></script>
+</body>
+</html>
