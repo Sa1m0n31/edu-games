@@ -1,92 +1,96 @@
 const questions = [
-        [
-            {
-                question: 'Fnac es:',
-                right: 'la primera marca distribuidora en Europa de productos tecnológicos y culturales',
-                wrong1: 'la marca distribuidora de alimentación',
-                wrong2: 'la primera marca distribuidora de ropa ',
-                wrong3: 'la marca que produce zapatillas deportivas'
-            },
-            {
-                question: 'Fnac nació en el:',
-                right: '1954',
-                wrong1: '1594',
-                wrong2: '1945',
-                wrong3: '1845'
-            },
-            {
-                question: 'En Fnac es posible comprar:',
-                right: 'videojuegos, auriculares, libros, televisores, productos de hogar, etc. ',
-                wrong1: 'leche, huevos, pan, carne, pescado, etc.',
-                wrong2: 'muebles, zapatillas deportivas, alimentos, etc. ',
-                wrong3: 'vestidos, calcetines, calzoncillos, trajes de baño, etc. '
-            },
-            {
-                question: 'Desde hace 20 años Fnac es una compañía: ',
-                right: 'con cuatro formas de entrega de los productos',
-                wrong1: 'con solo una forma de entrega de los productos ',
-                wrong2: 'con dos formas de entrega de los productos ',
-                wrong3: 'con tres formas de entrega de los productos'
-            }
-        ],
-        [
-            {
-                question: 'La opción Click & Collect se refiere a la posibilidad de:',
-                right: 'comprar en la web un producto y recogerlo en la tienda o recibirlo en el domicilio',
-                wrong1: 'comprar en la tienda un producto que físicamente está en otro lugar para recogerlo en la propia tienda o recibirlo en el domicilio',
-                wrong2: 'reservar online un producto que está disponible en la tienda y pasar a recogerlo en 1 hora',
-                wrong3: 'apostar por la flexibilidad '
-            },
-            {
-                question: 'Same-Day Delivery es la opción que consiste en:',
-                right: 'las entregas a domicilio en el día y entregas en 2h en todas las ciudades donde Fnac tiene sus tiendas',
-                wrong1: 'recibir un producto comprado en la tienda',
-                wrong2: 'apostar por la flexibilidad',
-                wrong3: 'reservar online un producto'
-            },
-            {
-                question: 'Fnac constituye un ejemplo único de alianza entre:',
-                right: 'comercio, cultura y tecnología',
-                wrong1: 'alimentación, moda y cultura',
-                wrong2: 'música, cine y moda',
-                wrong3: 'tecnología, alimentación y deporte'
-            },
-            {
-                question: 'Para facilitar la recogida de los productos, Fnac dispone de:',
-                right: 'lockers',
-                wrong1: 'la tienda abierta 24/7',
-                wrong2: 'el teléfono de ayuda',
-                wrong3: 'la página web'
-            }
-        ],
     [
         {
-            question: '¿Cuál de las siguientes cosas no vas a comprar en Fnac?',
-            right: 'traje de baño',
-            wrong1: 'televisor',
-            wrong2: 'libros',
-            wrong3: 'auriculares'
+            question: 'Coche le sentiment auquel correspond la photo.',
+            right: 'la curiosite',
+            wrong1: 'le courage',
+            wrong2: 'le pessimisme',
+            wrong3: 'l’intolérance',
+            img: './assets/img1.jpg'
         },
         {
-            question: 'En España Fnac tiene:',
-            right: 'treinta y nueve tiendas y la página web',
-            wrong1: 'treinta tiendas pero no tiene la página web',
-            wrong2: 'solo la página web',
-            wrong3: 'solo dos tiendas'
+            question: 'Coche le sentiment auquel correspond la photo.',
+            right: 'la gaieté',
+            wrong1: 'la tristesse',
+            wrong2: 'la peur',
+            wrong3: 'la crainte',
+            img: './assets/img2.jpg'
         },
         {
-            question: '¿Qué puedes comprar en Fnac? ',
-            right: 'móviles',
-            wrong1: 'vestidos',
-            wrong2: 'tacones',
-            wrong3: 'gafas del sol'
+            question: 'Coche le sentiment auquel correspond la photo.',
+            right: 'l’inquiétude',
+            wrong1: 'la gaieté',
+            wrong2: 'l’enthousiasme',
+            wrong3: 'la colère',
+            img: './assets/img3.jpg'
         },
         {
-            question: 'La opción en la que el cliente reserva online un producto que está disponible en la tienda y puede pasar a recogerlo en 1 hora se llama: ',
-            right: 'Reserve & Collect',
-            wrong1: 'Click & Collect',
-            wrong2: 'ClickinStore',
-            wrong3: 'Same-Day Delivery'
+            question: 'Coche le sentiment auquel correspond la photo.',
+            right: 'la peur',
+            wrong1: 'l’optimisme',
+            wrong2: 'la méchanceté',
+            wrong3: 'le courage',
+            img: './assets/img4.jpg'
+        }
+    ],
+    [
+        {
+            question: 'Coche un trait positif du caractère.',
+            right: 'la patience',
+            wrong1: 'la méchanceté',
+            wrong2: 'la paresse',
+            wrong3: 'l’avarice'
+        },
+        {
+            question: 'Coche un trait négatif du caractère.',
+            right: 'la bêtise',
+            wrong1: 'la tolerance',
+            wrong2: 'la fidélité',
+            wrong3: 'le courage'
+        },
+        {
+            question: 'Coche la description qui correspond à cette personne : une personne peureuse.',
+            right: 'J’ai crains beaucoup de choses. Les films d’horreur ? Ce n’est pas pour moi.',
+            wrong1: 'J’adore les aventures. Je n’ai peur de rien.',
+            wrong2: 'J’ai du courage, j’aime les sports extrêmes.',
+            wrong3: 'Je n’aime pas beaucoup travailler.'
+        },
+        {
+            question: 'Coche un trait du caractère qui signifie le contraire du mot : généreux.',
+            right: 'avare',
+            wrong1: 'paresseux',
+            wrong2: 'bête',
+            wrong3: 'querelleur'
+        }
+    ],
+    [
+        {
+            question: 'Lis la description et choisis le trait de caractère de cette personne. J’adore les sports extrêmes. Ma passion, ce sont les films d’horreur. La peur, je ne sais pas ce que c’est.',
+            right: 'Cette personne est courageuse.',
+            wrong1: 'Cette personne est disponible.',
+            wrong2: 'Cette personne est impatiente.',
+            wrong3: 'Cette personne est triste.'
+        },
+        {
+            question: 'Lis la description et choisis le trait de caractère de cette personne. Je ne pense jamais aux problèmes. Je vois toujours les bons côtés dans chaque situation.',
+            right: 'Cette personne est optimiste. ',
+            wrong1: 'Cette personne est bavarde.',
+            wrong2: 'Cette personne est travailleuse.',
+            wrong3: 'Cette personne est sociable.'
+        },
+        {
+            question: 'Lis la description et choisis le trait de caractère de cette personne. Je ne mens jamais. Je dis toujours la vérité.',
+            right: 'Cette personne est honnête.',
+            wrong1: 'Cette personne est heureuse.',
+            wrong2: 'Cette personne est intolérante.',
+            wrong3: 'Cette personne est méchante.'
+        },
+        {
+            question: 'Lis la description et choisis le trait de caractère de cette personne. J’aime parler avec des gens. Je peux trouver des sujets de conversation avec tout le monde.',
+            right: 'Cette personne est communicative.',
+            wrong1: 'Cette personne est cultivée.',
+            wrong2: 'Cette personne est pessimiste.',
+            wrong3: 'Cette personne est infidèle.'
         }
     ]
 ]
@@ -195,7 +199,7 @@ const markRightAnswer = (position) => {
     feedbackRight.style.display = "block";
     feedbackRight.style.opacity = "1";
 
-    feedbackRightPercentPlaceholder.textContent = progress[currentLvl-1].toString();
+    // feedbackRightPercentPlaceholder.textContent = progress[currentLvl-1].toString();
 
     setTimeout(() => {
         nextLvl();

@@ -14,8 +14,8 @@ const positiveFeedbacks = [
     'Dobrze! Statek o napędzie mechanicznym podczas holowania powinien pokazywać dwa światła masztowe umieszczone w linii pionowej, światła burtowe, światła rufowe i światło holowania umieszczone w linii pionowej nad światłem rufowym.',
     'Dobrze! Statek zajęty trałowaniem o długości mniejszej niż 50 metrów powinien pokazywać dwa światła widoczne dookoła widnokręgu, umieszczone w linii pionowej, górne zielone, a dolne białe, a gdy posuwa się po wodzie dodatkowo światła burtowe i światło rufowe.',
     'Dobrze! Statek nieodpowiadający za swoje ruchy, gdy się nie porusza, powinien pokazywać dwa czerwone światła widoczne dookoła widnokręgu, umieszczone w linii pionowej w miejscu, skąd będą najlepiej widoczne.',
-    'Dobrze! Statek o ograniczonej zdolności manewrowej powinien pokazywać trzy światła widoczne dookoła widnokręgu, umieszczone w linii pionowej w miejscu, skąd będą najlepiej widoczne (światła górne i dolne powinny być czerwone, a środkowe białe). Ponadto gdy posuwa się po wodzie – światło lub światła masztowe, światła burtowe i światło rufowe.',
-    'Dobrze! Statek ograniczony swym zanurzeniem może, prócz standardowych świateł, które muszą mieć włączone statki o napędzie mechanicznym, pokazywać w miejscu, skąd będą najlepiej widoczne, trzy czerwone światła widoczne dookoła widnokręgu, umieszczone w linii pionowej.',
+    'Dobrze! Statek o ograniczonej zdolności manewrowej o długości 50 metrów i większej powinien pokazywać trzy światła widoczne dookoła widnokręgu, umieszczone w linii pionowej w miejscu, skąd będą najlepiej widoczne (światła górne i dolne powinny być czerwone, a środkowe białe). Ponadto gdy posuwa się po wodzie – światło lub światła masztowe, światła burtowe i światło rufowe.',
+    'Dobrze! Statek ograniczony swym zanurzeniem, może, prócz standardowych świateł, które muszą mieć włączone statki o napędzie mechanicznym w drodze powyżej 50 metrów długości, pokazywać w miejscu, skąd będą najlepiej widoczne, trzy czerwone światła widoczne dookoła widnokręgu, umieszczone w linii pionowej.',
     'Dobrze! Gdy statki są wzajemnie widoczne, statek o napędzie mechanicznym w drodze powinien wskazać manewr skrętu w prawo za pomocą jednego krótkiego sygnału dźwiękowego.',
     'Dobrze! Gdy statki są wzajemnie widoczne, statek o napędzie mechanicznym w drodze powinien wskazać manewr skrętu w lewo za pomocą dwóch krótkich sygnałów dźwiękowych.',
     'Dobrze! Gdy statki wzajemnie widoczne zbliżają się do siebie i z jakiejkolwiek przyczyny którykolwiek z nich nie rozumie zamiarów lub działań drugiego statku lub ma wątpliwości, czy drugi statek podejmie wystarczające działania w celu uniknięcia zderzenia, statek mający wątpliwości powinien wskazać je przez nadanie gwizdkiem co najmniej pięciu krótkich i szybko po sobie następujących sygnałów.',
@@ -62,8 +62,8 @@ const infos = [
     'Holujesz inny statek. Twój statek ma długość mniejszą niż 50 metrów. Długość zespołu holowniczego nie przekracza 200 metrów. Które światła powinny być włączone na twoim statku?',
     'Twój statek, który ma mniej niż 50 metrów, zajęty jest trałowaniem. Które światła powinien mieć w takim wypadku włączone?',
     'Znajdujesz się w statku nieodpowiadającym za swoje ruchy, który się nie porusza. Które światła powinny być włączone na takim statku?',
-    'Twój statek ma ograniczoną zdolność manewrową. Pomimo tego płynie dalej. Jakie światła powinny być włączone na statku?',
-    'Twój statek jest mocno załadowany. Jego zanurzenie ogranicza możliwość manewrowania. Które światła powinien mieć taki statek włączone?',
+    'Twój statek o długości ponad 50 metrów ma ograniczoną zdolność manewrową. Pomimo tego płynie dalej. Jakie światła powinny być włączone na statku?',
+    'Twój statek o długości powyżej 50 metrów jest mocno załadowany i znajduje się w drodze. Jego zanurzenie ogranicza możliwość manewrowania. Które światła powinien mieć taki statek włączone?',
     'Płyniesz statkiem. Przed dziobem, w oddali, znajduje się inny statek. Niedługo zamierzasz skręcić w prawo. Jaki dźwięk nadasz?',
     'Płyniesz statkiem. Przed dziobem, w oddali, znajduje się inny statek. Niedługo zamierzasz skręcić w lewo. Jaki dźwięk nadasz?',
     'Płyniesz statkiem przed siebie. Po lewej stronie płynie inny statek. Wasze kursy mogą się przeciąć. Czekasz aż drugi statek podejmie odpowiednie działania, ponieważ masz pierwszeństwo. Czas mija, a drugi statek płynie dalej w tym samym kierunku. Jakim sygnałem dźwiękowym wyrazisz swoje wątpliwości co do zaistniałej sytuacji?',
@@ -99,9 +99,13 @@ const game = new Siema({
     perPage: 1
 });
 
+const startAudio = new Audio('./assets/sounds/start.mp3');
+
 const colregBtn = document.querySelector(".btn--colreg");
-const next = () => {
+const next = (start) => {
     game.goTo(1);
+
+    if(start) startAudio.pause();
 
     backBtn.style.display = "flex";
     colregBtn.style.display = "block";
@@ -132,6 +136,8 @@ const menu = (lvl) => {
 const backBtn = document.querySelector(".btn--back");
 const prevLvl = () => {
     game.goTo(1);
+
+    if(colregVisible) toggleColreg();
 
     feedbackImages.forEach((item) => {
         item.style.zIndex = '-1';
@@ -218,7 +224,7 @@ const toggleColreg = () => {
     if(colregVisible) {
         colregVisible = false;
         questionBoxesColreg.forEach((item, index) => {
-            item.innerHTML = questionBoxesContent[index];
+            if(questionBoxesContent[index] || questionBoxesContent[index] === "") item.innerHTML = questionBoxesContent[index];
             questionBoxesQuestions[index].style.display = "block";
             item.style.maxWidth = "none";
             item.style.maxHeight = "none";
@@ -236,13 +242,14 @@ const toggleColreg = () => {
     }
     else {
         colregVisible = true;
-        questionBoxesColreg.forEach((item, index) => {
-            questionBoxesContent[index] = item.innerHTML;
-            item.innerHTML = colregContentHTML;
-            questionBoxesQuestions[index].style.display = "none";
-            item.style.maxHeight = "90%";
-            item.style.overflowY = "scroll";
-        });
+
+        const colregBox = questionBoxesColreg[currentLvl-1];
+        questionBoxesContent[currentLvl-1] = colregBox.innerHTML;
+        colregBox.innerHTML = colregContentHTML;
+        questionBoxesQuestions[currentLvl-1].style.display = "none";
+        colregBox.style.maxHeight = "90%";
+        colregBox.style.overflowY = "scroll";
+
         checkButtons.forEach((item) => {
             item.style.display = 'none';
         });
@@ -713,4 +720,15 @@ const btnClick = (lvl, btnIndex, action = null) => {
         default:
             break;
     }
+}
+
+const resetAllAnswers = () => {
+    const lvl = currentLvl;
+    prevLvl();
+    menu(lvl-1);
+}
+
+const playStartSound = () => {
+    document.querySelector('.btn--sound').style.opacity = '.7';
+    startAudio.play();
 }

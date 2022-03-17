@@ -543,22 +543,6 @@ audio {
     left: 0;
 }
 
-.visibility-1 {
-    visibility: visible;
-}
-
-.visibility-0 {
-    visibility: hidden;
-}
-
-.opacity-1 {
-    opacity: 1;
-}
-
-.opacity-0 {
-    opacity: 0;
-}
-
 .shifter--2, .shifter--0 {
     visibility: hidden;
 }
@@ -717,4 +701,36 @@ audio {
     left: 0;
     width: 100%;
     visibility: hidden;
+}
+
+.visibility-1 {
+    visibility: visible;
+}
+
+.visibility-0 {
+    visibility: hidden;
+}
+
+.opacity-1 {
+    opacity: 1;
+}
+
+.opacity-0 {
+    opacity: 0;
+}
+
+.btn--sound {
+    position: absolute;
+    top: 25%;
+    left: 51%;
+    width: 30px;
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.btn__img {
+    width: 100%;
+    height: auto;
 }
