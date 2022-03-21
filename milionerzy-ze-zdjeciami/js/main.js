@@ -119,8 +119,8 @@ let currentLvl = 0;
 let gameOver = false;
 let helpAvailable = 2;
 
-let lvl1Questions = shuffleArray(questions[0]);
-let lvl2Questions = shuffleArray(questions[1]);
+let lvl1Questions = questions[0];
+let lvl2Questions = questions[1];
 // let lvl3Questions = shuffleArray(questions[2]);
 
 const intro = document.querySelector(".view--start");
@@ -128,6 +128,9 @@ const questionImg = document.querySelector(".view--question");
 
 const rightAnswerMarker = document.querySelector(".img--right");
 const wrongAnswerMarker = document.querySelector(".img--wrong");
+
+const rightAnswerMarkerForImages = document.querySelector('.img--right--images');
+const wrongAnswerMarkerForImages = document.querySelector('.img--wrong--images');
 
 const feedbackRight = document.querySelector(".feedbackWrapper--right");
 const feedbackWrong = document.querySelector(".feedbackWrapper--wrong");
@@ -146,9 +149,17 @@ const answer1Placeholder = document.querySelector(".answer--1");
 const answer2Placeholder = document.querySelector(".answer--2");
 const answer3Placeholder = document.querySelector(".answer--3");
 const answer4Placeholder = document.querySelector(".answer--4");
+
+const questionPlaceholderForImages = document.querySelector(".question--images");
+const answer1PlaceholderForImages = document.querySelector(".answer--1--images");
+const answer2PlaceholderForImages = document.querySelector(".answer--2--images");
+const answer3PlaceholderForImages = document.querySelector(".answer--3--images");
+const answer4PlaceholderForImages = document.querySelector(".answer--4--images");
+
 const image = document.querySelector(".image");
 
 const answerPlaceholders = [answer1Placeholder, answer2Placeholder, answer3Placeholder, answer4Placeholder];
+const answerPlaceholdersForImages = [answer1PlaceholderForImages, answer2PlaceholderForImages, answer3PlaceholderForImages, answer4PlaceholderForImages];
 // const answerPlaceholders = [answer1Placeholder, answer2Placeholder, answer3Placeholder];
 
 const enableAllAnswers = () => {
@@ -158,13 +169,14 @@ const enableAllAnswers = () => {
 }
 
 const playAgain = () => {
-    lvl1Questions = shuffleArray(questions[0]);
-    lvl2Questions = shuffleArray(questions[1]);
+    lvl1Questions = questions[0];
+    lvl2Questions = questions[1];
     // lvl3Questions = shuffleArray(questions[2]);
 
     feedbackWrong.style.opacity = "0";
     feedbackWrong.style.display = "none";
     wrongAnswerMarker.style.display = "none";
+    wrongAnswerMarkerForImages.style.display = "none";
 
     helpBtn.style.display = "block";
 
@@ -177,16 +189,22 @@ const playAgain = () => {
 }
 
 const markRightAnswer = (position) => {
-    rightAnswerMarker.style.display = "block";
+    if(currentLvl === 5 || currentLvl === 6) {
+        feedbackRight.style.marginTop = "-25px";
+        feedbackRight.style.display = "block";
+        feedbackRight.style.opacity = "1";
+    }
+    else {
+        rightAnswerMarker.style.display = "block";
 
-    rightAnswerMarker.removeAttribute('class');
-    rightAnswerMarker.classList.add('img--right');
-    rightAnswerMarker.classList.add(`img--mark--${position}`);
+        rightAnswerMarker.removeAttribute('class');
+        rightAnswerMarker.classList.add('img--right');
+        rightAnswerMarker.classList.add(`img--mark--${position}`);
 
-    feedbackRight.style.display = "block";
-    feedbackRight.style.opacity = "1";
-
-    // feedbackRightPercentPlaceholder.textContent = progress[currentLvl-1].toString();
+        feedbackRight.style.marginTop = '0';
+        feedbackRight.style.display = "block";
+        feedbackRight.style.opacity = "1";
+    }
 
     setTimeout(() => {
         nextLvl();
@@ -194,17 +212,27 @@ const markRightAnswer = (position) => {
 }
 
 const markWrongAnswer = (position) => {
-    wrongAnswerMarker.style.display = "block";
+    if(currentLvl === 5 || currentLvl === 6) {
+        feedbackWrong.style.marginTop = '-25px';
+        feedbackWrong.style.display = "block";
+        feedbackWrong.style.opacity = "1";
 
-    wrongAnswerMarker.removeAttribute('class');
-    wrongAnswerMarker.classList.add('img--wrong');
-    wrongAnswerMarker.classList.add(`img--mark--${position}`);
-    wrongAnswerMarker.classList.add(`img--mark--${position}--wrong`);
+        gameOver = true;
+    }
+    else {
+        wrongAnswerMarker.style.display = "block";
 
-    feedbackWrong.style.display = "block";
-    feedbackWrong.style.opacity = "1";
+        wrongAnswerMarker.removeAttribute('class');
+        wrongAnswerMarker.classList.add('img--wrong');
+        wrongAnswerMarker.classList.add(`img--mark--${position}`);
+        wrongAnswerMarker.classList.add(`img--mark--${position}--wrong`);
 
-    gameOver = true;
+        feedbackWrong.style.marginTop = '0';
+        feedbackWrong.style.display = "block";
+        feedbackWrong.style.opacity = "1";
+
+        gameOver = true;
+    }
 
     setTimeout(() => {
         playAgain();
@@ -215,7 +243,10 @@ const checkAnswer = (e, position) => {
     if(!gameOver) {
         image.style.display = "none";
 
-        const selectedAnswer = e.textContent;
+        let selectedAnswer;
+        if(currentLvl === 5 || currentLvl === 6) selectedAnswer = e.getAttribute('src');
+        else selectedAnswer = e.textContent;
+
         const currentQuestionObject = getCurrentQuestionObject();
 
         if(selectedAnswer === currentQuestionObject.right) {
@@ -240,7 +271,10 @@ const nextLvl = () => {
         enableAllAnswers();
 
         rightAnswerMarker.style.display = "none";
+        rightAnswerMarkerForImages.style.display = "none";
         wrongAnswerMarker.style.display = "none";
+        wrongAnswerMarkerForImages.style.display = "none";
+
         feedbackRight.style.opacity = "0";
         feedbackRight.style.display = "none";
 
@@ -253,6 +287,29 @@ const nextLvl = () => {
         if(currentQuestionObject?.images) {
             viewNormal.style.visibility = 'hidden';
             viewImages.style.visibility = 'visible';
+
+            for(let i=1; i<=2; i++) {
+                rightAnswerMarkerForImages.classList.remove(`img--mark--images--${i}`);
+
+                wrongAnswerMarkerForImages.classList.remove(`img--mark--images--${i}`);
+                wrongAnswerMarkerForImages.classList.remove(`img--mark--images--${i}--wrong`);
+            }
+
+            questionPlaceholder.style.visibility = 'hidden';
+            questionPlaceholderForImages.style.visibility = 'visible';
+            questionPlaceholderForImages.textContent = question;
+
+            answer1PlaceholderForImages.setAttribute('src', shuffledAnswers[0]);
+            answer2PlaceholderForImages.setAttribute('src', shuffledAnswers[1]);
+            answer3PlaceholderForImages.setAttribute('src', shuffledAnswers[2]);
+            answer4PlaceholderForImages.setAttribute('src', shuffledAnswers[3]);
+
+            answerPlaceholders.forEach((item) => {
+                item.style.visibility = 'hidden';
+            });
+            answerPlaceholdersForImages.forEach((item) => {
+                item.style.visibility = 'visible';
+            });
         }
         else {
             viewNormal.style.visibility = 'visible';
@@ -265,13 +322,22 @@ const nextLvl = () => {
                 wrongAnswerMarker.classList.remove(`img--mark--${i}--wrong`);
             }
 
+            questionPlaceholderForImages.style.visibility = 'hidden';
+            questionPlaceholder.style.visibility = 'visible';
+            questionPlaceholder.textContent = question;
+
             answer1Placeholder.textContent = shuffledAnswers[0];
             answer2Placeholder.textContent = shuffledAnswers[1];
             answer3Placeholder.textContent = shuffledAnswers[2];
             answer4Placeholder.textContent = shuffledAnswers[3];
-        }
 
-        questionPlaceholder.textContent = question;
+            answerPlaceholders.forEach((item) => {
+                item.style.visibility = 'visible';
+            });
+            answerPlaceholdersForImages.forEach((item) => {
+                item.style.visibility = 'hidden';
+            });
+        }
 
         if(currentQuestionObject.img) {
             image.style.display = "block";
@@ -280,6 +346,8 @@ const nextLvl = () => {
         else image.style.display = "none";
     }
     else {
+        feedbackWrong.style.visibility = 'hidden';
+        feedbackRight.style.visibility = 'hidden';
         endOfTheGame.style.display = "flex";
         audio.pause();
     }
@@ -298,12 +366,21 @@ const excludeTwoAnswers = () => {
     const answerToExclude1 = shuffledWrongAnswers[0];
     const answerToExclude2 = shuffledWrongAnswers[1];
 
-    answerPlaceholders.forEach((item) => {
-       if((item.textContent === answerToExclude1)||(item.textContent === answerToExclude2)) {
-            item.textContent = "";
-            item.setAttribute("disabled", "true");
-       }
-    });
+    if(currentLvl === 5 || currentLvl === 6) {
+        answerPlaceholdersForImages.forEach((item) => {
+            if((item.getAttribute('src') === answerToExclude1) || (item.getAttribute('src') === answerToExclude2)) {
+                item.style.visibility = 'hidden';
+            }
+        })
+    }
+    else {
+        answerPlaceholders.forEach((item) => {
+            if((item.textContent === answerToExclude1)||(item.textContent === answerToExclude2)) {
+                item.textContent = "";
+                item.setAttribute("disabled", "true");
+            }
+        });
+    }
 }
 
 /* Start the game */

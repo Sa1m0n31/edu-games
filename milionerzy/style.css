@@ -165,8 +165,9 @@ body {
 .imageWrapper {
     position: absolute;
     top: 3%;
-    right: 3%;
+    right: 50%;
     width: 30%;
+    transform: translateX(50%);
     height: auto;
 }
 
