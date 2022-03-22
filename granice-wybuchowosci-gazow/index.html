@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Granice wybuchowości gazów</title>
+    <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+<div class="container">
+    <button class="btn btn--gas btn--gas--0" onclick="chooseGas(0)">
+
+    </button>
+    <button class="btn btn--gas btn--gas--1" onclick="chooseGas(1)">
+
+    </button>
+    <button class="btn btn--gas btn--gas--2" onclick="chooseGas(2)">
+
+    </button>
+    <button class="btn btn--gas btn--gas--3" onclick="chooseGas(3)">
+
+    </button>
+
+    <input class="input input--air"
+           type="number"
+           step="0.001" />
+    <input class="input input--gas"
+           type="number"
+           step="0.001" />
+
+    <button class="btn btn--explosion" onclick="explosion()">
+        Zapłon
+    </button>
+</div>
+<script src="./main.js"></script>
+</body>
+</html>

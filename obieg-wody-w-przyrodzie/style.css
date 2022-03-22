@@ -13,7 +13,7 @@ body {
 
 .container {
     position: relative;
-    max-width: 640px;
+    max-width: 1200px;
 }
 
 .view__img {
@@ -55,4 +55,135 @@ body {
 
 .btn--2 {
     top: 70%;
+}
+
+.btn--start {
+    left: 70%;
+    width: 25%;
+    top: 5%;
+}
+
+.el {
+    position: absolute;
+}
+
+.el--snowCloud {
+    top: 0%;
+    left: 35%;
+    width: 22%;
+    z-index: 3;
+}
+
+.el--snow {
+    width: 20%;
+    top: 12%;
+    left: 35%;
+}
+
+.el--steam {
+    left: 75%;
+    top: 65%;
+    width: 10%;
+    z-index: 2;
+}
+
+.el--steamArrow {
+    bottom: 6%;
+    right: 4%;
+    width: 12%;
+    z-index: 3;
+}
+
+.el--waterArrow {
+    left: 25%;
+    bottom: 8%;
+    width: 15%;
+}
+
+.el--riverArrow {
+    bottom: 15%;
+    left: 48%;
+    width: 12%;
+    z-index: 3;
+}
+
+.el--snowArrow {
+    left: 25%;
+    top: 8%;
+    width: 11%;
+}
+
+.el--rainArrow {
+    top: 20%;
+    left: 67%;
+    width: 13%;
+}
+
+.el--rainCloud {
+    top: 0;
+    left: 51%;
+    width: 20%;
+    z-index: 3;
+}
+
+.el--rain {
+    top: 16%;
+    left: 53%;
+    width: 15%;
+}
+
+.el--transport {
+    top: 36%;
+    left: 47%;
+    width: 15%;
+}
+
+.el--liquefacation {
+    top: 31%;
+    left: 68%;
+    width: 12%;
+}
+
+.el--river {
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+@keyframes steamAnimation {
+    0% {
+        opacity: 1;
+        transform: none;
+    }
+    50% {
+        transform: translateY(-55px);
+        opacity: .4;
+    }
+    60% {
+        opacity: 0;
+    }
+    100% {
+        transform: none;
+        opacity: 0;
+    }
+}
+
+@keyframes showAndHideAnimation {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.steamAnimation {
+    animation: steamAnimation 3s infinite;
+}
+
+.showAndHideAnimation {
+    animation: showAndHideAnimation 1.5s infinite;
 }
