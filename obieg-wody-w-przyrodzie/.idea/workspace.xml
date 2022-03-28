@@ -20,17 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b8cdc016-737b-4636-b095-32e4e9fb1254" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../granice-wybuchowosci-gazow/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/obieg-wody-w-przyrodzie.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/rzeka.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sounds/ciekly.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sounds/gazowy.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sounds/reszta.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sounds/staly.mp3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/womi.js" beforeDir="false" afterPath="$PROJECT_DIR$/womi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +39,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/img" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Projekty/pet" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -66,7 +56,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1647975097254</updated>
-      <workItem from="1647975098414" duration="5136000" />
+      <workItem from="1647975098414" duration="5263000" />
+      <workItem from="1648050847110" duration="15000" />
     </task>
     <servers />
   </component>
@@ -83,8 +74,13 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="-1180" y="275" key="FileChooserDialogImpl" timestamp="1648050860588">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="-1180" y="275" key="FileChooserDialogImpl/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1648050860588" />
     <state x="-1297" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1647983423401">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>

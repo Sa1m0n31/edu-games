@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Milionerzy</title>
+    <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+<div class="container">
+    <main class="view view--start">
+        <img class="view__img" src="./assets/intro.png" alt="start" />
+        <p class="view__start__text">
+            Vérifie tes connaissances. Fais le jeu.
+<!--            ¿Recuerdas mucho de esta clase? Compruébalo.-->
+<!--            ¿Qué has recordado de la clase de hoy? Compruébalo.-->
+<!--            ¿Cuántas respuestas correctas puedes obtener?-->
+<!--            Vamos a jugar al juego “¿Quién quiere ser millonario?”. Debes responder a quince preguntas y conseguir el mayor número posible de respuestas correctas.-->
+        </p>
+    </main>
+    <main class="view view--end">
+        <video autoplay muted playsinline>
+            <source src="./assets/gratulacje-francuski.mp4" />
+        </video>
+    </main>
+    <main class="view view--question">
+        <figure class="feedbackWrapper  feedbackWrapper--right">
+            <img class="feedback__img" src="./assets/feedback.png" alt="feedback" />
+            <main class="feedback__content">
+                <img class="feedback__icon" src="./assets/right.svg" alt="ok" />
+                <span class="feedback__text">
+<!--                    ¡Felicidades! Has conseguido completar el <span class="feedbackWrapper&#45;&#45;right__percent"></span>% del juego.-->
+                    Bravo ! C'est la bonne réponse !
+                </span>
+            </main>
+        </figure>
+        <figure class="feedbackWrapper feedbackWrapper--wrong">
+            <img class="feedback__img" src="./assets/feedback.png" alt="feedback" />
+            <main class="feedback__content">
+                <img class="feedback__icon" src="./assets/wrong.svg" alt="blad" />
+                <span class="feedback__text">
+<!--                    Parece que no te ha salido muy bien. Puedes intentarlo de nuevo.-->
+                    C’est inexact, essaie encore une fois.
+                </span>
+            </main>
+        </figure>
+
+        <figure class="imageWrapper">
+            <img class="image" src="" alt="obrazek" />
+        </figure>
+
+        <button class="help" onclick="excludeTwoAnswers()">
+            <img class="help__img" src="./assets/50-50.png" alt="50/50" />
+        </button>
+
+
+        <p class="question">
+
+        </p>
+        <p class="question--images">
+
+        </p>
+
+        <img class="img--right" src="./assets/poprawna.png" alt="odpowiedz" />
+        <img class="img--wrong" src="./assets/bledna.png" alt="odpowiedz" />
+
+        <img class="img--right--images" src="./assets/poprawna.png" alt="odpowiedz" />
+        <img class="img--wrong--images" src="./assets/bledna.png" alt="odpowiedz" />
+
+        <img class="answer answer--images answer--1--images" src="./assets/img-5-1.png" onclick="checkAnswer(this, 1)" />
+        <img class="answer answer--images answer--2--images" src="./assets/img-5-2.png" onclick="checkAnswer(this, 2)" />
+        <img class="answer answer--images answer--3--images" src="./assets/img-5-3.png" onclick="checkAnswer(this, 3)" />
+        <img class="answer answer--images answer--4--images" src="./assets/img-5-4.png" onclick="checkAnswer(this, 4)" />
+
+        <button class="answer answer--1" onclick="checkAnswer(this, 1)">
+
+        </button>
+        <button class="answer answer--2" onclick="checkAnswer(this, 2)">
+
+        </button>
+        <button class="answer answer--3" onclick="checkAnswer(this, 3)">
+
+        </button>
+        <button class="answer answer--4" onclick="checkAnswer(this, 4)">
+
+        </button>
+        <img class="view__img view__img--normal" src="./assets/pytanie.png" alt="pytanie" />
+        <img class="view__img view__img--images" src="./assets/plansza-na-zdjecia.png" alt="pytanie" />
+    </main>
+</div>
+<script src="./js/main.js"></script>
+</body>
+</html>

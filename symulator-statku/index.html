@@ -24,6 +24,9 @@
                 <button class="btn btn--start" onclick="next(true)">
 
                 </button>
+                <button class="btn btn--start btn--instruction" onclick="instruction()">
+
+                </button>
                 <button class="btn btn--sound" onclick="playStartSound()">
                     <img class="btn__img" src="./assets/sound-icon.svg" alt="glosnik" />
                 </button>
@@ -2630,6 +2633,12 @@
                 <button class="gameBtn gameBtn--wrong btn--short" onclick="btnClick(21, 2); playSound(1);">
                     <img class="btn--sound__img" src="./assets/dzwiek-krotki.png" alt="krotki" />
                 </button>
+            </section>
+            <section class="view view--instruction">
+                <button class="btn btn--start btn--exitInstruction" onclick="exitInstruction()">
+
+                </button>
+                <img class="view__img" src="./assets/instrukcja.png" alt="plansza-startowa" />
             </section>
         </div>
     </main>

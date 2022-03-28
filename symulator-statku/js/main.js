@@ -133,6 +133,14 @@ const menu = (lvl) => {
     }
 }
 
+const instruction = () => {
+    game.goTo(24);
+}
+
+const exitInstruction = () => {
+    game.goTo(0);
+}
+
 const backBtn = document.querySelector(".btn--back");
 const prevLvl = () => {
     game.goTo(1);

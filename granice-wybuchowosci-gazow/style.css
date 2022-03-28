@@ -2,9 +2,11 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: 'Arial', sans-serif;
 }
 
 .container {
+    position: relative;
     max-width: 640px;
 }
 
@@ -31,32 +33,52 @@ input[type=number] {
 .btn {
     width: 50px;
     height: 50px;
-    background: red;
     margin: 10px;
+    background: transparent;
+    position: absolute;
+    border-radius: 4px;
+    transition: .2s all;
+}
+
+.btn:hover {
+    background: rgba(0, 0, 0, .1);
+}
+
+.view__img {
+    width: 100%;
+    height: auto;
 }
 
 .btn--gas {
-
-}
-
-.btn--gas--0 {
-
+    top: 37%;
+    left: 0.5%;
+    width: 10%;
+    height: 55%;
 }
 
 .btn--gas--1 {
-
+    left: 11.5%;
 }
 
 .btn--gas--2 {
-
+    left: 22%;
 }
 
 .btn--gas--3 {
-
+    left: 65%;
+    width: 14%;
+    height: 8%;
+    top: 65%;
 }
 
 .input {
-
+    margin-top: 10px;
+    width: 80%;
+    height: 30px;
+    border-radius: 4px;
+    padding: 3px 10px;
+    outline: none;
+    border: 1px solid #707070;
 }
 
 .input--air {
@@ -68,5 +90,77 @@ input[type=number] {
 }
 
 .btn--explosion {
+    background: #008000 !important;
+    width: 80%;
+    height: 35px;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    color: #fff;
+    padding: 5px;
+    text-transform: uppercase;
+}
 
+.btn--explosion:hover {
+    opacity: .9;
+}
+
+.info {
+    position: absolute;
+    top: 3%;
+    left: 3%;
+    width: 30%;
+    height: 30%;
+    border: 2px solid rgba(70, 70, 70, .5);
+    border-radius: 15px;
+    text-align: center;
+}
+
+.info__text {
+    font-size: 14px;
+}
+
+.info--2, .info--3, .info--4, .info--5 {
+    visibility: hidden;
+}
+
+.info__child {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.explosionImg {
+    position: absolute;
+    height: auto;
+    width: 2%;
+    left: 50.8%;
+    top: 30%;
+    opacity: 0;
+    transition: .3s opacity;
+}
+
+.row {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.row .btn {
+    width: 49%;
+}
+
+.btn--tryAgain {
+    font-size: 12px;
+    width: 100%;
 }

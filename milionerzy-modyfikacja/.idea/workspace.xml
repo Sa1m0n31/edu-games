@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="4e30153c-d2b3-48f4-a194-86ae2cec4ef1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../drukarka-3d/img/czerwony.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../drukarka-3d/img/niebieski.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../drukarka-3d/img/zielony.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../granice-wybuchowosci-gazow/img/gaz-ziemny.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../granice-wybuchowosci-gazow/img/propan-butan.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../granice-wybuchowosci-gazow/img/tlenek-wegla-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../granice-wybuchowosci-gazow/img/tlenek-wegla-4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../granice-wybuchowosci-gazow/img/tlo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../granice-wybuchowosci-gazow/img/wybuch-gaz-ziemny.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../granice-wybuchowosci-gazow/img/wybuch-propan-butan.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../granice-wybuchowosci-gazow/img/wybuch-tlenek-wegla-2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../granice-wybuchowosci-gazow/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../granice-wybuchowosci-gazow/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../granice-wybuchowosci-gazow/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../granice-wybuchowosci-gazow/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../granice-wybuchowosci-gazow/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/../granice-wybuchowosci-gazow/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../granice-wybuchowosci-gazow/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/../granice-wybuchowosci-gazow/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../komiks-francuski/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../komiks-francuski/.idea/gra-przedsiebiorca-i-klient.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../komiks-francuski/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../komiks-francuski/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../komiks-francuski/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../komiks-francuski/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../komiks-francuski/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../komiks-francuski/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../komiks-francuski/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../komiks-francuski/komiks-francuski.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../obieg-wody-w-przyrodzie/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../obieg-wody-w-przyrodzie/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1zS9Foqx4Ex9W4f38dIECHNABGa" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../symulator-statku" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\sajmo\Desktop\Programowanie\edu\milionerzy-modyfikacja\assets" />
+      <recent name="C:\Users\sajmo\Desktop\Programowanie\edu\milionerzy\assets" />
+      <recent name="C:\Users\sajmo\Desktop\Programowanie\Projekty\milionerzy\assets" />
+      <recent name="C:\Users\sajmo\Desktop\Programowanie\Projekty\milionerzy" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4e30153c-d2b3-48f4-a194-86ae2cec4ef1" name="Default Changelist" comment="" />
+      <created>1634130520905</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1634130520905</updated>
+      <workItem from="1634130521955" duration="1579000" />
+      <workItem from="1634198259798" duration="134000" />
+      <workItem from="1634198413822" duration="1725000" />
+      <workItem from="1634249863318" duration="2011000" />
+      <workItem from="1634287308745" duration="13000" />
+      <workItem from="1634598965202" duration="5358000" />
+      <workItem from="1634639542596" duration="20000" />
+      <workItem from="1634640593015" duration="2286000" />
+      <workItem from="1634737099682" duration="2193000" />
+      <workItem from="1635016512341" duration="607000" />
+      <workItem from="1635079304209" duration="38000" />
+      <workItem from="1637227272240" duration="1457000" />
+      <workItem from="1637230078292" duration="10000" />
+      <workItem from="1637924763261" duration="1375000" />
+      <workItem from="1637926165684" duration="8000" />
+      <workItem from="1637935699202" duration="133000" />
+      <workItem from="1637935850828" duration="1432000" />
+      <workItem from="1637937310588" duration="17000" />
+      <workItem from="1639745027262" duration="2620000" />
+      <workItem from="1640269974929" duration="2242000" />
+      <workItem from="1640344807990" duration="11000" />
+      <workItem from="1640625163107" duration="4000" />
+      <workItem from="1640625189584" duration="6805000" />
+      <workItem from="1640634762859" duration="30000" />
+      <workItem from="1640710031293" duration="227000" />
+      <workItem from="1640784741152" duration="1271000" />
+      <workItem from="1640797877423" duration="178000" />
+      <workItem from="1647341207173" duration="358000" />
+      <workItem from="1647341767396" duration="2061000" />
+      <workItem from="1647469311233" duration="2736000" />
+      <workItem from="1647556671834" duration="15000" />
+      <workItem from="1647556705684" duration="384000" />
+      <workItem from="1648489548964" duration="1691000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="705" y="322" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1640631554988">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="705" y="322" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1640631554988" />
+    <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1640271169490">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1640271169490" />
+    <state x="-1180" y="275" key="FileChooserDialogImpl" timestamp="1648491253067">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="-1180" y="275" key="FileChooserDialogImpl/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1648491253067" />
+    <state x="592" y="218" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1647557092114" />
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1640798055662" />
+    <state x="616" y="240" key="run.anything.popup" timestamp="1640784897318">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1640784897318" />
+    <state x="-1297" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1647342484461">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="-1297" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1647342484461" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1640626159545" />
+  </component>
+</project>

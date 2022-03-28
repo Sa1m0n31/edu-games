@@ -734,3 +734,18 @@ audio {
     width: 100%;
     height: auto;
 }
+
+.btn--instruction {
+    transform: scale(.48);
+    top: 10%;
+    left: 74%;
+}
+
+.btn--exitInstruction {
+    top: 1.5%;
+    right: 1%;
+    left: unset;
+    bottom: unset;
+    width: 5%;
+    height: 8%;
+}

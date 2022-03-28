@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Granice wybuchowości gazów</title>
+    <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+<div class="container">
+    <div class="panel">
+        <h3 class="panel__header">
+            Kolor
+        </h3>
+        <div class="row">
+            <button class="btn btn--color btn--color--0" onclick="changeColor(0)"></button>
+            <button class="btn btn--color btn--color--1" onclick="changeColor(1)"></button>
+            <button class="btn btn--color btn--color--2" onclick="changeColor(2)"></button>
+        </div>
+        <h3 class="panel__header">
+            Wysokość warstwy
+        </h3>
+        <select class="height">
+            <option>0.28 mm</option>
+            <option>0.12 mm</option>
+            <option>0.06 mm</option>
+        </select>
+        <h3 class="panel__header">
+            Procent wypełnienia
+        </h3>
+        <select class="percent">
+            <option>12%</option>
+            <option>30%</option>
+            <option>50%</option>
+        </select>
+    </div>
+    <div class="view">
+        <img class="img img--0" src="./img/zielony.png" alt="drukarka-3d" />
+        <img class="img img--1" src="./img/czerwony.png" alt="drukarka-3d" />
+        <img class="img img--2" src="./img/niebieski.png" alt="drukarka-3d" />
+    </div>
+</div>
+<script src="./main.js"></script>
+</body>
+</html>

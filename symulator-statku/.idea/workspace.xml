@@ -20,28 +20,35 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="30e1dee3-d04c-449c-a4d2-665e9fc3353b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/assets/sound-icon.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/sounds/start.mp3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../milionerzy/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../milionerzy/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../milionerzy/gra-milionerzy-225.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../milionerzy/gra-milionerzy-253.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../milionerzy/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../milionerzy/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../milionerzy/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/../milionerzy/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../milionerzy/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/../milionerzy/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../milionerzy/womi.js" beforeDir="false" afterPath="$PROJECT_DIR$/../milionerzy/womi.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../drukarka-3d/img/czerwony.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../drukarka-3d/img/niebieski.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../drukarka-3d/img/zielony.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../granice-wybuchowosci-gazow/img/gaz-ziemny.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../granice-wybuchowosci-gazow/img/propan-butan.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../granice-wybuchowosci-gazow/img/tlenek-wegla-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../granice-wybuchowosci-gazow/img/tlenek-wegla-4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../granice-wybuchowosci-gazow/img/tlo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../granice-wybuchowosci-gazow/img/wybuch-gaz-ziemny.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../granice-wybuchowosci-gazow/img/wybuch-propan-butan.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../granice-wybuchowosci-gazow/img/wybuch-tlenek-wegla-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/instrukcja.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../granice-wybuchowosci-gazow/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../granice-wybuchowosci-gazow/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../granice-wybuchowosci-gazow/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../granice-wybuchowosci-gazow/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../granice-wybuchowosci-gazow/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/../granice-wybuchowosci-gazow/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../granice-wybuchowosci-gazow/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/../granice-wybuchowosci-gazow/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../komiks-francuski/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../komiks-francuski/.idea/gra-przedsiebiorca-i-klient.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../komiks-francuski/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../komiks-francuski/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../komiks-francuski/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../komiks-francuski/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../komiks-francuski/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../komiks-francuski/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../komiks-francuski/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../komiks-francuski/komiks-francuski.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../obieg-wody-w-przyrodzie/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../obieg-wody-w-przyrodzie/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/manetka-do-przodu.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/manetka-do-przodu.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/manetka-do-tylu.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/manetka-do-tylu.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/manetka-stop.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/manetka-stop.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/prawidlo-14-2-feedback.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/prawidlo-14-2-feedback.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/prawidlo-14-2.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/prawidlo-14-2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/prawidlo-24.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/prawidlo-24.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/start.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/start.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symulator-statku.zip" beforeDir="false" afterPath="$PROJECT_DIR$/symulator-statku.zip" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +67,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../milionerzy" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/assets" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -92,6 +99,7 @@
       <workItem from="1646676028411" duration="421000" />
       <workItem from="1647337117709" duration="4042000" />
       <workItem from="1647467939900" duration="1350000" />
+      <workItem from="1648491255809" duration="1436000" />
     </task>
     <servers />
   </component>
@@ -125,10 +133,10 @@
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
     <state x="-1304" y="242" key="run.anything.popup/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1646526372559" />
-    <state x="-1297" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1647468068761">
+    <state x="-1297" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1648491338178">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="-1297" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1647468068761" />
+    <state x="-1297" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1648491338178" />
     <state x="-1297" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1642963598772" />
   </component>
 </project>
