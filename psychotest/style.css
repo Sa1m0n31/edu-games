@@ -18,6 +18,17 @@
 .background {
     width: 100%;
     height: auto;
+    transition: .3s all;
+}
+
+.background--2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: auto;
+    opacity: 0;
 }
 
 .questionBox {
@@ -122,4 +133,22 @@
 
 .nextQuestionBtn:hover {
     transform: translateY(-3px);
+}
+
+.resultHeader {
+    background: #322881;
+    width: 150px;
+    height: 40px;
+    border-radius: 40px;
+    border: 1px solid #fff;
+    font-size: 14px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+}
+
+.tryAgainBtn {
+    visibility: hidden;
 }

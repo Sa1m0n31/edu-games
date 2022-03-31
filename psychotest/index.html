@@ -8,6 +8,7 @@
 <body>
 <div class="container">
     <img class="background" src="./img/background.jpg" alt="tlo" />
+    <img class="background background--2" src="./img/result-background.jpg" alt="tlo" />
     <div class="questionBox">
         <p class="question">
 
@@ -28,11 +29,17 @@
         </div>
     </div>
     <div class="feedbackBox">
+        <h3 class="resultHeader">
+            Résultat du test
+        </h3>
         <p class="question feedback">
 
         </p>
         <button class="nextQuestionBtn" onclick="nextQuestion()">
             Question suivante
+        </button>
+        <button class="nextQuestionBtn tryAgainBtn" onclick="tryAgain()">
+            Recommence le test
         </button>
     </div>
 </div>

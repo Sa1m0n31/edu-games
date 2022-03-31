@@ -7,6 +7,112 @@
 </head>
 <body>
 <div class="container">
+    <!-- MODAL WINDOWS - EXERCISE 1 -->
+    <div class="bookView bookView--book">
+        <button class="bookView__cancel" onclick="closeBookView()">
+            <img class="soundIcon" src="./img/cancel.png" alt="zamknij" />
+        </button>
+        <div class="bookView__inner">
+            <span>
+            1. Przygotuj plik cyfrowy modelu 3D w programie typu slicer - kliknij na ikonę komputera.
+        </span>
+            <span>
+             2. Dostosuj parametry wydruku. Wybierz rodzaj materiału, wysokość warstwy oraz procent wypełnienia.
+        </span>
+            <span>
+            3. Wygeneruj GCode.
+        </span>
+            <span>
+            4. Zamontuj w podajniku szpulę z wybranym wcześniej materiałem i kliknij przycisk drukuj.
+        </span>
+            <span>
+            5. Wybierz sposób wykończenia powierzchni modelu.
+        </span>
+        </div>
+    </div>
+    <div class="bookView bookView--questionMark1">
+        <button class="bookView__cancel" onclick="closeBookView()">
+            <img class="soundIcon" src="./img/cancel.png" alt="zamknij" />
+        </button>
+        <div class="bookView__inner">
+            <span>
+            ABS – wysoka wytrzymałość, dobry do obróbki mechanicznej, większy skurcz
+        </span>
+            <span>
+            PLA – przyjazny środowisku, kruchy (zalecana minimalna obróbka mechaniczna), mały skurcz
+        </span>
+            <span>
+            PET-G – dobra wytrzymałość, lekko elastyczny, duża przyczepność warstw, mały skurcz
+        </span>
+            <span>
+            Wysokość warstwy druku – im mniejsza wysokość, tym dokładniejszy, ale trwający dłużej wydruk
+        </span>
+            <span>
+            Wypełnienie – określane w procentach;im większe, tym większa wytrzymałość przedmiotu, ale także większy koszt i dłuższy czas druku 3D
+        </span>
+        </div>
+    </div>
+    <div class="bookView bookView--questionMark2">
+        <button class="bookView__cancel" onclick="closeBookView()">
+            <img class="soundIcon" src="./img/cancel.png" alt="zamknij" />
+        </button>
+        <div class="bookView__inner">
+            <span>
+            Metody obróbki końcowej:
+        </span>
+            <span>
+            szlifowanie – bardzo gładka powierzchnia, ale nie każdy materiał można szlifować;
+        </span>
+            <span>
+            pokrycie warstwą żywicy – warstwa żywicy powinna być cienka, aby nie zmienić kształtu przedmiotu;
+        </span>
+            <span>
+            ogrzanie i nadtopienie zewnętrznej warstwy elementu – należy bardzo uważać, aby zbyt mocno nie stopić elementu.
+        </span>
+        </div>
+    </div>
+
+    <!-- MODAL WINDOWS - EXERCISE 2 -->
+    <div class="bookView bookView--book2">
+        <button class="bookView__cancel" onclick="closeBookView()">
+            <img class="soundIcon" src="./img/cancel.png" alt="zamknij" />
+        </button>
+        <div class="bookView__inner">
+            <span>
+                1. Przygotuj plik cyfrowy modelu 3D w programie typu slicer - kliknij na ikonę komputera.
+            </span>
+            <span>
+                2. Dostosuj parametry wydruku. Ustaw podpory, wybierz rodzaj brzegów i prędkość druku. Parametry retrakcji zostaną automatycznie zoptymalizowane do wybranej prędkości przemieszczania się ekstrudera.
+            </span>
+            <span>
+                3. Wygeneruj GCode.
+            </span>
+            <span>
+                4. Zamontuj w podajniku szpulę z wybranym wcześniej materiałem i kliknij przycisk “drukuj”.
+            </span>
+        </div>
+    </div>
+    <div class="bookView bookView--questionMark3">
+        <button class="bookView__cancel" onclick="closeBookView()">
+            <img class="soundIcon" src="./img/cancel.png" alt="zamknij" />
+        </button>
+        <div class="bookView__inner">
+            <span>
+            - Przy druku przedmiotów z wystającymi elementami konieczne jest zastosowanie podpór.
+        </span>
+            <span>
+            - Dla poprawy jakości wydruku 3D można stosować dodatkowe struktury, takie jak: brim, raft i skirt.
+        </span>
+            <span>
+            - Od prędkości przemieszczania się ekstrudera zależy nie tylko czas, ale także jakość wydruku.
+        </span>
+            <span>
+            - Od ustawienia parametrów retrakcji (długości i prędkości) zależy, czy między rozdzielonymi powierzchniami drukowanego przedmiotu będą występowały cienkie nitki materiału, czy nie.
+        </span>
+        </div>
+    </div>
+
+
     <div class="slide slide--0">
         <h1 class="title">
             Od modelowania do wydruku 3D
@@ -21,7 +127,7 @@
         </div>
     </div>
     <div class="slide slide--1">
-        <div class="bhp">
+        <div class="bhp scroll">
             <h2 class="bhp__header">
                 1. Przed uruchomieniem drukarki 3d:
             </h2>
@@ -97,10 +203,10 @@
     <div class="slide slide--2">
         <img class="img" src="./img/trzy-rolki.png" alt="druk-3d-trzy-rolki" />
 
-        <button class="icon icon--computer" onclick="goToProjectMode()">
+        <button class="icon icon--computer" onclick="goToProjectMode(0)">
             <img class="icon__img" src="./img/computer.png" alt="komputer" />
         </button>
-        <button class="icon icon--book" onclick="showHint()">
+        <button class="icon icon--book" onclick="showBookView(0)">
             <img class="icon__img" src="./img/book.png" alt="ksiazka" />
         </button>
 
@@ -114,7 +220,7 @@
         </p>
         <div class="panel">
             <h3 class="panel__header">
-                Kolor
+                Materiał
                 <button class="sound" onclick="playSound(0)">
                     <img class="soundIcon" src="./img/sound.png" alt="lektor" />
                 </button>
@@ -132,7 +238,7 @@
             </div>
             <h3 class="panel__header">
                 Wysokość warstwy
-                <button class="sound" onclick="playSound(0)">
+                <button class="sound" onclick="playSound(1)">
                     <img class="soundIcon" src="./img/sound.png" alt="lektor" />
                 </button>
             </h3>
@@ -140,7 +246,7 @@
                     type="number" />
             <h3 class="panel__header">
                 Procent wypełnienia
-                <button class="sound" onclick="playSound(0)">
+                <button class="sound" onclick="playSound(2)">
                     <img class="soundIcon" src="./img/sound.png" alt="lektor" />
                 </button>
             </h3>
@@ -152,10 +258,10 @@
         </div>
         <div class="view">
             <div class="view__icons">
-                <button class="view__icon" onclick="showHint()">
+                <button class="view__icon" onclick="showBookView(0)">
                     <img class="soundIcon" src="./img/book.png" alt="ksiazka" />
                 </button>
-                <button class="view__icon" onclick="showQuestions()">
+                <button class="view__icon" onclick="showBookView(1)">
                     <img class="soundIcon" src="./img/question-mark.png" alt="ksiazka" />
                 </button>
             </div>
@@ -175,21 +281,170 @@
         <img class="img" src="./img/niebieski.png" alt="trzy-rolki" />
 
         <div class="colorsButtons">
-            <button class="colorsButtons__item" onclick="changeColor2(1)"></button>
+            <button class="colorsButtons__item" onclick="changeColor2(0)"></button>
             <button class="colorsButtons__item" onclick="changeColor2(2)"></button>
-            <button class="colorsButtons__item" onclick="changeColor2(3)"></button>
+            <button class="colorsButtons__item" onclick="changeColor2(1)"></button>
         </div>
 
-        <button class="printBtn">
+        <button class="printBtn" onclick="finalTreatment()">
             Drukuj
         </button>
+        <p class="error">
+            Wybierz kolor wybrany we wcześniejszym etapie
+        </p>
+    </div>
+    <div class="slide slide--5">
+        <div class="panel">
+            <button class="gcodeBtn" onclick="makeFinalTreatment(0)">
+                Szlifowanie
+            </button>
+            <button class="gcodeBtn" onclick="makeFinalTreatment(1)">
+                Pokrycie warstwą żywicy
+            </button>
+            <button class="gcodeBtn" onclick="makeFinalTreatment(2)">
+                Ogrzanie i nadtopienie zewnętrznej warstwy elementu
+            </button>
+        </div>
+        <div class="view">
+            <div class="view__icons">
+                <button class="view__icon" onclick="showBookView(0)">
+                    <img class="soundIcon" src="./img/book.png" alt="ksiazka" />
+                </button>
+                <button class="view__icon" onclick="showBookView(2)">
+                    <img class="soundIcon" src="./img/question-mark.png" alt="ksiazka" />
+                </button>
+                <button class="view__icon" onclick="playSound(3)">
+                    <img class="soundIcon" src="./img/sound.png" alt="ksiazka" />
+                </button>
+            </div>
+            <button class="view__icon view__icon--home" onclick="home(5)">
+                <img class="soundIcon" src="./img/home.png" alt="ksiazka" />
+            </button>
+
+            <img class="img img--raw img--0" src="./img/gwiazdka_zielona_surowa.png" alt="drukarka-3d" />
+            <img class="img img--raw img--1" src="./img/gwiazdka_pomaranczowa_surowa.png" alt="drukarka-3d" />
+            <img class="img img--raw img--2" src="./img/gwiazdka_niebieska_surowa.png" alt="drukarka-3d" />
+
+            <img class="img img--treat0" src="./img/gwiazdka_zielona_gladka.png" alt="gwiazdka" />
+            <img class="img img--treat0" src="./img/gwiazdka_zielona_zywica.png" alt="gwiazdka" />
+            <img class="img img--treat0" src="./img/gwiazdka_zielona_obrobka.png" alt="gwiazdka" />
+
+            <img class="img img--treat1" src="./img/gwiazdka_pomaranczowa_gladka.png" alt="gwiazdka" />
+            <img class="img img--treat1" src="./img/gwiazdka_pomaranczowa_zywica.png" alt="gwiazdka" />
+            <img class="img img--treat1" src="./img/gwiazdka_pomaranczowa_obrobka.png" alt="gwiazdka" />
+
+            <img class="img img--treat2" src="./img/gwiazdka_niebieska_gladka.png" alt="gwiazdka" />
+            <img class="img img--treat2" src="./img/gwiazdka_niebieska_zywica.png" alt="gwiazdka" />
+            <img class="img img--treat2" src="./img/gwiazdka_niebieska_obrobka.png" alt="gwiazdka" />
+        </div>
     </div>
 
 
 
-
-
     <!-- 2: WYDRUK PRZEDMIOTU WYMAGAJACEGO ZASTOSOWANIA PODPOR -->
+    <div class="slide slide--6">
+        <img class="img" src="./img/trzy-rolki.png" alt="druk-3d-trzy-rolki" />
+
+        <button class="icon icon--computer" onclick="goToProjectMode(1)">
+            <img class="icon__img" src="./img/computer.png" alt="komputer" />
+        </button>
+        <button class="icon icon--book" onclick="showBookView(3)">
+            <img class="icon__img" src="./img/book.png" alt="ksiazka" />
+        </button>
+
+        <p class="instruction">
+            Wydrukuj jedną z brakujących liter przestrzennego loga pewnej firmy. Wydruk wykonaj przy użyciu filamentu ABS.
+        </p>
+    </div>
+    <div class="slide slide--7">
+        <p class="instruction">
+            Wydrukuj jedną z brakujących liter przestrzennego loga pewnej firmy. Wydruk wykonaj przy użyciu filamentu ABS.
+        </p>
+        <div class="panel scroll">
+            <h3 class="panel__header">
+                Brzegi
+                <button class="sound" onclick="playSound(4)">
+                    <img class="soundIcon" src="./img/sound.png" alt="lektor" />
+                </button>
+            </h3>
+            <select>
+                <option>raft</option>
+                <option>brim</option>
+                <option>skirt</option>
+            </select>
+            <h3 class="panel__header">
+                Materiał
+                <button class="sound" onclick="playSound(0)">
+                    <img class="soundIcon" src="./img/sound.png" alt="lektor" />
+                </button>
+            </h3>
+            <div class="row">
+                <button class="btn btn--color btn--color--0" onclick="changeColor(0)">
+                    ABS
+                </button>
+                <button class="btn btn--color btn--color--1" onclick="changeColor(1)">
+                    PLA
+                </button>
+                <button class="btn btn--color btn--color--2" onclick="changeColor(2)">
+                    PET-G
+                </button>
+            </div>
+            <h3 class="panel__header">
+                <span>
+                    Prędkość przemieszczania się ekstrudera
+                </span>
+                <button class="sound" onclick="playSound(5)">
+                    <img class="soundIcon" src="./img/sound.png" alt="lektor" />
+                </button>
+            </h3>
+            <select onchange="changePrintSpeed(this)">
+                <option>50 mm/s</option>
+                <option>100 mm/s</option>
+            </select>
+            <h3 class="panel__header">
+                Długość retrakcji
+                <button class="sound" onclick="playSound(6)">
+                    <img class="soundIcon" src="./img/sound.png" alt="lektor" />
+                </button>
+            </h3>
+            <input class="panel__input input--fixed1"
+                   disabled />
+            <h3 class="panel__header">
+                Prędkość retrakcji
+                <button class="sound" onclick="playSound(6)">
+                    <img class="soundIcon" src="./img/sound.png" alt="lektor" />
+                </button>
+            </h3>
+            <input class="panel__input input--fixed2"
+                   disabled />
+            <div class="row">
+                <button class="gcodeBtn gcodeBtn--small" onclick="clickSupport()">
+                    Dodaj podpory
+                </button>
+                <button class="sound" onclick="playSound(7)">
+                    <img class="soundIcon" src="./img/sound.png" alt="lektor" />
+                </button>
+            </div>
+            <button class="gcodeBtn" onclick="generateGCode2()">
+                Generuj GCode
+            </button>
+        </div>
+        <div class="view">
+            <div class="view__icons">
+                <button class="view__icon" onclick="showBookView(3)">
+                    <img class="soundIcon" src="./img/book.png" alt="ksiazka" />
+                </button>
+                <button class="view__icon" onclick="showBookView(4)">
+                    <img class="soundIcon" src="./img/question-mark.png" alt="ksiazka" />
+                </button>
+            </div>
+
+            <img class="img img--0" src="./img/zadanie2.png" alt="drukarka-3d" />
+        </div>
+        <p class="error">
+            Przy druku przedmiotów z wystającymi elementami konieczne jest zastosowanie podpór.
+        </p>
+    </div>
 </div>
 <script src="./main.js"></script>
 </body>

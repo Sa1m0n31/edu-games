@@ -114,6 +114,9 @@ const questionBox = document.querySelector('.questionBox');
 const feedbackBox = document.querySelector('.feedbackBox');
 const feedbackPlaceholder = document.querySelector('.feedback');
 const nextQuestionBtn = document.querySelector('.nextQuestionBtn');
+const resultHeader = document.querySelector('.resultHeader');
+const backgrounds = Array.from(document.querySelectorAll('.background'));
+const tryAgainBtn = document.querySelector('.tryAgainBtn');
 
 let points = 0;
 let lvl = 0;
@@ -133,7 +136,7 @@ const feedback = () => {
     questionBox.style.opacity = '0';
     questionBox.style.zIndex = '-1';
     feedbackBox.style.opacity = '1';
-    feedbackBox.style.zIndex = '1';
+    feedbackBox.style.zIndex = '4';
 
     feedbackPlaceholder.textContent = questions[lvl-1].feedback;
 }
@@ -171,8 +174,35 @@ const end = () => {
         res = results[0];
     }
 
+    backgrounds[0].style.opacity = '0';
+    backgrounds[0].style.zIndex = '-1';
+    backgrounds[1].style.opacity = '1';
+    backgrounds[1].style.zIndex = '3';
+
     feedbackPlaceholder.textContent = res;
     nextQuestionBtn.style.display = 'none';
+    resultHeader.style.visibility = 'visible';
+    resultHeader.style.marginBottom = '40px';
+    tryAgainBtn.style.visibility = 'visible';
+}
+
+const tryAgain = () => {
+    points = 0;
+    lvl = 0;
+
+    nextQuestionBtn.style.display = 'block';
+    resultHeader.style.visibility = 'hidden';
+    resultHeader.style.marginBottom = '0';
+    tryAgainBtn.style.visibility = 'hidden';
+
+    nextQuestionBtn.textContent = 'Question suivante';
+
+    backgrounds[0].style.opacity = '1';
+    backgrounds[0].style.zIndex = '1';
+    backgrounds[1].style.opacity = '0';
+    backgrounds[1].style.zIndex = '-1';
+
+    nextQuestion();
 }
 
 nextQuestion(); // start game

@@ -20,34 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="002ca950-fd59-4216-a905-34aa482f9337" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../labirynt-modyfikacja-rosyjski/img/feedback-1-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../labirynt-modyfikacja-rosyjski/img/feedback-1-2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../labirynt-modyfikacja-rosyjski/img/feedback-2-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../labirynt-modyfikacja-rosyjski/img/feedback-2-2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../labirynt-modyfikacja-rosyjski/img/feedback-3-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../labirynt-modyfikacja-rosyjski/img/feedback-3-2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../labirynt-modyfikacja-rosyjski/img/plansza-1-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../labirynt-modyfikacja-rosyjski/img/plansza-1-2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../labirynt-modyfikacja-rosyjski/img/plansza-2-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../labirynt-modyfikacja-rosyjski/img/plansza-2-2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../labirynt-modyfikacja-rosyjski/img/plansza-3-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../labirynt-modyfikacja-rosyjski/img/plansza-3-2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../labirynt-modyfikacja-rosyjski/img/start.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../labirynt-modyfikacja-rosyjski/sounds/sound1.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../labirynt-modyfikacja-rosyjski/sounds/sound2.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manifest.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/womi.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../milionerzy-modyfikacja/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../milionerzy-modyfikacja/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../milionerzy-modyfikacja/assets/img-5-2.png" beforeDir="false" afterPath="$PROJECT_DIR$/../milionerzy-modyfikacja/assets/img-5-2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../milionerzy-modyfikacja/assets/img-5-3.png" beforeDir="false" afterPath="$PROJECT_DIR$/../milionerzy-modyfikacja/assets/img-5-3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../milionerzy-modyfikacja/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/../milionerzy-modyfikacja/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../milionerzy/gra-milionerzy.zip" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/result-background.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../drukarka-3d/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../drukarka-3d/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../zastawa-hiszpanski/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../zastawa-hiszpanski/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../zastawa-hiszpanski/.idea/vcs.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,14 +54,14 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../drukarka-3d" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\sajmo\Desktop\Programowanie\edu\psychotest" />
       <recent name="C:\Users\sajmo\Desktop\Programowanie\edu\psychotest\img" />
+      <recent name="C:\Users\sajmo\Desktop\Programowanie\edu\psychotest" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -98,6 +76,7 @@
       <workItem from="1648563669666" duration="134000" />
       <workItem from="1648634819647" duration="2221000" />
       <workItem from="1648650096789" duration="1073000" />
+      <workItem from="1648748203751" duration="1698000" />
     </task>
     <servers />
   </component>
@@ -117,9 +96,9 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="-1180" y="275" key="FileChooserDialogImpl" timestamp="1648635659458">
+    <state x="-1180" y="275" key="FileChooserDialogImpl" timestamp="1648749915211">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="-1180" y="275" key="FileChooserDialogImpl/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1648635659458" />
+    <state x="-1180" y="275" key="FileChooserDialogImpl/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1648749915211" />
   </component>
 </project>
