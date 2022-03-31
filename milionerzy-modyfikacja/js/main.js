@@ -245,8 +245,6 @@ const markWrongAnswer = (position) => {
 
 const checkAnswer = (e, position) => {
     if(!gameOver) {
-        image.style.display = "none";
-
         let selectedAnswer;
         if(currentLvl === 5 || currentLvl === 6) selectedAnswer = e.getAttribute('src');
         else selectedAnswer = e.textContent;
@@ -254,6 +252,7 @@ const checkAnswer = (e, position) => {
         const currentQuestionObject = getCurrentQuestionObject();
 
         if(selectedAnswer === currentQuestionObject.right) {
+            image.style.display = "none";
             markRightAnswer(position);
         }
         else {

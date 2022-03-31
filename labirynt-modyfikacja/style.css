@@ -1,0 +1,967 @@
+@import url('https://fonts.googleapis.com/css2?family=Open-sans:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Open sans', sans-serif;
+}
+
+:root {
+    --color1: #0B0B3E;
+    --color2: #7171DF;
+    --color3: #FF0C0C;
+}
+
+.container {
+    width: clamp(200px, 100%, 1500px);
+    position: relative;
+}
+
+.carousel {
+    overflow-y: visible;
+    max-width: 1000px;
+}
+
+button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.view {
+    position: relative;
+    max-width: 640px;
+}
+
+.view__img {
+    width: 100%;
+    height: auto;
+}
+
+.btn--lvl {
+    position: absolute;
+    top: 57.5%;
+    left: 50.7%;
+    transform: translateX(-50%);
+    width: 25%;
+    height: 7%;
+    background: transparent;
+}
+
+.btn--lvl--1 {
+    top: 65.5%;
+}
+
+.btn--lvl--2 {
+    top: 73.7%;
+}
+
+.btn {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    transition: .1s all;
+}
+
+.btn:active {
+    border: 3px solid #fff;
+}
+
+.view--word .btn {
+    width: auto;
+    border-radius: 20px;
+    padding: 1px 6px;
+    font-size: 11px;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+}
+
+.btn--type1 {
+    background: var(--color1);
+}
+
+.btn--type2 {
+    background: var(--color2);
+}
+
+.btn--type3 {
+    background: var(--color3);
+}
+
+.btn--type4 {
+    background: #965CBA;
+}
+
+.btn--1 {
+    top: 68%;
+    left: 34%;
+}
+
+.btn--2 {
+    top: 34%;
+    left: 37.5%;
+}
+
+.btn--3 {
+    top: 50.3%;
+    left: 56.3%;
+}
+
+.btn--4 {
+    top: 72.3%;
+    left: 65%;
+}
+
+.btn--5 {
+    top: 38%;
+    left: 21%;
+}
+
+.btn--6 {
+    top: 33%;
+    left: 51.5%;
+}
+
+.btn--7 {
+    top: 68%;
+    left: 56.3%;
+}
+
+.btn--8 {
+    top: 53%;
+    left: 65%;
+}
+
+.btn--9 {
+    top: 58.5%;
+    left: 31%;
+}
+
+.btn--10 {
+    top: 50.5%;
+    left: 47%;
+}
+
+.btn--11 {
+    top: 45%;
+    left: 69%;
+}
+
+.btn--12 {
+    top: 83%;
+    left: 36%;
+}
+
+.btn--13 {
+    top: 67%;
+    left: 47.3%;
+}
+
+.btn--14 {
+    top: 40%;
+    left: 37.5%;
+}
+
+.btn--15 {
+    top: 44%;
+    left: 59.5%;
+}
+
+.btn--16 {
+    top: 23%;
+    left: 65%;
+}
+
+.btn--17 {
+    top: 60%;
+    left: 53%;
+}
+
+.btn--18 {
+    top: 76.5%;
+    left: 68%;
+}
+
+.btn--19 {
+    top: 49%;
+    left: 10%;
+}
+
+.btn--20 {
+    top: 46%;
+    left: 20%;
+}
+
+.btn--21 {
+    top: 55%;
+    left: 44.8%;
+}
+
+.btn--22 {
+    top: 79.5%;
+    left: 55%;
+}
+
+.btn--23 {
+    top: 51%;
+    left: 59%;
+}
+
+.btn--24 {
+    top: 32%;
+    left: 70.5%;
+}
+
+.btn--25 {
+    top: 43%;
+    left: 32.4%;
+}
+
+.btn--26 {
+    top: 74%;
+    left: 40%;
+}
+
+.btn--27 {
+    top: 66.5%;
+    left: 60%;
+}
+
+.btn--28 {
+    top: 55%;
+    left: 69%;
+}
+
+.btn--29 {
+    top: 39%;
+    left: 47%;
+}
+
+.btn--30 {
+    top: 32%;
+    left: 62%;
+}
+
+.circle {
+    position: absolute;
+    top: 57%;
+    width: 10%;
+    height: 15%;
+    background: transparent;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.circle--home {
+    left: 31%;
+}
+
+.circle--playAgain {
+    left: 45%;
+}
+
+.circle--nextLvl {
+    left: 59%;
+}
+
+.btn--31 {
+    left: 35.8%;
+    top: 60%;
+    transform: rotate(70deg);
+}
+
+.btn--31:hover {
+    transform: rotate(70deg) scale(1.05);
+}
+
+.btn--32 {
+    left: 48%;
+    top: 68%;
+    transform: rotate(39deg);
+}
+
+.btn--32:hover {
+    transform: rotate(39deg) scale(1.05);
+}
+
+.btn--33 {
+    top: 56%;
+    left: 50%;
+    transform: rotate(20deg);
+}
+
+.btn--33:hover {
+    transform: rotate(20deg) scale(1.05);
+}
+
+.btn--34 {
+    top: 34%;
+    left: 55%;
+    transform: rotate(45deg);
+}
+
+.btn--34:hover {
+    transform: rotate(45deg) scale(1.05);
+}
+
+.btn--35 {
+    top: 50%;
+    left: 65%;
+    transform: rotate(65deg);
+}
+
+.btn--35:hover {
+    transform: rotate(65deg) scale(1.05);
+}
+
+.btn--40 {
+    top: 64%;
+    left: 59%;
+    transform: rotate(-30deg);
+}
+
+.btn--40:hover {
+    transform: rotate(-30deg) scale(1.05);
+}
+
+.btn--41 {
+    top: 37%;
+    left: 18%;
+}
+
+.btn--42 {
+    top: 55%;
+    left: 38.9%;
+    transform: rotate(45deg);
+}
+
+.btn--42:hover {
+    transform: rotate(45deg) scale(1.05);
+}
+
+.btn--43 {
+    top: 77%;
+    left: 34.6%;
+    transform: rotate(75deg);
+}
+
+.btn--43:hover {
+    transform: rotate(75deg) scale(1.05);
+}
+
+.btn--44 {
+    top: 70%;
+    left: 66%;
+    transform: rotate(-60deg);
+}
+
+.btn--44:hover {
+    transform: rotate(-60deg) scale(1.05);
+}
+
+.btn--45 {
+    top: 16%;
+    left: 60%;
+    transform: rotate(-20deg);
+}
+
+.btn--45:hover {
+    transform: rotate(-20deg) scale(1.05);
+}
+
+.btn--36 {
+    top: 46%;
+    left: 38%;
+    transform: rotate(-10deg);
+}
+
+.btn--36:hover {
+    transform: rotate(-10deg) scale(1.05);
+}
+
+.btn--37 {
+    top: 31%;
+    left: 64%;
+    transform: rotate(49deg);
+}
+
+.btn--37:hover {
+    transform: rotate(49deg) scale(1.05);
+}
+
+.btn--38 {
+    top: 62%;
+    left: 29%;
+    transform: rotate(-80deg);
+}
+
+.btn--38:hover {
+    transform: rotate(-80deg) scale(1.05);
+}
+
+.btn--39 {
+    top: 73%;
+    left: 47%;
+    transform: rotate(30deg)
+}
+
+.btn--39:hover {
+    transform: rotate(30deg) scale(1.05);
+}
+
+.btn--46 {
+    top: 48%;
+    left: 34%;
+    transform: rotate(-80deg);
+}
+
+.btn--46:hover {
+    transform: rotate(-80deg) scale(1.05);
+}
+
+.btn--47 {
+    top: 49%;
+    left: 42%;
+    transform: rotate(10deg);
+}
+
+.btn--47:hover {
+    transform: rotate(10deg) scale(1.05);
+}
+
+.btn--48 {
+    top: 42%;
+    left: 60%;
+    transform: rotate(40deg);
+}
+
+.btn--48:hover {
+    transform: rotate(40deg) scale(1.05);
+}
+
+.btn--49 {
+    top: 59%;
+    left: 65%;
+    transform: rotate(-40deg);
+}
+
+.btn--49:hover {
+    transform: rotate(-40deg) scale(1.05);
+}
+
+.btn--50 {
+    top: 59%;
+    left: 47%;
+    transform: rotate(40deg);
+}
+
+.btn--50:hover {
+    transform: rotate(40deg) scale(1.05);
+}
+
+.btn--51 {
+    top: 63%;
+    left: 32.3%;
+    transform: rotate(-70deg);
+}
+
+.btn--51:hover {
+    transform: rotate(-70deg) scale(1.05);
+}
+
+.btn--52 {
+    top: 80%;
+    left: 40%;
+    transform: rotate(20deg);
+}
+
+.btn--52:hover {
+    transform: rotate(20deg) scale(1.05);
+}
+
+.btn--53 {
+    top: 78.5%;
+    left: 62%;
+    transform: rotate(25deg);
+}
+
+.btn--53:hover {
+    transform: rotate(25deg) scale(1.05);
+}
+
+.btn--54 {
+    top: 34.5%;
+    left: 23%;
+}
+
+.btn--55 {
+    top: 63%;
+    left: 36%;
+    transform: rotate(40deg);
+}
+
+.btn--55:hover {
+    transform: rotate(40deg) scale(1.05);
+}
+
+.btn--56 {
+    top: 58%;
+    left: 60%;
+}
+
+.btn--57 {
+    top: 34%;
+    left: 50%;
+    transform: rotate(-10deg);
+}
+
+.btn--57:hover {
+    transform: rotate(-10deg) scale(1.05);
+}
+
+.btn--58 {
+    top: 76%;
+    left: 47%;
+    transform: rotate(20deg);
+}
+
+.btn--58:hover {
+    transform: rotate(20deg) scale(1.05);
+}
+
+.btn--59 {
+    top: 70%;
+    left: 65%;
+    transform: rotate(-50deg);
+}
+
+.btn--59:hover {
+    transform: rotate(-50deg) scale(1.05);
+}
+
+.btn--60 {
+    top: 34.5%;
+    left: 62%;
+    transform: rotate(40deg);
+}
+
+.btn--60:hover {
+    transform: rotate(40deg) scale(1.05);
+}
+
+.btn--61 {
+    top: 14.5%;
+    left: 62%;
+    transform: rotate(-10deg);
+}
+
+.btn--61:hover {
+    transform: rotate(-10deg) scale(1.05);
+}
+
+.btn--62 {
+    top: 43%;
+    left: 24%;
+    transform: rotate(15deg);
+}
+
+.btn--62:hover {
+    transform: rotate(15deg) scale(1.05);
+}
+
+.btn--63 {
+    top: 43%;
+    left: 45%;
+}
+
+.btn--64 {
+    top: 10%;
+    left: 57%;
+    transform: rotate(-40deg);
+}
+
+.btn--64:hover {
+    transform: rotate(-40deg) scale(1.05);
+}
+
+.btn--65 {
+    top: 32%;
+    left: 66.5%;
+    transform: rotate(80deg);
+}
+
+.btn--65:hover {
+    transform: rotate(80deg) scale(1.05);
+}
+
+.btn--66 {
+    top: 48.5%;
+    left: 59%;
+    transform: rotate(-10deg);
+}
+
+.btn--66:hover {
+    transform: rotate(-10deg) scale(1.05);
+}
+
+.btn--67 {
+    top: 71%;
+    left: 36.8%;
+    transform: rotate(-60deg);
+}
+
+.btn--67:hover {
+    transform: rotate(-60deg) scale(1.05);
+}
+
+.btn--68 {
+    top: 84%;
+    left: 39%;
+    transform: rotate(15deg);
+}
+
+.btn--68:hover {
+    transform: rotate(15deg) scale(1.05);
+}
+
+.btn--69 {
+    top: 75%;
+    left: 67.7%;
+    transform: rotate(-53deg);
+}
+
+.btn--69:hover {
+    transform: rotate(-53deg) scale(1.05);
+}
+
+.btn--70 {
+    top: 51%;
+    left: 30%;
+    transform: rotate(53deg);
+}
+
+.btn--70:hover {
+    transform: rotate(53deg) scale(1.05);
+}
+
+.btn--71 {
+    top: 68%;
+    left: 43.5%;
+    transform: rotate(-44deg);
+}
+
+.btn--71:hover {
+    transform: rotate(-44deg) scale(1.05);
+}
+
+.btn--72 {
+    top: 70%;
+    left: 52.5%;
+    transform: rotate(28deg);
+}
+
+.btn--72:hover {
+    transform: rotate(28deg) scale(1.05);
+}
+
+.btn--73 {
+    left: 62%;
+    top: 64%;
+    transform: rotate(60deg);
+}
+
+.btn--73:hover {
+    transform: rotate(60deg) scale(1.05);
+}
+
+.btn--74 {
+    top: 52%;
+    left: 60%;
+    transform: rotate(-40deg);
+}
+
+.btn--74:hover {
+    transform: rotate(-40deg) scale(1.05);
+}
+
+.btn--75 {
+    top: 62%;
+    left: 70.6%;
+    transform: rotate(69deg);
+}
+
+.btn--75:hover {
+    transform: rotate(69deg) scale(1.05);
+}
+
+.btn--76 {
+    top: 44%;
+    left: 17%;
+    transform: rotate(-30deg);
+}
+
+.btn--76:hover {
+    transform: rotate(-30deg) scale(1.05);
+}
+
+.btn--77 {
+    top: 43.5%;
+    left: 39%;
+    transform: rotate(37deg);
+}
+
+.btn--77:hover {
+    transform: rotate(37deg) scale(1.05);
+}
+
+.btn--78 {
+    top: 82%;
+    left: 44%;
+    transform: rotate(35deg);
+}
+
+.btn--78:hover {
+    transform: rotate(35deg) scale(1.05);
+}
+
+.btn--79 {
+    top: 59%;
+    left: 55%;
+    transform: rotate(45deg);
+}
+
+.btn--79:hover {
+    transform: rotate(45deg) scale(1.05);
+}
+
+.btn--80 {
+    top: 35%;
+    left: 46.5%;
+    transform: rotate(-58deg);
+}
+
+.btn--80:hover {
+    transform: rotate(-50deg) scale(1.05);
+}
+
+.btn--81 {
+    top: 36%;
+    left: 56.5%;
+    transform: rotate(43deg);
+}
+
+.btn--81:hover {
+    transform: rotate(43deg) scale(1.05);
+}
+
+.btn--82 {
+    top: 36.5%;
+    left: 19.5%;
+}
+
+.btn--83 {
+    top: 52%;
+    left: 33%;
+    transform: rotate(65deg);
+}
+
+.btn--83:hover {
+    transform: rotate(65deg) scale(1.05);
+}
+
+.btn--84 {
+    top: 79.5%;
+    left: 50%;
+    transform: rotate(5deg);
+}
+
+.btn--84:hover {
+    transform: rotate(5deg) scale(1.05);
+}
+
+.btn--85 {
+    top: 61.5%;
+    left: 64%;
+    transform: rotate(60deg);
+}
+
+.btn--85:hover {
+    transform: rotate(60deg) scale(1.05);
+}
+
+.btn--86 {
+    top: 43%;
+    left: 52%;
+    transform: rotate(18deg);
+}
+
+.btn--86:hover {
+    transform: rotate(18deg) scale(1.05);
+}
+
+.btn--87 {
+    top: 31%;
+    left: 64%;
+    transform: rotate(18deg);
+}
+
+.btn--87:hover {
+    transform: rotate(18deg) scale(1.05);
+}
+
+.btn--88 {
+    top: 39%;
+    left: 15%;
+}
+
+.btn--89 {
+    top: 48%;
+    left: 30%;
+}
+
+.btn--90 {
+    top: 41%;
+    left: 58%;
+}
+
+.btn--91 {
+    top: 31%;
+    left: 70.5%;
+}
+
+.btn--92 {
+    top: 72%;
+    left: 48.5%;
+}
+
+.btn--93 {
+    top: 36.5%;
+    left: 38.5%;
+}
+
+.btn--94 {
+    top: 27%;
+    left: 63.5%;
+}
+
+.btn--95 {
+    top: 34.5%;
+    left: 22.5%;
+}
+
+.btn--96 {
+    top: 44.5%;
+    left: 37.9%;
+}
+
+.btn--97 {
+    top: 60.5%;
+    left: 50.9%;
+}
+
+.btn--98 {
+    top: 62.9%;
+    left: 60.9%;
+}
+
+.btn--99 {
+    top: 81.9%;
+    left: 64.9%;
+}
+
+.btn--100 {
+    top: 81.9%;
+    left: 38.4%;
+}
+
+.btn--101 {
+    top: 60.9%;
+    left: 40.4%;
+}
+
+.btn--102 {
+    top: 56.5%;
+    left: 64.4%;
+}
+
+.btn--103 {
+    top: 42.7%;
+    left: 30.4%;
+}
+
+.btn--104 {
+    top: 42.7%;
+    left: 44.4%;
+}
+
+.btn--105 {
+    top: 50%;
+    left: 61.4%;
+}
+
+.btn--106 {
+    top: 62%;
+    left: 70.7%;
+}
+
+.btn--107 {
+    top: 66%;
+    left: 44.7%;
+}
+
+.btn--108 {
+    top: 77%;
+    left: 38.7%;
+}
+
+.btn--109 {
+    top: 79.5%;
+    left: 46.7%;
+}
+
+.btn--110 {
+    top: 75.5%;
+    left: 59.7%;
+}
+
+.circle--home--failure {
+    left: 38%;
+}
+
+.circle--playAgain--failure {
+    left: 52.5%;
+}
+
+.soundBtn {
+    width: 3%;
+    background: transparent;
+    position: absolute;
+    top: 27%;
+    left: 30%;
+}
+
+.btn__img {
+    width: 100%;
+    height: auto;
+}
+
+.stop {
+    visibility: hidden;
+}
+
+.start, .stop {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.soundBtn2 {
+    top: 25%;
+}

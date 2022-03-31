@@ -110,6 +110,10 @@ const results = [
 
 const questionPlaceholder = document.querySelector('.question');
 const answersPlaceholders = Array.from(document.querySelectorAll('.answer'));
+const questionBox = document.querySelector('.questionBox');
+const feedbackBox = document.querySelector('.feedbackBox');
+const feedbackPlaceholder = document.querySelector('.feedback');
+const nextQuestionBtn = document.querySelector('.nextQuestionBtn');
 
 let points = 0;
 let lvl = 0;
@@ -118,26 +122,57 @@ const answer = (n) => {
     points += n;
     lvl++;
 
-    // show feedback, style stuff
+    if(lvl === 10) {
+        nextQuestionBtn.textContent = 'Fin de test';
+    }
 
+    feedback();
+}
+
+const feedback = () => {
+    questionBox.style.opacity = '0';
+    questionBox.style.zIndex = '-1';
+    feedbackBox.style.opacity = '1';
+    feedbackBox.style.zIndex = '1';
+
+    feedbackPlaceholder.textContent = questions[lvl-1].feedback;
+}
+
+const nextQuestion = () => {
     if(lvl === 10) {
         end()
+    }
+    else {
+        questionPlaceholder.textContent = questions[lvl].question;
+        answersPlaceholders.forEach((item, index) => {
+            item.textContent = questions[lvl].answers[index]
+        });
+
+        questionBox.style.opacity = '1';
+        questionBox.style.zIndex = '1';
+        feedbackBox.style.opacity = '0';
+        feedbackBox.style.zIndex = '-1';
     }
 }
 
 const end = () => {
-    if(points <= 10) {
+    let res;
 
+    if(points < 10) {
+        res = results[3];
     }
-    else if(points <= 20) {
-
+    else if(points < 20) {
+        res = results[2];
     }
-    else if(points <= 30) {
-
+    else if(points < 30) {
+        res = results[1];
     }
     else {
-
+        res = results[0];
     }
+
+    feedbackPlaceholder.textContent = res;
+    nextQuestionBtn.style.display = 'none';
 }
 
-answer(0); // start game
+nextQuestion(); // start game

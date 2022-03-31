@@ -8,7 +8,8 @@
 .container {
     position: relative;
     max-width: 640px;
-    height: 324px;
+    height: 360px;
+    overflow: hidden;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
@@ -16,12 +17,14 @@
 
 .panel {
     width: 25%;
-    height: 100%;
     padding: 20px 12px;
     align-self: center;
     background: #f1f1f1;
-    position: relative;
     z-index: 3;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: calc(100% - 80px);
 }
 
 .view {
@@ -70,10 +73,15 @@ input[type=number] {
 }
 
 .btn--color {
-    width: 70px;
+    width: 80px;
     height: 30px;
     border-radius: 5px;
-    margin-right: 15px;
+    margin-right: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 10px;
     transition: .2s all;
 }
 
@@ -94,8 +102,11 @@ input[type=number] {
 }
 
 .panel__header {
-    font-size: 14px;
-    margin-bottom: 15px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 11px;
+    margin-bottom: 7px;
     font-weight: 700;
 }
 
@@ -103,4 +114,302 @@ select {
     border-radius: 5px;
     padding: 4px;
     margin-bottom: 30px;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    min-height: 360px;
+    z-index: -1;
+    transition: .3s all;
+    background: rgb(115,119,141);
+    background: linear-gradient(0deg, rgba(115,119,141,1) 0%, rgba(132,136,157,1) 40%, rgba(212,214,227,1) 100%);
+}
+
+.slide--0 {
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    text-align: center;
+    font-size: 24px;
+}
+
+.startButtons {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.startBtn {
+    margin: 0 15px;
+    padding: 15px;
+    width: 180px;
+    height: 80px;
+    border: none;
+    border-radius: 5px;
+    background: rgb(50, 63, 123);
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    transition: .2s all;
+}
+
+.startBtn:hover {
+    opacity: .85;
+}
+
+.bhp {
+    width: 80%;
+    height: 220px;
+    overflow-y: scroll;
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-right: 20px;
+}
+
+.bhp__header {
+    font-size: 17px;
+    margin: 15px 0;
+}
+
+.bhp__header:first-of-type {
+    margin-top: 0;
+}
+
+.bhp span {
+    display: block;
+    font-size: 13px;
+}
+
+.acceptStatuteBtn {
+    width: 200px;
+    height: 45px;
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-53%);
+}
+
+.slide--2 .img {
+    opacity: 1;
+    left: 0;
+    width: 100%;
+}
+
+.icon {
+    position: absolute;
+    background: transparent;
+    height: 40px;
+    width: auto;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: .2s all;
+}
+
+.icon:hover {
+    opacity: .85;
+}
+
+.icon__img {
+    height: 100%;
+    width: auto;
+    filter: brightness(0) invert(1);
+}
+
+.icon--computer {
+    top: 20px;
+    left: 20px;
+}
+
+.icon--book {
+    top: 20px;
+    right: 20px;
+}
+
+.instruction {
+    position: absolute;
+    top: 30%;
+    left: 10%;
+    width: 80%;
+    height: 200px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: rgba(50, 63, 123, .8);
+    color: #fff;
+    font-size: 15px;
+    border-radius: 5px;
+}
+
+.slide--3 {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.slide--3 .instruction {
+    width: 100%;
+    height: 80px;
+    position: relative;
+    top: unset;
+    left: unset;
+    transform: none;
+    z-index: 5;
+    font-size: 13px;
+    border-radius: 0;
+}
+
+.gcodeBtn {
+    background: #323F7B;
+    color: #fff;
+    border-radius: 5px;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-top: -8px;
+}
+
+button {
+    transition: .2s all;
+}
+
+.gcodeBtn:hover {
+    opacity: .9;
+}
+
+.panel__input {
+    max-width: 90%;
+    margin-bottom: 20px;
+    padding: 3px 8px;
+}
+
+.slide--3 .view {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 75%;
+    height: calc(100% - 80px);
+}
+
+.slide--3 .view .img {
+    width: 100%;
+    height: 100%;
+    left: 0;
+}
+
+.sound {
+    margin-left: 8px;
+    width: 12px;
+    background: transparent;
+    border: none;
+    filter: brightness(0);
+    cursor: pointer;
+}
+
+.soundIcon {
+    width: 100%;
+}
+
+.view__icons {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 6;
+}
+
+.view__icon {
+    width: 40px;
+    height: 40px;
+    background: #f1f1f1;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.view__icon:hover .soundIcon {
+    transform: scale(1.1);
+}
+
+.view__icon .soundIcon {
+    width: 35%;
+    transition: .2s all;
+}
+
+.error {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 50px;
+    width: 75%;
+    color: #fff;
+    padding: 10px;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(200, 0, 0, .6);
+    transform: scaleY(0);
+    transform-origin: bottom left;
+    transition: .3s all;
+}
+
+.slide--4 .img {
+    left: 0;
+    width: 100%;
+}
+
+.slide--4 .img:first-of-type {
+    opacity: 1;
+}
+
+.colorsButtons {
+    width: 24%;
+    height: 31%;
+    background: red;
+    z-index: 7;
+    top: 50%;
+    left: 67%;
+    position: absolute;
+    opacity: .4;
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+}
+
+.colorsButtons__item {
+    width: 33%;
+}
+
+.printBtn {
+    width: 10%;
+    position: absolute;
+    bottom: 14.5%;
+    left: 47.5%;
+    font-size: 10px;
+    height: 8%;
+    background: transparent;
+    border: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
 }

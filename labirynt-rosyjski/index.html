@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+<div class="container">
+   <div class="carousel">
+       <div class="view">
+           <img class="view__img" src="./img/start.png" alt="start" />
+
+           <button class="btn--lvl btn--lvl--0" onclick="setLvl(0)"></button>
+           <button class="btn--lvl btn--lvl--1" onclick="setLvl(1)"></button>
+           <button class="btn--lvl btn--lvl--2" onclick="setLvl(2)"></button>
+       </div>
+
+       <!-- LVL 1 -->
+       <div class="view">
+           <img class="view__img" src="./img/plansza-1-1.png" alt="plansza-1" />
+
+           <button class="btn btn--type1 btn--1" onclick="verifyAnswer([0, 1], 6, true)">
+               6
+           </button>
+           <button class="btn btn--type1 btn--2" onclick="verifyAnswer(null)">
+               5
+           </button>
+           <button class="btn btn--type1 btn--3" onclick="verifyAnswer(null)">
+               6
+           </button>
+           <button class="btn btn--type1 btn--4" onclick="verifyAnswer(null)">
+               5
+           </button>
+
+           <button class="btn btn--type2 btn--5" onclick="verifyAnswer([0, 1], 6)">
+               6
+           </button>
+           <button class="btn btn--type2 btn--6" onclick="verifyAnswer([1, 2], 4)">
+               4
+           </button>
+           <button class="btn btn--type2 btn--7" onclick="verifyAnswer([2, 3], 7)">
+               7
+           </button>
+           <button class="btn btn--type2 btn--8" onclick="verifyAnswer([3], 5)">
+               5
+           </button>
+
+           <button class="btn btn--type3 btn--9" onclick="verifyAnswer([0, 1], 6, true)">
+               6
+           </button>
+           <button class="btn btn--type3 btn--10" onclick="verifyAnswer([1, 2], 4, true)">
+               4
+           </button>
+           <button class="btn btn--type3 btn--11" onclick="verifyAnswer(null)">
+               6
+           </button>
+           <button class="btn btn--type3 btn--12" onclick="verifyAnswer(null)">
+               5
+           </button>
+       </div>
+       <div class="view">
+           <img class="view__img" src="./img/feedback-1-1.png" alt="udalo-sie" />
+
+           <button class="circle circle--home" onclick="home()"></button>
+           <button class="circle circle--playAgain" onclick="playAgain()"></button>
+           <button class="circle circle--nextLvl" onclick="nextLvl()"></button>
+       </div>
+
+       <!-- LVL 2 -->
+       <div class="view">
+           <img class="view__img" src="./img/plansza-1-2.png" alt="plansza-2" />
+           <button class="btn btn--type2 btn--19" onclick="verifyAnswer([0, 1, 2], 8, true)">
+               8
+           </button>
+           <button class="btn btn--type2 btn--20" onclick="verifyAnswer([1, 2], 9, true)">
+               9
+           </button>
+           <button class="btn btn--type2 btn--21" onclick="verifyAnswer([2, 3], 1, true)">
+               1
+           </button>
+           <button class="btn btn--type2 btn--22" onclick="verifyAnswer([3, 4], 2, true)">
+               2
+           </button>
+           <button class="btn btn--type2 btn--23" onclick="verifyAnswer(null)">
+               5
+           </button>
+           <button class="btn btn--type2 btn--24" onclick="verifyAnswer(null)">
+               3
+           </button>
+
+           <button class="btn btn--type3 btn--25" onclick="verifyAnswer([0, 1, 2], 8, true)">
+               8
+           </button>
+           <button class="btn btn--type3 btn--26" onclick="verifyAnswer([1, 2], 9, true)">
+               9
+           </button>
+           <button class="btn btn--type3 btn--27" onclick="verifyAnswer(null)">
+               2
+           </button>
+           <button class="btn btn--type3 btn--28" onclick="verifyAnswer(null)">
+               1
+           </button>
+           <button class="btn btn--type3 btn--29" onclick="verifyAnswer(null)">
+               3
+           </button>
+           <button class="btn btn--type3 btn--30" onclick="verifyAnswer(null)">
+               5
+           </button>
+
+           <button class="btn btn--type1 btn--13" onclick="verifyAnswer([0, 1, 2, 3, 4], 8)">
+               8
+           </button>
+           <button class="btn btn--type1 btn--14" onclick="verifyAnswer([1, 2], 9)">
+               9
+           </button>
+           <button class="btn btn--type1 btn--15" onclick="verifyAnswer([2, 3], 1)">
+               1
+           </button>
+           <button class="btn btn--type1 btn--16" onclick="verifyAnswer([3, 4], 2)">
+               2
+           </button>
+           <button class="btn btn--type1 btn--17" onclick="verifyAnswer([4, 5], 3)">
+               3
+           </button>
+           <button class="btn btn--type1 btn--18" onclick="verifyAnswer([5, 6], 5)">
+               5
+           </button>
+       </div>
+       <div class="view">
+           <img class="view__img" src="./img/feedback-1-2.png" alt="udalo-sie" />
+
+           <button class="circle circle--home" onclick="home()"></button>
+           <button class="circle circle--playAgain" onclick="playAgain()"></button>
+           <button class="circle circle--nextLvl" onclick="nextLvl()"></button>
+       </div>
+
+       <!-- LVL 3 -->
+       <div class="view view--word">
+           <img class="view__img" src="./img/plansza-2-1.png" alt="plansza-2" />
+
+           <button class="btn btn--type1 btn--31" onclick="verifyAnswer([0, 1, 2, 3], 'douze', true)">
+               двена́дцать
+           </button>
+           <button class="btn btn--type1 btn--32" onclick="verifyAnswer([1, 2], 'dix-sept', true)">
+               семна́дцать
+           </button>
+           <button class="btn btn--type1 btn--33" onclick="verifyAnswer([2, 3], 'quinze', true)">
+               пятна́дцать
+           </button>
+           <button class="btn btn--type1 btn--34" onclick="verifyAnswer(null)">
+               три
+           </button>
+           <button class="btn btn--type1 btn--35" onclick="verifyAnswer(null)">
+               девятна́дцать
+           </button>
+
+           <button class="btn btn--type2 btn--41" onclick="verifyAnswer([0, 1, 2, 3], 'douze', true)">
+               двена́дцать
+           </button>
+           <button class="btn btn--type2 btn--42" onclick="verifyAnswer([1, 2], 'dix-sept', true)">
+               семна́дцать
+           </button>
+           <button class="btn btn--type2 btn--43" onclick="verifyAnswer(null)">
+               пять
+           </button>
+           <button class="btn btn--type2 btn--44" onclick="verifyAnswer(null)">
+               трина́дцать
+           </button>
+           <button class="btn btn--type2 btn--45" onclick="verifyAnswer(null)">
+               де́вять
+           </button>
+
+           <button class="btn btn--type3 btn--36" onclick="verifyAnswer([0, 1, 2], 'douze')">
+               двена́дцать
+           </button>
+           <button class="btn btn--type3 btn--37" onclick="verifyAnswer([1, 2], 'dix-sept')">
+               семна́дцать
+           </button>
+           <button class="btn btn--type3 btn--38" onclick="verifyAnswer([2, 3], 'quinze')">
+               пятна́дцать
+           </button>
+           <button class="btn btn--type3 btn--39" onclick="verifyAnswer([3, 4], 'treize')">
+               трина́дцать
+           </button>
+           <button class="btn btn--type3 btn--40" onclick="verifyAnswer([4, 5], 'dix-neuf')">
+               девятна́дцать
+           </button>
+       </div>
+       <div class="view">
+           <img class="view__img" src="./img/feedback-2-1.png" alt="udalo-sie" />
+
+           <button class="circle circle--home" onclick="home()"></button>
+           <button class="circle circle--playAgain" onclick="playAgain()"></button>
+           <button class="circle circle--nextLvl" onclick="nextLvl()"></button>
+       </div>
+
+       <!-- LVL 4 -->
+       <div class="view view--word">
+           <img class="view__img" src="./img/plansza-2-2.png" alt="plansza-2" />
+
+           <button class="btn btn--type4 btn--46" onclick="verifyAnswer([0, 1, 2, 3], 'vingt', true)">
+               два́дцать
+           </button>
+           <button class="btn btn--type4 btn--47" onclick="verifyAnswer([1, 2], 'seize', true)">
+               шестна́дцать
+           </button>
+           <button class="btn btn--type4 btn--48" onclick="verifyAnswer(null)">
+               шесть
+           </button>
+           <button class="btn btn--type4 btn--49" onclick="verifyAnswer(null)">
+               пять
+           </button>
+           <button class="btn btn--type4 btn--50" onclick="verifyAnswer(null)">
+               пятна́дцать
+           </button>
+           <button class="btn btn--type4 btn--51" onclick="verifyAnswer(null)">
+               оди́ннадцать
+           </button>
+           <button class="btn btn--type4 btn--52" onclick="verifyAnswer(null)">
+               двена́дцать
+           </button>
+           <button class="btn btn--type4 btn--53" onclick="verifyAnswer(null)">
+               де́сять
+           </button>
+
+           <button class="btn btn--type2 btn--54" onclick="verifyAnswer([0, 1, 2, 3], 'vingt')">
+               двена́дцать
+           </button>
+           <button class="btn btn--type2 btn--55" onclick="verifyAnswer([1, 2], 'seize')">
+               шестна́дцать
+           </button>
+           <button class="btn btn--type2 btn--56" onclick="verifyAnswer([2, 3], 'six')">
+               шесть
+           </button>
+           <button class="btn btn--type2 btn--57" onclick="verifyAnswer([3, 4], 'cinq')">
+               пять
+           </button>
+           <button class="btn btn--type2 btn--58" onclick="verifyAnswer([4, 5], 'quinze')">
+               пятна́дцать
+           </button>
+           <button class="btn btn--type2 btn--59" onclick="verifyAnswer([5, 6], 'onze')">
+               оди́ннадцать
+           </button>
+           <button class="btn btn--type2 btn--60" onclick="verifyAnswer([6, 7], 'douze')">
+               двена́дцать
+           </button>
+           <button class="btn btn--type2 btn--61" onclick="verifyAnswer([7, 8], 'dix')">
+               де́сять
+           </button>
+
+           <button class="btn btn--type3 btn--62" onclick="verifyAnswer([0, 1, 2], 'vingt', true)">
+               два́дцать
+           </button>
+           <button class="btn btn--type3 btn--63" onclick="verifyAnswer([1, 2], 'seize', true)">
+               шестна́дцать
+           </button>
+           <button class="btn btn--type3 btn--64" onclick="verifyAnswer([2, 3], 'six', true)">
+               шесть
+           </button>
+           <button class="btn btn--type3 btn--65" onclick="verifyAnswer(null)">
+               пять
+           </button>
+           <button class="btn btn--type3 btn--66" onclick="verifyAnswer(null)">
+               пятна́дцать
+           </button>
+           <button class="btn btn--type3 btn--67" onclick="verifyAnswer(null)">
+               оди́н
+           </button>
+           <button class="btn btn--type3 btn--68" onclick="verifyAnswer(null)">
+               два́дцать
+           </button>
+           <button class="btn btn--type3 btn--69" onclick="verifyAnswer(null)">
+               де́сять
+           </button>
+       </div>
+       <div class="view">
+           <img class="view__img" src="./img/feedback-2-2.png" alt="udalo-sie" />
+
+           <button class="circle circle--home" onclick="home()"></button>
+           <button class="circle circle--playAgain" onclick="playAgain()"></button>
+           <button class="circle circle--nextLvl" onclick="nextLvl()"></button>
+       </div>
+
+       <!-- LVL 5 -->
+       <div class="view view--word">
+           <img class="view__img" src="./img/plansza-3-1.png" alt="plansza-2" />
+
+           <button class="soundBtn" onclick="toggleSound1()">
+               <img class="btn__img start start1" src="./img/play-button.svg" alt="start" />
+               <img class="btn__img stop stop1" src="./img/pause.svg" alt="stop" />
+           </button>
+
+           <button class="btn btn--type1 btn--70" onclick="verifyAnswer([0, 1, 2, 3], 'treize', true)">
+               трина́дцать
+           </button>
+           <button class="btn btn--type1 btn--71" onclick="verifyAnswer([1, 2], 'quatorze', true)">
+               четы́рнадцать
+           </button>
+           <button class="btn btn--type1 btn--72" onclick="verifyAnswer(null)">
+               восемна́дцать
+           </button>
+           <button class="btn btn--type1 btn--73" onclick="verifyAnswer(null)">
+               де́вять
+           </button>
+           <button class="btn btn--type1 btn--74" onclick="verifyAnswer(null)">
+               два́дцать
+           </button>
+           <button class="btn btn--type1 btn--75" onclick="verifyAnswer(null)">
+               де́сять
+           </button>
+
+           <button class="btn btn--type2 btn--76" onclick="verifyAnswer([0, 1, 2], 'treize', true)">
+               трина́дцать
+           </button>
+           <button class="btn btn--type2 btn--77" onclick="verifyAnswer([1, 2], 'quatorze', true)">
+               четы́ре
+           </button>
+           <button class="btn btn--type2 btn--78" onclick="verifyAnswer([2, 3], 'dix-huit', true)">
+               восемна́дцать
+           </button>
+           <button class="btn btn--type2 btn--79" onclick="verifyAnswer(null)">
+               девятна́дцать
+           </button>
+           <button class="btn btn--type2 btn--80" onclick="verifyAnswer(null)">
+               двена́дцать
+           </button>
+           <button class="btn btn--type2 btn--81" onclick="verifyAnswer(null)">
+               два́дцать
+           </button>
+
+           <button class="btn btn--type3 btn--82" onclick="verifyAnswer([0, 1, 2, 3], 'treize')">
+               трина́дцать
+           </button>
+           <button class="btn btn--type3 btn--83" onclick="verifyAnswer([1, 2], 'quatorze')">
+               четы́рнадцать
+           </button>
+           <button class="btn btn--type3 btn--84" onclick="verifyAnswer([2, 3], 'dix-huit')">
+               восемна́дцать
+           </button>
+           <button class="btn btn--type3 btn--85" onclick="verifyAnswer([3, 4], 'dix-neuf')">
+               девятна́дцать
+           </button>
+           <button class="btn btn--type3 btn--86" onclick="verifyAnswer([4, 5], 'douze')">
+               двена́дцать
+           </button>
+           <button class="btn btn--type3 btn--87" onclick="verifyAnswer([5, 6], 'dix')">
+               де́сять
+           </button>
+       </div>
+       <div class="view">
+           <img class="view__img" src="./img/feedback-3-1.png" alt="udalo-sie" />
+
+           <button class="circle circle--home" onclick="home()"></button>
+           <button class="circle circle--playAgain" onclick="playAgain()"></button>
+           <button class="circle circle--nextLvl" onclick="nextLvl()"></button>
+       </div>
+
+       <!-- LVL 6 -->
+       <div class="view">
+           <img class="view__img" src="./img/plansza-3-2.png" alt="plansza-2" />
+
+           <button class="soundBtn soundBtn2" onclick="toggleSound2()">
+               <img class="btn__img start start2" src="./img/play-button.svg" alt="start" />
+               <img class="btn__img stop stop2" src="./img/pause.svg" alt="stop" />
+           </button>
+
+           <button class="btn btn--type1 btn--88" onclick="verifyAnswer([0, 1, 2, 3], 16)">
+               16
+           </button>
+           <button class="btn btn--type1 btn--89" onclick="verifyAnswer([1, 2], 10)">
+               10
+           </button>
+           <button class="btn btn--type1 btn--90" onclick="verifyAnswer([2, 3], 13)">
+               13
+           </button>
+           <button class="btn btn--type1 btn--91" onclick="verifyAnswer([3, 4], 12)">
+               12
+           </button>
+           <button class="btn btn--type1 btn--92" onclick="verifyAnswer([4, 5], 19)">
+               19
+           </button>
+           <button class="btn btn--type1 btn--93" onclick="verifyAnswer([5, 6], 11)">
+               11
+           </button>
+           <button class="btn btn--type1 btn--94" onclick="verifyAnswer([6, 7], 17)">
+               17
+           </button>
+
+           <button class="btn btn--type2 btn--95" onclick="verifyAnswer([0, 1, 2, 3, 4], 16, true)">
+               16
+           </button>
+           <button class="btn btn--type2 btn--96" onclick="verifyAnswer([1, 2], 10, true)">
+               10
+           </button>
+           <button class="btn btn--type2 btn--97" onclick="verifyAnswer([2, 3], 13, true)">
+               13
+           </button>
+           <button class="btn btn--type2 btn--98" onclick="verifyAnswer([3, 4], 12, true)">
+               12
+           </button>
+           <button class="btn btn--type2 btn--99" onclick="verifyAnswer(null)">
+               10
+           </button>
+           <button class="btn btn--type2 btn--100" onclick="verifyAnswer(null)">
+               9
+           </button>
+           <button class="btn btn--type2 btn--101" onclick="verifyAnswer(null)">
+               11
+           </button>
+           <button class="btn btn--type2 btn--102" onclick="verifyAnswer(null)">
+               17
+           </button>
+
+           <button class="btn btn--type3 btn--103" onclick="verifyAnswer([0, 1, 2, 3, 4], 16, true)">
+               16
+           </button>
+           <button class="btn btn--type3 btn--104" onclick="verifyAnswer([1, 2], 10, true)">
+               10
+           </button>
+           <button class="btn btn--type3 btn--105" onclick="verifyAnswer([2, 3], 13, true)">
+               13
+           </button>
+           <button class="btn btn--type3 btn--106" onclick="verifyAnswer([3, 4], 12, true)">
+               12
+           </button>
+           <button class="btn btn--type3 btn--107" onclick="verifyAnswer(null)">
+               19
+           </button>
+           <button class="btn btn--type3 btn--108" onclick="verifyAnswer(null)">
+               11
+           </button>
+           <button class="btn btn--type3 btn--109" onclick="verifyAnswer(null)">
+               10
+           </button>
+           <button class="btn btn--type3 btn--110" onclick="verifyAnswer(null)">
+               7
+           </button>
+       </div>
+       <div class="view">
+           <img class="view__img" src="./img/feedback-3-2.png" alt="udalo-sie" />
+
+           <button class="circle circle--home circle--home--failure" onclick="home()"></button>
+           <button class="circle circle--playAgain circle--playAgain--failure" onclick="playAgain()"></button>
+       </div>
+
+       <div class="view">
+           <img class="view__img" src="./img/negative-feedback.png" alt="porazka" />
+
+           <button class="circle circle--home circle--home--failure" onclick="home()"></button>
+           <button class="circle circle--playAgain circle--playAgain--failure" onclick="playAgainAfterFailure()"></button>
+       </div>
+   </div>
+</div>
+<script src="./siema.js"></script>
+<script src="./main.js"></script>
+</body>
+</html>
