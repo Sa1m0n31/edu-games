@@ -30,7 +30,6 @@ const changeColor2 = (n) => {
     }
 }
 
-// NEW
 let currentLab = 0;
 const slides = Array.from(document.querySelectorAll('.slide'));
 const inputPercent = document.querySelector('.input--percent');
@@ -39,6 +38,7 @@ const errors = Array.from(document.querySelectorAll('.error'));
 const bookViews = Array.from(document.querySelectorAll('.bookView'));
 const fixedInput1 = document.querySelector('.input--fixed1');
 const fixedInput2 = document.querySelector('.input--fixed2');
+const tImage = document.querySelector('.img--t');
 
 const sounds = [
     'material.mp3', 'wysokosc.mp3', 'wypelnienie.mp3',
@@ -65,6 +65,8 @@ const switchSlides = (hide, show) => {
 
 const setLab = (n) => {
     currentLab = n;
+
+    if(n === 1) currentColor = 0;
 
     switchSlides(0, 1);
 }
@@ -93,6 +95,8 @@ const stopAllAudios = () => {
 const playSound = (n) => {
     stopAllAudios();
     audios[n].play();
+
+    showBookView(n+5);
 }
 
 const error = (n) => {
@@ -113,8 +117,13 @@ const generateGCode = () => {
 }
 
 const finalTreatment = () => {
-    rawStarsImagesSlide5[currentColor].style.visibility = 'visible';
-    switchSlides(4, 5);
+    if(currentLab === 0) {
+        rawStarsImagesSlide5[currentColor].style.visibility = 'visible';
+        switchSlides(4, 5);
+    }
+    else {
+        switchSlides(4, 0);
+    }
 }
 
 const makeFinalTreatment = (n) => {
@@ -156,13 +165,26 @@ const changePrintSpeed = (e) => {
 
 const clickSupport = () => {
     supportClicked = true;
+    document.querySelector('.gcodeBtn--support').style.opacity = '.4';
 }
 
 const generateGCode2 = () => {
     if(supportClicked) {
-
+        switchSlides(7, 4);
     }
     else {
         error(2);
+    }
+}
+
+const changeEdges = (e) => {
+    if(e.value === 'raft') {
+        tImage.setAttribute('src', './img/raft.png');
+    }
+    else if(e.value === 'brim') {
+        tImage.setAttribute('src', './img/brim.png');
+    }
+    else {
+        tImage.setAttribute('src', './img/skirt.png');
     }
 }

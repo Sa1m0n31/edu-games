@@ -23,7 +23,7 @@
             3. Wygeneruj GCode.
         </span>
             <span>
-            4. Zamontuj w podajniku szpulę z wybranym wcześniej materiałem i kliknij przycisk drukuj.
+            4. Zamontuj w podajniku szpulę z wybranym wcześniej materiałem<br/> i kliknij przycisk drukuj.
         </span>
             <span>
             5. Wybierz sposób wykończenia powierzchni modelu.
@@ -112,6 +112,105 @@
         </div>
     </div>
 
+    <!-- MODAL WINDOWS - READ TEXT -->
+    <div class="bookView bookView--text1">
+        <button class="bookView__cancel" onclick="closeBookView()">
+            <img class="soundIcon" src="./img/cancel.png" alt="zamknij" />
+        </button>
+        <div class="bookView__inner">
+            <span>
+                Korzystając z ABS, możemy otrzymać elementy o stosunkowo wysokiej wytrzymałości mechanicznej i temperaturowej. Przedmioty wykonane z tego materiału dobrze nadają się do dalszej obróbki mechanicznej, np. wiercenia lub szlifowania, bez ryzyka pęknięcia. Ze względu na skurcz materiału, ABS wymaga wykonania druku ze stałą temperaturą.
+            </span>
+            <span>
+                PLA to materiał przyjazny środowisku. Jest tani i łatwy w użyciu, a także ma mały skurcz. Przedmioty wykonane z tego materiału mają jednak niedużą wytrzymałość. Ze względu na kruchość powinny być poddawane niewielkiej obróbce końcowej.
+            </span>
+            <span>
+                PET-G to materiał, który łączy pozytywne cechy ABS i PLA. Ma niewielki skurcz, dzięki czemu wydruk z niego jest dosyć łatwy. Wysoka przyczepność warstw zapewnia przedmiotom wykonanym z tego materiału większą wytrzymałość. Elementy wykonane z PET-G są w miarę elastyczne i odporne na uderzenia.
+            </span>
+        </div>
+    </div>
+    <div class="bookView bookView--text2">
+        <button class="bookView__cancel" onclick="closeBookView()">
+            <img class="soundIcon" src="./img/cancel.png" alt="zamknij" />
+        </button>
+        <div class="bookView__inner">
+            <span>
+               Wysokość warstwy druku to jeden z parametrów, który należy ustawić w drukarce 3D. Od wysokości warstwy zależy dokładność wykonanego elementu oraz jakość jego powierzchni bocznych. Ma ona także wpływ na czas drukowania przedmiotu.
+            </span>
+        </div>
+    </div>
+    <div class="bookView bookView--text3">
+        <button class="bookView__cancel" onclick="closeBookView()">
+            <img class="soundIcon" src="./img/cancel.png" alt="zamknij" />
+        </button>
+        <div class="bookView__inner">
+            <span>
+               Wypełnienie to kolejny parametr, który możemy ustawić w drukarce 3D. Zależy od niego wytrzymałość i masa drukowanego elementu. Im większe wypełnienie, tym większa wytrzymałość oraz masa. Większe wypełnienie wydłuża czas i podwyższa koszt druku 3D. Ten parametr określa się w procentach.
+            </span>
+        </div>
+    </div>
+    <div class="bookView bookView--text4">
+        <button class="bookView__cancel" onclick="closeBookView()">
+            <img class="soundIcon" src="./img/cancel.png" alt="zamknij" />
+        </button>
+        <div class="bookView__inner">
+            <span>
+               Istnieją różne metody obróbki końcowej, której zadaniem jest nadanie lepszego wyglądu powierzchni zewnętrznej elementów, wykonanych metodą druku 3D. Poszczególne elementy można wykończyć szlifując je, nakładając na ich powierzchnię cienką warstwę żywicy lub podgrzewając tak, żeby lekko nadtopić zewnętrzną warstwę materiału, z którego został wykonany przedmiot. Wybór obróbki końcowej zależy od użytego materiału, zamierzonego czasu i kosztów pracy, a także efektu końcowego, jaki chcemy uzyskać.
+            </span>
+        </div>
+    </div>
+    <div class="bookView bookView--text5">
+        <button class="bookView__cancel" onclick="closeBookView()">
+            <img class="soundIcon" src="./img/cancel.png" alt="zamknij" />
+        </button>
+        <div class="bookView__inner">
+            <span>
+               Pierwsze warstwy wydruku mogą mieć bardzo duże znaczenie dla jakości i poprawności wykonania przedmiotu. Przy ich wykonaniu można zastosować dodatkowe struktury, takie jak:
+            </span>
+            <span>
+                &bull; raft – poziomą powierzchnię, na której umieszczony jest właściwy drukowany przedmiot;
+            </span>
+            <span>
+                &bull; brim – kilka obrysów wokół drukowanego przedmiotu;
+            </span>
+            <span>
+                &bull; skirt – pojedynczy obrys wokół drukowanego przedmiotu, który nie dotyka samego przedmiotu.
+            </span>
+            <span>
+                Zadaniem dwóch pierwszych struktur jest przede wszystkim zwiększenie adhezji drukowanego przedmiotu do stołu roboczego drukarki. Ostatnia struktura pomaga przy prawidłowym rozpoczęciu wydruku.
+            </span>
+        </div>
+    </div>
+    <div class="bookView bookView--text7">
+        <button class="bookView__cancel" onclick="closeBookView()">
+            <img class="soundIcon" src="./img/cancel.png" alt="zamknij" />
+        </button>
+        <div class="bookView__inner">
+            <span>
+               Prędkość druku 3D zależy od prędkości, z jaką przemieszcza się ekstruder. Należy ustawić dwa parametry, czyli prędkość przemieszczania się ekstrudera w czasie nakładania materiału oraz prędkość przemieszczania się ekstrudera nad miejscami, w których nie nakłada on materiału. Od prędkości zależy zarówno czas, jak i jakość druku.
+            </span>
+        </div>
+    </div>
+    <div class="bookView bookView--text6">
+        <button class="bookView__cancel" onclick="closeBookView()">
+            <img class="soundIcon" src="./img/cancel.png" alt="zamknij" />
+        </button>
+        <div class="bookView__inner">
+            <span>
+               Retrakcja polega na zatrzymaniu i cofnięciu materiału z dyszy ekstrudera w przypadku druku powierzchni nieciągłych. Przy źle dobranych parametrach retrakcji (długości i prędkości), pomiędzy powierzchniami przedmiotu powstają cienkie nitki materiału. Prawidłowe ustawienie parametrów retrakcji zapobiega takiemu zjawisku.
+            </span>
+        </div>
+    </div>
+    <div class="bookView bookView--text7">
+        <button class="bookView__cancel" onclick="closeBookView()">
+            <img class="soundIcon" src="./img/cancel.png" alt="zamknij" />
+        </button>
+        <div class="bookView__inner">
+            <span>
+               W przypadku wydruku przedmiotu z wystającymi elementami, które są niejako zawieszone w powietrzu, konieczne jest zastosowanie podpór. W przeciwnym razie wydruk się nie uda, ponieważ tylko częściowo wystające wydrukowane elementy nie mają odpowiedniej wytrzymałości i bez odpowiednich podpór nie da się ich wydrukować.
+            </span>
+        </div>
+    </div>
 
     <div class="slide slide--0">
         <h1 class="title">
@@ -129,10 +228,10 @@
     <div class="slide slide--1">
         <div class="bhp scroll">
             <h2 class="bhp__header">
-                1. Przed uruchomieniem drukarki 3d:
+                1. Przed uruchomieniem drukarki 3D:
             </h2>
             <span>
-                - zapoznaj się z ogólną instrukcją BHP oraz instrukcją drukarki 3d;
+                - zapoznaj się z ogólną instrukcją BHP oraz instrukcją drukarki 3D;
             </span>
             <span>
                - umieść urządzenie na stabilnym podłożu;
@@ -159,10 +258,10 @@
                 - dokładnie zaplanuj poszczególne czynności.
             </span>
             <h2 class="bhp__header">
-                2. Podczas pracy drukarki 3d:
+                2. Podczas pracy drukarki 3D:
             </h2>
             <span>
-                - nie dotykaj rozgrzanej głowicy drukującej i stołu drukarki 3d;
+                - nie dotykaj rozgrzanej głowicy drukującej i stołu drukarki 3D;
             </span>
             <span>
                 - kontroluj temperaturę podzespołów urządzenia - optymalna temperatura zgodna z zaleceniami producenta;
@@ -180,7 +279,7 @@
                 - nie wkładaj rąk ani obcych ciał do wnętrza drukarki, podczas gdy urządzenie jest włączone.
             </span>
             <h2 class="bhp__header">
-                3. Po zakończeniu pracy drukarki 3d:
+                3. Po zakończeniu pracy drukarki 3D:
             </h2>
             <span>
                   - wyjmij wydrukowany model dopiero po ostygnięciu;
@@ -367,28 +466,11 @@
                     <img class="soundIcon" src="./img/sound.png" alt="lektor" />
                 </button>
             </h3>
-            <select>
+            <select onchange="changeEdges(this)">
                 <option>raft</option>
                 <option>brim</option>
                 <option>skirt</option>
             </select>
-            <h3 class="panel__header">
-                Materiał
-                <button class="sound" onclick="playSound(0)">
-                    <img class="soundIcon" src="./img/sound.png" alt="lektor" />
-                </button>
-            </h3>
-            <div class="row">
-                <button class="btn btn--color btn--color--0" onclick="changeColor(0)">
-                    ABS
-                </button>
-                <button class="btn btn--color btn--color--1" onclick="changeColor(1)">
-                    PLA
-                </button>
-                <button class="btn btn--color btn--color--2" onclick="changeColor(2)">
-                    PET-G
-                </button>
-            </div>
             <h3 class="panel__header">
                 <span>
                     Prędkość przemieszczania się ekstrudera
@@ -418,7 +500,7 @@
             <input class="panel__input input--fixed2"
                    disabled />
             <div class="row">
-                <button class="gcodeBtn gcodeBtn--small" onclick="clickSupport()">
+                <button class="gcodeBtn gcodeBtn--small gcodeBtn--support" onclick="clickSupport()">
                     Dodaj podpory
                 </button>
                 <button class="sound" onclick="playSound(7)">
@@ -439,7 +521,7 @@
                 </button>
             </div>
 
-            <img class="img img--0" src="./img/zadanie2.png" alt="drukarka-3d" />
+            <img class="img img--t" src="./img/raft.png" alt="drukarka-3d" />
         </div>
         <p class="error">
             Przy druku przedmiotów z wystającymi elementami konieczne jest zastosowanie podpór.

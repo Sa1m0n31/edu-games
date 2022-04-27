@@ -41,8 +41,18 @@
     transition: .3s all;
 }
 
+.img--t,
 .img--0 {
     opacity: 1;
+}
+
+.img--t {
+    height: 75%;
+    width: auto;
+    right: 20%;
+    left: unset;
+    bottom: 0;
+    top: unset;
 }
 
 .btn {
@@ -242,8 +252,8 @@ select {
 .instruction {
     position: absolute;
     top: 30%;
-    left: 10%;
-    width: 80%;
+    left: 5%;
+    width: 90%;
     height: 200px;
     padding: 20px;
     display: flex;
@@ -454,6 +464,7 @@ button {
     z-index: 8;
 }
 
+.modal,
 .bookView {
     position: absolute;
     top: 10%;
@@ -471,6 +482,13 @@ button {
     opacity: 0;
     z-index: -1;
     transition: .2s all;
+}
+
+.bookView--text1 {
+    height: 85%;
+    width: 84%;
+    left: 8%;
+    padding: 30px 30px 20px;
 }
 
 .bookView span {
@@ -498,11 +516,6 @@ button {
 
 .slide--7 .panel {
     overflow-y: scroll;
-}
-
-.slide--7 .img {
-    left: 15%;
-    width: 100%;
 }
 
 .slide--7 .view__icons {
