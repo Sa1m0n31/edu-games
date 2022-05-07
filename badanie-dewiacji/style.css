@@ -98,7 +98,12 @@
 }
 
 .selected__img {
-    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 1000px;
+    height: auto;
+    z-index: 0;
 }
 
 .showReasonsBtn {
@@ -108,6 +113,7 @@
     top: 26%;
     height: 8%;
     left: 42.2%;
+    z-index: 100;
 }
 
 button {
@@ -126,6 +132,10 @@ button {
     border-radius: 10px;
     visibility: hidden;
     z-index: 10;
+}
+
+.selectedWays--list {
+    width: 32.8%;
 }
 
 .selectedWays--list .selectedReason,
@@ -150,6 +160,16 @@ button {
     top: 62%;
     left: 54.7%;
     border-radius: 10px;
+}
+
+.beginBtn {
+    position: absolute;
+    bottom: 13%;
+    right: 16%;
+    width: 22%;
+    height: 37%;
+    border-radius: 50%;
+    background: transparent;
 }
 
 .feedback,
@@ -193,8 +213,8 @@ button {
     position: absolute;
     bottom: 10px;
     left: 10px;
-    width: 5%;
-    height: 9%;
+    height: 14%;
+    width: 9%;
     background: transparent;
     z-index: 3;
 }
@@ -206,16 +226,17 @@ button {
 
 .deklinacja--value {
     top: 28.3%;
-    left: 39%;
+    left: 46.5%;
     font-size: 16px;
     font-weight: 700;
 }
 
 .reason--value {
-    top: 45.2%;
+    top: 46.2%;
     left: 64.3%;
     width: 27.5%;
     height: 6%;
+    font-weight: 700;
     text-align: center;
     display: flex;
     justify-content: center;
@@ -239,13 +260,25 @@ button {
 }
 
 .input--kz--1 {
-    left: 17.9%;
-    top: 52.5%;
+    left: 23.3%;
+    top: 52%;
+    border-bottom: none;
+    font-weight: 700;
 }
 
-.input--km--1 {
-    top: 28%;
-    left: 64.5%;
+.input--kk--1 {
+    top: 28.5%;
+    left: 65.5%;
+    border-bottom: none;
+    font-weight: 700;
+}
+
+.input--kz--1::after,
+.input--kk--1::after {
+    content: '\00B0';
+    position: absolute;
+    top: 0;
+    right: 0;
 }
 
 .kkInputs,
@@ -290,8 +323,8 @@ button {
 .calculationsInputs {
     position: absolute;
     width: 27%;
-    left: 14%;
-    bottom: 12%;
+    left: 17.5%;
+    bottom: 14%;
     height: 5%;
     display: flex;
     justify-content: space-between;
@@ -301,11 +334,20 @@ button {
 .calculationsInputs .input {
     height: 100%;
     width: 14%;
+    font-weight: 700;
+    border: none;
 }
 
-.calculationsInputs .input:nth-of-type(3),
+.calculationsInputs .input:nth-of-type(2) {
+    transform: translateX(-5px);
+}
+
+.calculationsInputs .input:nth-of-type(3) {
+    transform: translateX(-15px);
+}
+
 .calculationsInputs .input:last-of-type {
-    transform: translateX(-20%);
+    transform: translateX(-18px);
 }
 
 .kmInputs--1 {
@@ -317,12 +359,15 @@ button {
 }
 
 .homeBtn--chart {
-    bottom: 78%;
-    left: 94%;
+    bottom: 1%;
+    left: 93%;
+    height: 15%;
+    width: 6%;
 }
 
-.homeBtn--home {
-    bottom: 89%;
+.homeBtn--clear {
+    height: 16%;
+    bottom: 82%;
 }
 
 .kkValues--2 {
@@ -340,8 +385,8 @@ button {
 }
 
 .reason--value--2 {
-    top: 37%;
-    left: 61%;
+    top: 46%;
+    left: 65%;
 }
 
 .kmInputs--2 {
@@ -458,4 +503,199 @@ button {
 
 body {
     max-width: 1000px;
+}
+
+.selectedReasons .selectedReason {
+    background: grey;
+    opacity: 0;
+    height: 60px;
+}
+
+.selectedReasons .selectedReason:hover {
+    opacity: .2;
+}
+
+.selectedWays--list .selectedReason {
+    height: 80px;
+}
+
+.largeRadar,
+.staticCompass,
+.compass,
+.help {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 1000px;
+    background: rgba(0, 0, 0, .5);
+    height: auto;
+    z-index: 5;
+    visibility: hidden;
+    opacity: 0;
+    transition: .3s opacity;
+}
+
+.largeRadar .img,
+.staticCompass .img,
+.compass .img,
+.help__img {
+    width: 100%;
+    height: auto;
+}
+
+.closeHelpBtn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 25px;
+    background: rgba(0, 0, 0, .8);
+    cursor: pointer;
+}
+
+.closeHelpBtn .img {
+    width: 100%;
+    height: auto;
+    filter: brightness(0) invert(1);
+}
+
+.homeBtn--help {
+    top: 20%;
+    right: 1%;
+    left: unset;
+    height: 11%;
+}
+
+.compass > button {
+    width: 6%;
+    height: 10%;
+    z-index: 10;
+    background: transparent;
+}
+
+.compassBtn {
+    position: absolute;
+    background: transparent;
+    top: 14%;
+    left: 76%;
+    width: 16%;
+    height: 31%;
+}
+
+.compassBtn--2 {
+    position: absolute;
+    background: transparent;
+    top: 36%;
+    left: 31%;
+    width: 19%;
+    height: 30%;
+}
+
+.closeCompassBtn {
+    position: absolute;
+    top: 11%;
+    left: 64.5%;
+}
+
+.acceptCompassBtn {
+    top: 11%;
+    left: 28%;
+}
+
+.plusCompass {
+    left: 28%;
+    top: 73%;
+}
+
+.minusCompass {
+    left: 64.5%;
+    top: 73%;
+}
+
+.compassValues {
+    height: auto;
+    position: absolute;
+    width: 37%;
+    top: 12%;
+    left: 31%;
+    transform-origin: center;
+    transform: rotate(133deg);
+    transition: .4s all;
+}
+
+.compassIndicator {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1110px;
+    height: auto;
+}
+
+.largeRadar .closeCompassBtn,
+.staticCompass .closeCompassBtn {
+    width: 3%;
+    background: transparent;
+    filter: brightness(0) invert(1);
+    left: 73.2%;
+    top: 12%;
+}
+
+.closeCompassBtn__img {
+    width: 100%;
+}
+
+.staticCompass__value {
+    position: absolute;
+    top: 33%;
+    left: 0;
+    color: #fff;
+    z-index: 1000;
+    font-size: 41px;
+    display: block;
+    width: 100%;
+    font-weight: 700;
+    text-align: center;
+}
+
+input:disabled {
+    color: #000;
+}
+
+.compass--2 {
+    background: red;
+}
+
+.radar {
+    position: absolute;
+    top: 27.3%;
+    left: 18%;
+    width: 29.3%;
+    height: 40%;
+    background: transparent;
+}
+
+.largeRadar .img,
+.radar .img {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+}
+
+.largeRadar {
+    height: auto;
+    z-index: -3;
+}
+
+.largeRadar .closeCompassBtn {
+    z-index: 1;
+    left: 95%;
+    bottom: unset;
+    position: absolute;
+    transform: translateY(15px);
+}
+
+.largeRadar .img:first-of-type {
+    visibility: visible;
 }

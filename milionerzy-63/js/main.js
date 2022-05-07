@@ -96,7 +96,7 @@ const questions = [
             wrong3: 'antipática'
         },
         {
-            question: 'Una persona que no tiene miedo de tomar riesgo es:',
+            question: 'Una persona que no tiene miedo de tomar riesgos es:',
             right: 'valiente',
             wrong1: 'habladora',
             wrong2: 'inteligente',

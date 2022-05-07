@@ -47,12 +47,16 @@
 }
 
 .img--t {
-    height: 75%;
-    width: auto;
-    right: 20%;
+    top: 23%;
+    left: 17%;
+}
+
+.img--t--final {
     left: unset;
-    bottom: 0;
-    top: unset;
+    right: 30%;
+    width: auto;
+    height: 90%;
+    top: 5%;
 }
 
 .btn {
@@ -97,6 +101,10 @@ input[type=number] {
 
 .btn--color:hover {
     opacity: .9;
+}
+
+.btn--color:not(:first-of-type) {
+    opacity: .5;
 }
 
 .btn--color--0 {
@@ -551,4 +559,12 @@ button {
 .panel__header > span {
     display: block;
     width: 70%;
+}
+
+.img--t--final {
+    opacity: 1;
+}
+
+.view--t--end {
+    width: 100%;
 }

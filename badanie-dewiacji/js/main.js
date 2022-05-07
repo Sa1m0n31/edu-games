@@ -1,3 +1,17 @@
+const calculationsComponents = Array.from(document.querySelectorAll('.calculationsInputs>.input--calculationsComponent'))
+const calculationsResult = document.querySelector('.calculationsInputs>.input--calculationsResult');
+const kzValueInput = document.querySelector('.input--kz--1');
+const kkValueInput = document.querySelector('.input--kk--1');
+const radarImages = Array.from(document.querySelectorAll('.radar>.img'));
+const largeRadarImages = Array.from(document.querySelectorAll('.largeRadar>.img'));
+const largeRadar = document.querySelector('.largeRadar');
+
+/* Start */
+const begin = () => {
+    document.querySelector(`.view--start`).style.visibility = 'hidden';
+    document.querySelector(`.view--1`).style.visibility = 'visible';
+}
+
 /* 1st view */
 const slider2 = document.getElementById('deklinacja');
 
@@ -11,6 +25,7 @@ slider2.oninput = function() {
 
 let reasonsVisible = false;
 const showReasons = () => {
+    console.log(reasonsVisible);
     const selectedReasonsList = document.querySelector('.selectedReasons--list');
     if(reasonsVisible) {
         selectedReasonsList.style.visibility = 'hidden';
@@ -34,31 +49,54 @@ const showWays = () => {
 }
 
 const reasons = [
-    './assets/przyczyna1.png',
-    './assets/przyczyna2.png',
-    './assets/przyczyna3.png',
-    './assets/przyczyna4.png',
-    './assets/przyczyna5.png',
-    './assets/przyczyna6.png'
+    './img/przyczyna1.png',
+    './img/przyczyna2.png',
+    './img/przyczyna3.png'
 ]
 
 const ways = [
-    './assets/sposob1.png',
-    './assets/sposob2.png',
-    './assets/sposob3.png'
+    './img/sposob1.png',
+    './img/sposob2.png'
 ]
+
+const helps = Array.from(document.querySelectorAll('.help'));
+const compass = document.querySelector('.compass');
+const compassValues = document.querySelector('.compassValues');
+const staticCompass = document.querySelector('.staticCompass');
+const staticCompassValueEl = document.querySelector('.staticCompass__value');
+
+let currentCompassRotation = 0;
+const compassRotations = [133, 89, 44, 0, -45, -90, -136, -186];
+const staticCompassValues = ['358', '41,5', '83,5', '127', '174,5', '223', '270', '314'];
 
 const setReason = (n) => {
     const chosenImg = document.querySelector('.selected__img--chosen');
     chosenImg.setAttribute('src', reasons[n-1]);
     reason = n-1;
     showReasons();
+
+    if(way !== 1) {
+        if(reason === 0) {
+            slider2.value = 1;
+        }
+        else if(reason === 1) {
+            slider2.value = -1;
+        }
+        else {
+            slider2.value = -2;
+        }
+    }
 }
 
 const setWay = (n) => {
     const chosenImg = document.querySelector('.selected__img--chosen--ways');
     chosenImg.setAttribute('src', ways[n-1]);
     way = n-1;
+
+    if(way === 1) {
+        slider2.value = 2;
+    }
+
     showWays();
 }
 
@@ -72,7 +110,7 @@ const reasonNames = [
 ]
 
 let selectedAngles = [];
-let angles = [0, 45, 90, 135, 180, 225, 270, 315, 360];
+let angles = [0, 45, 90, 135, 180, 225, 270, 315];
 let declination = [false, false, false, false, false, false, false, false, false];
 
 const toggleDeclination = (n) => {
@@ -93,16 +131,104 @@ const toggleDeclination = (n) => {
     });
 }
 
+const openHelp = () => {
+    helps.forEach((item) => {
+        item.style.visibility = 'visible';
+        item.style.opacity = '1';
+    });
+}
+
+const closeHelp = () => {
+    helps.forEach((item) => {
+        item.style.visibility = 'hidden';
+        item.style.opacity = '0';
+    });
+}
+
+const showCompass = () => {
+    compass.style.opacity = '1';
+    compass.style.visibility = 'visible';
+}
+
+const hideCompass = () => {
+    compass.style.opacity = '0';
+    compass.style.visibility = 'hidden';
+}
+
+const showStaticCompass = () => {
+    staticCompass.style.opacity = '1';
+    staticCompass.style.visibility = 'visible';
+}
+
+const hideStaticCompass = () => {
+    staticCompass.style.opacity = '0';
+    staticCompass.style.visibility = 'hidden';
+}
+
+const enlargeRadar = () => {
+    largeRadar.style.opacity = '1';
+    largeRadar.style.visibility = 'visible';
+    largeRadar.style.zIndex = '100';
+}
+
+const hideRadar = () => {
+    largeRadar.style.opacity = '0';
+    largeRadar.style.visibility = 'hidden';
+    largeRadar.style.zIndex = '-3';
+}
+
+const acceptCompass = () => {
+    hideCompass();
+}
+
+const compassPlus = () => {
+    currentCompassRotation++;
+    if(currentCompassRotation === 8) currentCompassRotation = 0;
+    compassRotation();
+}
+
+const compassMinus = () => {
+    currentCompassRotation--;
+    if(currentCompassRotation === -1) currentCompassRotation = 5;
+    compassRotation();
+}
+
+const compassRotation = () => {
+    staticCompassValueEl.textContent = staticCompassValues[currentCompassRotation];
+    compassValues.style.transform = `rotate(${compassRotations[currentCompassRotation]}deg)`;
+
+    kzValueInput.textContent = staticCompassValues[currentCompassRotation];
+    kkValueInput.textContent = angles[currentCompassRotation].toString();
+
+    radarImages.forEach((item, index) => {
+        if(index === currentCompassRotation) {
+            item.style.visibility = 'visible';
+        }
+        else {
+            item.style.visibility = 'hidden';
+        }
+    });
+    largeRadarImages.forEach((item, index) => {
+        if(index === currentCompassRotation) {
+            item.style.visibility = 'visible';
+        }
+        else {
+            item.style.visibility = 'hidden';
+        }
+    });
+}
+
 const start = () => {
     if(declination.filter((item) => {
         return item;
-    }).length === 6) {
+    }).length === 0) { // TODO: change to 8
         document.querySelector('.view--start').style.visibility = 'hidden';
+        document.querySelector('.view--1').style.visibility = 'hidden';
         document.querySelector('.view--chart').style.visibility = 'hidden';
-        document.querySelector(`.view--${way+1}`).style.visibility = 'visible';
+        document.querySelector(`.view--${way+2}`).style.visibility = 'visible';
 
         Array.from(document.querySelectorAll('.deklinacja--value')).forEach((item) => {
-            item.textContent = deklinacja;
+            item.textContent = slider2.value;
         });
         Array.from(document.querySelectorAll('.reason--value')).forEach((item) => {
             item.textContent = reasonNames[reason]
@@ -119,7 +245,7 @@ const start = () => {
         const startBtn = document.querySelector('.startBtn');
 
         feedback.style.zIndex = '2';
-        feedback.textContent = 'Wybierz dokładnie sześć kursów kompasowych';
+        feedback.textContent = 'Wybierz dokładnie osiem kursów kompasowych';
         startBtn.style.visibility = 'hidden';
 
         setTimeout(() => {
@@ -136,13 +262,11 @@ const home = () => {
     document.querySelector(`.view--3`).style.visibility = 'hidden';
     document.querySelector(`.view--chart`).style.visibility = 'hidden';
     document.querySelector(`.view--start`).style.visibility = 'visible';
-    myChart.destroy();
 }
 
 const homeOrPrev = () => {
     if(window.getComputedStyle(document.querySelector('.view--chart')).getPropertyValue('visibility') !== 'hidden') {
         start();
-        myChart.destroy();
     }
     else {
         home();
@@ -163,8 +287,6 @@ const setDeltaValues = () => {
     });
 }
 
-let data, myChart;
-
 const chart = () => {
     if(window.getComputedStyle(document.querySelector('.view--chart')).getPropertyValue('visibility') === 'hidden') {
         setDeltaValues();
@@ -173,36 +295,38 @@ const chart = () => {
         document.querySelector(`.view--2`).style.visibility = 'hidden';
         document.querySelector(`.view--3`).style.visibility = 'hidden';
         document.querySelector(`.view--chart`).style.visibility = 'visible';
-
-        data = {
-            labels: selectedAngles.sort((a, b) => {
-                return parseInt(a) >= parseInt(b) ? 1 : -1;
-            }),
-            datasets: [{
-                label: 'Wykres dewiacji',
-                backgroundColor: '#fff',
-                borderColor: '#463DB7',
-                color: '#fff',
-                data: deltaValues,
-            }]
-        };
-
-        myChart = new Chart(
-            document.getElementById('chart'),
-            {
-                type: 'line',
-                data: data,
-                options: {
-                    plugins: {
-                        legend: {
-                            display: false
-                        }
-                    }
-                }
-            }
-        );
     }
     else {
         home();
     }
+}
+
+// --------- UPDATE ----------
+calculationsComponents.forEach((item) => {
+    item.addEventListener('input', (event) => {
+        const comp1 = calculationsComponents[0];
+        const comp2 = calculationsComponents[1];
+        const comp3 = calculationsComponents[2];
+
+        if(event.target.value.length) {
+            if(isNaN(event.target.value[event.target.value.length-1])) {
+                event.target.value = event.target.value.substr(0, event.target.value.length-1);
+            }
+        }
+
+        if(comp1.value && comp2.value && comp3.value) {
+            calculationsResult.value = parseInt(comp1.value) + parseInt(comp2.value) - parseInt(comp3.value);
+        }
+        else {
+            calculationsResult.value = '';
+        }
+    });
+});
+
+const allInputs = Array.from(document.querySelectorAll('.toClear'));
+
+const clearInputs = () => {
+    allInputs.forEach((item) => {
+        item.value = '';
+    });
 }

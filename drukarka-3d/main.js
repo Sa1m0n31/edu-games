@@ -1,7 +1,7 @@
 const rawStarsImages = Array.from(document.querySelectorAll('.slide--3 .img'));
 const printersImages = Array.from(document.querySelectorAll('.slide--4 .img'));
 const rawStarsImagesSlide5 = Array.from(document.querySelectorAll('.slide--5 .img--raw'));
-
+const colorButtons = Array.from(document.querySelectorAll('.btn--color'));
 const slide5Images = Array.from(document.querySelectorAll('.slide--5 .img'));
 const treatStars0 = Array.from(document.querySelectorAll('.img--treat0'));
 const treatStars1 = Array.from(document.querySelectorAll('.img--treat1'));
@@ -12,8 +12,10 @@ let currentColor = 0, printColor = 0;
 
 const changeColor = (n) => {
     if(n !== currentColor) {
-        rawStarsImages[currentColor].style.opacity = '0';
-        rawStarsImages[n].style.opacity = '1';
+        colorButtons.forEach((item) => {
+            item.style.opacity = '.5';
+        });
+        colorButtons[n].style.opacity = '1';
         currentColor = n;
         printColor = n;
     }
@@ -39,6 +41,7 @@ const bookViews = Array.from(document.querySelectorAll('.bookView'));
 const fixedInput1 = document.querySelector('.input--fixed1');
 const fixedInput2 = document.querySelector('.input--fixed2');
 const tImage = document.querySelector('.img--t');
+const tImageFinal = document.querySelector('.img--t--final');
 
 const sounds = [
     'material.mp3', 'wysokosc.mp3', 'wypelnienie.mp3',
@@ -166,11 +169,12 @@ const changePrintSpeed = (e) => {
 const clickSupport = () => {
     supportClicked = true;
     document.querySelector('.gcodeBtn--support').style.opacity = '.4';
+    tImage.setAttribute('src', './img/t_z_podporami.png');
 }
 
 const generateGCode2 = () => {
     if(supportClicked) {
-        switchSlides(7, 4);
+        switchSlides(7, 8);
     }
     else {
         error(2);
@@ -179,12 +183,12 @@ const generateGCode2 = () => {
 
 const changeEdges = (e) => {
     if(e.value === 'raft') {
-        tImage.setAttribute('src', './img/raft.png');
+        tImageFinal.setAttribute('src', './img/raft.png');
     }
     else if(e.value === 'brim') {
-        tImage.setAttribute('src', './img/brim.png');
+        tImageFinal.setAttribute('src', './img/brim.png');
     }
     else {
-        tImage.setAttribute('src', './img/skirt.png');
+        tImageFinal.setAttribute('src', './img/skirt.png');
     }
 }

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="0771b000-6a23-4e80-85ca-57ea875946d6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/img/close.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/error.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/kompas-wartosci.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/kompas-wskaznik.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/kompas.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/plansza1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/plansza2-pomoc.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/plansza2-wykres.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/plansza2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/plansza3-pomoc.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/plansza3-wykres.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/plansza3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/przyczyny.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/radar0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/radar135.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/radar180.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/radar225.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/radar270.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/radar315.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/radar45.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/radar90.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/radarlarge0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/radarlarge135.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/radarlarge180.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/radarlarge225.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/radarlarge270.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/radarlarge315.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/radarlarge45.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/radarlarge90.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/sposoby.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/start.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/zyrokompas.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../drukarka-3d/img/gwiazdka_szara.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../drukarka-3d/img/t_bez_podpor.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../drukarka-3d/img/t_z_podporami.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/Labortorium_3-01.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/przyczyna1.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/przyczyna1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/przyczyna2.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/przyczyna2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/przyczyna3.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/przyczyna3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/sposob1.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/sposob1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/sposob2.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/sposob2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/tlo1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/tlo2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/tlo4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/tlo5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../drukarka-3d/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../drukarka-3d/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../drukarka-3d/druk-3d.zip" beforeDir="false" afterPath="$PROJECT_DIR$/../drukarka-3d/druk-3d.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../drukarka-3d/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../drukarka-3d/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../drukarka-3d/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/../drukarka-3d/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../drukarka-3d/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/../drukarka-3d/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../milionerzy-63/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/../milionerzy-63/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../milionerzy-63/milionerzy-2-8-1-3.zip" beforeDir="false" afterPath="$PROJECT_DIR$/../milionerzy-63/milionerzy-2-8-1-3.zip" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="28ne65Q2LzqTEJ9IR2KfTFA0w5h" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/img" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\sajmo\Desktop\Programowanie\edu\badanie-dewiacji\img" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0771b000-6a23-4e80-85ca-57ea875946d6" name="Default Changelist" comment="" />
+      <created>1651856598666</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1651856598666</updated>
+      <workItem from="1651856599798" duration="7032000" />
+      <workItem from="1651937406616" duration="8151000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="-1180" y="275" key="FileChooserDialogImpl" timestamp="1651914210539">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="-1180" y="275" key="FileChooserDialogImpl/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1651914210539" />
+    <state x="-1304" y="240" width="672" height="677" key="run.anything.popup" timestamp="1651940568778">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="-1304" y="240" width="672" height="677" key="run.anything.popup/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1651940568778" />
+    <state x="-1297" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1651857949272">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="-1297" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1651857949272" />
+  </component>
+</project>

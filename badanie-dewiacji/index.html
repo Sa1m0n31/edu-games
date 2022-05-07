@@ -13,7 +13,15 @@
 <div class="container">
      <div class="carousel">
          <div class="view view--start">
-             <img class="view__img" src="img/tlo1.png" alt="wybor-parametrow" />
+             <img class="view__img" src="./img/start.png" alt="start" />
+
+             <button class="beginBtn" onclick="begin()">
+
+             </button>
+         </div>
+
+         <div class="view view--1">
+             <img class="view__img" src="img/plansza1.png" alt="wybor-parametrow" />
 
              <div class="slidecontainer slider--kursy">
                  <button class="kursyBtn kursy--1" onclick="toggleDeclination(1)">
@@ -40,14 +48,13 @@
                  <button class="kursyBtn kursy--8" onclick="toggleDeclination(8)">
 
                  </button>
-                 <button class="kursyBtn kursy--9" onclick="toggleDeclination(9)">
-
-                 </button>
              </div>
+
              <div class="slidecontainer slider--deklinacja">
-                 <input type="range" min="-4" max="5" step="1" value="-4"
+                 <input type="range" min="-4" max="3" step="1" value="1" disabled
                         class="slider" id="deklinacja" />
              </div>
+
              <div class="selectedReason">
                  <img class="selected__img selected__img--chosen" src="img/przyczyna1.png" alt="przyczyna" />
              </div>
@@ -55,23 +62,16 @@
 
              </button>
              <div class="selectedReasons selectedReasons--list">
+                 <img class="selected__img" src="./img/przyczyny.png" alt="przyczyny" />
+
                  <button class="selectedReason" onclick="setReason(1)">
-                     <img class="selected__img" src="img/przyczyna1.png" alt="przyczyna" />
+
                  </button>
                  <button class="selectedReason" onclick="setReason(2)">
-                     <img class="selected__img" src="img/przyczyna2.png" alt="przyczyna" />
+
                  </button>
                  <button class="selectedReason" onclick="setReason(3)">
-                     <img class="selected__img" src="img/przyczyna3.png" alt="przyczyna" />
-                 </button>
-                 <button class="selectedReason" onclick="setReason(4)">
-                     <img class="selected__img" src="img/przyczyna4.png" alt="przyczyna" />
-                 </button>
-                 <button class="selectedReason" onclick="setReason(5)">
-                     <img class="selected__img" src="img/przyczyna5.png" alt="przyczyna" />
-                 </button>
-                 <button class="selectedReason" onclick="setReason(6)">
-                     <img class="selected__img" src="img/przyczyna6.png" alt="przyczyna" />
+
                  </button>
              </div>
 
@@ -82,14 +82,13 @@
 
              </button>
              <div class="selectedReasons selectedWays--list">
+                 <img class="selected__img" src="./img/sposoby.png" alt="przyczyny" />
+
                  <button class="selectedReason" onclick="setWay(1)">
-                     <img class="selected__img" src="img/sposob1.png" alt="przyczyna" />
+
                  </button>
                  <button class="selectedReason" onclick="setWay(2)">
-                     <img class="selected__img" src="img/sposob2.png" alt="przyczyna" />
-                 </button>
-                 <button class="selectedReason" onclick="setWay(3)">
-                     <img class="selected__img" src="img/sposob3.png" alt="przyczyna" />
+
                  </button>
              </div>
 
@@ -100,8 +99,57 @@
 
              </p>
          </div>
-         <div class="view view--1">
-             <img class="view__img" src="img/tlo2.png" alt="deklinacja" />
+
+         <!-- 1 PRZYCZYNA -->
+         <div class="view view--2">
+             <img class="view__img" src="img/plansza2.png" alt="deklinacja" />
+
+             <!-- POMOC -->
+             <div class="help">
+                 <button class="closeHelpBtn" onclick="closeHelp()">
+                      <img class="img" src="./img/close.svg" alt="zamknij" />
+                 </button>
+                 <img class="help__img" src="./img/plansza2-pomoc.png" alt="pomoc" />
+             </div>
+
+            <!-- KOMPAS -->
+             <div class="compass">
+                 <button class="closeCompassBtn" onclick="hideCompass()">
+
+                 </button>
+                 <button class="abs acceptCompassBtn" onclick="acceptCompass()">
+
+                 </button>
+                 <button class="abs plusCompass" onclick="compassPlus()">
+
+                 </button>
+                 <button class="abs minusCompass" onclick="compassMinus()">
+
+                 </button>
+
+                 <img class="img" src="./img/kompas.png" alt="kompas" />
+                 <img class="compassValues" src="./img/kompas-wartosci.png" alt="tarcza" />
+                 <img class="img compassIndicator" src="./img/kompas-wskaznik.png" alt="wskaznik" />
+             </div>
+             <button class="compassBtn" onclick="showCompass()">
+
+             </button>
+
+             <!-- ŻYROKOMPAS -->
+             <div class="staticCompass">
+                 <button class="closeCompassBtn" onclick="hideStaticCompass()">
+                    <img class="closeCompassBtn__img" src="./img/close.svg" alt="zamknij" />
+                 </button>
+
+                 <span class="staticCompass__value">
+
+                 </span>
+
+                 <img class="img" src="./img/zyrokompas.png" alt="zyrokompas" />
+             </div>
+             <button class="compassBtn--2" onclick="showStaticCompass()">
+
+             </button>
 
              <span class="deklinacja--value abs">
 
@@ -110,17 +158,20 @@
 
              </span>
 
-             <input class="input input--kz--1"
-                    name="kz--1" />
+             <span class="input input--kz--1">
+                 358
+             </span>
 
-             <input class="input input--km--1"
-                    name="km--1" />
+             <span class="input input--kk--1">
+                 000
+             </span>
 
+             <!-- WYKONAJ OBLICZENIA WEDLUG WZORU -->
              <div class="calculationsInputs">
-                 <input class="input" />
-                 <input class="input" />
-                 <input class="input" />
-                 <input class="input" />
+                 <input class="input input--calculationsComponent toClear" />
+                 <input class="input input--calculationsComponent toClear" />
+                 <input class="input input--calculationsComponent toClear" />
+                 <input class="input input--calculationsResult toClear" disabled />
              </div>
 
              <div class="kkValues kkValues--1">
@@ -165,8 +216,68 @@
                  <input class="input kkValues--item kkValues--input kmValues--input--6" />
              </div>
          </div>
-         <div class="view view--2">
-             <img class="view__img" src="img/tlo4.png" alt="deklinacja" />
+
+
+         <!-- 2. PRZYCZYNA -->
+         <div class="view view--3">
+             <img class="view__img" src="img/plansza3.png" alt="deklinacja" />
+
+             <!-- POMOC -->
+             <div class="help">
+                 <button class="closeHelpBtn" onclick="closeHelp()">
+                     <img class="img" src="./img/close.svg" alt="zamknij" />
+                 </button>
+                 <img class="help__img" src="./img/plansza3-pomoc.png" alt="pomoc" />
+             </div>
+
+             <!-- KOMPAS -->
+             <div class="compass compass--2">
+                 <button class="closeCompassBtn" onclick="hideCompass()">
+
+                 </button>
+                 <button class="abs acceptCompassBtn" onclick="acceptCompass()">
+
+                 </button>
+                 <button class="abs plusCompass" onclick="compassPlus()">
+
+                 </button>
+                 <button class="abs minusCompass" onclick="compassMinus()">
+
+                 </button>
+
+                 <img class="img" src="./img/kompas.png" alt="kompas" />
+                 <img class="compassValues" src="./img/kompas-wartosci.png" alt="tarcza" />
+                 <img class="img compassIndicator" src="./img/kompas-wskaznik.png" alt="wskaznik" />
+             </div>
+             <button class="compassBtn" onclick="showCompass()">
+
+             </button>
+
+            <!-- OBRAZKI NA RADARZE -->
+             <button class="radar" onclick="enlargeRadar()">
+                 <img class="img" src="./img/radar0.png" alt="radar-000" />
+                 <img class="img" src="./img/radar45.png" alt="radar-045" />
+                 <img class="img" src="./img/radar90.png" alt="radar-090" />
+                 <img class="img" src="./img/radar135.png" alt="radar-135" />
+                 <img class="img" src="./img/radar180.png" alt="radar-180" />
+                 <img class="img" src="./img/radar225.png" alt="radar-225" />
+                 <img class="img" src="./img/radar270.png" alt="radar-270" />
+                 <img class="img" src="./img/radar315.png" alt="radar-315" />
+             </button>
+             <div class="largeRadar">
+                 <button class="closeCompassBtn" onclick="hideRadar()">
+                     <img class="closeCompassBtn__img" src="./img/close.svg" alt="zamknij" />
+                 </button>
+
+                 <img class="img" src="./img/radarlarge0.png" alt="radar-000" />
+                 <img class="img" src="./img/radarlarge45.png" alt="radar-045" />
+                 <img class="img" src="./img/radarlarge90.png" alt="radar-090" />
+                 <img class="img" src="./img/radarlarge135.png" alt="radar-135" />
+                 <img class="img" src="./img/radarlarge180.png" alt="radar-180" />
+                 <img class="img" src="./img/radarlarge225.png" alt="radar-225" />
+                 <img class="img" src="./img/radarlarge270.png" alt="radar-270" />
+                 <img class="img" src="./img/radarlarge315.png" alt="radar-315" />
+             </div>
 
              <span class="reason--value reason--value--2 abs">
 
@@ -179,7 +290,7 @@
              <input class="input input--nr--2"
                     name="nr--2" />
 
-             <div class="calculationsInputs calculationsInputs--2">
+             <div class="calculationsInputs">
                  <input class="input" />
                  <input class="input" />
                  <input class="input" />
@@ -228,75 +339,10 @@
                  <input class="input kkValues--item kkValues--input kmValues--input--6" />
              </div>
          </div>
-         <div class="view view--3">
-             <img class="view__img" src="img/tlo5.png" alt="deklinacja" />
-
-             <span class="reason--value reason--value--3 abs">
-
-             </span>
-
-             <span class="deklinacja--value deklinacja--value--3 abs">
-
-             </span>
-
-             <input class="input input--nr--3"
-                    name="nr--3" />
-
-             <div class="calculationsInputs calculationsInputs--3">
-                 <input class="input" />
-                 <input class="input" />
-                 <input class="input" />
-             </div>
-
-
-             <div class="kkValues kkValues--3">
-                 <span class="kkValues--item kkValues--1"></span>
-                 <span class="kkValues--item kkValues--2"></span>
-                 <span class="kkValues--item kkValues--3"></span>
-                 <span class="kkValues--item kkValues--4"></span>
-                 <span class="kkValues--item kkValues--5"></span>
-                 <span class="kkValues--item kkValues--6"></span>
-             </div>
-             <div class="kkInputs kkInputs--3">
-                 <input class="input kkValues--item kkValues--input kkValues--input--1" />
-                 <input class="input kkValues--item kkValues--input kkValues--input--2" />
-                 <input class="input kkValues--item kkValues--input kkValues--input--3" />
-                 <input class="input kkValues--item kkValues--input kkValues--input--4" />
-                 <input class="input kkValues--item kkValues--input kkValues--input--5" />
-                 <input class="input kkValues--item kkValues--input kkValues--input--6" />
-             </div>
-
-             <div class="kkInputs kkInputs--3 kmInputs kmInputs--3">
-                 <input class="input kkValues--item kkValues--input kmValues--input--1" />
-                 <input class="input kkValues--item kkValues--input kmValues--input--2" />
-                 <input class="input kkValues--item kkValues--input kmValues--input--3" />
-                 <input class="input kkValues--item kkValues--input kmValues--input--4" />
-                 <input class="input kkValues--item kkValues--input kmValues--input--5" />
-                 <input class="input kkValues--item kkValues--input kmValues--input--6" />
-             </div>
-             <div class="kkValues kkInputs--3 kkValues--disabled--3">
-                 <input class="input kkValues--item kkValues--input kmValues--input--1" />
-                 <input class="input kkValues--item kkValues--input kmValues--input--2" />
-                 <input class="input kkValues--item kkValues--input kmValues--input--3" />
-                 <input class="input kkValues--item kkValues--input kmValues--input--4" />
-                 <input class="input kkValues--item kkValues--input kmValues--input--5" />
-                 <input class="input kkValues--item kkValues--input kmValues--input--6" />
-             </div>
-             <div class="kkInputs kkInputs--3 deltaInputs deltaInputs--3">
-                 <input class="input kkValues--item kkValues--input kmValues--input--1" />
-                 <input class="input kkValues--item kkValues--input kmValues--input--2" />
-                 <input class="input kkValues--item kkValues--input kmValues--input--3" />
-                 <input class="input kkValues--item kkValues--input kmValues--input--4" />
-                 <input class="input kkValues--item kkValues--input kmValues--input--5" />
-                 <input class="input kkValues--item kkValues--input kmValues--input--6" />
-             </div>
-         </div>
 
          <div class="view view--chart">
-             <img class="view__img" src="./img/Labortorium_3-01.png" alt="deklinacja" />
-             <div>
-                 <canvas id="chart" width="780" height="430"></canvas>
-             </div>
+             <img class="view__img view__img--chart1" src="./img/plansza2-wykres.png" alt="wykres" />
+             <img class="view__img view__img--chart2" src="./img/plansza3-wykres.png" alt="wykres" />
          </div>
 
          <button class="homeBtn" onclick="home()">
@@ -305,12 +351,14 @@
          <button class="homeBtn homeBtn--chart" onclick="chart()">
 
          </button>
-         <button class="homeBtn homeBtn--chart homeBtn--home" onclick="homeOrPrev()">
+         <button class="homeBtn homeBtn--chart homeBtn--clear" onclick="clearInputs()">
+
+         </button>
+         <button class="homeBtn homeBtn--help" onclick="openHelp()">
 
          </button>
      </div>
 </div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js" integrity="sha512-TW5s0IT/IppJtu76UbysrBH9Hy/5X41OTAbQuffZFU6lQ1rdcLHzpU5BzVvr/YFykoiMYZVWlr/PX1mDcfM9Qg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="./js/siema.js"></script>
 <script src="./js/main.js"></script>
 </body>
