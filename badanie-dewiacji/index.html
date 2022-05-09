@@ -151,13 +151,90 @@
 
              </button>
 
+             <!-- TABELA WARTOSCI KK I KZ -->
+             <div class="table">
+                 <div>
+                     <span>
+                         000 &deg;
+                     </span>
+                     <span>
+                         358 &deg;
+                     </span>
+                 </div>
+                 <div>
+                     <span>
+                         045 &deg;
+                     </span>
+                     <span>
+                         41,5 &deg;
+                     </span>
+                 </div>
+                 <div>
+                     <span>
+                         90 &deg;
+                     </span>
+                     <span>
+                         83,5 &deg;
+                     </span>
+                 </div>
+                 <div>
+                     <span>
+                         135 &deg;
+                     </span>
+                     <span>
+                         127 &deg;
+                     </span>
+                 </div>
+                 <div>
+                     <span>
+                         180 &deg;
+                     </span>
+                     <span>
+                         174,5 &deg;
+                     </span>
+                 </div>
+                 <div>
+                     <span>
+                         225 &deg;
+                     </span>
+                     <span>
+                         223 &deg;
+                     </span>
+                 </div>
+                 <div>
+                     <span>
+                         270 &deg;
+                     </span>
+                     <span>
+                         270 &deg;
+                     </span>
+                 </div>
+                 <div>
+                     <span>
+                         315 &deg;
+                     </span>
+                     <span>
+                         314 &deg;
+                     </span>
+                 </div>
+             </div>
+
+             <!-- DEKLINACJA -->
              <span class="deklinacja--value abs">
 
              </span>
+
+             <!-- PRZYCZYNA -->
              <span class="reason--value abs">
 
              </span>
 
+             <!-- POPRAWKA ZYROSKOPOWA -->
+             <span class="poprawkaZyroskopowa">
+                 +1 &deg;
+             </span>
+
+             <!-- ODCZYT Z KOMPASU I ODCZYT Z ZYROKOMPASU -->
              <span class="input input--kz--1">
                  358
              </span>
@@ -174,46 +251,58 @@
                  <input class="input input--calculationsResult toClear" disabled />
              </div>
 
+             <!-- INPUTY POD PRZYCZYNA -->
              <div class="kkValues kkValues--1">
-                 <span class="kkValues--item kkValues--1"></span>
-                 <span class="kkValues--item kkValues--2"></span>
-                 <span class="kkValues--item kkValues--3"></span>
-                 <span class="kkValues--item kkValues--4"></span>
-                 <span class="kkValues--item kkValues--5"></span>
-                 <span class="kkValues--item kkValues--6"></span>
+                 <span class="kkValues--item kkValues__item--1">000&deg;</span>
+                 <span class="kkValues--item kkValues--2">045&deg;</span>
+                 <span class="kkValues--item kkValues--3">090&deg;</span>
+                 <span class="kkValues--item kkValues--4">135&deg;</span>
+                 <span class="kkValues--item kkValues--5">180&deg;</span>
+                 <span class="kkValues--item kkValues--6">225&deg;</span>
+                 <span class="kkValues--item kkValues--7">270&deg;</span>
+                 <span class="kkValues--item kkValues--8">315&deg;</span>
              </div>
-             <div class="kkInputs kkInputs--1">
-                 <input class="input kkValues--item kkValues--input kkValues--input--1" />
-                 <input class="input kkValues--item kkValues--input kkValues--input--2" />
-                 <input class="input kkValues--item kkValues--input kkValues--input--3" />
-                 <input class="input kkValues--item kkValues--input kkValues--input--4" />
-                 <input class="input kkValues--item kkValues--input kkValues--input--5" />
-                 <input class="input kkValues--item kkValues--input kkValues--input--6" />
+             <div class="kkInputs kmInputs--1">
+                 <input class="input" />
+                 <input class="input" />
+                 <input class="input" />
+                 <input class="input" />
+                 <input class="input" />
+                 <input class="input" />
+                 <input class="input" />
+                 <input class="input" />
              </div>
 
-             <div class="kkInputs kkInputs--1 kmInputs kmInputs--1">
-                 <input class="input kkValues--item kkValues--input kmValues--input--1" />
-                 <input class="input kkValues--item kkValues--input kmValues--input--2" />
-                 <input class="input kkValues--item kkValues--input kmValues--input--3" />
-                 <input class="input kkValues--item kkValues--input kmValues--input--4" />
-                 <input class="input kkValues--item kkValues--input kmValues--input--5" />
-                 <input class="input kkValues--item kkValues--input kmValues--input--6" />
+             <!-- INPUTY POD OBLICZ DEWIACJE WG WZORU DLA 8 WARTOSCI -->
+             <div class="kmCalculateInputs">
+                 <input class="input" oninput="updateDelta1(this)" />
+                 <input class="input" oninput="updateDelta1(this)" />
+                 <input class="input" oninput="updateDelta1(this)" />
+                 <input class="input" oninput="updateDelta1(this)" />
+                 <input class="input" oninput="updateDelta1(this)" />
+                 <input class="input" oninput="updateDelta1(this)" />
+                 <input class="input" oninput="updateDelta1(this)" />
+                 <input class="input" oninput="updateDelta1(this)" />
              </div>
-             <div class="kkValues kkInputs--1 kkValues--disabled--1">
-                 <span class="kkValues--item kkValues--1"></span>
-                 <span class="kkValues--item kkValues--2"></span>
-                 <span class="kkValues--item kkValues--3"></span>
-                 <span class="kkValues--item kkValues--4"></span>
-                 <span class="kkValues--item kkValues--5"></span>
-                 <span class="kkValues--item kkValues--6"></span>
+             <div class="kkCalculateInputs">
+                 <input class="input" oninput="updateDelta1(this)" />
+                 <input class="input" oninput="updateDelta1(this)" />
+                 <input class="input" oninput="updateDelta1(this)" />
+                 <input class="input" oninput="updateDelta1(this)" />
+                 <input class="input" oninput="updateDelta1(this)" />
+                 <input class="input" oninput="updateDelta1(this)" />
+                 <input class="input" oninput="updateDelta1(this)" />
+                 <input class="input" oninput="updateDelta1(this)" />
              </div>
-             <div class="kkInputs kkInputs--1 deltaInputs deltaInputs--1">
-                 <input class="input kkValues--item kkValues--input kmValues--input--1" />
-                 <input class="input kkValues--item kkValues--input kmValues--input--2" />
-                 <input class="input kkValues--item kkValues--input kmValues--input--3" />
-                 <input class="input kkValues--item kkValues--input kmValues--input--4" />
-                 <input class="input kkValues--item kkValues--input kmValues--input--5" />
-                 <input class="input kkValues--item kkValues--input kmValues--input--6" />
+             <div class="deltaCalculateInputs">
+                 <input class="input" disabled />
+                 <input class="input" disabled />
+                 <input class="input" disabled />
+                 <input class="input" disabled />
+                 <input class="input" disabled />
+                 <input class="input" disabled />
+                 <input class="input" disabled />
+                 <input class="input" disabled />
              </div>
          </div>
 
@@ -253,6 +342,84 @@
 
              </button>
 
+             <!-- DEKLINACJA -->
+             <span class="deklinacja--value--2 abs">
+                 2
+             </span>
+
+             <!-- POPRAWKA ZYROSKOPOWA -->
+             <span class="poprawkaZyroskopowa">
+                 +1 &deg;
+             </span>
+
+             <!-- TABELA WARTOSCI KK I KZ -->
+             <div class="table">
+                 <div>
+                     <span>
+                         000 &deg;
+                     </span>
+                     <span>
+                         046 &deg;
+                     </span>
+                 </div>
+                 <div>
+                     <span>
+                         045 &deg;
+                     </span>
+                     <span>
+                         047 &deg;
+                     </span>
+                 </div>
+                 <div>
+                     <span>
+                         90 &deg;
+                     </span>
+                     <span>
+                         48,5 &deg;
+                     </span>
+                 </div>
+                 <div>
+                     <span>
+                         135 &deg;
+                     </span>
+                     <span>
+                         050 &deg;
+                     </span>
+                 </div>
+                 <div>
+                     <span>
+                         180 &deg;
+                     </span>
+                     <span>
+                         049 &deg;
+                     </span>
+                 </div>
+                 <div>
+                     <span>
+                         225 &deg;
+                     </span>
+                     <span>
+                         047 &deg;
+                     </span>
+                 </div>
+                 <div>
+                     <span>
+                         270 &deg;
+                     </span>
+                     <span>
+                         046 &deg;
+                     </span>
+                 </div>
+                 <div>
+                     <span>
+                         315 &deg;
+                     </span>
+                     <span>
+                         045 &deg;
+                     </span>
+                 </div>
+             </div>
+
             <!-- OBRAZKI NA RADARZE -->
              <button class="radar" onclick="enlargeRadar()">
                  <img class="img" src="./img/radar0.png" alt="radar-000" />
@@ -280,10 +447,6 @@
              </div>
 
              <span class="reason--value reason--value--2 abs">
-
-             </span>
-
-             <span class="deklinacja--value deklinacja--value--2 abs">
 
              </span>
 

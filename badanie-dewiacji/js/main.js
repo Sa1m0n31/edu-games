@@ -132,17 +132,13 @@ const toggleDeclination = (n) => {
 }
 
 const openHelp = () => {
-    helps.forEach((item) => {
-        item.style.visibility = 'visible';
-        item.style.opacity = '1';
-    });
+    helps[way].style.visibility = 'visible';
+    helps[way].style.opacity = '1';
 }
 
 const closeHelp = () => {
-    helps.forEach((item) => {
-        item.style.visibility = 'hidden';
-        item.style.opacity = '0';
-    });
+    helps[way].style.visibility = 'hidden';
+    helps[way].style.opacity = '0';
 }
 
 const showCompass = () => {
@@ -200,22 +196,24 @@ const compassRotation = () => {
     kzValueInput.textContent = staticCompassValues[currentCompassRotation];
     kkValueInput.textContent = angles[currentCompassRotation].toString();
 
-    radarImages.forEach((item, index) => {
-        if(index === currentCompassRotation) {
-            item.style.visibility = 'visible';
-        }
-        else {
-            item.style.visibility = 'hidden';
-        }
-    });
-    largeRadarImages.forEach((item, index) => {
-        if(index === currentCompassRotation) {
-            item.style.visibility = 'visible';
-        }
-        else {
-            item.style.visibility = 'hidden';
-        }
-    });
+    if(way === 1) {
+        radarImages.forEach((item, index) => {
+            if(index === currentCompassRotation) {
+                item.style.visibility = 'visible';
+            }
+            else {
+                item.style.visibility = 'hidden';
+            }
+        });
+        largeRadarImages.forEach((item, index) => {
+            if(index === currentCompassRotation) {
+                item.style.visibility = 'visible';
+            }
+            else {
+                item.style.visibility = 'hidden';
+            }
+        });
+    }
 }
 
 const start = () => {
@@ -232,12 +230,6 @@ const start = () => {
         });
         Array.from(document.querySelectorAll('.reason--value')).forEach((item) => {
             item.textContent = reasonNames[reason]
-        });
-
-        Array.from(document.querySelectorAll(`.kkValues--${way+1}>.kkValues--item`)).forEach((item, index) => {
-            item.textContent = selectedAngles.sort((a, b) => {
-                return parseInt(a) >= parseInt(b) ? 1 : -1;
-            })[index];
         });
     }
     else {
@@ -264,32 +256,8 @@ const home = () => {
     document.querySelector(`.view--start`).style.visibility = 'visible';
 }
 
-const homeOrPrev = () => {
-    if(window.getComputedStyle(document.querySelector('.view--chart')).getPropertyValue('visibility') !== 'hidden') {
-        start();
-    }
-    else {
-        home();
-    }
-}
-
-let deltaValues = [0, 0, 0, 0, 0, 0];
-
-[1, 2, 3, 4, 5, 6].forEach((item) => {
-    document.querySelector(`.kkValues--input--${item}`).addEventListener('input', (e) => {
-        document.querySelector(`.kkValues--disabled--1>.kkValues--${item}`).textContent = e.target.value;
-    })
-});
-
-const setDeltaValues = () => {
-    deltaValues = deltaValues.map((item, index) => {
-        return document.querySelector(`.deltaInputs--${way+1}>input:nth-of-type(${index+1})`).value;
-    });
-}
-
 const chart = () => {
     if(window.getComputedStyle(document.querySelector('.view--chart')).getPropertyValue('visibility') === 'hidden') {
-        setDeltaValues();
 
         document.querySelector(`.view--1`).style.visibility = 'hidden';
         document.querySelector(`.view--2`).style.visibility = 'hidden';
@@ -302,20 +270,80 @@ const chart = () => {
 }
 
 // --------- UPDATE ----------
+const preventToInputNotNumber = (event) => {
+    if(event.target.value.length) {
+        const lastSign = event.target.value[event.target.value.length-1];
+        if(event.target.value === '-') {
+
+        }
+        else if(isNaN(lastSign) && lastSign !== ',' && lastSign !== '.') {
+            event.target.value = event.target.value.substr(0, event.target.value.length-1);
+        }
+        else if(lastSign === ',') {
+            event.target.value = event.target.value.substr(0, event.target.value.length-1) + '.';
+        }
+    }
+}
+
+const kmCalculateInputs = Array.from(document.querySelectorAll('.kmCalculateInputs>.input'));
+const kkCalculateInputs = Array.from(document.querySelectorAll('.kkCalculateInputs>.input'));
+const deltaCalculateInputs = Array.from(document.querySelectorAll('.deltaCalculateInputs>.input'));
+
+const rightDeltaValues1 = [
+    [2, -3.5, -6.5, -8, -5.5, -2, 0, -1], // deklinacja = 1
+    [0, -1.5, -4.5, -6, -3.5, 0, 2, 1], // deklinacja = -1
+    [1, -0.5, -3.5, -5, -2.5, 1, 3, 2] // deklinacja = -2
+]
+
+const goToChartScreen = () => {
+
+}
+
+const updateDelta1 = (event) => {
+    if(event.value.length) {
+        const lastSign = event.value[event.value.length-1];
+        if(event.value === '-') {
+
+        }
+        else if(isNaN(lastSign) && lastSign !== ',' && lastSign !== '.') {
+            event.value = event.value.substr(0, event.value.length-1);
+        }
+        else if(lastSign === ',') {
+            event.value = event.value.substr(0, event.value.length-1) + '.';
+        }
+    }
+
+    const firstValues = kmCalculateInputs.map((item) => {
+        return item.value;
+    });
+    const secondValues = kkCalculateInputs.map((item) => {
+        return item.value;
+    });
+
+    firstValues.forEach((item, index) => {
+        if(item && secondValues[index]) {
+            const subtractionResult = item - secondValues[index];
+            if(Math.abs(subtractionResult) > 10) {
+                deltaCalculateInputs[index].value = Math.abs(360 - Math.max(item, secondValues[index]));
+            }
+            else {
+                deltaCalculateInputs[index].value = subtractionResult;
+            }
+        }
+    });
+}
+
 calculationsComponents.forEach((item) => {
     item.addEventListener('input', (event) => {
         const comp1 = calculationsComponents[0];
         const comp2 = calculationsComponents[1];
         const comp3 = calculationsComponents[2];
 
-        if(event.target.value.length) {
-            if(isNaN(event.target.value[event.target.value.length-1])) {
-                event.target.value = event.target.value.substr(0, event.target.value.length-1);
-            }
-        }
+        preventToInputNotNumber(event);
 
         if(comp1.value && comp2.value && comp3.value) {
-            calculationsResult.value = parseInt(comp1.value) + parseInt(comp2.value) - parseInt(comp3.value);
+            const result = parseFloat(comp1.value) + parseFloat(comp2.value) - parseFloat(comp3.value);
+            if(!isNaN(result)) calculationsResult.value = result;
         }
         else {
             calculationsResult.value = '';

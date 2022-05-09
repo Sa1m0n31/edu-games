@@ -226,7 +226,7 @@ button {
 
 .deklinacja--value {
     top: 28.3%;
-    left: 46.5%;
+    left: 45.5%;
     font-size: 16px;
     font-weight: 700;
 }
@@ -260,7 +260,7 @@ button {
 }
 
 .input--kz--1 {
-    left: 23.3%;
+    left: 22.2%;
     top: 52%;
     border-bottom: none;
     font-weight: 700;
@@ -300,6 +300,7 @@ button {
 }
 
 .kkValues--item {
+    font-weight: 700;
     background: transparent;
     width: 13%;
     height: 100%;
@@ -351,7 +352,9 @@ button {
 }
 
 .kmInputs--1 {
-    top: 78%;
+    top: 60%;
+    left: 54%;
+    width: 38%;
 }
 
 .deltaInputs--1 {
@@ -698,4 +701,103 @@ input:disabled {
 
 .largeRadar .img:first-of-type {
     visibility: visible;
+}
+
+.kkValues--1 {
+    top: 55%;
+    left: 54.2%;
+    width: 38%;
+}
+
+.kkValues--1 .kkValues--item {
+    border: none;
+}
+
+.kmCalculateInputs .input,
+.kkCalculateInputs .input,
+.deltaCalculateInputs .input,
+.kmInputs--1 .input {
+    display: block;
+    width: 11%;
+    height: 30px;
+    position: relative;
+    border: none;
+    font-weight: 700;
+}
+
+.kmCalculateInputs,
+.kkCalculateInputs,
+.deltaCalculateInputs {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.kmCalculateInputs {
+    position: absolute;
+    top: 77%;
+    left: 54.2%;
+    width: 37.6%;
+    height: 28px;
+}
+
+.kkCalculateInputs {
+    position: absolute;
+    top: 82%;
+    left: 54.2%;
+    width: 37.6%;
+    height: 28px;
+}
+
+.deltaCalculateInputs {
+    position: absolute;
+    top: 87.7%;
+    left: 54.2%;
+    width: 37.6%;
+    height: 28px;
+}
+
+.poprawkaZyroskopowa {
+    position: absolute;
+    top: 28.5%;
+    left: 23%;
+    font-weight: 700;
+}
+
+.view--3 .poprawkaZyroskopowa {
+    top: 21.7%;
+    left: 26.8%;
+}
+
+.deklinacja--value--2 {
+    top: 21.8%;
+    left: 40.8%;
+}
+
+.table {
+    position: absolute;
+    width: 10%;
+    height: 88%;
+    top: 24.3%;
+    left: 5.5%;
+    background: transparent;
+}
+
+.view--3 .table {
+    left: 6.2%;
+}
+
+.table > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.table > div > span {
+    display: block;
+    width: 48%;
+    height: 30px;
+    font-weight: 700;
+    font-size: 14px;
+    text-align: center;
 }
