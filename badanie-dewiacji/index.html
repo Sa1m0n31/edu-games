@@ -145,6 +145,8 @@
 
                  </span>
 
+                 <img class="img abs staticCompassValues" src="./img/zyrokompas-wartosci.png" alt="wartosci" />
+                 <img class="img abs" src="./img/zyrokompas-wskaznik.png" alt="wskaznik" />
                  <img class="img" src="./img/zyrokompas.png" alt="zyrokompas" />
              </div>
              <button class="compassBtn--2" onclick="showStaticCompass()">
@@ -263,53 +265,61 @@
                  <span class="kkValues--item kkValues--8">315&deg;</span>
              </div>
              <div class="kkInputs kmInputs--1">
-                 <input class="input" />
-                 <input class="input" />
-                 <input class="input" />
-                 <input class="input" />
-                 <input class="input" />
-                 <input class="input" />
-                 <input class="input" />
-                 <input class="input" />
+                 <input class="input toClear" />
+                 <input class="input toClear" />
+                 <input class="input toClear" />
+                 <input class="input toClear" />
+                 <input class="input toClear" />
+                 <input class="input toClear" />
+                 <input class="input toClear" />
+                 <input class="input toClear" />
              </div>
 
              <!-- INPUTY POD OBLICZ DEWIACJE WG WZORU DLA 8 WARTOSCI -->
              <div class="kmCalculateInputs">
-                 <input class="input" oninput="updateDelta1(this)" />
-                 <input class="input" oninput="updateDelta1(this)" />
-                 <input class="input" oninput="updateDelta1(this)" />
-                 <input class="input" oninput="updateDelta1(this)" />
-                 <input class="input" oninput="updateDelta1(this)" />
-                 <input class="input" oninput="updateDelta1(this)" />
-                 <input class="input" oninput="updateDelta1(this)" />
-                 <input class="input" oninput="updateDelta1(this)" />
+                 <input class="input toClear" oninput="updateDelta1(this)" />
+                 <input class="input toClear" oninput="updateDelta1(this)" />
+                 <input class="input toClear" oninput="updateDelta1(this)" />
+                 <input class="input toClear" oninput="updateDelta1(this)" />
+                 <input class="input toClear" oninput="updateDelta1(this)" />
+                 <input class="input toClear" oninput="updateDelta1(this)" />
+                 <input class="input toClear" oninput="updateDelta1(this)" />
+                 <input class="input toClear" oninput="updateDelta1(this)" />
              </div>
              <div class="kkCalculateInputs">
-                 <input class="input" oninput="updateDelta1(this)" />
-                 <input class="input" oninput="updateDelta1(this)" />
-                 <input class="input" oninput="updateDelta1(this)" />
-                 <input class="input" oninput="updateDelta1(this)" />
-                 <input class="input" oninput="updateDelta1(this)" />
-                 <input class="input" oninput="updateDelta1(this)" />
-                 <input class="input" oninput="updateDelta1(this)" />
-                 <input class="input" oninput="updateDelta1(this)" />
+                 <input class="input toClear" oninput="updateDelta1(this)" />
+                 <input class="input toClear" oninput="updateDelta1(this)" />
+                 <input class="input toClear" oninput="updateDelta1(this)" />
+                 <input class="input toClear" oninput="updateDelta1(this)" />
+                 <input class="input toClear" oninput="updateDelta1(this)" />
+                 <input class="input toClear" oninput="updateDelta1(this)" />
+                 <input class="input toClear" oninput="updateDelta1(this)" />
+                 <input class="input toClear" oninput="updateDelta1(this)" />
              </div>
              <div class="deltaCalculateInputs">
-                 <input class="input" disabled />
-                 <input class="input" disabled />
-                 <input class="input" disabled />
-                 <input class="input" disabled />
-                 <input class="input" disabled />
-                 <input class="input" disabled />
-                 <input class="input" disabled />
-                 <input class="input" disabled />
+                 <input class="input toClear" disabled />
+                 <input class="input toClear" disabled />
+                 <input class="input toClear" disabled />
+                 <input class="input toClear" disabled />
+                 <input class="input toClear" disabled />
+                 <input class="input toClear" disabled />
+                 <input class="input toClear" disabled />
+                 <input class="input toClear" disabled />
              </div>
          </div>
 
 
          <!-- 2. PRZYCZYNA -->
          <div class="view view--3">
-             <img class="view__img" src="img/plansza3.png" alt="deklinacja" />
+             <img class="view__img view__img--3" src="img/plansza3.png" alt="deklinacja" />
+             <img class="view__img view__img--3" src="./img/plansza-000.png" alt="radar-000" />
+             <img class="view__img view__img--3" src="./img/plansza-045.png" alt="radar-045" />
+             <img class="view__img view__img--3" src="./img/plansza-090.png" alt="radar-090" />
+             <img class="view__img view__img--3" src="./img/plansza-135.png" alt="radar-135" />
+             <img class="view__img view__img--3" src="./img/plansza-180.png" alt="radar-180" />
+             <img class="view__img view__img--3" src="./img/plansza-225.png" alt="radar-225" />
+             <img class="view__img view__img--3" src="./img/plansza-270.png" alt="radar-270" />
+             <img class="view__img view__img--3" src="./img/plansza-315.png" alt="radar-315" />
 
              <!-- POMOC -->
              <div class="help">
@@ -344,7 +354,7 @@
 
              <!-- DEKLINACJA -->
              <span class="deklinacja--value--2 abs">
-                 2
+                 2 &deg;
              </span>
 
              <!-- POPRAWKA ZYROSKOPOWA -->
@@ -420,39 +430,51 @@
                  </div>
              </div>
 
-            <!-- OBRAZKI NA RADARZE -->
+            <!-- POWIEKSZENIE RADARU -->
              <button class="radar" onclick="enlargeRadar()">
-                 <img class="img" src="./img/radar0.png" alt="radar-000" />
-                 <img class="img" src="./img/radar45.png" alt="radar-045" />
-                 <img class="img" src="./img/radar90.png" alt="radar-090" />
-                 <img class="img" src="./img/radar135.png" alt="radar-135" />
-                 <img class="img" src="./img/radar180.png" alt="radar-180" />
-                 <img class="img" src="./img/radar225.png" alt="radar-225" />
-                 <img class="img" src="./img/radar270.png" alt="radar-270" />
-                 <img class="img" src="./img/radar315.png" alt="radar-315" />
+
              </button>
              <div class="largeRadar">
                  <button class="closeCompassBtn" onclick="hideRadar()">
                      <img class="closeCompassBtn__img" src="./img/close.svg" alt="zamknij" />
                  </button>
 
-                 <img class="img" src="./img/radarlarge0.png" alt="radar-000" />
-                 <img class="img" src="./img/radarlarge45.png" alt="radar-045" />
-                 <img class="img" src="./img/radarlarge90.png" alt="radar-090" />
-                 <img class="img" src="./img/radarlarge135.png" alt="radar-135" />
-                 <img class="img" src="./img/radarlarge180.png" alt="radar-180" />
-                 <img class="img" src="./img/radarlarge225.png" alt="radar-225" />
-                 <img class="img" src="./img/radarlarge270.png" alt="radar-270" />
-                 <img class="img" src="./img/radarlarge315.png" alt="radar-315" />
+                 <img class="img" src="./img/mapa-000.png" alt="radar-000" />
+                 <img class="img" src="./img/mapa-045.png" alt="radar-045" />
+                 <img class="img" src="./img/mapa-090.png" alt="radar-090" />
+                 <img class="img" src="./img/mapa-135.png" alt="radar-135" />
+                 <img class="img" src="./img/mapa-180.png" alt="radar-180" />
+                 <img class="img" src="./img/mapa-225.png" alt="radar-225" />
+                 <img class="img" src="./img/mapa-270.png" alt="radar-270" />
+                 <img class="img" src="./img/mapa-315.png" alt="radar-315" />
              </div>
 
+             <!-- PRZYCZYNA -->
              <span class="reason--value reason--value--2 abs">
 
              </span>
 
-             <input class="input input--nr--2"
-                    name="nr--2" />
+             <!-- ODCZYT Z KOMPASU -->
+             <span class="input input--kk--2">
+                 <span>
 
+                 </span>
+                 <span>
+                     &deg;
+                 </span>
+             </span>
+
+             <!-- NK -->
+             <span class="input input--nk--2">
+                <span>
+
+                 </span>
+                 <span>
+                     &deg;
+                 </span>
+             </span>
+
+             <!-- OBLICZ NAMIAR MAGNETYCZNY NA NABIEZNIK -->
              <div class="calculationsInputs">
                  <input class="input" />
                  <input class="input" />
@@ -460,46 +482,58 @@
              </div>
 
 
-             <div class="kkValues kkValues--2">
-                 <span class="kkValues--item kkValues--1"></span>
-                 <span class="kkValues--item kkValues--2"></span>
-                 <span class="kkValues--item kkValues--3"></span>
-                 <span class="kkValues--item kkValues--4"></span>
-                 <span class="kkValues--item kkValues--5"></span>
-                 <span class="kkValues--item kkValues--6"></span>
+             <!-- INPUTY POD PRZYCZYNA -->
+             <div class="kkValues kkValues--1">
+                 <span class="kkValues--item kkValues__item--1">000&deg;</span>
+                 <span class="kkValues--item kkValues--2">045&deg;</span>
+                 <span class="kkValues--item kkValues--3">090&deg;</span>
+                 <span class="kkValues--item kkValues--4">135&deg;</span>
+                 <span class="kkValues--item kkValues--5">180&deg;</span>
+                 <span class="kkValues--item kkValues--6">225&deg;</span>
+                 <span class="kkValues--item kkValues--7">270&deg;</span>
+                 <span class="kkValues--item kkValues--8">315&deg;</span>
              </div>
-             <div class="kkInputs kkInputs--2">
-                 <input class="input kkValues--item kkValues--input kkValues--input--1" />
-                 <input class="input kkValues--item kkValues--input kkValues--input--2" />
-                 <input class="input kkValues--item kkValues--input kkValues--input--3" />
-                 <input class="input kkValues--item kkValues--input kkValues--input--4" />
-                 <input class="input kkValues--item kkValues--input kkValues--input--5" />
-                 <input class="input kkValues--item kkValues--input kkValues--input--6" />
+             <div class="kkInputs nmInputs--2">
+                 <input class="input toClear" />
+                 <input class="input toClear" />
+                 <input class="input toClear" />
+                 <input class="input toClear" />
+                 <input class="input toClear" />
+                 <input class="input toClear" />
+                 <input class="input toClear" />
+                 <input class="input toClear" />
              </div>
 
-             <div class="kkInputs kkInputs--2 kmInputs kmInputs--2">
-                 <input class="input kkValues--item kkValues--input kmValues--input--1" />
-                 <input class="input kkValues--item kkValues--input kmValues--input--2" />
-                 <input class="input kkValues--item kkValues--input kmValues--input--3" />
-                 <input class="input kkValues--item kkValues--input kmValues--input--4" />
-                 <input class="input kkValues--item kkValues--input kmValues--input--5" />
-                 <input class="input kkValues--item kkValues--input kmValues--input--6" />
+             <!-- INPUTY POD OBLICZ DEWIACJE WG WZORU DLA 8 WARTOSCI -->
+             <div class="nmCalculateInputs">
+                 <input class="input toClear" oninput="updateDelta2(this)" />
+                 <input class="input toClear" oninput="updateDelta2(this)" />
+                 <input class="input toClear" oninput="updateDelta2(this)" />
+                 <input class="input toClear" oninput="updateDelta2(this)" />
+                 <input class="input toClear" oninput="updateDelta2(this)" />
+                 <input class="input toClear" oninput="updateDelta2(this)" />
+                 <input class="input toClear" oninput="updateDelta2(this)" />
+                 <input class="input toClear" oninput="updateDelta2(this)" />
              </div>
-             <div class="kkValues kkInputs--2 kkValues--disabled--2">
-                 <input class="input kkValues--item kkValues--input kmValues--input--1" />
-                 <input class="input kkValues--item kkValues--input kmValues--input--2" />
-                 <input class="input kkValues--item kkValues--input kmValues--input--3" />
-                 <input class="input kkValues--item kkValues--input kmValues--input--4" />
-                 <input class="input kkValues--item kkValues--input kmValues--input--5" />
-                 <input class="input kkValues--item kkValues--input kmValues--input--6" />
+             <div class="nkCalculateInputs">
+                 <input class="input toClear" oninput="updateDelta2(this)" />
+                 <input class="input toClear" oninput="updateDelta2(this)" />
+                 <input class="input toClear" oninput="updateDelta2(this)" />
+                 <input class="input toClear" oninput="updateDelta2(this)" />
+                 <input class="input toClear" oninput="updateDelta2(this)" />
+                 <input class="input toClear" oninput="updateDelta2(this)" />
+                 <input class="input toClear" oninput="updateDelta2(this)" />
+                 <input class="input toClear" oninput="updateDelta2(this)" />
              </div>
-             <div class="kkInputs kkInputs--2 deltaInputs deltaInputs--2">
-                 <input class="input kkValues--item kkValues--input kmValues--input--1" />
-                 <input class="input kkValues--item kkValues--input kmValues--input--2" />
-                 <input class="input kkValues--item kkValues--input kmValues--input--3" />
-                 <input class="input kkValues--item kkValues--input kmValues--input--4" />
-                 <input class="input kkValues--item kkValues--input kmValues--input--5" />
-                 <input class="input kkValues--item kkValues--input kmValues--input--6" />
+             <div class="deltaCalculateInputs--2">
+                 <input class="input toClear" disabled />
+                 <input class="input toClear" disabled />
+                 <input class="input toClear" disabled />
+                 <input class="input toClear" disabled />
+                 <input class="input toClear" disabled />
+                 <input class="input toClear" disabled />
+                 <input class="input toClear" disabled />
+                 <input class="input toClear" disabled />
              </div>
          </div>
 

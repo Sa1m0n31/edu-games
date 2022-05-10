@@ -5,6 +5,11 @@ const kkValueInput = document.querySelector('.input--kk--1');
 const radarImages = Array.from(document.querySelectorAll('.radar>.img'));
 const largeRadarImages = Array.from(document.querySelectorAll('.largeRadar>.img'));
 const largeRadar = document.querySelector('.largeRadar');
+const view3Backgrounds = Array.from(document.querySelectorAll('.view__img--3'));
+const nkInput = document.querySelector('.input--nk--2>span:first-of-type');
+const kkValueSecondInput = document.querySelector('.input--kk--2>span:first-of-type');
+const nkInputParent = document.querySelector('.input--nk--2');
+const kkValueSecondInputParent = document.querySelector('.input--kk--2');
 
 /* Start */
 const begin = () => {
@@ -25,7 +30,6 @@ slider2.oninput = function() {
 
 let reasonsVisible = false;
 const showReasons = () => {
-    console.log(reasonsVisible);
     const selectedReasonsList = document.querySelector('.selectedReasons--list');
     if(reasonsVisible) {
         selectedReasonsList.style.visibility = 'hidden';
@@ -63,10 +67,11 @@ const helps = Array.from(document.querySelectorAll('.help'));
 const compass = document.querySelector('.compass');
 const compassValues = document.querySelector('.compassValues');
 const staticCompass = document.querySelector('.staticCompass');
-const staticCompassValueEl = document.querySelector('.staticCompass__value');
+const staticCompassValueEl = document.querySelector('.staticCompassValues');
 
 let currentCompassRotation = 0;
 const compassRotations = [133, 89, 44, 0, -45, -90, -136, -186];
+const nkValues = ['46', '47', '48,5', '50', '49', '47', '46', '45'];
 const staticCompassValues = ['358', '41,5', '83,5', '127', '174,5', '223', '270', '314'];
 
 const setReason = (n) => {
@@ -134,11 +139,13 @@ const toggleDeclination = (n) => {
 const openHelp = () => {
     helps[way].style.visibility = 'visible';
     helps[way].style.opacity = '1';
+    if(way === 1) document.querySelector('.view--3').style.zIndex = '4';
 }
 
 const closeHelp = () => {
     helps[way].style.visibility = 'hidden';
     helps[way].style.opacity = '0';
+    if(way === 1)  document.querySelector('.view--3').style.zIndex = '2';
 }
 
 const showCompass = () => {
@@ -165,12 +172,14 @@ const enlargeRadar = () => {
     largeRadar.style.opacity = '1';
     largeRadar.style.visibility = 'visible';
     largeRadar.style.zIndex = '100';
+    document.querySelector('.view--3').style.zIndex = '4';
 }
 
 const hideRadar = () => {
     largeRadar.style.opacity = '0';
     largeRadar.style.visibility = 'hidden';
     largeRadar.style.zIndex = '-3';
+    document.querySelector('.view--3').style.zIndex = '2';
 }
 
 const acceptCompass = () => {
@@ -189,16 +198,18 @@ const compassMinus = () => {
     compassRotation();
 }
 
+const staticCompassRotations = [136, 93, 52, 8, -40, -89, -136, -180];
+
 const compassRotation = () => {
-    staticCompassValueEl.textContent = staticCompassValues[currentCompassRotation];
     compassValues.style.transform = `rotate(${compassRotations[currentCompassRotation]}deg)`;
+    staticCompassValueEl.style.transform = `rotate(${staticCompassRotations[currentCompassRotation]}deg)`;
 
     kzValueInput.textContent = staticCompassValues[currentCompassRotation];
     kkValueInput.textContent = angles[currentCompassRotation].toString();
 
     if(way === 1) {
-        radarImages.forEach((item, index) => {
-            if(index === currentCompassRotation) {
+        view3Backgrounds.forEach((item, index) => {
+            if(index === currentCompassRotation + 1) {
                 item.style.visibility = 'visible';
             }
             else {
@@ -213,6 +224,11 @@ const compassRotation = () => {
                 item.style.visibility = 'hidden';
             }
         });
+
+        nkInputParent.style.opacity = '1';
+        kkValueSecondInputParent.style.opacity = '1';
+        nkInput.textContent = nkValues[currentCompassRotation];
+        kkValueSecondInput.textContent = angles[currentCompassRotation];
     }
 }
 
@@ -231,6 +247,12 @@ const start = () => {
         Array.from(document.querySelectorAll('.reason--value')).forEach((item) => {
             item.textContent = reasonNames[reason]
         });
+
+        view3Backgrounds[0].style.visibility = 'visible';
+
+        if(way === 1) {
+            document.querySelector('.view--3').style.zIndex = '2';
+        }
     }
     else {
         const feedback = document.querySelector('.feedback');
@@ -289,6 +311,11 @@ const kmCalculateInputs = Array.from(document.querySelectorAll('.kmCalculateInpu
 const kkCalculateInputs = Array.from(document.querySelectorAll('.kkCalculateInputs>.input'));
 const deltaCalculateInputs = Array.from(document.querySelectorAll('.deltaCalculateInputs>.input'));
 
+
+const nmCalculateInputs = Array.from(document.querySelectorAll('.nmCalculateInputs>.input'));
+const nkCalculateInputs = Array.from(document.querySelectorAll('.nkCalculateInputs>.input'));
+const deltaCalculateInputs2 = Array.from(document.querySelectorAll('.deltaCalculateInputs--2>.input'));
+
 const rightDeltaValues1 = [
     [2, -3.5, -6.5, -8, -5.5, -2, 0, -1], // deklinacja = 1
     [0, -1.5, -4.5, -6, -3.5, 0, 2, 1], // deklinacja = -1
@@ -299,7 +326,7 @@ const goToChartScreen = () => {
 
 }
 
-const updateDelta1 = (event) => {
+const inputValudatiion = (event) => {
     if(event.value.length) {
         const lastSign = event.value[event.value.length-1];
         if(event.value === '-') {
@@ -312,6 +339,10 @@ const updateDelta1 = (event) => {
             event.value = event.value.substr(0, event.value.length-1) + '.';
         }
     }
+}
+
+const updateDelta1 = (event) => {
+    inputValudatiion(event);
 
     const firstValues = kmCalculateInputs.map((item) => {
         return item.value;
@@ -328,6 +359,29 @@ const updateDelta1 = (event) => {
             }
             else {
                 deltaCalculateInputs[index].value = subtractionResult;
+            }
+        }
+    });
+}
+
+const updateDelta2 = (event) => {
+    inputValudatiion(event);
+
+    const firstValues = nmCalculateInputs.map((item) => {
+        return item.value;
+    });
+    const secondValues = nkCalculateInputs.map((item) => {
+        return item.value;
+    });
+
+    firstValues.forEach((item, index) => {
+        if(item && secondValues[index]) {
+            const subtractionResult = item - secondValues[index];
+            if(Math.abs(subtractionResult) > 10) {
+                deltaCalculateInputs2[index].value = Math.abs(360 - Math.max(item, secondValues[index]));
+            }
+            else {
+                deltaCalculateInputs2[index].value = subtractionResult;
             }
         }
     });

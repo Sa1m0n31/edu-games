@@ -351,6 +351,7 @@ button {
     transform: translateX(-18px);
 }
 
+.nmInputs--2,
 .kmInputs--1 {
     top: 60%;
     left: 54%;
@@ -409,9 +410,11 @@ button {
     left: 28.4%;
 }
 
-.input--nr--2 {
-    top: 24.4%;
-    left: 28.5%;
+.input--nk--2 {
+    font-weight: 700;
+    top: 69.5%;
+    left: 31.9%;
+    text-align: center;
 }
 
 .calculationsInputs .input {
@@ -597,6 +600,7 @@ body {
     position: absolute;
     top: 11%;
     left: 64.5%;
+    z-index: 5;
 }
 
 .acceptCompassBtn {
@@ -614,6 +618,7 @@ body {
     top: 73%;
 }
 
+.staticCompassValues,
 .compassValues {
     height: auto;
     position: absolute;
@@ -623,6 +628,12 @@ body {
     transform-origin: center;
     transform: rotate(133deg);
     transition: .4s all;
+}
+
+.staticCompassValues {
+    width: 44% !important;
+    top: 10% !important;
+    left: 28% !important;
 }
 
 .compassIndicator {
@@ -689,6 +700,10 @@ input:disabled {
 .largeRadar {
     height: auto;
     z-index: -3;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1000px;
 }
 
 .largeRadar .closeCompassBtn {
@@ -704,15 +719,20 @@ input:disabled {
 }
 
 .kkValues--1 {
-    top: 55%;
-    left: 54.2%;
-    width: 38%;
+    top: 55.2%;
+    left: 54%;
+    width: 38.3%;
 }
 
 .kkValues--1 .kkValues--item {
     border: none;
+    font-size: 15px;
 }
 
+.nmInputs--2 .input,
+.nmCalculateInputs .input,
+.nkCalculateInputs .input,
+.deltaCalculateInputs--2 .input,
 .kmCalculateInputs .input,
 .kkCalculateInputs .input,
 .deltaCalculateInputs .input,
@@ -725,6 +745,9 @@ input:disabled {
     font-weight: 700;
 }
 
+.nmCalculateInputs,
+.nkCalculateInputs,
+.deltaCalculateInputs--2,
 .kmCalculateInputs,
 .kkCalculateInputs,
 .deltaCalculateInputs {
@@ -733,6 +756,7 @@ input:disabled {
     align-items: center;
 }
 
+.nmCalculateInputs,
 .kmCalculateInputs {
     position: absolute;
     top: 77%;
@@ -741,6 +765,7 @@ input:disabled {
     height: 28px;
 }
 
+.nkCalculateInputs,
 .kkCalculateInputs {
     position: absolute;
     top: 82%;
@@ -749,6 +774,7 @@ input:disabled {
     height: 28px;
 }
 
+.deltaCalculateInputs--2,
 .deltaCalculateInputs {
     position: absolute;
     top: 87.7%;
@@ -772,6 +798,7 @@ input:disabled {
 .deklinacja--value--2 {
     top: 21.8%;
     left: 40.8%;
+    font-weight: 700;
 }
 
 .table {
@@ -800,4 +827,34 @@ input:disabled {
     font-weight: 700;
     font-size: 14px;
     text-align: center;
+}
+
+.view__img--3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1000px;
+    height: auto;
+    visibility: hidden;
+}
+
+.view--3 {
+    z-index: -1;
+    width: 1000px;
+    height: 100%;
+}
+
+.input--kk--2 {
+    position: absolute;
+    top: 28.5%;
+    left: 65.7%;
+    border: none;
+    font-weight: 700;
+}
+
+.input--nk--2,
+.input--kk--2 {
+    opacity: 0;
+    border: none;
+    white-space: nowrap;
 }
