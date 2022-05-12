@@ -104,6 +104,11 @@
          <div class="view view--2">
              <img class="view__img" src="img/plansza2.png" alt="deklinacja" />
 
+             <!-- CHART BUTTON -->
+             <button class="homeBtn homeBtn--chart" onclick="checkDelta1()">
+
+             </button>
+
              <!-- POMOC -->
              <div class="help">
                  <button class="closeHelpBtn" onclick="closeHelp()">
@@ -321,6 +326,11 @@
              <img class="view__img view__img--3" src="./img/plansza-270.png" alt="radar-270" />
              <img class="view__img view__img--3" src="./img/plansza-315.png" alt="radar-315" />
 
+             <!-- CHART BUTTON -->
+             <button class="homeBtn homeBtn--chart" onclick="checkDelta2()">
+
+             </button>
+
              <!-- POMOC -->
              <div class="help">
                  <button class="closeHelpBtn" onclick="closeHelp()">
@@ -361,6 +371,13 @@
              <span class="poprawkaZyroskopowa">
                  +1 &deg;
              </span>
+
+             <!-- OBLICZ NAMIAR MAGNETYCZNY NA NABIEZNIK -->
+             <div class="calculationsInputs--2">
+                 <input class="input input--calculationsComponent toClear" />
+                 <input class="input input--calculationsComponent toClear" />
+                 <input class="input input--calculationsResult toClear" disabled />
+             </div>
 
              <!-- TABELA WARTOSCI KK I KZ -->
              <div class="table">
@@ -457,7 +474,7 @@
              <!-- ODCZYT Z KOMPASU -->
              <span class="input input--kk--2">
                  <span>
-
+                     000
                  </span>
                  <span>
                      &deg;
@@ -467,7 +484,7 @@
              <!-- NK -->
              <span class="input input--nk--2">
                 <span>
-
+                    046
                  </span>
                  <span>
                      &deg;
@@ -538,14 +555,21 @@
          </div>
 
          <div class="view view--chart">
-             <img class="view__img view__img--chart1" src="./img/plansza2-wykres.png" alt="wykres" />
-             <img class="view__img view__img--chart2" src="./img/plansza3-wykres.png" alt="wykres" />
+             <button class="homeBtn" onclick="home()">
+
+             </button>
+
+             <img class="view__img view__img--chart1" src="./img/wykres-dewiacja_1.png" alt="wykres" />
+             <img class="view__img view__img--chart2" src="./img/wykres-dewiacja_-1.png" alt="wykres" />
+             <img class="view__img view__img--chart3" src="./img/wykres-dewiacja_-2.png" alt="wykres" />
+             <img class="view__img view__img--chart4" src="./img/wykres-plansza-3.png" alt="wykres" />
+         </div>
+
+         <div class="view--error">
+             <img class="img" src="./img/error.png" alt="blad" />
          </div>
 
          <button class="homeBtn" onclick="home()">
-
-         </button>
-         <button class="homeBtn homeBtn--chart" onclick="chart()">
 
          </button>
          <button class="homeBtn homeBtn--chart homeBtn--clear" onclick="clearInputs()">

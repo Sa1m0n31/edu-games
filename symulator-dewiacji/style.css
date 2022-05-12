@@ -206,16 +206,18 @@ button {
     position: absolute;
     bottom: 10px;
     left: 10px;
-    width: 5%;
-    height: 9%;
+    height: 14%;
+    width: 8%;
     background: transparent;
     z-index: 3;
 }
 
 .homeBtn--2 {
-    bottom: 90%;
-    right: 1%;
+    height: 16%;
+    bottom: unset;
+    top: 2%;
     left: unset;
+    right: 1%;
 }
 
 .abs {
@@ -520,26 +522,23 @@ body {
 
 .slider--predkosc {
     transform: rotate(-90deg);
-    height: 3%;
-    width: 19%;
-    top: 74.5%;
-    left: 78.12%;
+    top: 38%;
+    bottom: unset;
+    position: absolute;
+    left: 78.7%;
+    width: 16%;
 }
 
 .slider--wiatr {
-    top: 61%;
-}
-
-.slider--temperatura {
-    top: 69.5%;
-}
-
-.slider--cisnienie {
-    top: 78%;
+    top: 75.2%;
+    left: 64%;
+    width: 22.2%;
 }
 
 .slider--opady {
-    top: 86.4%;
+    top: 83.4%;
+    width: 22.2%;
+    left: 64%;
 }
 
 .values {
@@ -772,3 +771,88 @@ body {
 .chart canvas {
     visibility: hidden;
 }
+
+.homeBtn--help {
+    top: 20%;
+    left: unset;
+    right: 1%;
+    width: 5%;
+}
+
+.help {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 1000px;
+    background: rgba(0, 0, 0, .5);
+    height: auto;
+    visibility: hidden;
+    z-index: 5;
+    opacity: 0;
+    transition: .3s opacity;
+}
+
+.closeHelpBtn {
+    border: none;
+    outline: none;
+    background: transparent;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 25px;
+}
+
+.closeHelpBtn .img {
+    width: 100%;
+    filter: brightness(0) invert(1);
+}
+
+.help__img {
+    width: 100%;
+}
+
+.radarInner {
+    top: 14%;
+    left: 14.5%;
+    width: 380px;
+    height: 380px;
+    background: transparent;
+    border-radius: 50%;
+    position: absolute;
+    overflow: hidden;
+}
+
+.radar__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 120%;
+    transition: .6s transform;
+}
+
+.indicator--kompas,
+.indicator--zyrokompas,
+.ship {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: auto;
+}
+
+.ship {
+    transform-origin: 335px 266px;
+    transition: .3s transform;
+}
+
+.zyrokompas {
+    position: absolute;
+    width: 16%;
+    height: 27%;
+    top: 7%;
+    left: 62.5%;
+    border-radius: 50%;
+    background: transparent;
+}
+
+

@@ -321,6 +321,7 @@ button {
     top: 85%;
 }
 
+.calculationsInputs--2,
 .calculationsInputs {
     position: absolute;
     width: 27%;
@@ -332,6 +333,7 @@ button {
     align-items: center;
 }
 
+.calculationsInputs--2 .input,
 .calculationsInputs .input {
     height: 100%;
     width: 14%;
@@ -421,24 +423,6 @@ button {
     position: relative;
 }
 
-.calculationsInputs--2 {
-    top: 25%;
-    left: 64%;
-    width: 20%;
-}
-
-.calculationsInputs--2 .input:first-of-type {
-    transform: translateX(10%);
-}
-
-.calculationsInputs--2 .input:nth-of-type(2) {
-    transform: translateX(-20%);
-}
-
-.calculationsInputs--2 .input:nth-of-type(3) {
-    transform: translateX(-60%);
-}
-
 .reason--value--3 {
     top: 25%;
     left: 61%;
@@ -525,6 +509,7 @@ body {
     height: 80px;
 }
 
+.view--error,
 .largeRadar,
 .staticCompass,
 .compass,
@@ -838,6 +823,7 @@ input:disabled {
     visibility: hidden;
 }
 
+.view--error,
 .view--3 {
     z-index: -1;
     width: 1000px;
@@ -854,7 +840,41 @@ input:disabled {
 
 .input--nk--2,
 .input--kk--2 {
-    opacity: 0;
     border: none;
     white-space: nowrap;
+}
+
+.view--error {
+    height: auto;
+}
+
+.view--error .img {
+    width: 100%;
+}
+
+.calculationsInputs--2 {
+    left: 24.5%;
+    width: 19%;
+    top: 87.5%;
+}
+
+.calculationsInputs--2 .input {
+    position: relative;
+    width: 25%;
+}
+
+.calculationsInputs--2 .input:nth-of-type(2) {
+    transform: translateX(-3px);
+}
+
+.view--chart .view__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+}
+
+.view--chart .view__img--chart1 {
+    position: relative;
 }
