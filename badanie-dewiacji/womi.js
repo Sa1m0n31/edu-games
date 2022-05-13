@@ -7,7 +7,7 @@ define([ 'declare', 'reader.api', 'reader.avatar.api', 'require', 'jquery' ], fu
                 var readerApi = new api(require);
                 var src = readerApi.getFullPath('./index.html');
 
-                this.iframe = $('<iframe src="' + src + '" style="border: none; frameborder: 0; overflow: hidden; width: 1000px; height: 900px; position: relative;" scrolling="no" ></iframe></div></div>');
+                this.iframe = $('<iframe src="' + src + '" style="border: none; frameborder: 0; overflow: hidden; width: 1000px; transform: translateX(-200px); height: 900px; position: relative;" scrolling="no" ></iframe></div></div>');
                 $(placeholder).append(this.iframe);
                 var context = this;
                 // Init API

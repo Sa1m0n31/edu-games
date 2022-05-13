@@ -28,25 +28,15 @@
             <!-- STATEK -->
             <img class="ship" src="./img/statek.png" alt="statek" />
 
-            <!-- WSKAZNIK ZYROKOMPASU -->
-            <div class="zyrokompas">
-                <span class="zyrokompas--1"></span>
-                <span class="zyrokompas--2"></span>
-                <span class="zyrokompas--3"></span>
-                <span class="zyrokompas--4"></span>
-                <span class="zyrokompas--5"></span>
-                <span class="zyrokompas--6"></span>
-                <span class="zyrokompas--7"></span>
-                <span class="zyrokompas--8"></span>
-            </div>
+            <!-- TARCZA ZYROKOMPASU -->
             <img class="indicator--zyrokompas" src="./img/zyrokompas-wskaznik.png" alt="wskaznik" />
-
-            <!-- WSKAZNIK KOMPASU -->
-            <img class="indicator--kompas" src="./img/kompas-wskaznik.png" alt="wskaznik" />
 
             <!-- RADAR -->
             <div class="radarInner">
-                <img class="radar__img radar__img--clouds" src="./img/deszcz.png" alt="deszcz" />
+                <img class="radar__img radar__img--wind1" src="./img/lekki-wiatr.png" alt="lekki-wiatr" />
+                <img class="radar__img radar__img--wind2" src="./img/silny-wiatr.png" alt="silny-wiatr" />
+                <img class="radar__img radar__img--rain" src="./img/deszcz.png" alt="deszcz" />
+                <img class="radar__img radar__img--snow" src="./img/snieg.png" alt="snieg" />
             </div>
 
             <div class="slidecontainer slider--wiatr">
@@ -57,6 +47,37 @@
             </div>
             <div class="slidecontainer slider--predkosc">
                 <input type="range" min="0" max="20" step="1" value="0" class="slider" id="predkosc" />
+            </div>
+
+            <!-- WSKAZNIK KOMPASU -->
+            <img class="indicator--kompas" src="./img/kompas-wskaznik.png" alt="wskaznik" />
+
+            <!-- KOMPAS -->
+            <div class="compass" onmouseleave="backToPreviousTransform()">
+                <div class="compass__btn" onmouseenter="transformIndicator(0)" onclick="transformIndicatorPermanent(0)">
+
+                </div>
+                <div class="compass__btn" onmouseenter="transformIndicator(1)" onclick="transformIndicatorPermanent(1)">
+
+                </div>
+                <div class="compass__btn" onmouseenter="transformIndicator(2)" onclick="transformIndicatorPermanent(2)">
+
+                </div>
+                <div class="compass__btn" onmouseenter="transformIndicator(3)" onclick="transformIndicatorPermanent(3)">
+
+                </div>
+                <div class="compass__btn" onmouseenter="transformIndicator(4)" onclick="transformIndicatorPermanent(4)">
+
+                </div>
+                <div class="compass__btn" onmouseenter="transformIndicator(5)" onclick="transformIndicatorPermanent(5)">
+
+                </div>
+                <div class="compass__btn" onmouseenter="transformIndicator(6)" onclick="transformIndicatorPermanent(6)">
+
+                </div>
+                <div class="compass__btn" onmouseenter="transformIndicator(7)" onclick="transformIndicatorPermanent(7)">
+
+                </div>
             </div>
         </div>
 
@@ -72,7 +93,7 @@
         <button class="homeBtn" onclick="home()">
 
         </button>
-        <button class="homeBtn homeBtn--2" onclick="clearValues()">
+        <button class="homeBtn homeBtn--2" onclick="clearInputs()">
 
         </button>
         <button class="homeBtn homeBtn--help" onclick="openHelp()">

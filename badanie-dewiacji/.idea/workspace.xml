@@ -20,23 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0771b000-6a23-4e80-85ca-57ea875946d6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../symulator-dewiacji/img/close.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../symulator-dewiacji/img/deszcz.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../symulator-dewiacji/img/kompas-wskaznik.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../symulator-dewiacji/img/lekki-wiatr.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../symulator-dewiacji/img/pomoc.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../symulator-dewiacji/img/silny-wiatr.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../symulator-dewiacji/img/snieg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../symulator-dewiacji/img/statek.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../symulator-dewiacji/img/suwak-opady.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../symulator-dewiacji/img/suwak-predkosc.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../symulator-dewiacji/img/suwak-wiatr.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../symulator-dewiacji/img/zyrokompas-wskaznik.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../symulator-dewiacji/img/tlo-1.png" beforeDir="false" afterPath="$PROJECT_DIR$/../symulator-dewiacji/img/tlo-1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../symulator-dewiacji/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../symulator-dewiacji/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../symulator-dewiacji/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/../symulator-dewiacji/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../symulator-dewiacji/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/../symulator-dewiacji/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +39,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../symulator-dewiacji" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -80,6 +64,8 @@
       <workItem from="1652211133673" duration="18000" />
       <workItem from="1652265620552" duration="24000" />
       <workItem from="1652265656506" duration="636000" />
+      <workItem from="1652361709224" duration="5282000" />
+      <workItem from="1652431958630" duration="445000" />
     </task>
     <servers />
   </component>
@@ -99,17 +85,17 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="-1180" y="275" key="FileChooserDialogImpl" timestamp="1652211150288">
+    <state x="-1180" y="275" key="FileChooserDialogImpl" timestamp="1652432406777">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="-1180" y="275" key="FileChooserDialogImpl/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1652211150288" />
+    <state x="-1180" y="275" key="FileChooserDialogImpl/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1652432406777" />
     <state x="-1304" y="240" width="672" height="677" key="run.anything.popup" timestamp="1651940568778">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
     <state x="-1304" y="240" width="672" height="677" key="run.anything.popup/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1651940568778" />
-    <state x="-1297" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1651857949272">
+    <state x="-1297" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1652366729506">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="-1297" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1651857949272" />
+    <state x="-1297" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1652366729506" />
   </component>
 </project>

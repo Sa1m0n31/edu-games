@@ -17,6 +17,10 @@
     height: auto;
 }
 
+.container {
+    overflow: hidden;
+}
+
 .slidecontainer {
     width: 100%; /* Width of the outside container */
 }
@@ -32,6 +36,10 @@
         -webkit-transform: rotate(360deg);
         transform:rotate(360deg);
     }
+}
+
+.slidecontainer {
+    z-index: 3;
 }
 
 /* The slider itself */
@@ -591,30 +599,21 @@ body {
 }
 
 @keyframes cloudAnimation1 {
-    0% {margin-left: -30%; margin-top: 50%; }
-    100% {margin-left: 120%; margin-top: 30%; }
-}
-
-@keyframes circle{
-    0%{
-        transform:rotate(0deg)
-        translate(-165px)
-        rotate(0deg);
-
+    0% {
+        transform: translateY(-80%);
     }
-    100%{
-        transform:rotate(360deg)
-        translate(-165px)
-        rotate(-360deg);
+    100% {
+        transform: translateY(120%);
     }
 }
 
-
-.clouds .btn__img {
-    /*animation-name: circle;*/
-    /*animation-duration: 4s;*/
-    /*animation-timing-function: linear;*/
-    /*animation-iteration-count: infinite;*/
+@keyframes cloudAnimation2 {
+    0% {
+        transform: translateX(-80%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
 }
 
 .chooseCourse {
@@ -855,4 +854,150 @@ body {
     background: transparent;
 }
 
+/* Pizza circle */
+.chart {
+    position:relative;
+    width:500px;
+    height:250px;
+}
+.hold {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    clip: rect(0px, 200px, 200px, 100px);
+}
 
+.compass {
+    position: absolute;
+    top: 9.7%;
+    left: 64.3%;
+    background: transparent;
+    width: 126px;
+    height: 126px;
+    opacity: 0.6;
+    border-radius: 50%;
+}
+
+.compass__btn {
+    position: absolute;
+    width: 36px;
+    height: 32px;
+    cursor: pointer;
+}
+
+.compass__btn:first-of-type {
+    top: 0;
+    left: 36%;
+}
+
+.compass__btn:nth-of-type(2) {
+    top: 9%;
+    left: 64%;
+}
+
+.compass__btn:nth-of-type(3) {
+    top: 33%;
+    left: 74%;
+    height: 38px;
+}
+
+.compass__btn:nth-of-type(4) {
+    top: 63%;
+    left: 65%;
+}
+
+.compass__btn:nth-of-type(5) {
+    top: 72%;
+    left: 33%;
+    width: 40px;
+}
+
+.compass__btn:nth-of-type(6) {
+    top: 61%;
+    left: 6%;
+    height: 40px;
+}
+
+.compass__btn:nth-of-type(7) {
+    top: 36%;
+    left: 1%;
+}
+
+.compass__btn:nth-of-type(8) {
+    top: 4%;
+    left: 4%;
+    width: 40px;
+    height: 40px;
+}
+
+.indicator--kompas {
+    width: 100%;
+    height: auto;
+    transform: rotate(-29deg);
+    transform-origin: 706px 117px;
+    transition: .2s transform;
+}
+
+.compass--0 {
+    transform: rotate(-30deg);
+}
+
+.compass--1 {
+    transform: rotate(13deg);
+}
+
+.compass--2 {
+    transform: rotate(61deg);
+}
+
+.compass--3 {
+    transform: rotate(103deg);
+}
+
+.compass--4 {
+    transform: rotate(150deg);
+}
+
+.compass--5 {
+    transform: rotate(194deg);
+}
+
+.compass--6 {
+    transform: rotate(238deg);
+}
+
+.compass--7 {
+    transform: rotate(282deg);
+}
+
+.indicator--zyrokompas {
+    transition: .2s transform;
+    top: 39.4%;
+    left: 63.5%;
+    width: 139px;
+    height: 139px;
+    transform-origin: center;
+}
+
+.radar__img--wind2,
+.radar__img--wind1,
+.radar__img--rain,
+.radar__img--snow {
+    visibility: hidden;
+}
+
+.radar__img--wind2,
+.radar__img--wind1 {
+    animation-name: cloudAnimation1;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.radar__img--rain,
+.radar__img--snow {
+    animation-name: cloudAnimation2;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
