@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Milionerzy</title>
+    <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+<div class="container">
+    <main class="view view--start">
+        <img class="view__img" src="./assets/intro.png" alt="start" />
+        <p class="view__start__text">
+            ¿Cómo son tus compañeros de clase? Juega al “¿Quién quiere ser millonario?”.  Elige la respuesta correcta desde cuatro opciones y consigue el mayor número de puntos.
+        </p>
+    </main>
+    <main class="view view--end">
+        <img class="view__img" src="./assets/intro.png" alt="start" />
+        <p class="view__start__text">
+
+        </p>
+    </main>
+    <main class="view view--question">
+        <figure class="feedbackWrapper  feedbackWrapper--right">
+            <img class="feedback__img" src="./assets/feedback.png" alt="feedback" />
+            <main class="feedback__content">
+                <img class="feedback__icon" src="./assets/right.svg" alt="ok" />
+                <span class="feedback__text">
+                    ¡Enhorabuena! Es la respuesta correcta.
+                </span>
+            </main>
+        </figure>
+        <figure class="feedbackWrapper feedbackWrapper--wrong">
+            <img class="feedback__img" src="./assets/feedback.png" alt="feedback" />
+            <main class="feedback__content">
+                <img class="feedback__icon" src="./assets/wrong.svg" alt="blad" />
+                <span class="feedback__text">
+                    Parece que no te ha salido muy bien.
+<!--                    C’est inexact, essaie encore une fois.-->
+                </span>
+            </main>
+        </figure>
+
+        <figure class="imageWrapper">
+            <img class="image" src="" alt="obrazek" />
+        </figure>
+
+
+        <p class="question">
+
+        </p>
+
+        <img class="img--right" src="./assets/poprawna.png" alt="odpowiedz" />
+        <img class="img--wrong" src="./assets/bledna.png" alt="odpowiedz" />
+
+        <button class="answer answer--1" onclick="checkAnswer(this, 1)">
+
+        </button>
+        <button class="answer answer--2" onclick="checkAnswer(this, 2)">
+
+        </button>
+        <button class="answer answer--3" onclick="checkAnswer(this, 3)">
+
+        </button>
+        <button class="answer answer--4" onclick="checkAnswer(this, 4)">
+
+        </button>
+
+        <img class="view__img view__img--main" src="./assets/milionerzy-tlo.png" alt="pytanie" />
+
+        <div class="clock">
+            00:<span class="clock__inner">20</span>
+        </div>
+        <div class="helpers">
+            <button class="helpers__btn" onclick="excludeTwoAnswers()">
+                <img class="helpers__btn__img helpers__btn__img--active" src="./assets/50-50.png" alt="50-50" />
+                <img class="helpers__btn__img helpers__btn__img--noactive" src="./assets/50-50_nieaktywne.png" alt="50-50-nieaktywne" />
+            </button>
+            <button class="helpers__btn" onclick="hint()">
+                <img class="helpers__btn__img helpers__btn__img--active" src="./assets/podpowiedz.png" alt="podpowiedz" />
+                <img class="helpers__btn__img helpers__btn__img--noactive" src="./assets/podpowiedz_nieaktywne.png" alt="podpowiedz-nieaktywne" />
+            </button>
+            <button class="helpers__btn" onclick="translateQuestion()">
+                <img class="helpers__btn__img helpers__btn__img--active" src="./assets/tlumaczenie.png" alt="tlumaczenie" />
+                <img class="helpers__btn__img helpers__btn__img--noactive" src="./assets/tlumaczenie_nieaktywne.png" alt="tlumaczenie-nieaktywne" />
+            </button>
+        </div>
+
+        <div class="view__img--points">
+            <img class="view__img" src="./assets/milionerzy_01.png" alt="punkty" />
+            <img class="view__img" src="./assets/milionerzy_02.png" alt="punkty" />
+            <img class="view__img" src="./assets/milionerzy_03.png" alt="punkty" />
+            <img class="view__img" src="./assets/milionerzy_04.png" alt="punkty" />
+            <img class="view__img" src="./assets/milionerzy_05.png" alt="punkty" />
+            <img class="view__img" src="./assets/milionerzy_06.png" alt="punkty" />
+            <img class="view__img" src="./assets/milionerzy_07.png" alt="punkty" />
+            <img class="view__img" src="./assets/milionerzy_08.png" alt="punkty" />
+            <img class="view__img" src="./assets/milionerzy_09.png" alt="punkty" />
+            <img class="view__img" src="./assets/milionerzy_10.png" alt="punkty" />
+            <img class="view__img" src="./assets/milionerzy_11.png" alt="punkty" />
+            <img class="view__img" src="./assets/milionerzy_12.png" alt="punkty" />
+            <img class="view__img" src="./assets/milionerzy_13.png" alt="punkty" />
+            <img class="view__img" src="./assets/milionerzy_14.png" alt="punkty" />
+            <img class="view__img" src="./assets/milionerzy_15.png" alt="punkty" />
+        </div>
+    </main>
+</div>
+<script src="./js/main.js"></script>
+</body>
+</html>

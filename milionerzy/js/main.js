@@ -1,96 +1,92 @@
 const questions = [
     [
         {
-            question: 'Coche le sentiment auquel correspond la photo.',
-            right: 'la curiosite',
-            wrong1: 'le courage',
-            wrong2: 'le pessimisme',
-            wrong3: 'l’intolérance',
-            img: './assets/img1.jpg'
+            question: 'Où les étudiants prennent-ils généralement leur repas de midi ?',
+            right: 'au resto universitaire',
+            wrong1: 'à la cantine',
+            wrong2: 'dans la classe',
+            wrong3: 'dans le parc',
         },
         {
-            question: 'Coche le sentiment auquel correspond la photo.',
-            right: 'la gaieté',
-            wrong1: 'la tristesse',
-            wrong2: 'la peur',
-            wrong3: 'la crainte',
-            img: './assets/img2.jpg'
+            question: 'Où habitent les étudiants qui arrivent d’une autre ville pour faire leurs études ?',
+            right: 'à la résidence universitaire',
+            wrong1: 'à la maison d’accueil',
+            wrong2: 'dans un hotel',
+            wrong3: 'chez amis',
         },
         {
-            question: 'Coche le sentiment auquel correspond la photo.',
-            right: 'l’inquiétude',
-            wrong1: 'la gaieté',
-            wrong2: 'l’enthousiasme',
-            wrong3: 'la colère',
-            img: './assets/img3.jpg'
+            question: 'Où tu ne peux pas continuer ton éducation après le bac ?',
+            right: 'au lycée',
+            wrong1: 'à l’Université',
+            wrong2: 'à l’École Polytechnique',
+            wrong3: 'aux écoles supérieures',
         },
         {
-            question: 'Coche le sentiment auquel correspond la photo.',
-            right: 'la peur',
-            wrong1: 'l’optimisme',
-            wrong2: 'la méchanceté',
-            wrong3: 'le courage',
-            img: './assets/img4.jpg'
+            question: 'Quel diplôme peux-tu recevoir à la fin de trois ans d\'éducation supérieure ? ',
+            right: 'la licence',
+            wrong1: 'le bac',
+            wrong2: 'le BEP',
+            wrong3: 'le doctorat',
         }
     ],
     [
         {
-            question: 'Coche un trait positif du caractère.',
-            right: 'la patience',
-            wrong1: 'la méchanceté',
-            wrong2: 'la paresse',
-            wrong3: 'l’avarice'
+            question: 'Qu’est-ce que tu dois rédiger pour terminer le premier cycle d\'études ?',
+            right: 'un mémoire de master',
+            wrong1: 'une thèse de maîtrise',
+            wrong2: 'un travail de fin d\'année',
+            wrong3: 'une dissertation',
         },
         {
-            question: 'Coche un trait négatif du caractère.',
-            right: 'la bêtise',
-            wrong1: 'la tolerance',
-            wrong2: 'la fidélité',
-            wrong3: 'le courage'
+            question: 'Le document que tu reçois après l’entrée à l’université et qui t’identifie au tant qu’étudiant, c’est :',
+            right: 'la carte d’étudiant',
+            wrong1: 'la carte d’identité',
+            wrong2: 'le certificat d\'études',
+            wrong3: 'la carte d’université',
         },
         {
-            question: 'Coche la description qui correspond à cette personne : une personne peureuse.',
-            right: 'J’ai crains beaucoup de choses. Les films d’horreur ? Ce n’est pas pour moi.',
-            wrong1: 'J’adore les aventures. Je n’ai peur de rien.',
-            wrong2: 'J’ai du courage, j’aime les sports extrêmes.',
-            wrong3: 'Je n’aime pas beaucoup travailler.'
+            question: 'Le type de cours qui sert à illustrer et approfondir les questions théoriques à l’aide des exemples, exposés et d\'exercices pratiques, c’est :',
+            right: 'le TD (Travaux Dirigés)',
+            wrong1: 'le CM (Cours Magistraux)',
+            wrong2: 'l’apprentissage',
+            wrong3: 'les ateliers',
         },
         {
-            question: 'Coche un trait du caractère qui signifie le contraire du mot : généreux.',
-            right: 'avare',
-            wrong1: 'paresseux',
-            wrong2: 'bête',
-            wrong3: 'querelleur'
+            question: 'Avant d’entrer aux études tu dois payer :',
+            right: 'les frais d’inscription',
+            wrong1: 'les frais de location',
+            wrong2: 'les frais de scolarité',
+            wrong3: 'les acomptes',
         }
     ],
     [
         {
-            question: 'Lis la description et choisis le trait de caractère de cette personne. J’adore les sports extrêmes. Ma passion, ce sont les films d’horreur. La peur, je ne sais pas ce que c’est.',
-            right: 'Cette personne est courageuse.',
-            wrong1: 'Cette personne est disponible.',
-            wrong2: 'Cette personne est impatiente.',
-            wrong3: 'Cette personne est triste.'
+            question: 'Tous les bâtiments universitaires ainsi que les résidences universitaires forment :',
+            right: 'la cité U',
+            wrong1: 'la faculté',
+            wrong2: 'l’institut',
+            wrong3: 'le doyenné',
         },
         {
-            question: 'Lis la description et choisis le trait de caractère de cette personne. Je ne pense jamais aux problèmes. Je vois toujours les bons côtés dans chaque situation.',
-            right: 'Cette personne est optimiste. ',
-            wrong1: 'Cette personne est bavarde.',
-            wrong2: 'Cette personne est travailleuse.',
-            wrong3: 'Cette personne est sociable.'
+            question: 'La partie de l’université où se donne l’enseignement supérieur dans une discipline déterminée, c’est :',
+            right: 'la faculté',
+            wrong1: 'la classe',
+            wrong2: 'l’atelier',
+            wrong3: 'le labo',
         },
         {
-            question: 'Lis la description et choisis le trait de caractère de cette personne. Je ne mens jamais. Je dis toujours la vérité.',
-            right: 'Cette personne est honnête.',
-            wrong1: 'Cette personne est heureuse.',
-            wrong2: 'Cette personne est intolérante.',
-            wrong3: 'Cette personne est méchante.'
+            question: 'Combien d\'universités est-ce qu’il y a en France ?',
+            right: '67',
+            wrong1: '53',
+            wrong2: '75',
+            wrong3: '81',
         },
         {
-            question: 'Lis la description et choisis le trait de caractère de cette personne. J’aime parler avec des gens. Je peux trouver des sujets de conversation avec tout le monde.',
-            right: 'Cette personne est communicative.',
-            wrong1: 'Cette personne est cultivée.',
-            wrong2: 'Cette personne est pessimiste.',
-            wrong3: 'Cette personne est infidèle.'
+            question: 'Quelles étaient les spécialités les plus demandées en licence en France en 2021 ?',
+            right: 'le droit',
+            wrong1: 'les sciences de la vie',
+            wrong2: 'l\'économie et gestion',
+            wrong3: 'la psychologie',
         }
     ]
 ]
