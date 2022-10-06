@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+<div class="container">
+    <!-- JRWA MODAL -->
+    <div class="modal">
+        <button class="modal__btn" onclick="closeModal()">
+            &times;
+        </button>
+
+        <div class="modal__inner scroll">
+            <p style="text-align: center; font-weight: 700; margin-bottom: 20px; font-size: 21px;">JEDNOLITY RZECZOWY WYKAZ AKT</p>
+            <p class="h">0 ZARZĄDZANIE</p>
+            <p>&nbsp;</p>
+            <p>00 Gremia kolegialne</p>
+            <p class="i1">000 Rada Szkoły &ndash; A</p>
+            <p class="i1">001 Rada Pedagogiczna (protokoły i uchwały)&ndash; A</p>
+            <p class="i1">002 Samorząd uczniowski &nbsp;&ndash; A</p>
+            <p class="i1">003 Własne komisje i&nbsp;zespoły (stałe i&nbsp;doraźne) &ndash; A</p>
+            <p class="i1">004 Udział w&nbsp;obcych gremiach kolegialnych &ndash; A</p>
+            <p class="i1">005 Narady (zebrania) pracownik&oacute;w &ndash; A</p>
+            <p>01 Organizacja</p>
+            <p class="i1">010 Organizacja organ&oacute;w i&nbsp;jednostek nadrzędnych &ndash; A</p>
+            <p class="i1">011 Organizacja własnej jednostki&nbsp;</p>
+            <p class="i1">012 Pełnomocnictwa, upoważnienia, wzory podpis&oacute;w i&nbsp;podpisy elektroniczne &ndash; B10</p>
+            <p class="i1">013 System zarządzania jakością &ndash; A</p>
+            <p class="i1">014 Ochrona i&nbsp;udostępnianie informacji ustawowo chronionych oraz informacji publicznej</p>
+            <p class="i2">0140 Wyjaśnienia, interpretacje, opinie oraz akty prawne dotyczące zagadnień z&nbsp;zakresu ochrony i&nbsp;udostępniania informacji ustawowo chronionych oraz informacji publicznej - B10</p>
+            <p class="i2">0141 Ochrona informacji niejawnych &ndash; B10</p>
+            <p class="i2">0142 Ochrona danych osobowych &ndash; B10</p>
+            <p class="i2">0143 Udostępnianie informacji &ndash; B10</p>
+            <p class="i1">015 Obsługa kancelaryjna</p>
+            <p class="i2">0150 Przepisy kancelaryjne i&nbsp;archiwalne oraz wyjaśnienia i&nbsp;poradnictwo &ndash; A</p>
+            <p class="i2">0151 Środki do rejestrowania i&nbsp;kontroli obiegu dokumentacji &ndash; B5</p>
+            <p class="i2">0152 Opracowanie oraz wdrażanie wzor&oacute;w formularzy oraz ich wykazy &ndash; A</p>
+            <p class="i2">0153 Ewidencja druk&oacute;w ścisłego zarachowania &ndash; B10</p>
+            <p class="i2">0154 Ewidencja pieczęci i&nbsp;pieczątek oraz ich wzory odciskowe &ndash; A</p>
+            <p class="i2">0155 Prenumerata czasopism i&nbsp;innych publikacji &ndash; B5</p>
+            <p class="i2">0156 Przekazywanie dokumentacji w&nbsp;związku ze zmianami organizacyjnymi i&nbsp;kompetencyjnymi &ndash; A</p>
+            <p class="i1">016 Składnica akt</p>
+            <p class="i2">0160 Ewidencja dokumentacji przechowywanej w&nbsp;składnicy akt &ndash; A</p>
+            <p class="i2">0161 Przekazywanie dokumentacji do archiwum państwowego &ndash; A</p>
+            <p class="i2">0162 Brakowanie dokumentacji niearchiwalnej &ndash; A</p>
+            <p class="i2">0163 Udostępnianie i&nbsp;wypożyczanie dokumentacji w&nbsp;składnicy akt &ndash; B5</p>
+            <p class="i2">0164 Profilaktyka i&nbsp;konserwacja dokumentacji w&nbsp;archiwum &ndash; B10</p>
+            <p class="i1">017 Zbiory biblioteczne</p>
+            <p class="i2">0170 Wyjaśnienia, interpretacje, opinie do regulacji, instrukcje w&nbsp;sprawach obsługi zbior&oacute;w bibliotecznych &ndash; B10</p>
+            <p class="i2">0171 Ewidencja zbior&oacute;w bibliotecznych &ndash; A</p>
+            <p class="i2">0172 Gromadzenie zbior&oacute;w bibliotecznych &ndash; A</p>
+            <p class="i2">0173 Udostępnianie zbior&oacute;w bibliotecznych i&nbsp;informacje o&nbsp;zbiorach biblioteki</p>
+            <p>02 Zbiory akt&oacute;w normatywnych, legislacja i&nbsp;obsługa prawna</p>
+            <p class="i1">020 Zbi&oacute;r akt&oacute;w normatywnych władz i&nbsp;organ&oacute;w nadrzędnych i&nbsp;innych &ndash; B10</p>
+            <p class="i1">021 Zbi&oacute;r akt&oacute;w normatywnych własnej jednostki &ndash; A</p>
+            <p class="i1">022 Zbi&oacute;r um&oacute;w &ndash; B10</p>
+            <p class="i1">023 Udział w&nbsp;przygotowywaniu projekt&oacute;w akt&oacute;w prawnych &ndash; A</p>
+            <p class="i1">024 Interpretacje i&nbsp;opinie prawne na potrzeby własnej jednostki &ndash; B10</p>
+            <p class="i1">025 Sprawy sądowe i&nbsp;sprawy w&nbsp;postępowaniu administracyjnym</p>
+            <p class="i2">0250 Sprawy przed sądami powszechnymi i&nbsp;Sądem Najwyższym &ndash; B10</p>
+            <p class="i2">0251 Sprawy przed sądami administracyjnymi &ndash; B10</p>
+            <p>03 Strategie, programy, planowanie, sprawozdawczość i&nbsp;analizy</p>
+            <p class="i1">030 Wyjaśnienia, interpretacje, opinie oraz akty prawne dotyczące sposobu opracowania strategii, program&oacute;w, plan&oacute;w, sprawozdań i&nbsp;analiz &ndash; B10</p>
+            <p class="i1">031 Strategie, programy, plany i&nbsp;sprawozdania z&nbsp;innych podmiot&oacute;w &ndash; B5</p>
+            <p class="i1">032 Strategie, programy, plany i&nbsp;sprawozdania własnej jednostki &ndash; A</p>
+            <p class="i1">033 Sprawozdawczość statystyczna &ndash; A</p>
+            <p class="i1">034 Analizy tematyczne lub przekrojowe, ankietyzacja &ndash; A</p>
+            <p class="i1">035 Informacje o&nbsp;charakterze analitycznym i&nbsp;sprawozdawczym dla innych podmiot&oacute;w &ndash; A</p>
+            <p>04 Informatyzacja</p>
+            <p class="i1">040 Wyjaśnienia, interpretacje, opinie oraz akty prawne dotyczące zagadnień z&nbsp;zakresu informatyzacji &ndash; B10</p>
+            <p class="i1">041 Projektowanie, wdrażanie system&oacute;w teleinformatycznych &ndash; B10</p>
+            <p class="i1">042 Licencje na oprogramowanie i&nbsp;systemy teleinformatyczne &ndash; B5</p>
+            <p class="i1">043 Eksploatacja system&oacute;w teleinformatycznych i&nbsp;oprogramowania &ndash; B5</p>
+            <p class="i1">044 Ustalanie uprawnień dostępu do danych i&nbsp;system&oacute;w &ndash; B5</p>
+            <p class="i1">045 Projektowanie i&nbsp;eksploatacja stron internetowych</p>
+            <p class="i1">046 Bezpieczeństwo system&oacute;w teleinformatycznych</p>
+            <p>05 Skargi, wnioski, petycje, postulaty, inicjatywy i&nbsp;interpelacje</p>
+            <p class="i1">050 Wyjaśnienia, interpretacje, opinie oraz akty prawne dotyczące skarg, wniosk&oacute;w, petycji, postulat&oacute;w, inicjatyw i&nbsp;interpelacji &ndash; B10</p>
+            <p class="i1">051 Skargi i&nbsp;wnioski załatwiane bezpośrednio &ndash; A</p>
+            <p class="i1">052 Skargi i&nbsp;wnioski przekazywane do załatwienia według właściwości &ndash; B2</p>
+            <p class="i1">053 Petycje, postulaty i&nbsp;inicjatywy obywatelskie &ndash; A</p>
+            <p class="i1">054 Interpelacje i&nbsp;zapytania &ndash; A</p>
+            <p class="i1">055 Sprawy odesłane do załatwienia innym podmiotom &ndash; B2</p>
+            <p>06 Reprezentacja i&nbsp;promowanie</p>
+            <p class="i1">060 Wyjaśnienia, interpretacje, opinie oraz akty prawne w&nbsp;zakresie reprezentacji i&nbsp;promowania działalności &ndash; B10</p>
+            <p class="i1">061 Patronaty &ndash; A</p>
+            <p class="i1">062 Kontakty ze środkami publicznego przekazu</p>
+            <p class="i2">0620 Informacje własne dla środk&oacute;w publicznego przekazu, odpowiedzi na informacje medialne i&nbsp;konferencje i&nbsp;wywiady &ndash; A</p>
+            <p class="i2">0621 Monitoring środk&oacute;w publicznego przekazu &ndash; A</p>
+            <p class="i1">063 Promocja i&nbsp;reklama działalności własnej jednostki &ndash; A</p>
+            <p class="i1">064 Własne wydawnictwa oraz udział w&nbsp;obcych wydawnictwach &ndash; A</p>
+            <p class="i1">065 Zbi&oacute;r zaproszeń, życzeń, podziękowań, kondolencji &ndash; B5</p>
+            <p class="i1">066 Badanie satysfakcji klienta &ndash; B10</p>
+            <p>07 Wsp&oacute;łdziałanie z&nbsp;innymi podmiotami</p>
+            <p class="i1">070 Wyjaśnienia, interpretacje, opinie oraz akty prawne dotyczące wsp&oacute;łdziałania z&nbsp;innymi podmiotami &ndash; B10</p>
+            <p class="i1">071 Kontakty z&nbsp;podmiotami na gruncie krajowym &ndash; A</p>
+            <p class="i1">072 Kontakty z&nbsp;podmiotami zagranicznymi</p>
+            <p class="i2">0720 Kontakty i&nbsp;zakres wsp&oacute;łdziałania z podmiotami zagranicznymi &ndash; A</p>
+            <p class="i2">0721 Wyjazdy zagraniczne przedstawicieli własnej jednostki &ndash; B10</p>
+            <p class="i2">0722 Przyjmowanie przedstawicieli i&nbsp;gości z&nbsp;zagranicy &ndash; B10</p>
+            <p class="i1">073 Konferencje, zjazdy, sympozja, sesje, fora krajowe i&nbsp;zagraniczne &ndash; A</p>
+            <p>08 Programy i&nbsp;projekty wsp&oacute;łfinansowane ze środk&oacute;w zewnętrznych, w&nbsp;tym Unii Europejskiej &ndash; B10</p>
+            <p>09 Kontrole i&nbsp;audyt</p>
+            <p class="i1">090 Wyjaśnienia, interpretacje, opinie oraz akty prawne dotyczące zagadnień z&nbsp;zakresu kontroli, audytu &ndash; B10</p>
+            <p class="i1">091 Kontrole</p>
+            <p class="i2">0910 Kontrole zewnętrzne we własnej jednostce &ndash; A</p>
+            <p class="i2">0911 Kontrole wewnętrzne we własnej jednostce &ndash; A</p>
+            <p class="i2">0912 Książka kontroli &ndash; B5</p>
+            <p class="i2">0913 Udział przedstawicieli jednostki w&nbsp;kontrolach przeprowadzanych przez inne podmioty &ndash; B5</p>
+            <p>092 Audyt</p>
+            <p class="h">1 SPRAWY KADROWE</p>
+            <p>10 Regulacje oraz wyjaśnienia, interpretacje, opinie, akty prawne dotyczące zagadnień z&nbsp;zakresu spraw kadrowych</p>
+            <p class="i1">100 Własne regulacje, ich projekty oraz wyjaśnienia, interpretacje, opinie, akty prawne dotyczące zagadnień z&nbsp;zakresu spraw kadrowych &ndash; A</p>
+            <p class="i1">101 Otrzymane od organ&oacute;w i&nbsp;jednostek zewnętrznych regulacje, ich projekty oraz wyjaśnienia, interpretacje, opinie, akty prawne dotyczące zagadnień z&nbsp;zakresu spraw kadrowych &ndash; B10</p>
+            <p class="i1">102 Opisy i&nbsp;wartościowanie stanowisk pracy &ndash; B10</p>
+            <p class="i1">103 Restrukturyzacja zatrudnienia &ndash; A</p>
+            <p class="i1">104 Kontakty i&nbsp;wymiana informacji ze związkami zawodowymi w&nbsp;sprawach kadrowych &ndash; A</p>
+            <p>11 Nawiązywanie, przebieg i&nbsp;rozwiązywanie stosunku pracy oraz innych form zatrudnienia</p>
+            <p class="i1">110 Zapotrzebowanie i&nbsp;nab&oacute;r kandydat&oacute;w do pracy &ndash; B10</p>
+            <p class="i1">111 Konkursy na stanowiska &ndash; B5</p>
+            <p class="i1">112 Obsługa zatrudnienia</p>
+            <p class="i2">1120 Obsługa zatrudnienia kierownika jednostki &ndash; B10</p>
+            <p class="i2">1121 Obsługa zatrudnienia pracownik&oacute;w &ndash; B10</p>
+            <p class="i2">1122 Rozmieszczanie i&nbsp;wynagradzanie pracownik&oacute;w &ndash; B10</p>
+            <p class="i2">1123 Oświadczenia lustracyjne, majątkowe lub inne &ndash; B6</p>
+            <p class="i2">1124 Opiniowanie i&nbsp;ocenianie os&oacute;b zatrudnionych &ndash; B10</p>
+            <p class="i1">113 Staże zawodowe, wolontariat, praktyki &ndash; B10</p>
+            <p class="i1">114 Prace zlecone (umowy cywilnoprawne)</p>
+            <p class="i2">1140 Prace zlecone ze składką na ubezpieczenie społeczne &ndash; B10</p>
+            <p class="i2">1141 Prace zlecone bez składki na ubezpieczenie społeczne &ndash; B5</p>
+            <p class="i1">115 Nagradzanie, odznaczanie i&nbsp;karanie</p>
+            <p class="i2">1150 Nagrody - B10</p>
+            <p class="i2">1151 Odznaczenia państwowe, samorządowe i&nbsp;inne &ndash; B10</p>
+            <p class="i2">1152 Wyr&oacute;żnienia &ndash; B10</p>
+            <p class="i2">1153 Karanie &ndash; B&nbsp;(okres przechowywania zależy od obowiązujących przepis&oacute;w prawa)</p>
+            <p class="i2">1154 Postępowanie dyscyplinarne &ndash; B&nbsp;(okres przechowywania zależy od obowiązujących przepis&oacute;w prawa)</p>
+            <p class="i1">116 Sprawy wojskowe os&oacute;b zatrudnionych &ndash; B10</p>
+            <p class="i1">117 Dostęp do informacji chronionych przepisami prawa&nbsp;&ndash; B10</p>
+            <p class="i1">118 Sprawy osobowe niezwiązane z&nbsp;zatrudnieniem &ndash; B5</p>
+            <p>12 Dokumentacja pracownicza</p>
+            <p class="i1">120 Akta osobowe zatrudnionych po 01.01.1999 r. &ndash; B10</p>
+            <p class="i1">121 Dokumentacja w&nbsp;sprawach związanych ze stosunkiem pracy &ndash; B10</p>
+            <p class="i1">122 Pomoce ewidencyjne do dokumentacji pracowniczej &ndash; B10</p>
+            <p class="i1">123 Legitymacje służbowe &ndash; B5</p>
+            <p class="i1">124 Zaświadczenia o&nbsp;zatrudnieniu i&nbsp;wynagrodzeniu &ndash; B2</p>
+            <p class="i1">125 Obsługa sposobu prowadzenia i&nbsp;przechowywania akt osobowych B10</p>
+            <p>13 Bezpieczeństwo i&nbsp;higiena pracy</p>
+            <p class="i1">130 Przeglądy warunk&oacute;w i&nbsp;bezpieczeństwa pracy &ndash; A</p>
+            <p class="i1">131 Działania w&nbsp;zakresie zwalczania wypadk&oacute;w, chor&oacute;b zawodowych, ryzyka pracy &ndash; A</p>
+            <p class="i1">132 Wypadki przy pracy oraz w&nbsp;drodze do pracy i&nbsp;z&nbsp;pracy &ndash; B10</p>
+            <p class="i1">133 Warunki szkodliwe i&nbsp;choroby zawodowe</p>
+            <p class="i1">1330 Warunki szkodliwe &ndash; B10</p>
+            <p class="i1">1331 Rejestr czynnik&oacute;w szkodliwych &ndash; B40</p>
+            <p class="i1">1332 Choroby zawodowe &ndash; B10</p>
+            <p class="i1">134 Przeciwdziałanie mobbingowi i&nbsp;dyskryminacji &ndash; B10</p>
+            <p>14 Szkolenie i&nbsp;doskonalenie zawodowe os&oacute;b zatrudnionych</p>
+            <p class="i1">140 Własne regulacje i&nbsp;programy szkolenia oraz doskonalenia &ndash; A</p>
+            <p class="i1">141 Szkolenia organizowane we własnym zakresie &ndash; B10</p>
+            <p class="i1">142 Dokształcanie pracownik&oacute;w B10</p>
+            <p>15 Dyscyplina pracy</p>
+            <p class="i1">150 Czas pracy</p>
+            <p class="i2">1500 Dowody obecności w&nbsp;pracy &ndash; B10</p>
+            <p class="i2">1501 Absencje w&nbsp;pracy &ndash; B10</p>
+            <p class="i2">1502 Rozliczenia czasu pracy &ndash; B10</p>
+            <p class="i2">1503 Delegacje służbowe &ndash; B3</p>
+            <p class="i2">1504 Ustalanie i&nbsp;zmiany czasu pracy &ndash; B10</p>
+            <p class="i2">1505 Praca w&nbsp;godzinach nadliczbowych &ndash; B10</p>
+            <p class="i1">151 Urlopy os&oacute;b zatrudnionych</p>
+            <p class="i2">1510 Urlopy wypoczynkowe &ndash; B5</p>
+            <p class="i2">1511 Urlopy macierzyńskie, ojcowskie, wychowawcze, dla poratowania zdrowia itp. &ndash; B10</p>
+            <p class="i2">1512 Urlopy bezpłatne &ndash; B10</p>
+            <p class="i1">152 Dodatkowe zatrudnienie os&oacute;b zatrudnionych &ndash; B10</p>
+            <p>16 Działalność socjalna &ndash; B5</p>
+            <p>17 Ubezpieczenia osobowe i&nbsp;opieka zdrowotna</p>
+            <p class="i1">170 Zgłoszenia do ubezpieczenia społecznego &ndash; B10</p>
+            <p class="i1">171 Obsługa ubezpieczenia społecznego &ndash; B5</p>
+            <p class="i1">172 Dowody uprawnień do zasiłk&oacute;w &ndash; B5</p>
+            <p class="i1">173 Emerytury i&nbsp;renty &ndash; B10</p>
+            <p class="i1">174 Ubezpieczenia zbiorowe, pracownicze, itp. &ndash; B10</p>
+            <p class="i1">175 Opieka zdrowotna</p>
+            <p class="i2">1750 Organizowanie i&nbsp;obsługa opieki zdrowotnej</p>
+            <p class="i2">1751 Badania lekarskie w&nbsp;zakresie medycyny pracy &ndash; B10</p>
+            <p class="i1">176 Pracownicze Plany Kapitałowe &ndash; B10</p>
+            <p>18 Zapewnienia dostępności osobom ze szczeg&oacute;lnymi potrzebami &ndash; B10</p>
+
+            <p class="h">2 ŚRODKI RZECZOWE</p>
+
+            <p>20 Regulacje oraz wyjaśnienia, interpretacje, opinie, akty prawne dotyczące zagadnień z&nbsp;zakresu spraw administracyjnych - B10</p>
+            <p>21 Inwestycje i&nbsp;remonty &ndash; B5</p>
+            <p>22 Administrowanie i&nbsp;eksploatowanie obiekt&oacute;w</p>
+            <p class="i1">220 Stan prawny nieruchomości &ndash; A</p>
+            <p class="i1">221 Udostępnianie i&nbsp;oddawanie w&nbsp;najem lub w&nbsp;dzierżawę własnych obiekt&oacute;w i&nbsp;lokali oraz najmowanie lokali na potrzeby własne &ndash; B5</p>
+            <p class="i1">222 Konserwacja i&nbsp;eksploatacja bieżąca budynk&oacute;w, lokali i&nbsp;pomieszczeń &ndash; B5</p>
+            <p class="i1">223 Podatki i&nbsp;opłaty publiczne &ndash; B10</p>
+            <p class="i1">224 Gospodarowanie terenami wok&oacute;ł obiekt&oacute;w &ndash; B5</p>
+            <p>23 Gospodarka materiałowa</p>
+            <p class="i1">230 Zaopatrzenie w&nbsp;sprzęt, materiały i&nbsp;pomoce biurowe &ndash; B5</p>
+            <p class="i1">231 Magazynowanie i&nbsp;użytkowanie środk&oacute;w trwałych i&nbsp;nietrwałych &ndash; B5</p>
+            <p class="i1">232 Ewidencja środk&oacute;w trwałych i&nbsp;nietrwałych &ndash; B10</p>
+            <p class="i1">233 Eksploatacja i&nbsp;likwidacja środk&oacute;w trwałych i&nbsp;przedmiot&oacute;w nietrwałych &ndash; B10</p>
+            <p class="i1">234 Dokumentacja technicznoeksploatacyjna środk&oacute;w trwałych - B5</p>
+            <p class="i1">235 Gospodarka odpadami i&nbsp;surowcami wt&oacute;rnymi &ndash; B5</p>
+            <p>24 Transport, łączność, infrastruktura informatyczna i&nbsp;telekomunikacyjna</p>
+            <p class="i1">240 Zakupy środk&oacute;w i&nbsp;usług transportowych, łączności, pocztowych i&nbsp;kurierskich &ndash; B5</p>
+            <p class="i1">241 Eksploatacja własnych środk&oacute;w transportowych &ndash; B5</p>
+            <p class="i1">242 Użytkowanie obcych środk&oacute;w transportowych &ndash; B5</p>
+            <p class="i1">243 Eksploatacja środk&oacute;w łączności &ndash; B5</p>
+            <p class="i1">244 Organizacja i&nbsp;eksploatacja infrastruktury informatycznej i&nbsp;telekomunikacyjnej &ndash; B10</p>
+            <p>25 ochrona obiekt&oacute;w i&nbsp;mienia oraz sprawy obronne</p>
+            <p class="i1">250 Strzeżenie mienia własnej jednostki &ndash; B10</p>
+            <p class="i1">251 Ubezpieczenia majątkowe &ndash; B10</p>
+            <p class="i1">252 Ochrona przeciwpożarowa &ndash; B10</p>
+            <p class="i1">253 &nbsp;Sprawy obronne &ndash; B10</p>
+            <p class="i1">254 Obrona cywilna &ndash; B10</p>
+            <p class="i1">255 Zarządzanie kryzysowe &ndash; B10</p>
+            <p>26 Zam&oacute;wienia publiczne &ndash; B5</p>
+
+            <p class="h">3 EKONOMIKA</p>
+
+            <p>30 Regulacje oraz wyjaśnienia, interpretacje, opinie, akty prawne dotyczące zagadnień z&nbsp;zakresu spraw finansowoksięgowych &ndash; B10</p>
+            <p>31 Planowanie i&nbsp;realizacja budżetu</p>
+            <p class="i1">310 Wieloletnia prognoza finansowa &ndash; A</p>
+            <p class="i1">311 Budżet i&nbsp;jego zmiany &ndash; A</p>
+            <p class="i1">312 Realizacja budżetu</p>
+            <p class="i2">3120 Przekazywanie środk&oacute;w finansowych &ndash; B5</p>
+            <p class="i2">3121 Rozliczanie dochod&oacute;w, wydatk&oacute;w, opłat &ndash; B5</p>
+            <p class="i2">3122 Ewidencjonowanie dochod&oacute;w, wykorzystania środk&oacute;w, opłat &ndash; B5</p>
+            <p class="i2">3123 Sprawozdania okresowe z&nbsp;wykonania budżetu &ndash; B10</p>
+            <p class="i2">3124 Sprawozdania roczne, bilans i&nbsp;analizy z&nbsp;wykonania budżetu &ndash; A</p>
+            <p class="i2">3125 Rewizja budżetu i&nbsp;jego bilansu &ndash; A</p>
+            <p class="i1">313 Finansowanie i kredytowanie &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>
+            <p class="i2">3130 Finansowanie działalności &ndash; B5</p>
+            <p class="i2">3131 Finansowanie inwestycji &ndash; B5</p>
+            <p class="i2">3132 Finansowanie remont&oacute;w &ndash; B5</p>
+            <p class="i2">3133 Wsp&oacute;łpraca z&nbsp;bankami finansującymi i&nbsp;kredytującymi &ndash; B5</p>
+            <p class="i2">3134 Gospodarka pozabudżetowa &ndash; B5</p>
+            <p class="i1">314 Egzekucja i&nbsp;windykacja &ndash; B10</p>
+            <p>32 Rachunkowość, księgowość i&nbsp;obsługa kasowa</p>
+            <p class="i1">320 Obr&oacute;t got&oacute;wkowy i&nbsp;bezgot&oacute;wkowy</p>
+            <p class="i2">3200 Obr&oacute;t got&oacute;wkowy &ndash; B5</p>
+            <p class="i2">3201 Obr&oacute;t bezgot&oacute;wkowy - B5</p>
+            <p class="i2">3202 Depozyty kasowe, obsługa wadium &ndash; B5</p>
+            <p class="i2">3210 Dowody księgowe &ndash; B5</p>
+            <p class="i1">321 Księgowość</p>
+            <p class="i2">3211 Dokumentacja księgowa &ndash; B5</p>
+            <p class="i2">3212 Rozliczenia &ndash; B5</p>
+            <p class="i2">3213 Ewidencja syntetyczna i&nbsp;analityczna &ndash; B5</p>
+            <p class="i2">3214 Uzgadnianie sald &ndash; B5</p>
+            <p class="i2">3215 Kontrole i&nbsp;rewizje kasy &ndash; B5</p>
+            <p class="i2">3216 Zobowiązania, poręczenia &ndash; B5</p>
+            <p class="i1">322 Księgowość materiałowotowarowa &ndash; B5</p>
+            <p class="i1">323 Rozliczenia płac i&nbsp;wynagrodzeń</p>
+            <p class="i2">3230 Dokumentacja płac i&nbsp;potrąceń z&nbsp;płac &ndash; B5</p>
+            <p class="i2">3231 Listy płac - B10</p>
+            <p class="i2">3232 Kartoteki wynagrodzeń - B10</p>
+            <p class="i2">3233 Deklaracje podatkowe i&nbsp;rozliczenia podatku dochodowego &ndash; B5</p>
+            <p class="i2">3234 Rozliczenia składek na ubezpieczenie społeczne &ndash; B10</p>
+            <p class="i2">3235 Dokumentacja wynagrodzeń z&nbsp;bezosobowego funduszu płac &ndash; B10</p>
+            <p>33 Obsługa finansowa funduszy i&nbsp;środk&oacute;w specjalnych &ndash; B10</p>
+            <p>34 Opłaty i&nbsp;ustalenie cen</p>
+            <p class="i1">340 Ustalanie i&nbsp;zwalnianie z&nbsp;opłat &ndash; B5</p>
+            <p class="i1">341 Ustalanie cen za własne wyroby &ndash; B5</p>
+            <p>35 Inwentaryzacja &ndash; B5</p>
+            <p>36 Dyscyplina finansowa &ndash; B10</p>
+        </div>
+    </div>
+
+    <!-- START -->
+    <div class="view view--start center">
+        <h1 class="view__header">
+            Program EKA 03.3
+        </h1>
+        <h2 class="view__subheader">
+            Jaki to dokument?
+        </h2>
+        <button class="btn btn--start"
+                onclick="start()">
+            Rozpocznij
+        </button>
+    </div>
+
+    <!-- GAME -->
+    <div class="view view--game">
+        <div class="view__menu scroll">
+            <button class="view__menu__button" onclick="menu(0)">
+                Plakat o utworzeniu zamkniętych dzielnic (1941)
+            </button>
+            <button class="view__menu__button" onclick="menu(1)">
+                Plan sytuacyjny parkingu (część dokumentacji aktowej dot. remontu parkingu szkolnego) (2007)
+            </button>
+            <button class="view__menu__button" onclick="menu(2)">
+                Plan getta (1941)
+            </button>
+            <button class="view__menu__button" onclick="menu(3)">
+                Dokumentacja techniczna, rzut budynku  (część dokumentacji aktowej dot. budowy budynku)
+            </button>
+            <button class="view__menu__button" onclick="menu(4)">
+                Obwieszczenie, druk ulotny (1906)
+            </button>
+            <button class="view__menu__button" onclick="menu(5)">
+                Strona tytułowa akt kancelarii gubernatora radomskiego (1908)
+            </button>
+            <button class="view__menu__button" onclick="menu(6)">
+                Oświadczenie o zapoznaniu z regulaminem pracy (dokument, który trafia do akt osobowych pracownika)
+            </button>
+            <button class="view__menu__button" onclick="menu(7)">
+                Uchwała Rady Pedagogicznej
+            </button>
+            <button class="view__menu__button" onclick="menu(8)">
+                Umowa zlecenia
+            </button>
+            <button class="view__menu__button" onclick="menu(9)">
+                Zaświadczenie o zatrudnieniu
+            </button>
+            <button class="view__menu__button" onclick="menu(10)">
+                Karta urlopowa
+            </button>
+            <button class="view__menu__button" onclick="menu(11)">
+                Oferta współpracy
+            </button>
+            <button class="view__menu__button" onclick="menu(12)">
+                Zapytanie ofertowe
+            </button>
+            <button class="view__menu__button" onclick="menu(13)">
+                Druk delegacji
+            </button>
+            <button class="view__menu__button" onclick="menu(14)">
+                Skarga
+            </button>
+            <button class="view__menu__button" onclick="menu(15)">
+                Regulamin sporządzania protokołów w formie elektronicznej (załącznik do uchwały)
+            </button>
+            <button class="view__menu__button" onclick="menu(16)">
+                Zarządzenie o inwentaryzacji
+            </button>
+            <button class="view__menu__button" onclick="menu(17)">
+                Regulamin organizacyjny
+            </button>
+            <button class="view__menu__button" onclick="menu(18)">
+                Spis dokumentacji kat. B
+            </button>
+            <button class="view__menu__button" onclick="menu(19)">
+                Zgoda na przetwarzanie danych
+            </button>
+            <button class="view__menu__button" onclick="menu(20)">
+                Zdjęcie Pancernik (1926)
+            </button>
+            <button class="view__menu__button" onclick="menu(21)">
+                Zdjęcie konferencja Teheran (1943)
+            </button>
+        </div>
+
+        <figure class="documentWrapper scroll">
+            <figcaption>
+                Zapoznaj się z zaprezentowanym dokumentem i wykonaj polecenia.
+            </figcaption>
+            <img class="document" src="./img/plakat-o-utworzeniu-dzielnic.jpg" alt="dokument" />
+            <img class="document" src="./img/plan-parkingu.jpg" alt="dokument" />
+            <img class="document" src="./img/plan-getta.jpg" alt="dokument" />
+            <img class="document" src="./img/dokumentacja-techniczna.jpg" alt="dokument" />
+            <img class="document" src="./img/obwieszczenie.jpg" alt="dokument" />
+            <img class="document" src="./img/strona-tytulowa.jpg" alt="dokument" />
+            <img class="document" src="./img/3_oswiadczenie-01.png" alt="dokument" />
+            <img class="document" src="./img/4_uchwala_nr2-01.png" alt="dokument" />
+            <img class="document" src="./img/5_umowa_zlecenie-01.png" alt="dokument" />
+            <img class="document" src="./img/11_zaswiadczenie%20o%20zatrudnieniu-01.png" alt="dokument" />
+            <img class="document" src="./img/1_karta_urlopowa-01.png" alt="dokument" />
+            <img class="document" src="./img/2_oferta_wspolpracy-01.png" alt="dokument" />
+            <img class="document" src="./img/9_zapytanie_ofertowe-01.png" alt="dokument" />
+            <img class="document" src="./img/12_druk_delegacji_str1-01.png" alt="dokument" />
+            <img class="document" src="./img/6_skarga-01.png" alt="dokument" />
+            <img class="document" src="./img/13_regulamim_sprzadzania_protokolow_z_Rady-01.png" alt="dokument" />
+            <img class="document" src="./img/14_zazadzenie_str1.png" alt="dokument" />
+            <img class="document" src="./img/10_regulamin_organizacyjny-01.png" alt="dokument" />
+            <img class="document" src="./img/15_spis_zdawczo_odbiorczy-01.png" alt="dokument" />
+            <img class="document" src="./img/8_zgoda_na_przetwarzanie_danych_osobowych.png" alt="dokument" />
+            <img class="document" src="./img/pancernik.jpg" alt="dokument" />
+            <img class="document" src="./img/teheran.jpg" alt="dokument" />
+        </figure>
+
+        <div class="quiz">
+            <div class="quiz__item quiz__item--first">
+                <p class="quiz__question">
+                    Zaklasyfikuj zaprezentowany dokument (dobierz odpowiedni dla niego symbol klasyfikacyjny z <button class="btn--inline" onclick="openModal()">Jednolitego Rzeczowego Wykazu Akt  - JRWA</button>)
+                </p>
+                <input class="input" />
+            </div>
+            <div class="quiz__item">
+                <p class="quiz__question">
+                    Zakwalifikuj zaprezentowany dokument (dobierz właściwą dla niego kategorię archiwalną, pamiętając, że dokumenty przeznaczone do wieczystego przechowywania mają kategorię A, natomiast dokumenty podlegające zniszczeniu po upływie ustalonego okresu przechowywania otrzymują którąś z nw. kategorii: B2, B3, B5, B10, B50, Bc).
+                </p>
+                <select class="question2">
+                    <option value="0">A</option>
+                    <option value="1">B2</option>
+                    <option value="2">B3</option>
+                    <option value="3">B5</option>
+                    <option value="4">B10</option>
+                </select>
+            </div>
+            <div class="quiz__item">
+                <p class="quiz__question">
+                    Zdecyduj jaką formę zapisu ma zaprezentowany dokument:<br/>
+                    a) tekstową (rękopisy, maszynopisy, druki, pisma powielone)<br/>
+                    b) graficzną (szkice, rysunki, schematy, wykresy, diagramy, plany, mapy, plansze, afisze itp.),<br/>
+                    c) fotograficzną i filmową (obrazy utrwalone technikami fotograficznymi, polegającymi na naświetleniu materiału światłoczułego umieszczonego na płótnie, płytkach metalowych, szkle, błonie celuloidowej i papierze).
+                </p>
+                <select class="question3">
+                    <option value="0">tekstowa</option>
+                    <option value="1">graficzna</option>
+                    <option value="2">fotograficzna</option>
+                </select>
+            </div>
+
+            <button class="btn btn--quizNext btn--checkAnswer" onclick="checkAnswer()">
+                Sprawdź
+            </button>
+
+            <p class="feedback">
+
+            </p>
+
+            <button class="btn btn--quizNext btn--nextDocument" onclick="nextDocument()">
+                Przejdź dalej >
+            </button>
+        </div>
+    </div>
+</div>
+<script src="./main.js"></script>
+</body>
+</html>
